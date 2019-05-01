@@ -1,0 +1,5 @@
+# Coupled FV3GFS-GSDCHEM-WW3 32bit
+#
+## NEMS Application Builder file
+
+COMPONENTS=( FMS FV3%32BIT=Y GSDCHEM WW3 )

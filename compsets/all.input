@@ -1,0 +1,11 @@
+load 'fv3.input'
+load 'fv3ww3.input'
+load 'fv3gsdchem.input'
+
+#run cpld@20161003@1day_1way@block_fv3@C96_ww3@glo30m   @ fv3, ww3, coupled, standard, baseline, block, yes
+run cpld@20161003@1day_1way@leap_fv3@C96_ww3@glo30m    @ fv3, ww3, coupled, standard, leap
+run cpld@20170301@1day_1way@block_fv3@C384_ww3@glo30m  @ fv3, ww3, coupled, standard, baseline, block384
+run cpld@20170301@1day_1way@block_fv3@32bit@C384_ww3@glo30m  @ fv332bit, ww3, coupled, standard, baseline
+run cpld_fv3_gsdchem_between           @ fv3, coupledapp, atmchem,        plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray
+run cpld_fv3_gfdlmp_gsdchem_between    @ fv3, coupledapp, atmchem_gfdlmp, plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray
+

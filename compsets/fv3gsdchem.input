@@ -1,0 +1,1170 @@
+load 'platforms.input'
+load 'nemscommon.input'
+
+########################################################################
+
+# Common prep step at the top of all fv3 tests:
+
+embed bash fv3_prep(RUNDIR,modules,CNTL) [[[
+        rm -rf "$RUNDIR"
+        mkdir -p "$RUNDIR" "$CNTL"
+        cd @[RUNDIR]
+
+        set +e
+
+        source @[plat%SRCnems]/conf/module-setup.sh.inc
+        module purge
+        module use $( dirname $modules )
+        module load $( basename $modules )
+
+        @[plat%execution_time_modules]
+
+        mkdir RESTART INPUT
+
+        export MPI_TYPE_DEPTH=20
+        export OMP_STACKSIZE=512M
+        export ESMF_RUNTIME_COMPLIANCECHECK=OFF:depth=4
+
+        # Set the stack limit as high as we can.
+        if [[ $( ulimit -s ) != unlimited ]] ; then
+        for try_limit in 20000 18000 12000 9000 6000 3000 1500 1000 800 ; do
+            if [[ ! ( $( ulimit -s ) -gt $(( try_limit * 1000 )) ) ]] ; then
+            ulimit -s $(( try_limit * 1000 ))
+        else
+            break
+            fi
+        done
+        fi
+
+        ulimit -a
+]]]
+
+# Function that uses compile.sh to build.  Note the defaults are no
+# make options and no build name.  No build name creates fv3.exe and
+# modules.fv3.
+embed bash compile.sh(MAKE_OPTS=' ',BUILD_NR='',fv3,modules,md5) [[[
+        cd @[plat%HOMEnems]/tests/
+        # Run the compile.sh.  Convert wcoss.cray to wcoss_cray to
+        # make the FV3 happy.
+        rm -f @[fv3] @[modules]
+        
+        @[plat%execution_time_modules]
+        if ( which aprun ) && [[ @[plat%PLATFORM_NAME] == wcoss.cray ]] ; then
+            aprun -n 1 -j 1 -N 1 -d 24 \
+                ./compile.sh "@[plat%HOMEnems]/FV3" \
+                $( echo @[plat%MACHINE_ID] | sed 's,\.,_,g' ) \
+                @[MAKE_OPTS] @[BUILD_NR]
+        elif [[ @[plat%PLATFORM_NAME] == theia.* || @[plat%PLATFORM_NAME] == cheyenne.* ]] ; then
+            # Don't substitute the . with a _ on Theia/Cheyenne
+            echo "DON'T SUBSTITUTE _ for . on @[plat%PLATFORM_NAME]"
+            ./compile.sh "@[plat%HOMEnems]/FV3" \
+                @[plat%MACHINE_ID] \
+                @[MAKE_OPTS] @[BUILD_NR]
+        else
+            ./compile.sh "@[plat%HOMEnems]/FV3" \
+                $( echo @[plat%MACHINE_ID] | sed 's,\.,_,g' ) \
+                @[MAKE_OPTS] @[BUILD_NR]
+        fi
+        mkdir -p "@[plat%EXECrt]" "@[plat%INCrt]"
+        cp -fp ./fv3.exe @[fv3]
+        cp -fp ./modules.fv3 @[modules]
+        md5sum ./fv3.exe > @[md5]
+]]]
+
+########################################################################
+
+build fv3_gsdchem.exe {
+    # This block is similar to the fv3.exe block, but uses the
+    # NEMSAppBuilder.  We do this for one compset, just to make sure
+    # the NEMSAppBuilder does not break.
+    use plat
+    target="@[plat%EXECrt]/fv3_gsdchem.exe"
+    modules.nems="@[plat%INCrt]/modules_appbuilder.fv3"
+    md5sum="@[target].md5"
+
+    # The NEMSAppBuilder is another embedded bash script in nemscommon.input
+    build=NEMSAppBuilder(NEMS.x="@[target]",modules.nems="@[modules.nems]",
+                         OPTS="app=coupledFV3_GSDCHEM",md5sum="@[md5sum]")
+}
+
+########################################################################
+
+# Common variables used by many tests and input files:
+
+fv3_defaults = {
+    WARM_START='.F.'
+    NGGPS_IC='.T.'
+    EXTERNAL_IC='.T.'
+    MAKE_NH='.T.'
+    MOUNTAIN='.F.'
+    SATMEDMF='.F.'
+    HYBEDMF='.T.'
+    LHEATSTRG='.F.'
+    LGFDLMPRAD='.F.'
+    EFFR_IN='.F.'
+    NA_INIT='1'
+    READ_INCREMENT='.F.'
+    FDIAG='0,1,2,3,4,5,6,7,8,9,10,11,12,15,18,21,24'
+    NSTF_NAME='2,1,1,0,5'
+    FNALBC="'global_snowfree_albedo.bosu.t126.384.190.rg.grb',"
+    FNVETC="'global_vegtype.igbp.t126.384.190.rg.grb',"
+    FNSOTC="'global_soiltype.statsgo.t126.384.190.rg.grb',"
+    FNSMCC="'global_soilmgldas.t126.384.190.grb',"
+    FNABSC="'global_mxsnoalb.uariz.t126.384.190.rg.grb',"
+
+    ENS_NUM='1'
+    SYEAR='2016'
+    SMONTH='10'
+    SDAY='03'
+    SHOUR='00'
+    DT_ATMOS='1800'
+
+    DAYS='1'
+    FHMAX='24'
+    NPX='97'
+    NPY='97'
+    NPZ='64'
+    NPZP='65'
+    NFHOUT='3'
+    NFHMAX_HF='12'
+    NFHOUT_HF='1'
+
+    QUILTING='.true.'
+    WRITE_GROUP=1
+    NUM_FILES=2
+    FILENAME_BASE="'dyn' 'phy'"
+    OUTPUT_GRID="'cubed_sphere_grid'"
+    OUTPUT_FILE="'netcdf'"
+    WRITE_NEMSIOFLIP='.false.'
+    WRITE_FSYNCFLAG ='.false.'
+    IMO='384'
+    JMO='190'
+
+    SPPT='-999.0'
+    SHUM='-999.0'
+    SKEB='-999.0'
+
+    IAU_INC_FILES="''"
+
+    CPLFLX='.F.'
+    CPLWAV='.F.'
+    CPL='.false.'
+}
+
+########################################################################
+
+test cpld_fv3_gsdchem_between: fv3_gsdchem.exe {
+    use plat
+    use plat%default_resources
+    use fv3_defaults
+
+    TEST_DESCR="Compare FV3GFS-GSDCHEM control results with previous trunk version"
+    CNTL_NAME="@[TEST_NAME]"
+
+    COM="@[plat%COMrt]/@[TEST_NAME]"          # Test result area
+    RUNDIR="@[plat%TMPrt]/@[TEST_NAME]"       # Test work area
+    CNTL="@[plat%BASELINE]/@[CNTL_NAME]"      # Control baseline area
+    FV3_input_data="@[plat%INPUTS]/FV3_input_data"
+    GSDCHEM_input_data="@[plat%INPUTS]/GSDCHEM_input_data"
+
+    # The build variable is the fv3.exe or fv3_appbuild.fv3, which
+    # provides the path to the build target, md5 sum, and modulefile.
+    build=fv3_gsdchem.exe
+
+    prep=fv3_prep(
+        RUNDIR="@[RUNDIR]",modules="@[fv3_gsdchem.exe%modules.nems]",
+        CNTL="@[CNTL]")
+
+    # - nems.configure ---
+    nems_configure='atm_chm_between'
+    atm_model='fv3'
+    atm_petlist_bounds="-1 -1"
+    chm_model='gsdchem'
+    chm_petlist_bounds="-1 -1"
+    coupling_interval_sec="@[DT_ATMOS]" # fv3 time step
+
+    # - model_configure ---
+    CPL='.true.'
+
+    # Specify input files.
+    filters input {
+      #    WORK FILE  <=filter=   SOURCE FILE
+                   'input.nml' <=atparse=  "@[PARMnems]/chm.nml.IN"
+             'model_configure' <=atparse=  "@[PARMnems]/model_configure.IN"
+                 'aerosol.dat' <=copyfrom= "@[FV3_input_data]/INPUT"
+  'co2historicaldata_201*.txt' <=copyfrom= "@[FV3_input_data]/INPUT"
+      'sfc_emissivity_idx.txt' <=copyfrom= "@[FV3_input_data]/INPUT"
+   'solarconstant_noaa_an.txt' <=copyfrom= "@[FV3_input_data]/INPUT"
+                        '*grb' <=copyfrom= "@[FV3_input_data]"
+                     '*_table' <=copyfrom= "@[FV3_input_data]"
+                  '*configure' <=copyfrom= "@[FV3_input_data]"
+                       'INPUT' <=copy=     "@[FV3_input_data]/INPUT"
+         'global_o3prdlos.f77' <=copy=     "@[FV3_input_data]/INPUT/global_o3prdlos.f77"
+               'INPUT/emi_C96' <=copy=     "@[GSDCHEM_input_data]/emi_C96"
+                 'field_table' <=copy=     "@[PARMnems]/chm_field_table"
+                  'diag_table' <=copy=     "@[PARMnems]/chm_diag_table"
+              'nems.configure' <=atparse=  "@[PARMnems]/nems.configure.@[nems_configure].IN"
+    }
+
+    # Specify output files:
+    criteria output {
+        # WORKFILE                            .comparison. TARGET
+        # FV3GFS
+        'atmos_4xdaily.tile1.nc' .bitcmp. "@[CNTL]"
+        'atmos_4xdaily.tile2.nc' .bitcmp. "@[CNTL]"
+        'atmos_4xdaily.tile3.nc' .bitcmp. "@[CNTL]"
+        'atmos_4xdaily.tile4.nc' .bitcmp. "@[CNTL]"
+        'atmos_4xdaily.tile5.nc' .bitcmp. "@[CNTL]"
+        'atmos_4xdaily.tile6.nc' .bitcmp. "@[CNTL]"
+        'phyf000.tile1.nc'      .bitcmp. "@[CNTL]"
+        'phyf000.tile2.nc'      .bitcmp. "@[CNTL]"
+        'phyf000.tile3.nc'      .bitcmp. "@[CNTL]"
+        'phyf000.tile4.nc'      .bitcmp. "@[CNTL]"
+        'phyf000.tile5.nc'      .bitcmp. "@[CNTL]"
+        'phyf000.tile6.nc'      .bitcmp. "@[CNTL]"
+        'phyf024.tile1.nc'      .bitcmp. "@[CNTL]"
+        'phyf024.tile2.nc'      .bitcmp. "@[CNTL]"
+        'phyf024.tile3.nc'      .bitcmp. "@[CNTL]"
+        'phyf024.tile4.nc'      .bitcmp. "@[CNTL]"
+        'phyf024.tile5.nc'      .bitcmp. "@[CNTL]"
+        'phyf024.tile6.nc'      .bitcmp. "@[CNTL]"
+        'dynf000.tile1.nc'      .bitcmp. "@[CNTL]"
+        'dynf000.tile2.nc'      .bitcmp. "@[CNTL]"
+        'dynf000.tile3.nc'      .bitcmp. "@[CNTL]"
+        'dynf000.tile4.nc'      .bitcmp. "@[CNTL]"
+        'dynf000.tile5.nc'      .bitcmp. "@[CNTL]"
+        'dynf000.tile6.nc'      .bitcmp. "@[CNTL]"
+        'dynf024.tile1.nc'      .bitcmp. "@[CNTL]"
+        'dynf024.tile2.nc'      .bitcmp. "@[CNTL]"
+        'dynf024.tile3.nc'      .bitcmp. "@[CNTL]"
+        'dynf024.tile4.nc'      .bitcmp. "@[CNTL]"
+        'dynf024.tile5.nc'      .bitcmp. "@[CNTL]"
+        'dynf024.tile6.nc'      .bitcmp. "@[CNTL]"
+        'RESTART/coupler.res'                   .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.nc'                .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile1.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile2.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile3.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile4.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile5.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile6.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile1.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile2.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile3.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile4.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile5.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile6.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile1.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile2.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile3.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile4.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile5.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile6.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile1.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile2.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile3.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile4.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile5.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile6.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile1.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile2.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile3.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile4.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile5.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile6.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        # GSDCHEM
+        'anbc.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'anbc.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'anbc.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'anbc.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'anbc.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'anbc.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile1.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile2.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile3.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile4.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile5.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile6.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile1.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile2.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile3.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile4.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile5.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile6.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile1.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile2.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile3.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile4.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile5.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile6.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile1.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile2.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile3.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile4.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile5.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile6.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile1.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile2.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile3.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile4.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile5.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile6.dat'                        .bitcmp. "@[CNTL]"
+
+      # Executable validation.  This makes an MD5 sum of the fv3.exe
+      # for comparison against the MD5 sum made in the build job.
+      # This is to ensure the executable did not change during the
+      # test suite.
+        "@[build%target]" .md5cmp. "@[build%md5sum]"
+    }
+
+    spawn execute {
+        # Run the
+        {"@[build%target]", ranks="@[TASKS]" }
+    }
+}
+
+########################################################################
+
+test cpld_fv3_gfdlmp_gsdchem_between: fv3_gsdchem.exe {
+    use plat
+    use plat%default_resources
+    use fv3_defaults
+
+    TEST_DESCR="Compare FV3-GSDCHEM GFDL microphysics results with previous trunk version"
+    CNTL_NAME="@[TEST_NAME]"
+
+    DT_ATMOS='1200'
+
+    COM="@[plat%COMrt]/@[TEST_NAME]"          # Test result area
+    RUNDIR="@[plat%TMPrt]/@[TEST_NAME]"       # Test work area
+    CNTL="@[plat%BASELINE]/@[CNTL_NAME]"      # Control baseline area
+    FV3_input_data="@[plat%INPUTS]/FV3_input_data"
+    GSDCHEM_input_data="@[plat%INPUTS]/GSDCHEM_input_data"
+
+    # The build variable is the fv3.exe or fv3_appbuild.fv3, which
+    # provides the path to the build target, md5 sum, and modulefile.
+    build=fv3_gsdchem.exe
+
+    prep=fv3_prep(
+        RUNDIR="@[RUNDIR]",modules="@[fv3_gsdchem.exe%modules.nems]",
+        CNTL="@[CNTL]")
+
+    # - nems.configure ---
+    nems_configure='atm_chm_between'
+    atm_model='fv3'
+    atm_petlist_bounds="-1 -1"
+    chm_model='gsdchem'
+    chm_petlist_bounds="-1 -1"
+    coupling_interval_sec="@[DT_ATMOS]" # fv3 time step
+
+    # - model_configure ---
+    CPL='.true.'
+
+    # Specify input files.
+    filters input {
+      #    WORK FILE  <=filter=   SOURCE FILE
+                   'input.nml' <=atparse=  "@[PARMnems]/chm.gfdlmp.nml.IN"
+             'model_configure' <=atparse=  "@[PARMnems]/model_configure.IN"
+                 'aerosol.dat' <=copyfrom= "@[FV3_input_data]/INPUT"
+  'co2historicaldata_201*.txt' <=copyfrom= "@[FV3_input_data]/INPUT"
+      'sfc_emissivity_idx.txt' <=copyfrom= "@[FV3_input_data]/INPUT"
+   'solarconstant_noaa_an.txt' <=copyfrom= "@[FV3_input_data]/INPUT"
+                        '*grb' <=copyfrom= "@[FV3_input_data]"
+                     '*_table' <=copyfrom= "@[FV3_input_data]"
+                  '*configure' <=copyfrom= "@[FV3_input_data]"
+                       'INPUT' <=copy=     "@[FV3_input_data]/INPUT"
+         'global_o3prdlos.f77' <=copy=     "@[FV3_input_data]/INPUT/global_o3prdlos.f77"
+               'INPUT/emi_C96' <=copy=     "@[GSDCHEM_input_data]/emi_C96"
+                 'diag_table'  <=copy=     "@[PARMnems]/chm_diag_table_gfdlmp"
+                 'field_table' <=copy=     "@[PARMnems]/chm_field_table_gfdlmp"
+              'nems.configure' <=atparse=  "@[PARMnems]/nems.configure.@[nems_configure].IN"
+    }
+
+    # Specify output files:
+    criteria output {
+        # WORKFILE                            .comparison. TARGET
+        # FV3GFS
+        'atmos_4xdaily.tile1.nc' .bitcmp. "@[CNTL]"
+        'atmos_4xdaily.tile2.nc' .bitcmp. "@[CNTL]"
+        'atmos_4xdaily.tile3.nc' .bitcmp. "@[CNTL]"
+        'atmos_4xdaily.tile4.nc' .bitcmp. "@[CNTL]"
+        'atmos_4xdaily.tile5.nc' .bitcmp. "@[CNTL]"
+        'atmos_4xdaily.tile6.nc' .bitcmp. "@[CNTL]"
+        'phyf000.tile1.nc'       .bitcmp. "@[CNTL]"
+        'phyf000.tile2.nc'       .bitcmp. "@[CNTL]"
+        'phyf000.tile3.nc'       .bitcmp. "@[CNTL]"
+        'phyf000.tile4.nc'       .bitcmp. "@[CNTL]"
+        'phyf000.tile5.nc'       .bitcmp. "@[CNTL]"
+        'phyf000.tile6.nc'       .bitcmp. "@[CNTL]"
+        'phyf024.tile1.nc'       .bitcmp. "@[CNTL]"
+        'phyf024.tile2.nc'       .bitcmp. "@[CNTL]"
+        'phyf024.tile3.nc'       .bitcmp. "@[CNTL]"
+        'phyf024.tile4.nc'       .bitcmp. "@[CNTL]"
+        'phyf024.tile5.nc'       .bitcmp. "@[CNTL]"
+        'phyf024.tile6.nc'       .bitcmp. "@[CNTL]"
+        'dynf000.tile1.nc'       .bitcmp. "@[CNTL]"
+        'dynf000.tile2.nc'       .bitcmp. "@[CNTL]"
+        'dynf000.tile3.nc'       .bitcmp. "@[CNTL]"
+        'dynf000.tile4.nc'       .bitcmp. "@[CNTL]"
+        'dynf000.tile5.nc'       .bitcmp. "@[CNTL]"
+        'dynf000.tile6.nc'       .bitcmp. "@[CNTL]"
+        'dynf024.tile1.nc'       .bitcmp. "@[CNTL]"
+        'dynf024.tile2.nc'       .bitcmp. "@[CNTL]"
+        'dynf024.tile3.nc'       .bitcmp. "@[CNTL]"
+        'dynf024.tile4.nc'       .bitcmp. "@[CNTL]"
+        'dynf024.tile5.nc'       .bitcmp. "@[CNTL]"
+        'dynf024.tile6.nc'       .bitcmp. "@[CNTL]"
+        'RESTART/coupler.res'                   .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.nc'                .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile1.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile2.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile3.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile4.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile5.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_core.res.tile6.nc'          .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile1.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile2.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile3.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile4.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile5.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_srf_wnd.res.tile6.nc'       .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile1.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile2.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile3.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile4.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile5.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/fv_tracer.res.tile6.nc'        .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile1.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile2.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile3.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile4.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile5.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/phy_data.tile6.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile1.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile2.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile3.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile4.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile5.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        'RESTART/sfc_data.tile6.nc'             .bitcmp. "@[CNTL]/RESTART/"
+        # GSDCHEM
+        'anbc.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'anbc.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'anbc.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'anbc.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'anbc.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'anbc.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'anoc.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ao2D.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'aso2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cbae.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cbbc.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cbdt.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cboc.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cbsf.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'cbss.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'd1st.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'd2st.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'd3st.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'd4st.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'd5st.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'dms1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'emd1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'emd2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'emd3.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'emd4.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'emd5.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ems1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ems2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ems3.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ems4.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ems5.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'hobg.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'no3b.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ocbb.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'ohbg.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pbc1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pbc2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pm10.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pm25.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pmsa.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'poc1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'poc2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pp10.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pp25.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'pso2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile1.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile2.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile3.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile4.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile5.dat'                        .bitcmp. "@[CNTL]"
+        's1ea.tile6.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile1.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile2.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile3.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile4.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile5.dat'                        .bitcmp. "@[CNTL]"
+        's2ea.tile6.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile1.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile2.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile3.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile4.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile5.dat'                        .bitcmp. "@[CNTL]"
+        's3ea.tile6.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile1.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile2.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile3.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile4.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile5.dat'                        .bitcmp. "@[CNTL]"
+        's4ea.tile6.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile1.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile2.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile3.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile4.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile5.dat'                        .bitcmp. "@[CNTL]"
+        's5ea.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'sulf.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wbc2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wdt1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wdt2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wdt3.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wdt4.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wdt5.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'woc2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wp10.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wp25.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wpre.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wse1.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wse2.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wse3.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wse4.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wse5.tile6.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile1.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile2.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile3.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile4.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile5.dat'                        .bitcmp. "@[CNTL]"
+        'wso4.tile6.dat'                        .bitcmp. "@[CNTL]"
+
+      # Executable validation.  This makes an MD5 sum of the fv3.exe
+      # for comparison against the MD5 sum made in the build job.
+      # This is to ensure the executable did not change during the
+      # test suite.
+        "@[build%target]" .md5cmp. "@[build%md5sum]"
+    }
+
+    spawn execute {
+        # Run the
+        {"@[build%target]", ranks="@[TASKS]" }
+    }
+}
