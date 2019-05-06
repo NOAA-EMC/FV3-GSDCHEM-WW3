@@ -292,7 +292,7 @@ platform wcoss.cray {
     BUILD_QUEUE='&BUILDQ;'
 
     TASK_THROTTLE='11'
-    BUILD_WALLTIME="1800"
+    BUILD_WALLTIME="3600"
     DEFAULT_TEST_WALLTIME=1800
 
     BASELINE="/gpfs/hps3/emc/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190430"
