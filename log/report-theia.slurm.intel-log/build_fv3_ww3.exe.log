@@ -1,42 +1,28 @@
-Start prolog.task v19.04.17 on node t0791 for job 350337 :: Thu May 2 15:44:00 UTC 2019
+Start prolog.task v19.04.17 on node t0773 for job 1152964 :: Wed Jun 26 12:13:26 UTC 2019
 _______________________________________________________________
-End prolog.task v19.04.17 Thu May 2 15:44:00 UTC 2019
-+ sh -c 'cd /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/src ; ./install.sh fv3_ww3.exe'
+End prolog.task v19.04.17 Wed Jun 26 12:13:26 UTC 2019
++ sh -c 'cd /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/src ; ./install.sh fv3_ww3.exe'
 + [[ fv3_ww3.exe == fv3_ww3.exe ]]
-+ rm -f /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/exec/fv3_ww3.exe
-+ md5sum=/scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/exec/fv3_ww3.exe.md5
++ rm -f /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_ww3.exe
++ md5sum=/scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_ww3.exe.md5
 + OPTS=app=coupledFV3_WW3
-+ mkdir -p /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/exec /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/include
-+ rm -f /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/exec/fv3_ww3.exe /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/include/modules_fv3_ww3
++ mkdir -p /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/include
++ rm -f /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_ww3.exe /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/include/modules_fv3_ww3
 + cd /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3
 + module load slurm
 ++ /apps/lmod/7.7.18/libexec/lmod bash load slurm
-+ eval '__LMOD_REF_COUNT_CPATH="/apps/slurm/default/include:1;/apps/intel/composer_xe_2013_sp1.2.144/ipp/include:1;/apps/intel/composer_xe_2013_sp1.2.144/mkl/include:1;/apps/intel/composer_xe_2013_sp1.2.144/tbb/include:1";' export '__LMOD_REF_COUNT_CPATH;' 'CPATH="/apps/slurm/default/include:/apps/intel/composer_xe_2013_sp1.2.144/ipp/include:/apps/intel/composer_xe_2013_sp1.2.144/mkl/include:/apps/intel/composer_xe_2013_sp1.2.144/tbb/include";' export 'CPATH;' '__LMOD_REF_COUNT_LD_LIBRARY_PATH="/apps/slurm/default/lib:1;/apps/grib_api/1.14.7/intel/15.6.233/lib:1;/apps/nco/4.4.5-intel/lib:1;/apps/netcdf/4.3.0-intel/lib:1;/apps/intel/impi/5.1.2.150/intel64/lib:1;/apps/intel/composer_xe_2013_sp1.2.144/mpirt/lib/intel64:1;/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:3;/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:1;/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:1;/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4:1";' export '__LMOD_REF_COUNT_LD_LIBRARY_PATH;' 'LD_LIBRARY_PATH="/apps/slurm/default/lib:/apps/grib_api/1.14.7/intel/15.6.233/lib:/apps/nco/4.4.5-intel/lib:/apps/netcdf/4.3.0-intel/lib:/apps/intel/impi/5.1.2.150/intel64/lib:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4";' export 'LD_LIBRARY_PATH;' '__LMOD_REF_COUNT_LOADEDMODULES="intel/14.0.2:1;impi/5.1.2.150:1;grads/2.0.1a:1;matlab/R2017b:1;wgrib2/0.1.9.5.1:1;netcdf/4.3.0:1;ncview/2.1.3:1;hpss/hpss:1;nco/4.4.5:1;grib_api/1.14.7:1;cdo/1.9.5:1;rocoto/1.2.4:1;slurm/18.08:1";' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES="intel/14.0.2:impi/5.1.2.150:grads/2.0.1a:matlab/R2017b:wgrib2/0.1.9.5.1:netcdf/4.3.0:ncview/2.1.3:hpss/hpss:nco/4.4.5:grib_api/1.14.7:cdo/1.9.5:rocoto/1.2.4:slurm/18.08";' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MANPATH="/apps/slurm/default/share/man:1;/apps/rocoto/1.2.4/man:1;/apps/nco/4.4.5-intel/share/man:1;/apps/netcdf/4.3.0-intel/share/man:1;/apps/intel/impi/5.1.2.150/man:1;/apps/intel/composer_xe_2013_sp1.2.144/man/en_US:2;/apps/lmod/lmod/share/man:1;/apps/moab/default/share/man:1;/apps/torque/default/share/man:1;/apps/local/man:1";' export '__LMOD_REF_COUNT_MANPATH;' 'MANPATH="/apps/slurm/default/share/man:/apps/rocoto/1.2.4/man:/apps/nco/4.4.5-intel/share/man:/apps/netcdf/4.3.0-intel/share/man:/apps/intel/impi/5.1.2.150/man:/apps/intel/composer_xe_2013_sp1.2.144/man/en_US:/apps/lmod/lmod/share/man:/apps/moab/default/share/man:/apps/torque/default/share/man:/apps/local/man";' export 'MANPATH;' 'MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles:/opt/cray/modulefiles:/opt/cray/craype/default/modulefiles:/apps/modules/modulefamilies/intel:/apps/modules/modulefamilies/intel_impi";' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH="/apps/slurm/default/tools:1;/apps/slurm/default/bin:1;/apps/slurm/default/sbin:1;.:1;/apps/rocoto/1.2.4/bin:1;/apps/grib_api/1.14.7/intel/15.6.233/bin:1;/apps/cdo/1.9.5/intel/15.6.233/bin:1;/apps/nco/4.4.5-intel/bin:1;/apps/hpss:1;/apps/ncview/2.1.3/bin:1;/apps/netcdf/4.3.0-intel/bin:1;/apps/wgrib2/0.1.9.5.1/bin:1;/apps/matlab/R2017b/bin:1;/apps/grads/2.0.1a/bin:1;/apps/intel/impi/5.1.2.150/intel64/bin:1;/apps/intel/composer_xe_2013_sp1.2.144/mpirt/bin/intel64:1;/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64:2;/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py27/py27/bin:1;/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py27/bin:1;/apps/intel/composer_xe_2013_sp1.2.144/debugger/gui/intel64:1;/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64_mic:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/apps/moab/default/moab/tools:1;/apps/moab/default/bin:1;/apps/moab/default/sbin:1;/apps/torque/default/bin:1;/apps/torque/default/sbin:1;/apps/mam/default/bin:1;/apps/mam/default/sbin:1;/apps/local/bin:1;/apps/local/sbin:1";' export '__LMOD_REF_COUNT_PATH;' 'PATH="/apps/slurm/default/tools:/apps/slurm/default/bin:/apps/slurm/default/sbin:.:/apps/rocoto/1.2.4/bin:/apps/grib_api/1.14.7/intel/15.6.233/bin:/apps/cdo/1.9.5/intel/15.6.233/bin:/apps/nco/4.4.5-intel/bin:/apps/hpss:/apps/ncview/2.1.3/bin:/apps/netcdf/4.3.0-intel/bin:/apps/wgrib2/0.1.9.5.1/bin:/apps/matlab/R2017b/bin:/apps/grads/2.0.1a/bin:/apps/intel/impi/5.1.2.150/intel64/bin:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py27/py27/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py27/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gui/intel64:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64_mic:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/apps/moab/default/moab/tools:/apps/moab/default/bin:/apps/moab/default/sbin:/apps/torque/default/bin:/apps/torque/default/sbin:/apps/mam/default/bin:/apps/mam/default/sbin:/apps/local/bin:/apps/local/sbin";' export 'PATH;' '__LMOD_REF_COUNT__LMFILES_="/apps/modules/modulefiles/intel/14.0.2:1;/apps/modules/modulefamilies/intel/impi/5.1.2.150:1;/apps/modules/modulefiles/grads/2.0.1a:1;/apps/modules/modulefiles/matlab/R2017b:1;/apps/modules/modulefiles/wgrib2/0.1.9.5.1:1;/apps/modules/modulefamilies/intel/netcdf/4.3.0:1;/apps/modules/modulefiles/ncview/2.1.3:1;/apps/modules/modulefiles/hpss/hpss:1;/apps/modules/modulefamilies/intel/nco/4.4.5:1;/apps/modules/modulefamilies/intel/grib_api/1.14.7:1;/apps/modules/modulefamilies/intel/cdo/1.9.5:1;/apps/modules/modulefiles/rocoto/1.2.4:1;/apps/modules/modulefiles/slurm/18.08:1";' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_="/apps/modules/modulefiles/intel/14.0.2:/apps/modules/modulefamilies/intel/impi/5.1.2.150:/apps/modules/modulefiles/grads/2.0.1a:/apps/modules/modulefiles/matlab/R2017b:/apps/modules/modulefiles/wgrib2/0.1.9.5.1:/apps/modules/modulefamilies/intel/netcdf/4.3.0:/apps/modules/modulefiles/ncview/2.1.3:/apps/modules/modulefiles/hpss/hpss:/apps/modules/modulefamilies/intel/nco/4.4.5:/apps/modules/modulefamilies/intel/grib_api/1.14.7:/apps/modules/modulefamilies/intel/cdo/1.9.5:/apps/modules/modulefiles/rocoto/1.2.4:/apps/modules/modulefiles/slurm/18.08";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIixbIm1waSJdPSJpbXBpIix9LG1UPXtjZG89e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbC9jZG8vMS45LjUiLFsiZnVsbE5hbWUiXT0iY2RvLzEuOS41IixbImxvYWRPcmRlciJdPTExLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNkbyIsfSxncmFkcz17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL2dyYWRzLzIuMC4xYSIsWyJmdWxsTmFtZSJdPSJncmFkcy8yLjAu";' export '_ModuleTable001_;' '_ModuleTable002_="MWEiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJncmFkcyIsfSxncmliX2FwaT17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZhbWlsaWVzL2ludGVsL2dyaWJfYXBpLzEuMTQuNyIsWyJmdWxsTmFtZSJdPSJncmliX2FwaS8xLjE0LjciLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ3JpYl9hcGkiLH0saHBzcz17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL2hwc3MvaHBzcyIsWyJmdWxsTmFtZSJdPSJocHNzL2hwc3MiLFsibG9hZE9yZGVyIl09OCxwcm9wVD17fSxbInN0";' export '_ModuleTable002_;' '_ModuleTable003_="YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJocHNzIix9LGltcGk9e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbC9pbXBpLzUuMS4yLjE1MCIsWyJmdWxsTmFtZSJdPSJpbXBpLzUuMS4yLjE1MCIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImltcGkiLH0saW50ZWw9e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9pbnRlbC8xNC4wLjIiLFsiZnVsbE5hbWUiXT0iaW50ZWwvMTQuMC4yIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNl";' export '_ModuleTable003_;' '_ModuleTable004_="ck5hbWUiXT0iaW50ZWwiLH0sbWF0bGFiPXtbImZuIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMvbWF0bGFiL1IyMDE3YiIsWyJmdWxsTmFtZSJdPSJtYXRsYWIvUjIwMTdiIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibWF0bGFiL1IyMDE3YiIsfSxuY289e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbC9uY28vNC40LjUiLFsiZnVsbE5hbWUiXT0ibmNvLzQuNC41IixbImxvYWRPcmRlciJdPTkscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibmNvIix9LG5jdmlldz17WyJmbiJdPSIvYXBw";' export '_ModuleTable004_;' '_ModuleTable005_="cy9tb2R1bGVzL21vZHVsZWZpbGVzL25jdmlldy8yLjEuMyIsWyJmdWxsTmFtZSJdPSJuY3ZpZXcvMi4xLjMiLFsibG9hZE9yZGVyIl09Nyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJuY3ZpZXciLH0sbmV0Y2RmPXtbImZuIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmFtaWxpZXMvaW50ZWwvbmV0Y2RmLzQuMy4wIixbImZ1bGxOYW1lIl09Im5ldGNkZi80LjMuMCIsWyJsb2FkT3JkZXIiXT02LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im5ldGNkZi80LjMuMCIsfSxyb2NvdG89e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9yb2NvdG8v";' export '_ModuleTable005_;' '_ModuleTable006_="MS4yLjQiLFsiZnVsbE5hbWUiXT0icm9jb3RvLzEuMi40IixbImxvYWRPcmRlciJdPTEyLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InJvY290byIsfSxzbHVybT17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL3NsdXJtLzE4LjA4IixbImZ1bGxOYW1lIl09InNsdXJtLzE4LjA4IixbImxvYWRPcmRlciJdPTEzLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNsdXJtIix9LHdncmliMj17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL3dncmliMi8wLjEuOS41LjEiLFsiZnVsbE5hbWUiXT0id2dyaWIyLzAuMS45LjUuMSIsWyJs";' export '_ModuleTable006_;' '_ModuleTable007_="b2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IndncmliMiIsfSx9LG1wYXRoQT17Ii9hcHBzL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlIiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9MaW51eCIsIi9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMiLCIvb3B0L2NyYXkvbW9kdWxlZmlsZXMiLCIvb3B0L2NyYXkvY3JheXBlL2RlZmF1bHQvbW9kdWxlZmlsZXMiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZhbWlsaWVzL2ludGVsIiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbF9pbXBpIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9hcHBzL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9D";' export '_ModuleTable007_;' '_ModuleTable008_="b3JlOi9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMvTGludXg6L2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlczovb3B0L2NyYXkvbW9kdWxlZmlsZXM6L29wdC9jcmF5L2NyYXlwZS9kZWZhdWx0L21vZHVsZWZpbGVzIix9";' export '_ModuleTable008_;' '_ModuleTable_Sz_="8";' export '_ModuleTable_Sz_;'
-++ __LMOD_REF_COUNT_CPATH='/apps/slurm/default/include:1;/apps/intel/composer_xe_2013_sp1.2.144/ipp/include:1;/apps/intel/composer_xe_2013_sp1.2.144/mkl/include:1;/apps/intel/composer_xe_2013_sp1.2.144/tbb/include:1'
-++ export __LMOD_REF_COUNT_CPATH
-++ CPATH=/apps/slurm/default/include:/apps/intel/composer_xe_2013_sp1.2.144/ipp/include:/apps/intel/composer_xe_2013_sp1.2.144/mkl/include:/apps/intel/composer_xe_2013_sp1.2.144/tbb/include
-++ export CPATH
-++ __LMOD_REF_COUNT_LD_LIBRARY_PATH='/apps/slurm/default/lib:1;/apps/grib_api/1.14.7/intel/15.6.233/lib:1;/apps/nco/4.4.5-intel/lib:1;/apps/netcdf/4.3.0-intel/lib:1;/apps/intel/impi/5.1.2.150/intel64/lib:1;/apps/intel/composer_xe_2013_sp1.2.144/mpirt/lib/intel64:1;/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:3;/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:1;/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:1;/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4:1'
-++ export __LMOD_REF_COUNT_LD_LIBRARY_PATH
-++ LD_LIBRARY_PATH=/apps/slurm/default/lib:/apps/grib_api/1.14.7/intel/15.6.233/lib:/apps/nco/4.4.5-intel/lib:/apps/netcdf/4.3.0-intel/lib:/apps/intel/impi/5.1.2.150/intel64/lib:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:/apps/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4
-++ export LD_LIBRARY_PATH
-++ __LMOD_REF_COUNT_LOADEDMODULES='intel/14.0.2:1;impi/5.1.2.150:1;grads/2.0.1a:1;matlab/R2017b:1;wgrib2/0.1.9.5.1:1;netcdf/4.3.0:1;ncview/2.1.3:1;hpss/hpss:1;nco/4.4.5:1;grib_api/1.14.7:1;cdo/1.9.5:1;rocoto/1.2.4:1;slurm/18.08:1'
+Warning: The Slurm module is no longer needed and will be removed on August 1st
+2019 
++ eval '__LMOD_REF_COUNT_LOADEDMODULES="intel/14.0.2:1;impi/5.1.2.150:1;grads/2.0.1a:1;matlab/R2017b:1;wgrib2/0.1.9.5.1:1;netcdf/4.3.0:1;ncview/2.1.3:1;hpss/hpss:1;nco/4.4.5:1;grib_api/1.14.7:1;cdo/1.9.5:1;rocoto/1.3.0:1;slurm/18.08:1";' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES="intel/14.0.2:impi/5.1.2.150:grads/2.0.1a:matlab/R2017b:wgrib2/0.1.9.5.1:netcdf/4.3.0:ncview/2.1.3:hpss/hpss:nco/4.4.5:grib_api/1.14.7:cdo/1.9.5:rocoto/1.3.0:slurm/18.08";' export 'LOADEDMODULES;' 'MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles:/opt/cray/modulefiles:/opt/cray/craype/default/modulefiles:/apps/modules/modulefamilies/intel:/apps/modules/modulefamilies/intel_impi";' export 'MODULEPATH;' '__LMOD_REF_COUNT__LMFILES_="/apps/modules/modulefiles/intel/14.0.2:1;/apps/modules/modulefamilies/intel/impi/5.1.2.150:1;/apps/modules/modulefiles/grads/2.0.1a:1;/apps/modules/modulefiles/matlab/R2017b:1;/apps/modules/modulefiles/wgrib2/0.1.9.5.1:1;/apps/modules/modulefamilies/intel/netcdf/4.3.0:1;/apps/modules/modulefiles/ncview/2.1.3:1;/apps/modules/modulefiles/hpss/hpss:1;/apps/modules/modulefamilies/intel/nco/4.4.5:1;/apps/modules/modulefamilies/intel/grib_api/1.14.7:1;/apps/modules/modulefamilies/intel/cdo/1.9.5:1;/apps/modules/modulefiles/rocoto/1.3.0:1;/apps/modules/modulefiles/slurm/18.08:1";' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_="/apps/modules/modulefiles/intel/14.0.2:/apps/modules/modulefamilies/intel/impi/5.1.2.150:/apps/modules/modulefiles/grads/2.0.1a:/apps/modules/modulefiles/matlab/R2017b:/apps/modules/modulefiles/wgrib2/0.1.9.5.1:/apps/modules/modulefamilies/intel/netcdf/4.3.0:/apps/modules/modulefiles/ncview/2.1.3:/apps/modules/modulefiles/hpss/hpss:/apps/modules/modulefamilies/intel/nco/4.4.5:/apps/modules/modulefamilies/intel/grib_api/1.14.7:/apps/modules/modulefamilies/intel/cdo/1.9.5:/apps/modules/modulefiles/rocoto/1.3.0:/apps/modules/modulefiles/slurm/18.08";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIixbIm1waSJdPSJpbXBpIix9LG1UPXtjZG89e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbC9jZG8vMS45LjUiLFsiZnVsbE5hbWUiXT0iY2RvLzEuOS41IixbImxvYWRPcmRlciJdPTExLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNkbyIsfSxncmFkcz17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL2dyYWRzLzIuMC4xYSIsWyJmdWxsTmFtZSJdPSJncmFkcy8yLjAu";' export '_ModuleTable001_;' '_ModuleTable002_="MWEiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJncmFkcyIsfSxncmliX2FwaT17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZhbWlsaWVzL2ludGVsL2dyaWJfYXBpLzEuMTQuNyIsWyJmdWxsTmFtZSJdPSJncmliX2FwaS8xLjE0LjciLFsibG9hZE9yZGVyIl09MTAscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ3JpYl9hcGkiLH0saHBzcz17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL2hwc3MvaHBzcyIsWyJmdWxsTmFtZSJdPSJocHNzL2hwc3MiLFsibG9hZE9yZGVyIl09OCxwcm9wVD17fSxbInN0";' export '_ModuleTable002_;' '_ModuleTable003_="YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJocHNzIix9LGltcGk9e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbC9pbXBpLzUuMS4yLjE1MCIsWyJmdWxsTmFtZSJdPSJpbXBpLzUuMS4yLjE1MCIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImltcGkiLH0saW50ZWw9e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9pbnRlbC8xNC4wLjIiLFsiZnVsbE5hbWUiXT0iaW50ZWwvMTQuMC4yIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNl";' export '_ModuleTable003_;' '_ModuleTable004_="ck5hbWUiXT0iaW50ZWwiLH0sbWF0bGFiPXtbImZuIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMvbWF0bGFiL1IyMDE3YiIsWyJmdWxsTmFtZSJdPSJtYXRsYWIvUjIwMTdiIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibWF0bGFiL1IyMDE3YiIsfSxuY289e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbC9uY28vNC40LjUiLFsiZnVsbE5hbWUiXT0ibmNvLzQuNC41IixbImxvYWRPcmRlciJdPTkscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibmNvIix9LG5jdmlldz17WyJmbiJdPSIvYXBw";' export '_ModuleTable004_;' '_ModuleTable005_="cy9tb2R1bGVzL21vZHVsZWZpbGVzL25jdmlldy8yLjEuMyIsWyJmdWxsTmFtZSJdPSJuY3ZpZXcvMi4xLjMiLFsibG9hZE9yZGVyIl09Nyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJuY3ZpZXciLH0sbmV0Y2RmPXtbImZuIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmFtaWxpZXMvaW50ZWwvbmV0Y2RmLzQuMy4wIixbImZ1bGxOYW1lIl09Im5ldGNkZi80LjMuMCIsWyJsb2FkT3JkZXIiXT02LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im5ldGNkZi80LjMuMCIsfSxyb2NvdG89e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9yb2NvdG8v";' export '_ModuleTable005_;' '_ModuleTable006_="MS4zLjAiLFsiZnVsbE5hbWUiXT0icm9jb3RvLzEuMy4wIixbImxvYWRPcmRlciJdPTEyLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InJvY290byIsfSxzbHVybT17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL3NsdXJtLzE4LjA4IixbImZ1bGxOYW1lIl09InNsdXJtLzE4LjA4IixbImxvYWRPcmRlciJdPTEzLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNsdXJtIix9LHdncmliMj17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL3dncmliMi8wLjEuOS41LjEiLFsiZnVsbE5hbWUiXT0id2dyaWIyLzAuMS45LjUuMSIsWyJs";' export '_ModuleTable006_;' '_ModuleTable007_="b2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IndncmliMiIsfSx9LG1wYXRoQT17Ii9hcHBzL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlIiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9MaW51eCIsIi9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMiLCIvb3B0L2NyYXkvbW9kdWxlZmlsZXMiLCIvb3B0L2NyYXkvY3JheXBlL2RlZmF1bHQvbW9kdWxlZmlsZXMiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZhbWlsaWVzL2ludGVsIiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbF9pbXBpIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9hcHBzL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9D";' export '_ModuleTable007_;' '_ModuleTable008_="b3JlOi9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMvTGludXg6L2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlczovb3B0L2NyYXkvbW9kdWxlZmlsZXM6L29wdC9jcmF5L2NyYXlwZS9kZWZhdWx0L21vZHVsZWZpbGVzIix9";' export '_ModuleTable008_;' '_ModuleTable_Sz_="8";' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LOADEDMODULES='intel/14.0.2:1;impi/5.1.2.150:1;grads/2.0.1a:1;matlab/R2017b:1;wgrib2/0.1.9.5.1:1;netcdf/4.3.0:1;ncview/2.1.3:1;hpss/hpss:1;nco/4.4.5:1;grib_api/1.14.7:1;cdo/1.9.5:1;rocoto/1.3.0:1;slurm/18.08:1'
 ++ export __LMOD_REF_COUNT_LOADEDMODULES
-++ LOADEDMODULES=intel/14.0.2:impi/5.1.2.150:grads/2.0.1a:matlab/R2017b:wgrib2/0.1.9.5.1:netcdf/4.3.0:ncview/2.1.3:hpss/hpss:nco/4.4.5:grib_api/1.14.7:cdo/1.9.5:rocoto/1.2.4:slurm/18.08
+++ LOADEDMODULES=intel/14.0.2:impi/5.1.2.150:grads/2.0.1a:matlab/R2017b:wgrib2/0.1.9.5.1:netcdf/4.3.0:ncview/2.1.3:hpss/hpss:nco/4.4.5:grib_api/1.14.7:cdo/1.9.5:rocoto/1.3.0:slurm/18.08
 ++ export LOADEDMODULES
-++ __LMOD_REF_COUNT_MANPATH='/apps/slurm/default/share/man:1;/apps/rocoto/1.2.4/man:1;/apps/nco/4.4.5-intel/share/man:1;/apps/netcdf/4.3.0-intel/share/man:1;/apps/intel/impi/5.1.2.150/man:1;/apps/intel/composer_xe_2013_sp1.2.144/man/en_US:2;/apps/lmod/lmod/share/man:1;/apps/moab/default/share/man:1;/apps/torque/default/share/man:1;/apps/local/man:1'
-++ export __LMOD_REF_COUNT_MANPATH
-++ MANPATH=/apps/slurm/default/share/man:/apps/rocoto/1.2.4/man:/apps/nco/4.4.5-intel/share/man:/apps/netcdf/4.3.0-intel/share/man:/apps/intel/impi/5.1.2.150/man:/apps/intel/composer_xe_2013_sp1.2.144/man/en_US:/apps/lmod/lmod/share/man:/apps/moab/default/share/man:/apps/torque/default/share/man:/apps/local/man
-++ export MANPATH
 ++ MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles:/opt/cray/modulefiles:/opt/cray/craype/default/modulefiles:/apps/modules/modulefamilies/intel:/apps/modules/modulefamilies/intel_impi
 ++ export MODULEPATH
-++ __LMOD_REF_COUNT_PATH='/apps/slurm/default/tools:1;/apps/slurm/default/bin:1;/apps/slurm/default/sbin:1;.:1;/apps/rocoto/1.2.4/bin:1;/apps/grib_api/1.14.7/intel/15.6.233/bin:1;/apps/cdo/1.9.5/intel/15.6.233/bin:1;/apps/nco/4.4.5-intel/bin:1;/apps/hpss:1;/apps/ncview/2.1.3/bin:1;/apps/netcdf/4.3.0-intel/bin:1;/apps/wgrib2/0.1.9.5.1/bin:1;/apps/matlab/R2017b/bin:1;/apps/grads/2.0.1a/bin:1;/apps/intel/impi/5.1.2.150/intel64/bin:1;/apps/intel/composer_xe_2013_sp1.2.144/mpirt/bin/intel64:1;/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64:2;/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py27/py27/bin:1;/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py27/bin:1;/apps/intel/composer_xe_2013_sp1.2.144/debugger/gui/intel64:1;/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64_mic:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/apps/moab/default/moab/tools:1;/apps/moab/default/bin:1;/apps/moab/default/sbin:1;/apps/torque/default/bin:1;/apps/torque/default/sbin:1;/apps/mam/default/bin:1;/apps/mam/default/sbin:1;/apps/local/bin:1;/apps/local/sbin:1'
-++ export __LMOD_REF_COUNT_PATH
-++ PATH=/apps/slurm/default/tools:/apps/slurm/default/bin:/apps/slurm/default/sbin:.:/apps/rocoto/1.2.4/bin:/apps/grib_api/1.14.7/intel/15.6.233/bin:/apps/cdo/1.9.5/intel/15.6.233/bin:/apps/nco/4.4.5-intel/bin:/apps/hpss:/apps/ncview/2.1.3/bin:/apps/netcdf/4.3.0-intel/bin:/apps/wgrib2/0.1.9.5.1/bin:/apps/matlab/R2017b/bin:/apps/grads/2.0.1a/bin:/apps/intel/impi/5.1.2.150/intel64/bin:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py27/py27/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py27/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gui/intel64:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64_mic:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/apps/moab/default/moab/tools:/apps/moab/default/bin:/apps/moab/default/sbin:/apps/torque/default/bin:/apps/torque/default/sbin:/apps/mam/default/bin:/apps/mam/default/sbin:/apps/local/bin:/apps/local/sbin
-++ export PATH
-++ __LMOD_REF_COUNT__LMFILES_='/apps/modules/modulefiles/intel/14.0.2:1;/apps/modules/modulefamilies/intel/impi/5.1.2.150:1;/apps/modules/modulefiles/grads/2.0.1a:1;/apps/modules/modulefiles/matlab/R2017b:1;/apps/modules/modulefiles/wgrib2/0.1.9.5.1:1;/apps/modules/modulefamilies/intel/netcdf/4.3.0:1;/apps/modules/modulefiles/ncview/2.1.3:1;/apps/modules/modulefiles/hpss/hpss:1;/apps/modules/modulefamilies/intel/nco/4.4.5:1;/apps/modules/modulefamilies/intel/grib_api/1.14.7:1;/apps/modules/modulefamilies/intel/cdo/1.9.5:1;/apps/modules/modulefiles/rocoto/1.2.4:1;/apps/modules/modulefiles/slurm/18.08:1'
+++ __LMOD_REF_COUNT__LMFILES_='/apps/modules/modulefiles/intel/14.0.2:1;/apps/modules/modulefamilies/intel/impi/5.1.2.150:1;/apps/modules/modulefiles/grads/2.0.1a:1;/apps/modules/modulefiles/matlab/R2017b:1;/apps/modules/modulefiles/wgrib2/0.1.9.5.1:1;/apps/modules/modulefamilies/intel/netcdf/4.3.0:1;/apps/modules/modulefiles/ncview/2.1.3:1;/apps/modules/modulefiles/hpss/hpss:1;/apps/modules/modulefamilies/intel/nco/4.4.5:1;/apps/modules/modulefamilies/intel/grib_api/1.14.7:1;/apps/modules/modulefamilies/intel/cdo/1.9.5:1;/apps/modules/modulefiles/rocoto/1.3.0:1;/apps/modules/modulefiles/slurm/18.08:1'
 ++ export __LMOD_REF_COUNT__LMFILES_
-++ _LMFILES_=/apps/modules/modulefiles/intel/14.0.2:/apps/modules/modulefamilies/intel/impi/5.1.2.150:/apps/modules/modulefiles/grads/2.0.1a:/apps/modules/modulefiles/matlab/R2017b:/apps/modules/modulefiles/wgrib2/0.1.9.5.1:/apps/modules/modulefamilies/intel/netcdf/4.3.0:/apps/modules/modulefiles/ncview/2.1.3:/apps/modules/modulefiles/hpss/hpss:/apps/modules/modulefamilies/intel/nco/4.4.5:/apps/modules/modulefamilies/intel/grib_api/1.14.7:/apps/modules/modulefamilies/intel/cdo/1.9.5:/apps/modules/modulefiles/rocoto/1.2.4:/apps/modules/modulefiles/slurm/18.08
+++ _LMFILES_=/apps/modules/modulefiles/intel/14.0.2:/apps/modules/modulefamilies/intel/impi/5.1.2.150:/apps/modules/modulefiles/grads/2.0.1a:/apps/modules/modulefiles/matlab/R2017b:/apps/modules/modulefiles/wgrib2/0.1.9.5.1:/apps/modules/modulefamilies/intel/netcdf/4.3.0:/apps/modules/modulefiles/ncview/2.1.3:/apps/modules/modulefiles/hpss/hpss:/apps/modules/modulefamilies/intel/nco/4.4.5:/apps/modules/modulefamilies/intel/grib_api/1.14.7:/apps/modules/modulefamilies/intel/cdo/1.9.5:/apps/modules/modulefiles/rocoto/1.3.0:/apps/modules/modulefiles/slurm/18.08
 ++ export _LMFILES_
 ++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIixbIm1waSJdPSJpbXBpIix9LG1UPXtjZG89e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbC9jZG8vMS45LjUiLFsiZnVsbE5hbWUiXT0iY2RvLzEuOS41IixbImxvYWRPcmRlciJdPTExLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNkbyIsfSxncmFkcz17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL2dyYWRzLzIuMC4xYSIsWyJmdWxsTmFtZSJdPSJncmFkcy8yLjAu
 ++ export _ModuleTable001_
@@ -48,7 +34,7 @@ End prolog.task v19.04.17 Thu May 2 15:44:00 UTC 2019
 ++ export _ModuleTable004_
 ++ _ModuleTable005_=cy9tb2R1bGVzL21vZHVsZWZpbGVzL25jdmlldy8yLjEuMyIsWyJmdWxsTmFtZSJdPSJuY3ZpZXcvMi4xLjMiLFsibG9hZE9yZGVyIl09Nyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJuY3ZpZXciLH0sbmV0Y2RmPXtbImZuIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmFtaWxpZXMvaW50ZWwvbmV0Y2RmLzQuMy4wIixbImZ1bGxOYW1lIl09Im5ldGNkZi80LjMuMCIsWyJsb2FkT3JkZXIiXT02LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im5ldGNkZi80LjMuMCIsfSxyb2NvdG89e1siZm4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9yb2NvdG8v
 ++ export _ModuleTable005_
-++ _ModuleTable006_=MS4yLjQiLFsiZnVsbE5hbWUiXT0icm9jb3RvLzEuMi40IixbImxvYWRPcmRlciJdPTEyLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InJvY290byIsfSxzbHVybT17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL3NsdXJtLzE4LjA4IixbImZ1bGxOYW1lIl09InNsdXJtLzE4LjA4IixbImxvYWRPcmRlciJdPTEzLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNsdXJtIix9LHdncmliMj17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL3dncmliMi8wLjEuOS41LjEiLFsiZnVsbE5hbWUiXT0id2dyaWIyLzAuMS45LjUuMSIsWyJs
+++ _ModuleTable006_=MS4zLjAiLFsiZnVsbE5hbWUiXT0icm9jb3RvLzEuMy4wIixbImxvYWRPcmRlciJdPTEyLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InJvY290byIsfSxzbHVybT17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL3NsdXJtLzE4LjA4IixbImZ1bGxOYW1lIl09InNsdXJtLzE4LjA4IixbImxvYWRPcmRlciJdPTEzLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNsdXJtIix9LHdncmliMj17WyJmbiJdPSIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL3dncmliMi8wLjEuOS41LjEiLFsiZnVsbE5hbWUiXT0id2dyaWIyLzAuMS45LjUuMSIsWyJs
 ++ export _ModuleTable006_
 ++ _ModuleTable007_=b2FkT3JkZXIiXT01LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IndncmliMiIsfSx9LG1wYXRoQT17Ii9hcHBzL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlIiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9MaW51eCIsIi9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMiLCIvb3B0L2NyYXkvbW9kdWxlZmlsZXMiLCIvb3B0L2NyYXkvY3JheXBlL2RlZmF1bHQvbW9kdWxlZmlsZXMiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZhbWlsaWVzL2ludGVsIiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbF9pbXBpIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9hcHBzL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9D
 ++ export _ModuleTable007_
@@ -59,7 +45,7 @@ End prolog.task v19.04.17 Thu May 2 15:44:00 UTC 2019
 ++ : -s sh
 + eval
 + which aprun
-which: no aprun in (/apps/slurm/default/tools:/apps/slurm/default/bin:/apps/slurm/default/sbin:.:/apps/rocoto/1.2.4/bin:/apps/grib_api/1.14.7/intel/15.6.233/bin:/apps/cdo/1.9.5/intel/15.6.233/bin:/apps/nco/4.4.5-intel/bin:/apps/hpss:/apps/ncview/2.1.3/bin:/apps/netcdf/4.3.0-intel/bin:/apps/wgrib2/0.1.9.5.1/bin:/apps/matlab/R2017b/bin:/apps/grads/2.0.1a/bin:/apps/intel/impi/5.1.2.150/intel64/bin:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py27/py27/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py27/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gui/intel64:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64_mic:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/apps/moab/default/moab/tools:/apps/moab/default/bin:/apps/moab/default/sbin:/apps/torque/default/bin:/apps/torque/default/sbin:/apps/mam/default/bin:/apps/mam/default/sbin:/apps/local/bin:/apps/local/sbin)
+which: no aprun in (.:/apps/rocoto/1.3.0/bin:/apps/grib_api/1.14.7/intel/15.6.233/bin:/apps/cdo/1.9.5/intel/15.6.233/bin:/apps/nco/4.4.5-intel/bin:/apps/hpss:/apps/ncview/2.1.3/bin:/apps/netcdf/4.3.0-intel/bin:/apps/wgrib2/0.1.9.5.1/bin:/apps/matlab/R2017b/bin:/apps/grads/2.0.1a/bin:/apps/intel/impi/5.1.2.150/intel64/bin:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py27/py27/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py27/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gui/intel64:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64_mic:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/apps/local/bin:/apps/local/sbin:/apps/slurm/default/slurm/tools:/apps/slurm/default/bin:/apps/slurm/default/sbin:/apps/slurm/tools/sbank/bin)
 + ./NEMS/NEMSAppBuilder rebuild app=coupledFV3_WW3
 ls: cannot access ../conf/component_*.mk: No such file or directory
 NEMSAppBuilder: make  app=coupledFV3_WW3 distclean
@@ -79,10 +65,6 @@ cd .. ; \
 ls -1 */*.a */*.o */*.mod */depend \
   | grep -vE 'INSTALL|\.git' | xargs rm -f || true ; \
 rm -rf FMS_INSTALL || true
-ls: cannot access */*.a: No such file or directory
-ls: cannot access */*.o: No such file or directory
-ls: cannot access */*.mod: No such file or directory
-ls: cannot access */depend: No such file or directory
 make[1]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/fv3gfs'
 rm -rf /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL/fms.mk /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/fv3gfs/makefile.temp.clean
 cat /dev/null > /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/conf/configure.fv3
@@ -93,13 +75,6 @@ make[1]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_
 Cleaning ... 
 
 (cd gfsphysics     && make clean)
-
-Build standalone FV3 gfsphysics ...
-
-make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics'
-makefile:208: depend: No such file or directory
-Building dependencies ...
-make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics'
 
 Build standalone FV3 gfsphysics ...
 
@@ -180,6 +155,8 @@ rm -rf /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV
 export COMP_SRCDIR="/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model" COMP_BINDIR="/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3_INSTALL" WW3_COMP="theia"                                  ; \
 export ESMFMKFILE=/dev/null                             ; \
 exec make distclean
+Warning: The Slurm module is no longer needed and will be removed on August 1st
+2019 
 Lmod has detected the following error: The following module(s) are unknown:
 "modules.nems"
 
@@ -193,6 +170,7 @@ Also make sure that all modulefiles written in TCL start with the string
 
 
 No modules loaded
+which: no nc-config in (.:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/apps/local/bin:/apps/local/sbin:/apps/slurm/default/slurm/tools:/apps/slurm/default/bin:/apps/slurm/default/sbin:/apps/slurm/tools/sbank/bin)
 make[1]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/esmf'
 \rm -f /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/exe/ww3_multi_esmf *.o *.mod
 /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/w3_clean -c
@@ -273,6 +251,10 @@ if [ "Q$ESMFMKFILE" != Q ] ; then egrep 'VERSION|^ESMF_[A-Z]*DIR' < "$ESMFMKFILE
 make[1]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS'
 . /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/module-setup.sh.inc ; stack=`ulimit -S -s`                  ; ulimit -S -s 200000                     ; module use /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf                 ; module load modules.nems              ; module list                           ; ulimit -S -s $stack ; cd /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/fv3gfs                      ; \
 exec make  all
+Warning: The Slurm module is no longer needed and will be removed on August 1st
+2019 
+Warning: The Slurm module is no longer needed and will be removed on August 1st
+2019 
 
 Currently Loaded Modules:
   1) intel/15.1.133       7) sp/v2.0.2      13) g2/v2.5.0
@@ -558,6 +540,10 @@ cp -fp /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/s
        "/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3"/conf/modules.fv3
 . /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/module-setup.sh.inc ; stack=`ulimit -S -s`                  ; ulimit -S -s 200000                     ; module use /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf                 ; module load modules.nems              ; module list                           ; ulimit -S -s $stack ; cd /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 ; \
   exec make COMP=FV3 COMP_SRCDIR=/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 COMP_BINDIR=/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL MACHINE_ID=theia FMS_DIR=/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL  nemsinstall
+Warning: The Slurm module is no longer needed and will be removed on August 1st
+2019 
+Warning: The Slurm module is no longer needed and will be removed on August 1st
+2019 
 
 Currently Loaded Modules:
   1) intel/15.1.133       7) sp/v2.0.2      13) g2/v2.5.0
@@ -1124,6 +1110,10 @@ test -d /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/F
 . /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/module-setup.sh.inc ; stack=`ulimit -S -s`                  ; ulimit -S -s 200000                     ; module use /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf                 ; module load modules.nems              ; module list                           ; ulimit -S -s $stack ; set -x ; cd /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/esmf       ; \
 export COMP_SRCDIR="/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model" COMP_BINDIR="/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3_INSTALL" WW3_COMP="theia"                                  ; \
 exec make -j 1 WW3_COMP="theia" ww3_nems
+Warning: The Slurm module is no longer needed and will be removed on August 1st
+2019 
+Warning: The Slurm module is no longer needed and will be removed on August 1st
+2019 
 
 Currently Loaded Modules:
   1) intel/15.1.133       7) sp/v2.0.2      13) g2/v2.5.0
@@ -1204,24 +1194,62 @@ Processing ww3_grid
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing constants 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3servmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3arrymd 
 ad3 : processing w3gsrumd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3gdatmd 
-ad3 : processing w3odatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3idatmd 
+ad3 : processing w3odatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ad3 : processing w3adatmd 
 ad3 : processing w3dispmd 
 ad3 : processing w3nmlgridmd 
-ad3 : processing w3adatmd 
 ad3 : processing w3timemd 
+ls: ls: cannot access *.modcannot access *.mod: No such file or directoryls: 
+: No such file or directorycannot access *.mod
+: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmmdatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3src4md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3snl1md 
 ad3 : processing w3triamd 
 ad3 : processing w3parall 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.modls: : No such file or directorycannot access *.mod
+: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3wdatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iogrmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_grid 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_grid
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1249,7 +1277,15 @@ make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_
 ad3 : processing w3sdb1md 
 ad3 : processing w3sbt1md 
 ad3 : processing w3iogomd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_outf 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_outf
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1275,10 +1311,20 @@ Processing ww3_outp
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing w3bullmd 
-ad3 : processing w3iopomd 
-ad3 : processing w3flx1md 
 ad3 : processing w3partmd 
+ad3 : processing w3flx1md 
+ad3 : processing w3iopomd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_outp 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_outp
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1287,8 +1333,7 @@ make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_F
                      *** end of compilation ***
                        **********************
  
-\rm -f /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/tempswitch
-/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/w3_make ww3_outp
+/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/w3_make ww3_prep
  
                 *****************************
               ***   WAVEWATCH III make      ***
@@ -1299,24 +1344,18 @@ Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Save source codes : yes
 Save listings     : yes
  
-[INFO] list of the programs selected : ww3_outp
-Making makefile ...
+[INFO] list of the programs selected : ww3_prep
  
-                *****************************
-              ***   WAVEWATCH III makefile  ***
-                *****************************
- 
-switch = /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/switch
-   new NCO modifications
-   new GRIB package
-   Checking all subroutines for modules (this may take a while) ...
- 
-Processing ww3_outp
+Processing ww3_prep
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
-ad3 : processing w3bullmd 
-ad3 : processing ww3_outp 
-      Linking ww3_outp
+ad3 : processing w3fldsmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ad3 : processing ww3_prep 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+      Linking ww3_prep
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
  
@@ -1324,6 +1363,130 @@ make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_F
                      *** end of compilation ***
                        **********************
  
+/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/w3_make ww3_gint
+ 
+                *****************************
+              ***   WAVEWATCH III make      ***
+                *****************************
+ 
+Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model
+Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
+Save source codes : yes
+Save listings     : yes
+ 
+[INFO] list of the programs selected : ww3_gint
+ 
+Processing ww3_gint
+---------------------
+make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
+ad3 : processing ww3_gint 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+      Linking ww3_gint
+make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
+ 
+ 
+                       **********************
+                     *** end of compilation ***
+                       **********************
+ 
+/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/w3_make ww3_prnc
+ 
+                *****************************
+              ***   WAVEWATCH III make      ***
+                *****************************
+ 
+Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model
+Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
+Save source codes : yes
+Save listings     : yes
+ 
+[INFO] list of the programs selected : ww3_prnc
+ 
+Processing ww3_prnc
+---------------------
+make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
+ad3 : processing w3nmlprncmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ad3 : processing ww3_prnc 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+      Linking ww3_prnc
+make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
+ 
+ 
+                       **********************
+                     *** end of compilation ***
+                       **********************
+ 
+/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/w3_make ww3_ounf
+ 
+                *****************************
+              ***   WAVEWATCH III make      ***
+                *****************************
+ 
+Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model
+Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
+Save source codes : yes
+Save listings     : yes
+ 
+[INFO] list of the programs selected : ww3_ounf
+ 
+Processing ww3_ounf
+---------------------
+make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
+ad3 : processing w3iorsmd 
+ad3 : processing w3nmlounfmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ad3 : processing w3initmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ad3 : processing ww3_ounf 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+      Linking ww3_ounf
+make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
+ 
+ 
+                       **********************
+                     *** end of compilation ***
+                       **********************
+ 
+/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/w3_make ww3_ounp
+ 
+                *****************************
+              ***   WAVEWATCH III make      ***
+                *****************************
+ 
+Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model
+Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
+Save source codes : yes
+Save listings     : yes
+ 
+[INFO] list of the programs selected : ww3_ounp
+ 
+Processing ww3_ounp
+---------------------
+make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
+ad3 : processing w3nmlounpmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ad3 : processing ww3_ounp 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+      Linking ww3_ounp
+make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
+ 
+ 
+                       **********************
+                     *** end of compilation ***
+                       **********************
+ 
+\rm -f /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/tempswitch
 /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/w3_make ww3_grib
  
                 *****************************
@@ -1336,11 +1499,22 @@ Save source codes : yes
 Save listings     : yes
  
 [INFO] list of the programs selected : ww3_grib
+Making makefile ...
+ 
+                *****************************
+              ***   WAVEWATCH III makefile  ***
+                *****************************
+ 
+switch = /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/switch
+   new GRIB package
+   Checking all subroutines for modules (this may take a while) ...
  
 Processing ww3_grib
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing ww3_grib 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_grib
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1368,8 +1542,6 @@ Making makefile ...
                 *****************************
  
 switch = /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/switch
-   new NCO modifications
-   new GRIB package
    new shared / distributed memory
    new message passing protocol
    Checking all subroutines for modules (this may take a while) ...
@@ -1380,62 +1552,189 @@ make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_
 ad3 : processing constants 
 ad3 : processing scrip_kindsmod [no w3adc]
 ad3 : processing w3uqckmd 
-ad3 : processing scrip_constants [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_iounitsmod [no w3adc]
+ad3 : processing scrip_constants [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_timers [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3servmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_errormod [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ad3 : processing scrip_netcdfmod [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_grids [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3cspcmd 
-ad3 : processing w3gsrumd 
 ad3 : processing w3arrymd 
+ad3 : processing w3gsrumd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmunitmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_remap_vars [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_remap_conservative [no w3adc]
+ad3 : processing scrip_remap_write [no w3adc]
+ad3 : processing scrip_remap_read [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_interface 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3gdatmd 
-ad3 : processing w3idatmd 
-ad3 : processing w3sbt1md 
-ad3 : processing wmscrpmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3odatmd 
-ad3 : processing w3timemd 
+ad3 : processing w3sbt1md 
+ad3 : processing w3idatmd 
+ad3 : processing wmscrpmd 
+ls: cannot access *.mod: No such file or directory
+ls: ls: cannot access *.modcannot access *.mod: No such file or directoryls: : No such file or directory
+cannot access *.mod
+: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmmdatmd 
+ad3 : processing w3timemd 
 ad3 : processing w3dispmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3adatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3src4md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3fldsmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3fld1md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3sdb1md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3flx1md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3partmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3nmlmultimd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmfinlmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3fld2md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3snl1md 
-ad3 : processing w3triamd 
 ad3 : processing w3parall 
+ad3 : processing w3triamd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3wdatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iogrmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iogomd 
 ad3 : processing wmupdtmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iosfmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iotrmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3pro3md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3profsmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3srcemd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3wdasmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3updtmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iopomd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iorsmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmgridmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iobcmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wminiomd 
-ad3 : processing w3initmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3wavemd 
+ad3 : processing w3initmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmiopomd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmwavemd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wminitmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmesmfmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ar: creating libww3_multi_esmf.a
 a - wmmdatmd.o
 a - w3gdatmd.o
@@ -1496,6 +1795,36 @@ a - scrip_interface.o
 a - scrip_kindsmod.o
 a - scrip_remap_conservative.o
 a - wmscrpmd.o
+a - scrip_netcdfmod.o
+a - scrip_remap_write.o
+a - scrip_remap_read.o
+make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
+ 
+ 
+                       **********************
+                     *** end of compilation ***
+                       **********************
+ 
+/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/w3_make ww3_multi
+ 
+                *****************************
+              ***   WAVEWATCH III make      ***
+                *****************************
+ 
+Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model
+Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
+Save source codes : yes
+Save listings     : yes
+ 
+[INFO] list of the programs selected : ww3_multi
+ 
+Processing ww3_multi
+---------------------
+make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
+ad3 : processing ww3_multi 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+      Linking ww3_multi
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
  
@@ -1523,6 +1852,10 @@ make nems                              \
           COMPONENTS="FMS FV3 WW3"                      \
           FMS_DIR=/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL FV3_DIR=/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL WW3_DIR=/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3_INSTALL TARGET="/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/exe/NEMS.x"    ; \
 test -x /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/exe/NEMS.x
+Warning: The Slurm module is no longer needed and will be removed on August 1st
+2019 
+Warning: The Slurm module is no longer needed and will be removed on August 1st
+2019 
 
 Currently Loaded Modules:
   1) intel/15.1.133       7) sp/v2.0.2      13) g2/v2.5.0
@@ -1555,44 +1888,44 @@ ar rv ENS_Cpl.a ENS_CplComp_ESMFMod_STUB.o
 ar: creating ENS_Cpl.a
 a - ENS_CplComp_ESMFMod_STUB.o
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/ENS_Cpl'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Thu May  2 16:04:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=122' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Jun 26 12:35:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=177' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_UTILS.tmp.f90
 mv -v module_NEMS_UTILS.tmp.o module_NEMS_UTILS.o
 ‘module_NEMS_UTILS.tmp.o’ -> ‘module_NEMS_UTILS.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Thu May  2 16:04:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=122' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Jun 26 12:35:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=177' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_methods.tmp.f90
 mv -v module_MEDIATOR_methods.tmp.o module_MEDIATOR_methods.o
 ‘module_MEDIATOR_methods.tmp.o’ -> ‘module_MEDIATOR_methods.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Thu May  2 16:04:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=122' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Jun 26 12:35:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=177' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR.tmp.f90
 mv -v module_MEDIATOR.tmp.o module_MEDIATOR.o
 ‘module_MEDIATOR.tmp.o’ -> ‘module_MEDIATOR.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Thu May  2 16:04:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=122' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Jun 26 12:35:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=177' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_SpaceWeather.tmp.f90
 mv -v module_MEDIATOR_SpaceWeather.tmp.o module_MEDIATOR_SpaceWeather.o
 ‘module_MEDIATOR_SpaceWeather.tmp.o’ -> ‘module_MEDIATOR_SpaceWeather.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Thu May  2 16:04:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=122' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Jun 26 12:35:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=177' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_INTERNAL_STATE.tmp.f90
 mv -v module_EARTH_INTERNAL_STATE.tmp.o module_EARTH_INTERNAL_STATE.o
 ‘module_EARTH_INTERNAL_STATE.tmp.o’ -> ‘module_EARTH_INTERNAL_STATE.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Thu May  2 16:04:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=122' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Jun 26 12:35:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=177' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_GRID_COMP.tmp.f90
 mv -v module_EARTH_GRID_COMP.tmp.o module_EARTH_GRID_COMP.o
 ‘module_EARTH_GRID_COMP.tmp.o’ -> ‘module_EARTH_GRID_COMP.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Thu May  2 16:04:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=122' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Jun 26 12:35:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=177' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_INTERNAL_STATE.tmp.f90
 mv -v module_NEMS_INTERNAL_STATE.tmp.o module_NEMS_INTERNAL_STATE.o
 ‘module_NEMS_INTERNAL_STATE.tmp.o’ -> ‘module_NEMS_INTERNAL_STATE.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Thu May  2 16:04:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=122' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Jun 26 12:35:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=177' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_GRID_COMP.tmp.f90
 mv -v module_NEMS_GRID_COMP.tmp.o module_NEMS_GRID_COMP.o
 ‘module_NEMS_GRID_COMP.tmp.o’ -> ‘module_NEMS_GRID_COMP.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Thu May  2 16:04:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=122' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Jun 26 12:35:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=177' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_Rusage.tmp.f90
 mv -v module_NEMS_Rusage.tmp.o module_NEMS_Rusage.o
 ‘module_NEMS_Rusage.tmp.o’ -> ‘module_NEMS_Rusage.o’
 mpiicc -c nems_c_rusage.c
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Thu May  2 16:04:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=122' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Jun 26 12:35:44 UTC 2019 rc1c570160f32 gerrit:NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=177' -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs21/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c MAIN_NEMS.tmp.f90
 mv -v MAIN_NEMS.tmp.o MAIN_NEMS.o
 ‘MAIN_NEMS.tmp.o’ -> ‘MAIN_NEMS.o’
@@ -1604,17 +1937,17 @@ mpiifort  -o /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/
 /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/exe/NEMS.x is created.
 make[1]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src'
 + cd /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src
-+ cp -fp ../exe/NEMS.x /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/exec/fv3_ww3.exe
-+ cp -fp conf/modules.nems /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/include/modules_fv3_ww3
-+ md5sum /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/exec/fv3_ww3.exe
++ cp -fp ../exe/NEMS.x /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_ww3.exe
++ cp -fp conf/modules.nems /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/include/modules_fv3_ww3
++ md5sum /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_ww3.exe
 + unset md5sum
 + unset OPTS
 + set -xe
 + set -xe
-+ test -s /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/exec/fv3_ww3.exe
-+ test -x /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.139871/exec/fv3_ww3.exe
++ test -s /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_ww3.exe
++ test -x /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_ww3.exe
 _______________________________________________________________
-Start Epilog v19.04.17 on node t0791 for job 350337 :: Thu May 2 16:05:26 UTC 2019
-Job 350337 (not serial) finished for user Jessica.Meixner in partition theia with exit code 0:0
+Start Epilog v19.04.17 on node t0773 for job 1152964 :: Wed Jun 26 12:36:26 UTC 2019
+Job 1152964 (not serial) finished for user Jessica.Meixner in partition theia with exit code 0:0
 _______________________________________________________________
-End Epilogue v19.04.17 Thu May 2 16:05:26 UTC 2019
+End Epilogue v19.04.17 Wed Jun 26 12:36:26 UTC 2019

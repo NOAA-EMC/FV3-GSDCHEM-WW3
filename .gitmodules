@@ -1,6 +1,3 @@
-[submodule "NEMS"]
-	path = NEMS
-	url = gerrit:NEMS
 [submodule "FV3"]
 	path = FV3
 	url = gerrit:FV3
@@ -10,6 +7,9 @@
 [submodule "GSDCHEM"]
 	path = GSDCHEM
 	url = gerrit:GSDCHEM
+[submodule "NEMS"]
+	path = NEMS
+	url = gerrit:NEMS
 [submodule "WW3"]
 	path = WW3
 	url = git://github.com/NOAA-EMC/WW3
