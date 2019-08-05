@@ -1,11 +1,11 @@
 Run rocotostat...
 Generate report...
-WORKFLOW STARTED AT Wed Jun 26 12:34:15 2019 (+1561552455)
+WORKFLOW STARTED AT Sun Aug  4 14:39:33 2019 (+1564929573)
 Repository information:
 
 
 REPO TOP:
-WW3_esmf_makefile c5db495 [origin/WW3_esmf_makefile] WW3_esmf_makefile: point to NEMS master for prepping to commit to master of app
+combo-commit 580e872 [origin/combo-commit] New NEMS plus theia logs
 Fetch URL: gerrit:EMC_FV3-GSDCHEM-WW3
  M log/report-wcoss.phase2-log/build_fv3_ww3.exe.log
  M log/report-wcoss.phase2-log/rtreport.txt
@@ -34,8 +34,8 @@ Fetch URL: git://github.com/NOAA-EMC/WW3
 BUILD fv3_ww3.exe: SUCCEEDED
 
 TEST #1: PASS
-  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Wed Jun 26 13:10:28 UTC 2019 (One-way coupled FV3-WW3 C384)
-  Wed Jun 26 13:10:28 UTC 2019
+  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Sun Aug 4 15:15:45 UTC 2019 (One-way coupled FV3-WW3 C384)
+  Sun Aug  4 15:15:45 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -99,14 +99,14 @@ TEST #1: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /ptmpd3/Jessica.Meixner/rtgen.41760/exec/fv3_ww3.exe
-    Expected md5sum: b4b38ec57c772ea2d5b1b8d944d8fd92
-    Actual md5sum: b4b38ec57c772ea2d5b1b8d944d8fd92
-  TEST PASSED AT Wed Jun 26 13:26:34 UTC 2019
+    File: /ptmpp2/emc.nemspara/rtgen.10133/exec/fv3_ww3.exe
+    Expected md5sum: 30b40cd5c7b91cd73274d4c455463fe8
+    Actual md5sum: 30b40cd5c7b91cd73274d4c455463fe8
+  TEST PASSED AT Sun Aug  4 15:30:48 UTC 2019
 
 TEST #2: PASS
-  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Wed Jun 26 13:10:28 UTC 2019 (One-way coupled FV3-WW3)
-  Wed Jun 26 13:10:28 UTC 2019
+  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Sun Aug 4 15:15:45 UTC 2019 (One-way coupled FV3-WW3)
+  Sun Aug  4 15:15:45 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -170,11 +170,11 @@ TEST #2: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /ptmpd3/Jessica.Meixner/rtgen.41760/exec/fv3_ww3.exe
-    Expected md5sum: b4b38ec57c772ea2d5b1b8d944d8fd92
-    Actual md5sum: b4b38ec57c772ea2d5b1b8d944d8fd92
-  TEST PASSED AT Wed Jun 26 13:38:04 UTC 2019
-WORKFLOW REPORT AT Wed Jun 26 13:39:46 2019 (+1561556386)
+    File: /ptmpp2/emc.nemspara/rtgen.10133/exec/fv3_ww3.exe
+    Expected md5sum: 30b40cd5c7b91cd73274d4c455463fe8
+    Actual md5sum: 30b40cd5c7b91cd73274d4c455463fe8
+  TEST PASSED AT Sun Aug  4 15:44:30 UTC 2019
+WORKFLOW REPORT AT Sun Aug  4 15:45:23 2019 (+1564933523)
 Tests: 0 failed, 2 passed out of 2
 Builds: 0 failed, 1 passed out of 1
 REGRESSION TEST WAS SUCCESSFUL

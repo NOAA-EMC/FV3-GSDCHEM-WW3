@@ -1,11 +1,11 @@
 Run rocotostat...
 Generate report...
-WORKFLOW STARTED AT Wed Jun 26 12:13:21 2019 (+1561551201)
+WORKFLOW STARTED AT Mon Aug  5 04:21:53 2019 (+1564978913)
 Repository information:
 
 
 REPO TOP:
-WW3_esmf_makefile c5db495 [origin/WW3_esmf_makefile] WW3_esmf_makefile: point to NEMS master for prepping to commit to master of app
+combo-commit a0be40e [origin/combo-commit] Commit logs for wcoss2 testing NEMS combogsdww3nems
 Fetch URL: gerrit:EMC_FV3-GSDCHEM-WW3
  M log/report-theia.slurm.intel-log/build_fv3_gsdchem.exe.log
  M log/report-theia.slurm.intel-log/build_fv3_gsdchem_ww3_32bit.exe.log
@@ -25,11 +25,11 @@ Entering 'GSDCHEM'
 Fetch URL: gerrit:GSDCHEM
 
 Entering 'NEMS'
-(HEAD detached at c1c5701) c1c5701 NEMS commit regarding adding FV3GFS-GSDCHEM application.
+(HEAD detached at 5fbf9e3) 5fbf9e3 remove module load slurm
 Fetch URL: gerrit:NEMS
 
 Entering 'WW3'
-develop 3063a4c [origin/develop] Fb esmf makefile (#53)
+(HEAD detached at 3063a4c) 3063a4c Fb esmf makefile (#53)
 Fetch URL: git://github.com/NOAA-EMC/WW3
 
 
@@ -38,8 +38,8 @@ BUILD fv3_gsdchem.exe: SUCCEEDED
 BUILD fv3_gsdchem_ww3_32bit.exe: SUCCEEDED
 
 TEST #1: PASS
-  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Wed Jun 26 12:37:35 UTC 2019 (One-way coupled FV3-WW3 C384)
-  Wed Jun 26 12:37:35 UTC 2019
+  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Mon Aug 5 04:47:23 UTC 2019 (One-way coupled FV3-WW3 C384)
+  Mon Aug  5 04:47:23 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -103,14 +103,14 @@ TEST #1: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_ww3.exe
-    Expected md5sum: 87e5b2e2c8a69533acca58cde14e9adf
-    Actual md5sum: 87e5b2e2c8a69533acca58cde14e9adf
-  TEST PASSED AT Wed Jun 26 12:57:11 UTC 2019
+    File: /scratch3/NCEPDEV/stmp2/emc.nemspara/rtgen.57781/exec/fv3_ww3.exe
+    Expected md5sum: c74cb44c8b5fcfb6c907b2525b7baf21
+    Actual md5sum: c74cb44c8b5fcfb6c907b2525b7baf21
+  TEST PASSED AT Mon Aug  5 05:07:57 UTC 2019
 
 TEST #2: PASS
-  Test cpld_fv3_gfdlmp_gsdchem_between starting at Wed Jun 26 12:56:42 UTC 2019 (Compare FV3-GSDCHEM GFDL microphysics results with previous trunk version)
-  Wed Jun 26 12:56:42 UTC 2019
+  Test cpld_fv3_gfdlmp_gsdchem_between starting at Mon Aug 5 05:05:37 UTC 2019 (Compare FV3-GSDCHEM GFDL microphysics results with previous trunk version)
+  Mon Aug  5 05:05:37 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -546,14 +546,14 @@ TEST #2: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_gsdchem.exe
-    Expected md5sum: d0db85867e0cce9e80258c0a22250f4f
-    Actual md5sum: d0db85867e0cce9e80258c0a22250f4f
-  TEST PASSED AT Wed Jun 26 13:13:20 UTC 2019
+    File: /scratch3/NCEPDEV/stmp2/emc.nemspara/rtgen.57781/exec/fv3_gsdchem.exe
+    Expected md5sum: 44274612c9471b6f9396d1b08e026c75
+    Actual md5sum: 44274612c9471b6f9396d1b08e026c75
+  TEST PASSED AT Mon Aug  5 05:22:29 UTC 2019
 
 TEST #3: PASS
-  Test cpld_1way@block_fv3@32bit@C384_ww3@glo30m starting at Wed Jun 26 13:22:27 UTC 2019 (One-way coupled FV3-WW3 C384 with GEFS FV3 configuration)
-  Wed Jun 26 13:22:27 UTC 2019
+  Test cpld_1way@block_fv3@32bit@C384_ww3@glo30m starting at Mon Aug 5 05:32:36 UTC 2019 (One-way coupled FV3-WW3 C384 with GEFS FV3 configuration)
+  Mon Aug  5 05:32:36 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -617,14 +617,14 @@ TEST #3: PASS
   RESTART/sfc_data.tile4.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_gsdchem_ww3_32bit.exe
-    Expected md5sum: 6a88896eb113b8b41b549787d9623642
-    Actual md5sum: 6a88896eb113b8b41b549787d9623642
-  TEST PASSED AT Wed Jun 26 13:48:12 UTC 2019
+    File: /scratch3/NCEPDEV/stmp2/emc.nemspara/rtgen.57781/exec/fv3_gsdchem_ww3_32bit.exe
+    Expected md5sum: 723144ced81137e7463b9b154473851a
+    Actual md5sum: 723144ced81137e7463b9b154473851a
+  TEST PASSED AT Mon Aug  5 05:58:35 UTC 2019
 
 TEST #4: PASS
-  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Wed Jun 26 12:37:36 UTC 2019 (One-way coupled FV3-WW3)
-  Wed Jun 26 12:37:36 UTC 2019
+  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Mon Aug 5 04:47:03 UTC 2019 (One-way coupled FV3-WW3)
+  Mon Aug  5 04:47:03 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -688,14 +688,14 @@ TEST #4: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_ww3.exe
-    Expected md5sum: 87e5b2e2c8a69533acca58cde14e9adf
-    Actual md5sum: 87e5b2e2c8a69533acca58cde14e9adf
-  TEST PASSED AT Wed Jun 26 12:42:32 UTC 2019
+    File: /scratch3/NCEPDEV/stmp2/emc.nemspara/rtgen.57781/exec/fv3_ww3.exe
+    Expected md5sum: c74cb44c8b5fcfb6c907b2525b7baf21
+    Actual md5sum: c74cb44c8b5fcfb6c907b2525b7baf21
+  TEST PASSED AT Mon Aug  5 04:52:07 UTC 2019
 
 TEST #5: PASS
-  Test cpld_fv3_gsdchem_between starting at Wed Jun 26 12:56:41 UTC 2019 (Compare FV3GFS-GSDCHEM control results with previous trunk version)
-  Wed Jun 26 12:56:41 UTC 2019
+  Test cpld_fv3_gsdchem_between starting at Mon Aug 5 05:05:38 UTC 2019 (Compare FV3GFS-GSDCHEM control results with previous trunk version)
+  Mon Aug  5 05:05:38 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -1131,11 +1131,11 @@ TEST #5: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /scratch4/NCEPDEV/stmp4/Jessica.Meixner/rtgen.27577/exec/fv3_gsdchem.exe
-    Expected md5sum: d0db85867e0cce9e80258c0a22250f4f
-    Actual md5sum: d0db85867e0cce9e80258c0a22250f4f
-  TEST PASSED AT Wed Jun 26 13:09:56 UTC 2019
-WORKFLOW REPORT AT Wed Jun 26 13:50:02 2019 (+1561557002)
+    File: /scratch3/NCEPDEV/stmp2/emc.nemspara/rtgen.57781/exec/fv3_gsdchem.exe
+    Expected md5sum: 44274612c9471b6f9396d1b08e026c75
+    Actual md5sum: 44274612c9471b6f9396d1b08e026c75
+  TEST PASSED AT Mon Aug  5 05:19:36 UTC 2019
+WORKFLOW REPORT AT Mon Aug  5 05:59:08 2019 (+1564984748)
 Tests: 0 failed, 5 passed out of 5
 Builds: 0 failed, 3 passed out of 3
 REGRESSION TEST WAS SUCCESSFUL

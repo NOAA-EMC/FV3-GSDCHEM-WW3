@@ -41,4 +41,4 @@ module load g2tmpl/v1.3.0 g2/v2.5.0 jasper/v1.900.1 png/v1.2.44 z/v1.2.6
 ## load ESMF library for above compiler / MPI combination
 ##
 module use /scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/modulefiles
-module load esmf/8.0.0bs21
+module load esmf/8.0.0bs32-noyaml
