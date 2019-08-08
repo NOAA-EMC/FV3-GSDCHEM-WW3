@@ -1,18 +1,18 @@
 Run rocotostat...
 Generate report...
-WORKFLOW STARTED AT Sun Aug  4 14:39:33 2019 (+1564929573)
+WORKFLOW STARTED AT Wed Aug  7 20:30:55 2019 (+1565209855)
 Repository information:
 
 
 REPO TOP:
-combo-commit 580e872 [origin/combo-commit] New NEMS plus theia logs
+master             0a210c8 [origin/master] Replace git with https for GitHub in .gitmodules
 Fetch URL: gerrit:EMC_FV3-GSDCHEM-WW3
  M log/report-wcoss.phase2-log/build_fv3_ww3.exe.log
  M log/report-wcoss.phase2-log/rtreport.txt
 
 Entering 'FMS'
 age: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
-Fetch URL: git://github.com/NOAA-EMC/FMS
+Fetch URL: https://github.com/NOAA-EMC/FMS
 
 Entering 'FV3'
 age: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
@@ -24,18 +24,18 @@ Fetch URL: gerrit:GSDCHEM
 
 Entering 'NEMS'
 age: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
-Fetch URL: gerrit:NEMS
+Fetch URL: https://github.com/NOAA-EMC/NEMS.git
 
 Entering 'WW3'
 age: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
-Fetch URL: git://github.com/NOAA-EMC/WW3
+Fetch URL: https://github.com/NOAA-EMC/WW3
 
 
 BUILD fv3_ww3.exe: SUCCEEDED
 
 TEST #1: PASS
-  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Sun Aug 4 15:15:45 UTC 2019 (One-way coupled FV3-WW3 C384)
-  Sun Aug  4 15:15:45 UTC 2019
+  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Wed Aug 7 21:12:17 UTC 2019 (One-way coupled FV3-WW3 C384)
+  Wed Aug  7 21:12:17 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -99,14 +99,14 @@ TEST #1: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /ptmpp2/emc.nemspara/rtgen.10133/exec/fv3_ww3.exe
-    Expected md5sum: 30b40cd5c7b91cd73274d4c455463fe8
-    Actual md5sum: 30b40cd5c7b91cd73274d4c455463fe8
-  TEST PASSED AT Sun Aug  4 15:30:48 UTC 2019
+    File: /ptmpp2/emc.nemspara/rtgen.42322/exec/fv3_ww3.exe
+    Expected md5sum: 9ae1c91de6cd7a3782fdc8f239b5f1a5
+    Actual md5sum: 9ae1c91de6cd7a3782fdc8f239b5f1a5
+  TEST PASSED AT Wed Aug  7 21:29:45 UTC 2019
 
 TEST #2: PASS
-  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Sun Aug 4 15:15:45 UTC 2019 (One-way coupled FV3-WW3)
-  Sun Aug  4 15:15:45 UTC 2019
+  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Wed Aug 7 21:12:17 UTC 2019 (One-way coupled FV3-WW3)
+  Wed Aug  7 21:12:17 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -170,11 +170,11 @@ TEST #2: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /ptmpp2/emc.nemspara/rtgen.10133/exec/fv3_ww3.exe
-    Expected md5sum: 30b40cd5c7b91cd73274d4c455463fe8
-    Actual md5sum: 30b40cd5c7b91cd73274d4c455463fe8
-  TEST PASSED AT Sun Aug  4 15:44:30 UTC 2019
-WORKFLOW REPORT AT Sun Aug  4 15:45:23 2019 (+1564933523)
+    File: /ptmpp2/emc.nemspara/rtgen.42322/exec/fv3_ww3.exe
+    Expected md5sum: 9ae1c91de6cd7a3782fdc8f239b5f1a5
+    Actual md5sum: 9ae1c91de6cd7a3782fdc8f239b5f1a5
+  TEST PASSED AT Wed Aug  7 21:39:32 UTC 2019
+WORKFLOW REPORT AT Wed Aug  7 21:40:08 2019 (+1565214008)
 Tests: 0 failed, 2 passed out of 2
 Builds: 0 failed, 1 passed out of 1
 REGRESSION TEST WAS SUCCESSFUL
