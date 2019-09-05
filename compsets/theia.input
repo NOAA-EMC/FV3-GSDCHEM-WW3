@@ -26,8 +26,8 @@ platform theia.intel {   # Moab+Torque Theia.  See below for SLURM.
     # INPUTS is the input directory, which should contain fix and parm
     # files, plus any restarts or other inputs.
 
-    BASELINE="/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190430"
-    BASELINE_TEMPLATE="/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190430"
+    BASELINE="/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
+    BASELINE_TEMPLATE="/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
     INPUTS="@[BASELINE]"
 
     default_resources={
@@ -37,6 +37,9 @@ platform theia.intel {   # Moab+Torque Theia.  See below for SLURM.
         JNPES=8
         THRD=1
         WRTTASK_PER_GROUP=6
+        atm_petlist_bounds="0 149"
+        wav_petlist_bounds="150 191"
+        CPLTASKS=192
     }
     default_stretched_resources={
         TASKS=48
@@ -107,7 +110,6 @@ platform theia.slurm.intel {   # SLURM support
     use platform.defaults
     MACHINE_ID='theia.intel' # Name of this platform.
     PARTITION='theia'
-    execution_time_modules="module load slurm"
     MPI='srun'
 
     CPU_ACCOUNT='nems'
@@ -127,8 +129,8 @@ platform theia.slurm.intel {   # SLURM support
     # INPUTS is the input directory, which should contain fix and parm
     # files, plus any restarts or other inputs.
 
-    BASELINE="/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190430"
-    BASELINE_TEMPLATE="/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190430"
+    BASELINE="/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
+    BASELINE_TEMPLATE="/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
     INPUTS="@[BASELINE]"
 
     default_resources={
@@ -138,6 +140,9 @@ platform theia.slurm.intel {   # SLURM support
         JNPES=8
         THRD=1
         WRTTASK_PER_GROUP=6
+        atm_petlist_bounds="0 149"
+        wav_petlist_bounds="150 191"
+        CPLTASKS=192
     }
     default_stretched_resources={
         TASKS=48

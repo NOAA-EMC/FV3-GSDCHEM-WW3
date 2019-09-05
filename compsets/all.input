@@ -1,9 +1,16 @@
 load 'fv3ww3.input'
 load 'fv3gsdchem.input'
 
-run cpld_1way@leap_fv3@C96_ww3@glo30m          @ fv3, ww3,  baseline, leap,     plat==theia.slurm.intel, plat==wcoss.phase2
-run cpld_1way@block_fv3@C384_ww3@glo30m        @ fv3, ww3,  baseline, block384, plat==theia.slurm.intel, plat==wcoss.phase2
-run cpld_1way@block_fv3@32bit@C384_ww3@glo30m  @ fv3, ww3,  baseline, gefs32bit,      plat==theia.slurm.intel, plat==wcoss_dell_p3
-run cpld_fv3_gsdchem_between                   @ fv3, chem, baseline, atmchem,        plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
-run cpld_fv3_gfdlmp_gsdchem_between            @ fv3, chem, baseline, atmchem_gfdlmp, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_1way@leap_fv3@C96_ww3@glo30m          @ fv3, ww3,  baseline, leap
+run cpld_1way@block_fv3@C384_ww3@glo30m        @ fv3, ww3,  baseline, block384
+run cpld_1way@block_fv3@32bit@C384_ww3@glo30m  @ fv3, ww3,  baseline, gefs32bit,      plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+
+run cpld_fv3_gsdchem_modis                     @ fv3, coupledapp, atmchem_modis,                     plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gsdchem_gbbepx_frp                @ fv3, coupledapp, atmchem_gbbepx_frp,                plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gsdchem_gbbepx_sfc                @ fv3, coupledapp, atmchem_gbbepx_sfc,                plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gfdlmp_gsdchem_modis              @ fv3, coupledapp, atmchem_gfdlmp_modis,              plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gfdlmp_gsdchem_gbbepx_frp         @ fv3, coupledapp, atmchem_gfdlmp_gbbepx_frp,         plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gfdlmp_gsdchem_gbbepx_frp_fengsha @ fv3, coupledapp, atmchem_gfdlmp_gbbepx_frp_fengsha, plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gfdlmp_gsdchem_gbbepx_sfc         @ fv3, coupledapp, atmchem_gfdlmp_gbbepx_sfc,         plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gfdlmp_gsdchem_modis_c384         @ fv3, coupledapp, atmchem_gfdlmp_modis_c384,         plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
 

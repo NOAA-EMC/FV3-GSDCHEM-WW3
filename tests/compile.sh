@@ -39,7 +39,7 @@ if ( ! which $gnu_make ) ; then
     fi
 fi
 
-if [[ $BUILD_TARGET == cheyenne.* ]] ; then
+if [[ $BUILD_TARGET == cheyenne.* || $BUILD_TARGET == stampede.* ]] ; then
     MAKE_THREADS=${MAKE_THREADS:-3}
 fi
 
@@ -61,6 +61,10 @@ COMPONENTS="FMS,FV3,GSDCHEM,WW3"
 if [[ "${MAKE_OPT}" == *"CCPP=Y"* ]]; then
   COMPONENTS="CCPP,$COMPONENTS"
 fi
+
+#if [[ "${MAKE_OPT}" == *"WW3=Y"* ]]; then
+#  COMPONENTS="WW3,$COMPONENTS"
+#fi
 
 # Make variables:
 #   COMPONENTS = list of components to build

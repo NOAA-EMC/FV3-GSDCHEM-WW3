@@ -17,3 +17,4 @@ Created for application: FV3-GSDCHEM-WW3
 Change log:
 
 * Apr. 30, 2019 - initial commit
+* Aug.  2, 2019 - Updating to FV3GFS-GSDCHEM 087

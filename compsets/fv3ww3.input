@@ -179,7 +179,7 @@ test cpld_1way@leap_fv3@C96_ww3@glo30m: fv3_ww3.exe {
         'RESTART/sfc_data.tile4.nc'             .bitcmp. "@[CNTL]/RESTART/"
         'RESTART/sfc_data.tile5.nc'             .bitcmp. "@[CNTL]/RESTART/"
         'RESTART/sfc_data.tile6.nc'             .bitcmp. "@[CNTL]/RESTART/"
-        #'out_grd.glo_30m'                       .bitcmp. "@[CNTL]/leap/"
+       # 'out_grd.glo_30m'                       .bitcmp. "@[CNTL]/leap/"
       # Executable validation.  This makes an MD5 sum of the fv3.exe
       # for comparison against the MD5 sum made in the build job.
       # This is to ensure the executable did not change during the
@@ -507,7 +507,7 @@ test cpld_1way@block_fv3@C384_ww3@glo30m: fv3_ww3.exe {
         'RESTART/sfc_data.tile4.nc'             .bitcmp. "@[CNTL]/RESTART/"
         'RESTART/sfc_data.tile5.nc'             .bitcmp. "@[CNTL]/RESTART/"
         'RESTART/sfc_data.tile6.nc'             .bitcmp. "@[CNTL]/RESTART/"
-        #'out_grd.glo_30m'                       .bitcmp. "@[CNTL]"
+      #  'out_grd.glo_30m'                       .bitcmp. "@[CNTL]"
       # Executable validation.  This makes an MD5 sum of the fv3.exe
       # for comparison against the MD5 sum made in the build job.
       # This is to ensure the executable did not change during the
