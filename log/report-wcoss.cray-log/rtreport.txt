@@ -1,13 +1,12 @@
 Run rocotostat...
 Generate report...
-WORKFLOW STARTED AT Wed Sep  4 18:24:44 2019 (+1567621484)
+WORKFLOW STARTED AT Tue Sep 17 16:03:47 2019 (+1568736227)
 Repository information:
 
 
 REPO TOP:
-feature/bs44nemsgithub 283b428 [origin/feature/bs44nemsgithub] remove out-grd
+master           8f70e4e [origin/master] Update components (incl GSDCHEM 0.87) and ESMF versions
 Fetch URL: gerrit:EMC_FV3-GSDCHEM-WW3
- M compsets/wcoss.input
  M log/report-wcoss.cray-log/build_fv3_gsdchem.exe.log
  M log/report-wcoss.cray-log/build_fv3_gsdchem_ww3_32bit.exe.log
  M log/report-wcoss.cray-log/build_fv3_ww3.exe.log
@@ -27,7 +26,7 @@ Fetch URL: gerrit:GSDCHEM
 
 Entering 'NEMS'
 age: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-Fetch URL: https://github.com/NOAA-EMC/NEMS.git
+Fetch URL: https://github.com/NOAA-EMC/NEMS
 
 Entering 'WW3'
 age: git [--version] [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
@@ -39,8 +38,8 @@ BUILD fv3_gsdchem.exe: SUCCEEDED
 BUILD fv3_gsdchem_ww3_32bit.exe: SUCCEEDED
 
 TEST #1: PASS
-  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Wed Sep 4 20:21:36 UTC 2019 (One-way coupled FV3-WW3 C384)
-  Wed Sep  4 20:21:36 UTC 2019
+  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Tue Sep 17 16:42:08 UTC 2019 (One-way coupled FV3-WW3 C384)
+  Tue Sep 17 16:42:08 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -104,14 +103,14 @@ TEST #1: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.33822/exec/fv3_ww3.exe
-    Expected md5sum: 9aa220c7a6a4eee404aa9ea75e3f6c42
-    Actual md5sum: 9aa220c7a6a4eee404aa9ea75e3f6c42
-  TEST PASSED AT Wed Sep  4 20:33:27 UTC 2019
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_ww3.exe
+    Expected md5sum: 1ed5e8d1639fbeaeb06e2b06118f03c2
+    Actual md5sum: 1ed5e8d1639fbeaeb06e2b06118f03c2
+  TEST PASSED AT Tue Sep 17 16:54:12 UTC 2019
 
 TEST #2: PASS
-  Test cpld_fv3_gsdchem_gbbepx_frp starting at Wed Sep 4 21:13:10 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and GBBEPx emission data + FRP)
-  Wed Sep  4 21:13:10 UTC 2019
+  Test cpld_fv3_gsdchem_gbbepx_frp starting at Tue Sep 17 17:03:53 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and GBBEPx emission data + FRP)
+  Tue Sep 17 17:03:53 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -547,14 +546,14 @@ TEST #2: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.33822/exec/fv3_gsdchem.exe
-    Expected md5sum: 286edf1925053351aca7e74477dcf84b
-    Actual md5sum: 286edf1925053351aca7e74477dcf84b
-  TEST PASSED AT Wed Sep  4 21:33:32 UTC 2019
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_gsdchem.exe
+    Expected md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+    Actual md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+  TEST PASSED AT Tue Sep 17 17:25:18 UTC 2019
 
 TEST #3: PASS
-  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_frp starting at Wed Sep 4 21:13:22 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and GBBEPx emission data + FRP)
-  Wed Sep  4 21:13:22 UTC 2019
+  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_frp starting at Tue Sep 17 17:03:52 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and GBBEPx emission data + FRP)
+  Tue Sep 17 17:03:52 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -990,14 +989,14 @@ TEST #3: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.33822/exec/fv3_gsdchem.exe
-    Expected md5sum: 286edf1925053351aca7e74477dcf84b
-    Actual md5sum: 286edf1925053351aca7e74477dcf84b
-  TEST PASSED AT Wed Sep  4 21:40:38 UTC 2019
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_gsdchem.exe
+    Expected md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+    Actual md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+  TEST PASSED AT Tue Sep 17 17:34:03 UTC 2019
 
 TEST #4: PASS
-  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Wed Sep 4 20:20:39 UTC 2019 (One-way coupled FV3-WW3)
-  Wed Sep  4 20:20:39 UTC 2019
+  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Tue Sep 17 16:41:18 UTC 2019 (One-way coupled FV3-WW3)
+  Tue Sep 17 16:41:18 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -1061,14 +1060,14 @@ TEST #4: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.33822/exec/fv3_ww3.exe
-    Expected md5sum: 9aa220c7a6a4eee404aa9ea75e3f6c42
-    Actual md5sum: 9aa220c7a6a4eee404aa9ea75e3f6c42
-  TEST PASSED AT Wed Sep  4 20:28:29 UTC 2019
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_ww3.exe
+    Expected md5sum: 1ed5e8d1639fbeaeb06e2b06118f03c2
+    Actual md5sum: 1ed5e8d1639fbeaeb06e2b06118f03c2
+  TEST PASSED AT Tue Sep 17 16:49:22 UTC 2019
 
 TEST #5: PASS
-  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_sfc starting at Wed Sep 4 21:13:24 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and GBBEPx surface emission data)
-  Wed Sep  4 21:13:24 UTC 2019
+  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_sfc starting at Tue Sep 17 17:04:32 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and GBBEPx surface emission data)
+  Tue Sep 17 17:04:32 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -1504,14 +1503,14 @@ TEST #5: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.33822/exec/fv3_gsdchem.exe
-    Expected md5sum: 286edf1925053351aca7e74477dcf84b
-    Actual md5sum: 286edf1925053351aca7e74477dcf84b
-  TEST PASSED AT Wed Sep  4 21:40:33 UTC 2019
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_gsdchem.exe
+    Expected md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+    Actual md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+  TEST PASSED AT Tue Sep 17 17:35:47 UTC 2019
 
 TEST #6: PASS
-  Test cpld_fv3_gfdlmp_gsdchem_modis starting at Wed Sep 4 21:15:27 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and MODIS emission data)
-  Wed Sep  4 21:15:27 UTC 2019
+  Test cpld_fv3_gfdlmp_samf_gsdchem_gbbepx_frp starting at Tue Sep 17 17:04:23 UTC 2019 (FV3-GSDCHEM with GFDL microphysics, SAMF tracer transport, and GBBEPx emission data + FRP)
+  Tue Sep 17 17:04:23 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -1947,85 +1946,14 @@ TEST #6: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.33822/exec/fv3_gsdchem.exe
-    Expected md5sum: 286edf1925053351aca7e74477dcf84b
-    Actual md5sum: 286edf1925053351aca7e74477dcf84b
-  TEST PASSED AT Wed Sep  4 21:44:58 UTC 2019
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_gsdchem.exe
+    Expected md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+    Actual md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+  TEST PASSED AT Tue Sep 17 17:33:59 UTC 2019
 
 TEST #7: PASS
-  Test cpld_1way@block_fv3@32bit@C384_ww3@glo30m starting at Wed Sep 4 22:27:24 UTC 2019 (One-way coupled FV3-WW3 C384 with GEFS FV3 configuration)
-  Wed Sep  4 22:27:24 UTC 2019
-  atmos_4xdaily.tile1.nc: bit-for-bit identical
-  atmos_4xdaily.tile2.nc: bit-for-bit identical
-  atmos_4xdaily.tile3.nc: bit-for-bit identical
-  atmos_4xdaily.tile4.nc: bit-for-bit identical
-  atmos_4xdaily.tile5.nc: bit-for-bit identical
-  atmos_4xdaily.tile6.nc: bit-for-bit identical
-  phyf000.tile1.nc: bit-for-bit identical
-  phyf000.tile2.nc: bit-for-bit identical
-  phyf000.tile3.nc: bit-for-bit identical
-  phyf000.tile4.nc: bit-for-bit identical
-  phyf000.tile5.nc: bit-for-bit identical
-  phyf000.tile6.nc: bit-for-bit identical
-  phyf024.tile1.nc: bit-for-bit identical
-  phyf024.tile2.nc: bit-for-bit identical
-  phyf024.tile3.nc: bit-for-bit identical
-  phyf024.tile4.nc: bit-for-bit identical
-  phyf024.tile5.nc: bit-for-bit identical
-  phyf024.tile6.nc: bit-for-bit identical
-  dynf000.tile1.nc: bit-for-bit identical
-  dynf000.tile2.nc: bit-for-bit identical
-  dynf000.tile3.nc: bit-for-bit identical
-  dynf000.tile4.nc: bit-for-bit identical
-  dynf000.tile5.nc: bit-for-bit identical
-  dynf000.tile6.nc: bit-for-bit identical
-  dynf024.tile1.nc: bit-for-bit identical
-  dynf024.tile2.nc: bit-for-bit identical
-  dynf024.tile3.nc: bit-for-bit identical
-  dynf024.tile4.nc: bit-for-bit identical
-  dynf024.tile5.nc: bit-for-bit identical
-  dynf024.tile6.nc: bit-for-bit identical
-  RESTART/coupler.res: bit-for-bit identical
-  RESTART/fv_core.res.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile1.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile2.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile3.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile4.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile5.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile6.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile1.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile2.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile3.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile4.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile5.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile6.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile1.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile2.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile3.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile4.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile5.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile6.nc: bit-for-bit identical
-  RESTART/phy_data.tile1.nc: bit-for-bit identical
-  RESTART/phy_data.tile2.nc: bit-for-bit identical
-  RESTART/phy_data.tile3.nc: bit-for-bit identical
-  RESTART/phy_data.tile4.nc: bit-for-bit identical
-  RESTART/phy_data.tile5.nc: bit-for-bit identical
-  RESTART/phy_data.tile6.nc: bit-for-bit identical
-  RESTART/sfc_data.tile1.nc: bit-for-bit identical
-  RESTART/sfc_data.tile2.nc: bit-for-bit identical
-  RESTART/sfc_data.tile5.nc: bit-for-bit identical
-  RESTART/sfc_data.tile3.nc: bit-for-bit identical
-  RESTART/sfc_data.tile4.nc: bit-for-bit identical
-  RESTART/sfc_data.tile6.nc: bit-for-bit identical
-  Executable did not change during test suite:
-    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.33822/exec/fv3_gsdchem_ww3_32bit.exe
-    Expected md5sum: d09f7df1cb1826ff916daf7dd623c463
-    Actual md5sum: d09f7df1cb1826ff916daf7dd623c463
-  TEST PASSED AT Wed Sep  4 22:39:37 UTC 2019
-
-TEST #8: PASS
-  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_frp_fengsha starting at Wed Sep 4 21:14:22 UTC 2019 (FV3-GSDCHEM with GFDL MP, GBBEPx emissions + FRP, and FENGSHA)
-  Wed Sep  4 21:14:22 UTC 2019
+  Test cpld_fv3_gfdlmp_gsdchem_modis starting at Tue Sep 17 17:04:57 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and MODIS emission data)
+  Tue Sep 17 17:04:57 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -2461,14 +2389,528 @@ TEST #8: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.33822/exec/fv3_gsdchem.exe
-    Expected md5sum: 286edf1925053351aca7e74477dcf84b
-    Actual md5sum: 286edf1925053351aca7e74477dcf84b
-  TEST PASSED AT Wed Sep  4 21:41:56 UTC 2019
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_gsdchem.exe
+    Expected md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+    Actual md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+  TEST PASSED AT Tue Sep 17 17:36:21 UTC 2019
+
+TEST #8: PASS
+  Test cpld_1way@block_fv3@32bit@C384_ww3@glo30m starting at Tue Sep 17 17:53:40 UTC 2019 (One-way coupled FV3-WW3 C384 with GEFS FV3 configuration)
+  Tue Sep 17 17:53:41 UTC 2019
+  atmos_4xdaily.tile1.nc: bit-for-bit identical
+  atmos_4xdaily.tile2.nc: bit-for-bit identical
+  atmos_4xdaily.tile3.nc: bit-for-bit identical
+  atmos_4xdaily.tile4.nc: bit-for-bit identical
+  atmos_4xdaily.tile5.nc: bit-for-bit identical
+  atmos_4xdaily.tile6.nc: bit-for-bit identical
+  phyf000.tile1.nc: bit-for-bit identical
+  phyf000.tile2.nc: bit-for-bit identical
+  phyf000.tile3.nc: bit-for-bit identical
+  phyf000.tile4.nc: bit-for-bit identical
+  phyf000.tile5.nc: bit-for-bit identical
+  phyf000.tile6.nc: bit-for-bit identical
+  phyf024.tile1.nc: bit-for-bit identical
+  phyf024.tile2.nc: bit-for-bit identical
+  phyf024.tile3.nc: bit-for-bit identical
+  phyf024.tile4.nc: bit-for-bit identical
+  phyf024.tile5.nc: bit-for-bit identical
+  phyf024.tile6.nc: bit-for-bit identical
+  dynf000.tile1.nc: bit-for-bit identical
+  dynf000.tile2.nc: bit-for-bit identical
+  dynf000.tile3.nc: bit-for-bit identical
+  dynf000.tile4.nc: bit-for-bit identical
+  dynf000.tile5.nc: bit-for-bit identical
+  dynf000.tile6.nc: bit-for-bit identical
+  dynf024.tile1.nc: bit-for-bit identical
+  dynf024.tile2.nc: bit-for-bit identical
+  dynf024.tile3.nc: bit-for-bit identical
+  dynf024.tile4.nc: bit-for-bit identical
+  dynf024.tile5.nc: bit-for-bit identical
+  dynf024.tile6.nc: bit-for-bit identical
+  RESTART/coupler.res: bit-for-bit identical
+  RESTART/fv_core.res.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile1.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile2.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile3.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile4.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile5.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile6.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile1.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile2.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile3.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile4.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile5.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile6.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile1.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile2.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile3.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile4.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile5.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile6.nc: bit-for-bit identical
+  RESTART/phy_data.tile1.nc: bit-for-bit identical
+  RESTART/phy_data.tile2.nc: bit-for-bit identical
+  RESTART/phy_data.tile3.nc: bit-for-bit identical
+  RESTART/phy_data.tile4.nc: bit-for-bit identical
+  RESTART/phy_data.tile5.nc: bit-for-bit identical
+  RESTART/phy_data.tile6.nc: bit-for-bit identical
+  RESTART/sfc_data.tile1.nc: bit-for-bit identical
+  RESTART/sfc_data.tile2.nc: bit-for-bit identical
+  RESTART/sfc_data.tile5.nc: bit-for-bit identical
+  RESTART/sfc_data.tile3.nc: bit-for-bit identical
+  RESTART/sfc_data.tile4.nc: bit-for-bit identical
+  RESTART/sfc_data.tile6.nc: bit-for-bit identical
+  Executable did not change during test suite:
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_gsdchem_ww3_32bit.exe
+    Expected md5sum: 5584c1b90e73acba7a8694118b5ae7f8
+    Actual md5sum: 5584c1b90e73acba7a8694118b5ae7f8
+  TEST PASSED AT Tue Sep 17 18:05:29 UTC 2019
 
 TEST #9: PASS
-  Test cpld_fv3_gfdlmp_gsdchem_modis_c384 starting at Wed Sep 4 21:14:18 UTC 2019 (FV3-GSDCHEM with GFDL MP and MODIS emissions at C384, 6-hour)
-  Wed Sep  4 21:14:18 UTC 2019
+  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_frp_fengsha starting at Tue Sep 17 17:04:57 UTC 2019 (FV3-GSDCHEM with GFDL MP, GBBEPx emissions + FRP, and FENGSHA)
+  Tue Sep 17 17:04:57 UTC 2019
+  atmos_4xdaily.tile1.nc: bit-for-bit identical
+  atmos_4xdaily.tile2.nc: bit-for-bit identical
+  atmos_4xdaily.tile3.nc: bit-for-bit identical
+  atmos_4xdaily.tile4.nc: bit-for-bit identical
+  atmos_4xdaily.tile5.nc: bit-for-bit identical
+  atmos_4xdaily.tile6.nc: bit-for-bit identical
+  phyf000.tile1.nc: bit-for-bit identical
+  phyf000.tile2.nc: bit-for-bit identical
+  phyf000.tile3.nc: bit-for-bit identical
+  phyf000.tile4.nc: bit-for-bit identical
+  phyf000.tile5.nc: bit-for-bit identical
+  phyf000.tile6.nc: bit-for-bit identical
+  phyf024.tile1.nc: bit-for-bit identical
+  phyf024.tile2.nc: bit-for-bit identical
+  phyf024.tile3.nc: bit-for-bit identical
+  phyf024.tile4.nc: bit-for-bit identical
+  phyf024.tile5.nc: bit-for-bit identical
+  phyf024.tile6.nc: bit-for-bit identical
+  dynf000.tile1.nc: bit-for-bit identical
+  dynf000.tile2.nc: bit-for-bit identical
+  dynf000.tile3.nc: bit-for-bit identical
+  dynf000.tile4.nc: bit-for-bit identical
+  dynf000.tile5.nc: bit-for-bit identical
+  dynf000.tile6.nc: bit-for-bit identical
+  dynf024.tile1.nc: bit-for-bit identical
+  dynf024.tile2.nc: bit-for-bit identical
+  dynf024.tile3.nc: bit-for-bit identical
+  dynf024.tile4.nc: bit-for-bit identical
+  dynf024.tile5.nc: bit-for-bit identical
+  dynf024.tile6.nc: bit-for-bit identical
+  RESTART/coupler.res: bit-for-bit identical
+  RESTART/fv_core.res.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile1.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile2.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile3.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile4.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile5.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile6.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile1.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile2.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile3.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile4.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile5.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile6.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile1.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile2.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile3.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile4.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile5.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile6.nc: bit-for-bit identical
+  RESTART/phy_data.tile1.nc: bit-for-bit identical
+  RESTART/phy_data.tile2.nc: bit-for-bit identical
+  RESTART/phy_data.tile3.nc: bit-for-bit identical
+  RESTART/phy_data.tile4.nc: bit-for-bit identical
+  RESTART/phy_data.tile5.nc: bit-for-bit identical
+  RESTART/phy_data.tile6.nc: bit-for-bit identical
+  RESTART/sfc_data.tile1.nc: bit-for-bit identical
+  RESTART/sfc_data.tile2.nc: bit-for-bit identical
+  RESTART/sfc_data.tile3.nc: bit-for-bit identical
+  RESTART/sfc_data.tile4.nc: bit-for-bit identical
+  RESTART/sfc_data.tile5.nc: bit-for-bit identical
+  RESTART/sfc_data.tile6.nc: bit-for-bit identical
+  anbc.tile1.dat: bit-for-bit identical
+  anbc.tile2.dat: bit-for-bit identical
+  anbc.tile3.dat: bit-for-bit identical
+  anbc.tile4.dat: bit-for-bit identical
+  anbc.tile5.dat: bit-for-bit identical
+  anbc.tile6.dat: bit-for-bit identical
+  anoc.tile1.dat: bit-for-bit identical
+  anoc.tile2.dat: bit-for-bit identical
+  anoc.tile3.dat: bit-for-bit identical
+  anoc.tile4.dat: bit-for-bit identical
+  anoc.tile5.dat: bit-for-bit identical
+  anoc.tile6.dat: bit-for-bit identical
+  ao2D.tile1.dat: bit-for-bit identical
+  ao2D.tile2.dat: bit-for-bit identical
+  ao2D.tile3.dat: bit-for-bit identical
+  ao2D.tile4.dat: bit-for-bit identical
+  ao2D.tile5.dat: bit-for-bit identical
+  ao2D.tile6.dat: bit-for-bit identical
+  aso2.tile1.dat: bit-for-bit identical
+  aso2.tile2.dat: bit-for-bit identical
+  aso2.tile3.dat: bit-for-bit identical
+  aso2.tile4.dat: bit-for-bit identical
+  aso2.tile5.dat: bit-for-bit identical
+  aso2.tile6.dat: bit-for-bit identical
+  cbae.tile1.dat: bit-for-bit identical
+  cbae.tile2.dat: bit-for-bit identical
+  cbae.tile3.dat: bit-for-bit identical
+  cbae.tile4.dat: bit-for-bit identical
+  cbae.tile5.dat: bit-for-bit identical
+  cbae.tile6.dat: bit-for-bit identical
+  cbbc.tile1.dat: bit-for-bit identical
+  cbbc.tile2.dat: bit-for-bit identical
+  cbbc.tile3.dat: bit-for-bit identical
+  cbbc.tile4.dat: bit-for-bit identical
+  cbbc.tile5.dat: bit-for-bit identical
+  cbbc.tile6.dat: bit-for-bit identical
+  cbdt.tile1.dat: bit-for-bit identical
+  cbdt.tile2.dat: bit-for-bit identical
+  cbdt.tile3.dat: bit-for-bit identical
+  cbdt.tile4.dat: bit-for-bit identical
+  cbdt.tile5.dat: bit-for-bit identical
+  cbdt.tile6.dat: bit-for-bit identical
+  cboc.tile1.dat: bit-for-bit identical
+  cboc.tile2.dat: bit-for-bit identical
+  cboc.tile3.dat: bit-for-bit identical
+  cboc.tile4.dat: bit-for-bit identical
+  cboc.tile5.dat: bit-for-bit identical
+  cboc.tile6.dat: bit-for-bit identical
+  cbsf.tile1.dat: bit-for-bit identical
+  cbsf.tile2.dat: bit-for-bit identical
+  cbsf.tile3.dat: bit-for-bit identical
+  cbsf.tile4.dat: bit-for-bit identical
+  cbsf.tile5.dat: bit-for-bit identical
+  cbsf.tile6.dat: bit-for-bit identical
+  cbss.tile1.dat: bit-for-bit identical
+  cbss.tile2.dat: bit-for-bit identical
+  cbss.tile3.dat: bit-for-bit identical
+  cbss.tile4.dat: bit-for-bit identical
+  cbss.tile5.dat: bit-for-bit identical
+  cbss.tile6.dat: bit-for-bit identical
+  d1st.tile1.dat: bit-for-bit identical
+  d1st.tile2.dat: bit-for-bit identical
+  d1st.tile3.dat: bit-for-bit identical
+  d1st.tile4.dat: bit-for-bit identical
+  d1st.tile5.dat: bit-for-bit identical
+  d1st.tile6.dat: bit-for-bit identical
+  d2st.tile1.dat: bit-for-bit identical
+  d2st.tile2.dat: bit-for-bit identical
+  d2st.tile3.dat: bit-for-bit identical
+  d2st.tile4.dat: bit-for-bit identical
+  d2st.tile5.dat: bit-for-bit identical
+  d2st.tile6.dat: bit-for-bit identical
+  d3st.tile1.dat: bit-for-bit identical
+  d3st.tile2.dat: bit-for-bit identical
+  d3st.tile3.dat: bit-for-bit identical
+  d3st.tile4.dat: bit-for-bit identical
+  d3st.tile5.dat: bit-for-bit identical
+  d3st.tile6.dat: bit-for-bit identical
+  d4st.tile1.dat: bit-for-bit identical
+  d4st.tile2.dat: bit-for-bit identical
+  d4st.tile3.dat: bit-for-bit identical
+  d4st.tile4.dat: bit-for-bit identical
+  d4st.tile5.dat: bit-for-bit identical
+  d4st.tile6.dat: bit-for-bit identical
+  d5st.tile1.dat: bit-for-bit identical
+  d5st.tile2.dat: bit-for-bit identical
+  d5st.tile3.dat: bit-for-bit identical
+  d5st.tile4.dat: bit-for-bit identical
+  d5st.tile5.dat: bit-for-bit identical
+  d5st.tile6.dat: bit-for-bit identical
+  dms1.tile1.dat: bit-for-bit identical
+  dms1.tile2.dat: bit-for-bit identical
+  dms1.tile3.dat: bit-for-bit identical
+  dms1.tile4.dat: bit-for-bit identical
+  dms1.tile5.dat: bit-for-bit identical
+  dms1.tile6.dat: bit-for-bit identical
+  emd1.tile1.dat: bit-for-bit identical
+  emd1.tile2.dat: bit-for-bit identical
+  emd1.tile3.dat: bit-for-bit identical
+  emd1.tile4.dat: bit-for-bit identical
+  emd1.tile5.dat: bit-for-bit identical
+  emd1.tile6.dat: bit-for-bit identical
+  emd2.tile1.dat: bit-for-bit identical
+  emd2.tile2.dat: bit-for-bit identical
+  emd2.tile3.dat: bit-for-bit identical
+  emd2.tile4.dat: bit-for-bit identical
+  emd2.tile5.dat: bit-for-bit identical
+  emd2.tile6.dat: bit-for-bit identical
+  emd3.tile1.dat: bit-for-bit identical
+  emd3.tile2.dat: bit-for-bit identical
+  emd3.tile3.dat: bit-for-bit identical
+  emd3.tile4.dat: bit-for-bit identical
+  emd3.tile5.dat: bit-for-bit identical
+  emd3.tile6.dat: bit-for-bit identical
+  emd4.tile1.dat: bit-for-bit identical
+  emd4.tile2.dat: bit-for-bit identical
+  emd4.tile3.dat: bit-for-bit identical
+  emd4.tile4.dat: bit-for-bit identical
+  emd4.tile5.dat: bit-for-bit identical
+  emd4.tile6.dat: bit-for-bit identical
+  emd5.tile1.dat: bit-for-bit identical
+  emd5.tile2.dat: bit-for-bit identical
+  emd5.tile3.dat: bit-for-bit identical
+  emd5.tile4.dat: bit-for-bit identical
+  emd5.tile5.dat: bit-for-bit identical
+  emd5.tile6.dat: bit-for-bit identical
+  ems1.tile1.dat: bit-for-bit identical
+  ems1.tile2.dat: bit-for-bit identical
+  ems1.tile3.dat: bit-for-bit identical
+  ems1.tile4.dat: bit-for-bit identical
+  ems1.tile5.dat: bit-for-bit identical
+  ems1.tile6.dat: bit-for-bit identical
+  ems2.tile1.dat: bit-for-bit identical
+  ems2.tile2.dat: bit-for-bit identical
+  ems2.tile3.dat: bit-for-bit identical
+  ems2.tile4.dat: bit-for-bit identical
+  ems2.tile5.dat: bit-for-bit identical
+  ems2.tile6.dat: bit-for-bit identical
+  ems3.tile1.dat: bit-for-bit identical
+  ems3.tile2.dat: bit-for-bit identical
+  ems3.tile3.dat: bit-for-bit identical
+  ems3.tile4.dat: bit-for-bit identical
+  ems3.tile5.dat: bit-for-bit identical
+  ems3.tile6.dat: bit-for-bit identical
+  ems4.tile1.dat: bit-for-bit identical
+  ems4.tile2.dat: bit-for-bit identical
+  ems4.tile3.dat: bit-for-bit identical
+  ems4.tile4.dat: bit-for-bit identical
+  ems4.tile5.dat: bit-for-bit identical
+  ems4.tile6.dat: bit-for-bit identical
+  ems5.tile1.dat: bit-for-bit identical
+  ems5.tile2.dat: bit-for-bit identical
+  ems5.tile3.dat: bit-for-bit identical
+  ems5.tile4.dat: bit-for-bit identical
+  ems5.tile5.dat: bit-for-bit identical
+  ems5.tile6.dat: bit-for-bit identical
+  hobg.tile1.dat: bit-for-bit identical
+  hobg.tile2.dat: bit-for-bit identical
+  hobg.tile3.dat: bit-for-bit identical
+  hobg.tile4.dat: bit-for-bit identical
+  hobg.tile5.dat: bit-for-bit identical
+  hobg.tile6.dat: bit-for-bit identical
+  no3b.tile1.dat: bit-for-bit identical
+  no3b.tile2.dat: bit-for-bit identical
+  no3b.tile3.dat: bit-for-bit identical
+  no3b.tile4.dat: bit-for-bit identical
+  no3b.tile5.dat: bit-for-bit identical
+  no3b.tile6.dat: bit-for-bit identical
+  ocbb.tile1.dat: bit-for-bit identical
+  ocbb.tile2.dat: bit-for-bit identical
+  ocbb.tile3.dat: bit-for-bit identical
+  ocbb.tile4.dat: bit-for-bit identical
+  ocbb.tile5.dat: bit-for-bit identical
+  ocbb.tile6.dat: bit-for-bit identical
+  ohbg.tile1.dat: bit-for-bit identical
+  ohbg.tile2.dat: bit-for-bit identical
+  ohbg.tile3.dat: bit-for-bit identical
+  ohbg.tile4.dat: bit-for-bit identical
+  ohbg.tile5.dat: bit-for-bit identical
+  ohbg.tile6.dat: bit-for-bit identical
+  pbc1.tile1.dat: bit-for-bit identical
+  pbc1.tile2.dat: bit-for-bit identical
+  pbc1.tile3.dat: bit-for-bit identical
+  pbc1.tile4.dat: bit-for-bit identical
+  pbc1.tile5.dat: bit-for-bit identical
+  pbc1.tile6.dat: bit-for-bit identical
+  pbc2.tile1.dat: bit-for-bit identical
+  pbc2.tile2.dat: bit-for-bit identical
+  pbc2.tile3.dat: bit-for-bit identical
+  pbc2.tile4.dat: bit-for-bit identical
+  pbc2.tile5.dat: bit-for-bit identical
+  pbc2.tile6.dat: bit-for-bit identical
+  pm10.tile1.dat: bit-for-bit identical
+  pm10.tile2.dat: bit-for-bit identical
+  pm10.tile3.dat: bit-for-bit identical
+  pm10.tile4.dat: bit-for-bit identical
+  pm10.tile5.dat: bit-for-bit identical
+  pm10.tile6.dat: bit-for-bit identical
+  pm25.tile1.dat: bit-for-bit identical
+  pm25.tile2.dat: bit-for-bit identical
+  pm25.tile3.dat: bit-for-bit identical
+  pm25.tile4.dat: bit-for-bit identical
+  pm25.tile5.dat: bit-for-bit identical
+  pm25.tile6.dat: bit-for-bit identical
+  pmsa.tile1.dat: bit-for-bit identical
+  pmsa.tile2.dat: bit-for-bit identical
+  pmsa.tile3.dat: bit-for-bit identical
+  pmsa.tile4.dat: bit-for-bit identical
+  pmsa.tile5.dat: bit-for-bit identical
+  pmsa.tile6.dat: bit-for-bit identical
+  poc1.tile1.dat: bit-for-bit identical
+  poc1.tile2.dat: bit-for-bit identical
+  poc1.tile3.dat: bit-for-bit identical
+  poc1.tile4.dat: bit-for-bit identical
+  poc1.tile5.dat: bit-for-bit identical
+  poc1.tile6.dat: bit-for-bit identical
+  poc2.tile1.dat: bit-for-bit identical
+  poc2.tile2.dat: bit-for-bit identical
+  poc2.tile3.dat: bit-for-bit identical
+  poc2.tile4.dat: bit-for-bit identical
+  poc2.tile5.dat: bit-for-bit identical
+  poc2.tile6.dat: bit-for-bit identical
+  pp10.tile1.dat: bit-for-bit identical
+  pp10.tile2.dat: bit-for-bit identical
+  pp10.tile3.dat: bit-for-bit identical
+  pp10.tile4.dat: bit-for-bit identical
+  pp10.tile5.dat: bit-for-bit identical
+  pp10.tile6.dat: bit-for-bit identical
+  pp25.tile1.dat: bit-for-bit identical
+  pp25.tile2.dat: bit-for-bit identical
+  pp25.tile3.dat: bit-for-bit identical
+  pp25.tile4.dat: bit-for-bit identical
+  pp25.tile5.dat: bit-for-bit identical
+  pp25.tile6.dat: bit-for-bit identical
+  pso2.tile1.dat: bit-for-bit identical
+  pso2.tile2.dat: bit-for-bit identical
+  pso2.tile3.dat: bit-for-bit identical
+  pso2.tile4.dat: bit-for-bit identical
+  pso2.tile5.dat: bit-for-bit identical
+  pso2.tile6.dat: bit-for-bit identical
+  s1ea.tile1.dat: bit-for-bit identical
+  s1ea.tile2.dat: bit-for-bit identical
+  s1ea.tile3.dat: bit-for-bit identical
+  s1ea.tile4.dat: bit-for-bit identical
+  s1ea.tile5.dat: bit-for-bit identical
+  s1ea.tile6.dat: bit-for-bit identical
+  s2ea.tile1.dat: bit-for-bit identical
+  s2ea.tile2.dat: bit-for-bit identical
+  s2ea.tile3.dat: bit-for-bit identical
+  s2ea.tile4.dat: bit-for-bit identical
+  s2ea.tile5.dat: bit-for-bit identical
+  s2ea.tile6.dat: bit-for-bit identical
+  s3ea.tile1.dat: bit-for-bit identical
+  s3ea.tile2.dat: bit-for-bit identical
+  s3ea.tile3.dat: bit-for-bit identical
+  s3ea.tile4.dat: bit-for-bit identical
+  s3ea.tile5.dat: bit-for-bit identical
+  s3ea.tile6.dat: bit-for-bit identical
+  s4ea.tile1.dat: bit-for-bit identical
+  s4ea.tile2.dat: bit-for-bit identical
+  s4ea.tile3.dat: bit-for-bit identical
+  s4ea.tile4.dat: bit-for-bit identical
+  s4ea.tile5.dat: bit-for-bit identical
+  s4ea.tile6.dat: bit-for-bit identical
+  s5ea.tile1.dat: bit-for-bit identical
+  s5ea.tile2.dat: bit-for-bit identical
+  s5ea.tile3.dat: bit-for-bit identical
+  s5ea.tile4.dat: bit-for-bit identical
+  s5ea.tile5.dat: bit-for-bit identical
+  s5ea.tile6.dat: bit-for-bit identical
+  sulf.tile1.dat: bit-for-bit identical
+  sulf.tile2.dat: bit-for-bit identical
+  sulf.tile3.dat: bit-for-bit identical
+  sulf.tile4.dat: bit-for-bit identical
+  sulf.tile5.dat: bit-for-bit identical
+  sulf.tile6.dat: bit-for-bit identical
+  wbc2.tile1.dat: bit-for-bit identical
+  wbc2.tile2.dat: bit-for-bit identical
+  wbc2.tile3.dat: bit-for-bit identical
+  wbc2.tile4.dat: bit-for-bit identical
+  wbc2.tile5.dat: bit-for-bit identical
+  wbc2.tile6.dat: bit-for-bit identical
+  wdt1.tile1.dat: bit-for-bit identical
+  wdt1.tile2.dat: bit-for-bit identical
+  wdt1.tile3.dat: bit-for-bit identical
+  wdt1.tile4.dat: bit-for-bit identical
+  wdt1.tile5.dat: bit-for-bit identical
+  wdt1.tile6.dat: bit-for-bit identical
+  wdt2.tile1.dat: bit-for-bit identical
+  wdt2.tile2.dat: bit-for-bit identical
+  wdt2.tile3.dat: bit-for-bit identical
+  wdt2.tile4.dat: bit-for-bit identical
+  wdt2.tile5.dat: bit-for-bit identical
+  wdt2.tile6.dat: bit-for-bit identical
+  wdt3.tile1.dat: bit-for-bit identical
+  wdt3.tile2.dat: bit-for-bit identical
+  wdt3.tile3.dat: bit-for-bit identical
+  wdt3.tile4.dat: bit-for-bit identical
+  wdt3.tile5.dat: bit-for-bit identical
+  wdt3.tile6.dat: bit-for-bit identical
+  wdt4.tile1.dat: bit-for-bit identical
+  wdt4.tile2.dat: bit-for-bit identical
+  wdt4.tile3.dat: bit-for-bit identical
+  wdt4.tile4.dat: bit-for-bit identical
+  wdt4.tile5.dat: bit-for-bit identical
+  wdt4.tile6.dat: bit-for-bit identical
+  wdt5.tile1.dat: bit-for-bit identical
+  wdt5.tile2.dat: bit-for-bit identical
+  wdt5.tile3.dat: bit-for-bit identical
+  wdt5.tile4.dat: bit-for-bit identical
+  wdt5.tile5.dat: bit-for-bit identical
+  wdt5.tile6.dat: bit-for-bit identical
+  woc2.tile1.dat: bit-for-bit identical
+  woc2.tile2.dat: bit-for-bit identical
+  woc2.tile3.dat: bit-for-bit identical
+  woc2.tile4.dat: bit-for-bit identical
+  woc2.tile5.dat: bit-for-bit identical
+  woc2.tile6.dat: bit-for-bit identical
+  wp10.tile1.dat: bit-for-bit identical
+  wp10.tile2.dat: bit-for-bit identical
+  wp10.tile3.dat: bit-for-bit identical
+  wp10.tile4.dat: bit-for-bit identical
+  wp10.tile5.dat: bit-for-bit identical
+  wp10.tile6.dat: bit-for-bit identical
+  wp25.tile1.dat: bit-for-bit identical
+  wp25.tile2.dat: bit-for-bit identical
+  wp25.tile3.dat: bit-for-bit identical
+  wp25.tile4.dat: bit-for-bit identical
+  wp25.tile5.dat: bit-for-bit identical
+  wp25.tile6.dat: bit-for-bit identical
+  wpre.tile1.dat: bit-for-bit identical
+  wpre.tile2.dat: bit-for-bit identical
+  wpre.tile3.dat: bit-for-bit identical
+  wpre.tile4.dat: bit-for-bit identical
+  wpre.tile5.dat: bit-for-bit identical
+  wpre.tile6.dat: bit-for-bit identical
+  wse1.tile1.dat: bit-for-bit identical
+  wse1.tile2.dat: bit-for-bit identical
+  wse1.tile3.dat: bit-for-bit identical
+  wse1.tile4.dat: bit-for-bit identical
+  wse1.tile5.dat: bit-for-bit identical
+  wse1.tile6.dat: bit-for-bit identical
+  wse2.tile1.dat: bit-for-bit identical
+  wse2.tile2.dat: bit-for-bit identical
+  wse2.tile3.dat: bit-for-bit identical
+  wse2.tile4.dat: bit-for-bit identical
+  wse2.tile5.dat: bit-for-bit identical
+  wse2.tile6.dat: bit-for-bit identical
+  wse3.tile1.dat: bit-for-bit identical
+  wse3.tile2.dat: bit-for-bit identical
+  wse3.tile3.dat: bit-for-bit identical
+  wse3.tile4.dat: bit-for-bit identical
+  wse3.tile5.dat: bit-for-bit identical
+  wse3.tile6.dat: bit-for-bit identical
+  wse4.tile1.dat: bit-for-bit identical
+  wse4.tile2.dat: bit-for-bit identical
+  wse4.tile3.dat: bit-for-bit identical
+  wse4.tile4.dat: bit-for-bit identical
+  wse4.tile5.dat: bit-for-bit identical
+  wse4.tile6.dat: bit-for-bit identical
+  wse5.tile1.dat: bit-for-bit identical
+  wse5.tile2.dat: bit-for-bit identical
+  wse5.tile3.dat: bit-for-bit identical
+  wse5.tile4.dat: bit-for-bit identical
+  wse5.tile5.dat: bit-for-bit identical
+  wse5.tile6.dat: bit-for-bit identical
+  wso4.tile1.dat: bit-for-bit identical
+  wso4.tile2.dat: bit-for-bit identical
+  wso4.tile3.dat: bit-for-bit identical
+  wso4.tile4.dat: bit-for-bit identical
+  wso4.tile5.dat: bit-for-bit identical
+  wso4.tile6.dat: bit-for-bit identical
+  Executable did not change during test suite:
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_gsdchem.exe
+    Expected md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+    Actual md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+  TEST PASSED AT Tue Sep 17 17:35:12 UTC 2019
+
+TEST #10: PASS
+  Test cpld_fv3_gfdlmp_gsdchem_modis_c384 starting at Tue Sep 17 17:05:03 UTC 2019 (FV3-GSDCHEM with GFDL MP and MODIS emissions at C384, 6-hour)
+  Tue Sep 17 17:05:03 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -2532,457 +2974,14 @@ TEST #9: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.33822/exec/fv3_gsdchem.exe
-    Expected md5sum: 286edf1925053351aca7e74477dcf84b
-    Actual md5sum: 286edf1925053351aca7e74477dcf84b
-  TEST PASSED AT Wed Sep  4 21:53:49 UTC 2019
-
-TEST #10: PASS
-  Test cpld_fv3_gsdchem_modis starting at Wed Sep 4 21:15:26 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and MODIS emission data)
-  Wed Sep  4 21:15:26 UTC 2019
-  atmos_4xdaily.tile1.nc: bit-for-bit identical
-  atmos_4xdaily.tile2.nc: bit-for-bit identical
-  atmos_4xdaily.tile3.nc: bit-for-bit identical
-  atmos_4xdaily.tile4.nc: bit-for-bit identical
-  atmos_4xdaily.tile5.nc: bit-for-bit identical
-  atmos_4xdaily.tile6.nc: bit-for-bit identical
-  phyf000.tile1.nc: bit-for-bit identical
-  phyf000.tile2.nc: bit-for-bit identical
-  phyf000.tile3.nc: bit-for-bit identical
-  phyf000.tile4.nc: bit-for-bit identical
-  phyf000.tile5.nc: bit-for-bit identical
-  phyf000.tile6.nc: bit-for-bit identical
-  phyf024.tile1.nc: bit-for-bit identical
-  phyf024.tile2.nc: bit-for-bit identical
-  phyf024.tile3.nc: bit-for-bit identical
-  phyf024.tile4.nc: bit-for-bit identical
-  phyf024.tile5.nc: bit-for-bit identical
-  phyf024.tile6.nc: bit-for-bit identical
-  dynf000.tile1.nc: bit-for-bit identical
-  dynf000.tile2.nc: bit-for-bit identical
-  dynf000.tile3.nc: bit-for-bit identical
-  dynf000.tile4.nc: bit-for-bit identical
-  dynf000.tile5.nc: bit-for-bit identical
-  dynf000.tile6.nc: bit-for-bit identical
-  dynf024.tile1.nc: bit-for-bit identical
-  dynf024.tile2.nc: bit-for-bit identical
-  dynf024.tile3.nc: bit-for-bit identical
-  dynf024.tile4.nc: bit-for-bit identical
-  dynf024.tile5.nc: bit-for-bit identical
-  dynf024.tile6.nc: bit-for-bit identical
-  RESTART/coupler.res: bit-for-bit identical
-  RESTART/fv_core.res.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile1.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile2.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile3.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile4.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile5.nc: bit-for-bit identical
-  RESTART/fv_core.res.tile6.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile1.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile2.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile3.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile4.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile5.nc: bit-for-bit identical
-  RESTART/fv_srf_wnd.res.tile6.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile1.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile2.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile3.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile4.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile5.nc: bit-for-bit identical
-  RESTART/fv_tracer.res.tile6.nc: bit-for-bit identical
-  RESTART/phy_data.tile1.nc: bit-for-bit identical
-  RESTART/phy_data.tile2.nc: bit-for-bit identical
-  RESTART/phy_data.tile3.nc: bit-for-bit identical
-  RESTART/phy_data.tile4.nc: bit-for-bit identical
-  RESTART/phy_data.tile5.nc: bit-for-bit identical
-  RESTART/phy_data.tile6.nc: bit-for-bit identical
-  RESTART/sfc_data.tile1.nc: bit-for-bit identical
-  RESTART/sfc_data.tile2.nc: bit-for-bit identical
-  RESTART/sfc_data.tile3.nc: bit-for-bit identical
-  RESTART/sfc_data.tile4.nc: bit-for-bit identical
-  RESTART/sfc_data.tile5.nc: bit-for-bit identical
-  RESTART/sfc_data.tile6.nc: bit-for-bit identical
-  anbc.tile1.dat: bit-for-bit identical
-  anbc.tile2.dat: bit-for-bit identical
-  anbc.tile3.dat: bit-for-bit identical
-  anbc.tile4.dat: bit-for-bit identical
-  anbc.tile5.dat: bit-for-bit identical
-  anbc.tile6.dat: bit-for-bit identical
-  anoc.tile1.dat: bit-for-bit identical
-  anoc.tile2.dat: bit-for-bit identical
-  anoc.tile3.dat: bit-for-bit identical
-  anoc.tile4.dat: bit-for-bit identical
-  anoc.tile5.dat: bit-for-bit identical
-  anoc.tile6.dat: bit-for-bit identical
-  ao2D.tile1.dat: bit-for-bit identical
-  ao2D.tile2.dat: bit-for-bit identical
-  ao2D.tile3.dat: bit-for-bit identical
-  ao2D.tile4.dat: bit-for-bit identical
-  ao2D.tile5.dat: bit-for-bit identical
-  ao2D.tile6.dat: bit-for-bit identical
-  aso2.tile1.dat: bit-for-bit identical
-  aso2.tile2.dat: bit-for-bit identical
-  aso2.tile3.dat: bit-for-bit identical
-  aso2.tile4.dat: bit-for-bit identical
-  aso2.tile5.dat: bit-for-bit identical
-  aso2.tile6.dat: bit-for-bit identical
-  cbae.tile1.dat: bit-for-bit identical
-  cbae.tile2.dat: bit-for-bit identical
-  cbae.tile3.dat: bit-for-bit identical
-  cbae.tile4.dat: bit-for-bit identical
-  cbae.tile5.dat: bit-for-bit identical
-  cbae.tile6.dat: bit-for-bit identical
-  cbbc.tile1.dat: bit-for-bit identical
-  cbbc.tile2.dat: bit-for-bit identical
-  cbbc.tile3.dat: bit-for-bit identical
-  cbbc.tile4.dat: bit-for-bit identical
-  cbbc.tile5.dat: bit-for-bit identical
-  cbbc.tile6.dat: bit-for-bit identical
-  cbdt.tile1.dat: bit-for-bit identical
-  cbdt.tile2.dat: bit-for-bit identical
-  cbdt.tile3.dat: bit-for-bit identical
-  cbdt.tile4.dat: bit-for-bit identical
-  cbdt.tile5.dat: bit-for-bit identical
-  cbdt.tile6.dat: bit-for-bit identical
-  cboc.tile1.dat: bit-for-bit identical
-  cboc.tile2.dat: bit-for-bit identical
-  cboc.tile3.dat: bit-for-bit identical
-  cboc.tile4.dat: bit-for-bit identical
-  cboc.tile5.dat: bit-for-bit identical
-  cboc.tile6.dat: bit-for-bit identical
-  cbsf.tile1.dat: bit-for-bit identical
-  cbsf.tile2.dat: bit-for-bit identical
-  cbsf.tile3.dat: bit-for-bit identical
-  cbsf.tile4.dat: bit-for-bit identical
-  cbsf.tile5.dat: bit-for-bit identical
-  cbsf.tile6.dat: bit-for-bit identical
-  cbss.tile1.dat: bit-for-bit identical
-  cbss.tile2.dat: bit-for-bit identical
-  cbss.tile3.dat: bit-for-bit identical
-  cbss.tile4.dat: bit-for-bit identical
-  cbss.tile5.dat: bit-for-bit identical
-  cbss.tile6.dat: bit-for-bit identical
-  d1st.tile1.dat: bit-for-bit identical
-  d1st.tile2.dat: bit-for-bit identical
-  d1st.tile3.dat: bit-for-bit identical
-  d1st.tile4.dat: bit-for-bit identical
-  d1st.tile5.dat: bit-for-bit identical
-  d1st.tile6.dat: bit-for-bit identical
-  d2st.tile1.dat: bit-for-bit identical
-  d2st.tile2.dat: bit-for-bit identical
-  d2st.tile3.dat: bit-for-bit identical
-  d2st.tile4.dat: bit-for-bit identical
-  d2st.tile5.dat: bit-for-bit identical
-  d2st.tile6.dat: bit-for-bit identical
-  d3st.tile1.dat: bit-for-bit identical
-  d3st.tile2.dat: bit-for-bit identical
-  d3st.tile3.dat: bit-for-bit identical
-  d3st.tile4.dat: bit-for-bit identical
-  d3st.tile5.dat: bit-for-bit identical
-  d3st.tile6.dat: bit-for-bit identical
-  d4st.tile1.dat: bit-for-bit identical
-  d4st.tile2.dat: bit-for-bit identical
-  d4st.tile3.dat: bit-for-bit identical
-  d4st.tile4.dat: bit-for-bit identical
-  d4st.tile5.dat: bit-for-bit identical
-  d4st.tile6.dat: bit-for-bit identical
-  d5st.tile1.dat: bit-for-bit identical
-  d5st.tile2.dat: bit-for-bit identical
-  d5st.tile3.dat: bit-for-bit identical
-  d5st.tile4.dat: bit-for-bit identical
-  d5st.tile5.dat: bit-for-bit identical
-  d5st.tile6.dat: bit-for-bit identical
-  dms1.tile1.dat: bit-for-bit identical
-  dms1.tile2.dat: bit-for-bit identical
-  dms1.tile3.dat: bit-for-bit identical
-  dms1.tile4.dat: bit-for-bit identical
-  dms1.tile5.dat: bit-for-bit identical
-  dms1.tile6.dat: bit-for-bit identical
-  emd1.tile1.dat: bit-for-bit identical
-  emd1.tile2.dat: bit-for-bit identical
-  emd1.tile3.dat: bit-for-bit identical
-  emd1.tile4.dat: bit-for-bit identical
-  emd1.tile5.dat: bit-for-bit identical
-  emd1.tile6.dat: bit-for-bit identical
-  emd2.tile1.dat: bit-for-bit identical
-  emd2.tile2.dat: bit-for-bit identical
-  emd2.tile3.dat: bit-for-bit identical
-  emd2.tile4.dat: bit-for-bit identical
-  emd2.tile5.dat: bit-for-bit identical
-  emd2.tile6.dat: bit-for-bit identical
-  emd3.tile1.dat: bit-for-bit identical
-  emd3.tile2.dat: bit-for-bit identical
-  emd3.tile3.dat: bit-for-bit identical
-  emd3.tile4.dat: bit-for-bit identical
-  emd3.tile5.dat: bit-for-bit identical
-  emd3.tile6.dat: bit-for-bit identical
-  emd4.tile1.dat: bit-for-bit identical
-  emd4.tile2.dat: bit-for-bit identical
-  emd4.tile3.dat: bit-for-bit identical
-  emd4.tile4.dat: bit-for-bit identical
-  emd4.tile5.dat: bit-for-bit identical
-  emd4.tile6.dat: bit-for-bit identical
-  emd5.tile1.dat: bit-for-bit identical
-  emd5.tile2.dat: bit-for-bit identical
-  emd5.tile3.dat: bit-for-bit identical
-  emd5.tile4.dat: bit-for-bit identical
-  emd5.tile5.dat: bit-for-bit identical
-  emd5.tile6.dat: bit-for-bit identical
-  ems1.tile1.dat: bit-for-bit identical
-  ems1.tile2.dat: bit-for-bit identical
-  ems1.tile3.dat: bit-for-bit identical
-  ems1.tile4.dat: bit-for-bit identical
-  ems1.tile5.dat: bit-for-bit identical
-  ems1.tile6.dat: bit-for-bit identical
-  ems2.tile1.dat: bit-for-bit identical
-  ems2.tile2.dat: bit-for-bit identical
-  ems2.tile3.dat: bit-for-bit identical
-  ems2.tile4.dat: bit-for-bit identical
-  ems2.tile5.dat: bit-for-bit identical
-  ems2.tile6.dat: bit-for-bit identical
-  ems3.tile1.dat: bit-for-bit identical
-  ems3.tile2.dat: bit-for-bit identical
-  ems3.tile3.dat: bit-for-bit identical
-  ems3.tile4.dat: bit-for-bit identical
-  ems3.tile5.dat: bit-for-bit identical
-  ems3.tile6.dat: bit-for-bit identical
-  ems4.tile1.dat: bit-for-bit identical
-  ems4.tile2.dat: bit-for-bit identical
-  ems4.tile3.dat: bit-for-bit identical
-  ems4.tile4.dat: bit-for-bit identical
-  ems4.tile5.dat: bit-for-bit identical
-  ems4.tile6.dat: bit-for-bit identical
-  ems5.tile1.dat: bit-for-bit identical
-  ems5.tile2.dat: bit-for-bit identical
-  ems5.tile3.dat: bit-for-bit identical
-  ems5.tile4.dat: bit-for-bit identical
-  ems5.tile5.dat: bit-for-bit identical
-  ems5.tile6.dat: bit-for-bit identical
-  hobg.tile1.dat: bit-for-bit identical
-  hobg.tile2.dat: bit-for-bit identical
-  hobg.tile3.dat: bit-for-bit identical
-  hobg.tile4.dat: bit-for-bit identical
-  hobg.tile5.dat: bit-for-bit identical
-  hobg.tile6.dat: bit-for-bit identical
-  no3b.tile1.dat: bit-for-bit identical
-  no3b.tile2.dat: bit-for-bit identical
-  no3b.tile3.dat: bit-for-bit identical
-  no3b.tile4.dat: bit-for-bit identical
-  no3b.tile5.dat: bit-for-bit identical
-  no3b.tile6.dat: bit-for-bit identical
-  ocbb.tile1.dat: bit-for-bit identical
-  ocbb.tile2.dat: bit-for-bit identical
-  ocbb.tile3.dat: bit-for-bit identical
-  ocbb.tile4.dat: bit-for-bit identical
-  ocbb.tile5.dat: bit-for-bit identical
-  ocbb.tile6.dat: bit-for-bit identical
-  ohbg.tile1.dat: bit-for-bit identical
-  ohbg.tile2.dat: bit-for-bit identical
-  ohbg.tile3.dat: bit-for-bit identical
-  ohbg.tile4.dat: bit-for-bit identical
-  ohbg.tile5.dat: bit-for-bit identical
-  ohbg.tile6.dat: bit-for-bit identical
-  pbc1.tile1.dat: bit-for-bit identical
-  pbc1.tile2.dat: bit-for-bit identical
-  pbc1.tile3.dat: bit-for-bit identical
-  pbc1.tile4.dat: bit-for-bit identical
-  pbc1.tile5.dat: bit-for-bit identical
-  pbc1.tile6.dat: bit-for-bit identical
-  pbc2.tile1.dat: bit-for-bit identical
-  pbc2.tile2.dat: bit-for-bit identical
-  pbc2.tile3.dat: bit-for-bit identical
-  pbc2.tile4.dat: bit-for-bit identical
-  pbc2.tile5.dat: bit-for-bit identical
-  pbc2.tile6.dat: bit-for-bit identical
-  pm10.tile1.dat: bit-for-bit identical
-  pm10.tile2.dat: bit-for-bit identical
-  pm10.tile3.dat: bit-for-bit identical
-  pm10.tile4.dat: bit-for-bit identical
-  pm10.tile5.dat: bit-for-bit identical
-  pm10.tile6.dat: bit-for-bit identical
-  pm25.tile1.dat: bit-for-bit identical
-  pm25.tile2.dat: bit-for-bit identical
-  pm25.tile3.dat: bit-for-bit identical
-  pm25.tile4.dat: bit-for-bit identical
-  pm25.tile5.dat: bit-for-bit identical
-  pm25.tile6.dat: bit-for-bit identical
-  pmsa.tile1.dat: bit-for-bit identical
-  pmsa.tile2.dat: bit-for-bit identical
-  pmsa.tile3.dat: bit-for-bit identical
-  pmsa.tile4.dat: bit-for-bit identical
-  pmsa.tile5.dat: bit-for-bit identical
-  pmsa.tile6.dat: bit-for-bit identical
-  poc1.tile1.dat: bit-for-bit identical
-  poc1.tile2.dat: bit-for-bit identical
-  poc1.tile3.dat: bit-for-bit identical
-  poc1.tile4.dat: bit-for-bit identical
-  poc1.tile5.dat: bit-for-bit identical
-  poc1.tile6.dat: bit-for-bit identical
-  poc2.tile1.dat: bit-for-bit identical
-  poc2.tile2.dat: bit-for-bit identical
-  poc2.tile3.dat: bit-for-bit identical
-  poc2.tile4.dat: bit-for-bit identical
-  poc2.tile5.dat: bit-for-bit identical
-  poc2.tile6.dat: bit-for-bit identical
-  pp10.tile1.dat: bit-for-bit identical
-  pp10.tile2.dat: bit-for-bit identical
-  pp10.tile3.dat: bit-for-bit identical
-  pp10.tile4.dat: bit-for-bit identical
-  pp10.tile5.dat: bit-for-bit identical
-  pp10.tile6.dat: bit-for-bit identical
-  pp25.tile1.dat: bit-for-bit identical
-  pp25.tile2.dat: bit-for-bit identical
-  pp25.tile3.dat: bit-for-bit identical
-  pp25.tile4.dat: bit-for-bit identical
-  pp25.tile5.dat: bit-for-bit identical
-  pp25.tile6.dat: bit-for-bit identical
-  pso2.tile1.dat: bit-for-bit identical
-  pso2.tile2.dat: bit-for-bit identical
-  pso2.tile3.dat: bit-for-bit identical
-  pso2.tile4.dat: bit-for-bit identical
-  pso2.tile5.dat: bit-for-bit identical
-  pso2.tile6.dat: bit-for-bit identical
-  s1ea.tile1.dat: bit-for-bit identical
-  s1ea.tile2.dat: bit-for-bit identical
-  s1ea.tile3.dat: bit-for-bit identical
-  s1ea.tile4.dat: bit-for-bit identical
-  s1ea.tile5.dat: bit-for-bit identical
-  s1ea.tile6.dat: bit-for-bit identical
-  s2ea.tile1.dat: bit-for-bit identical
-  s2ea.tile2.dat: bit-for-bit identical
-  s2ea.tile3.dat: bit-for-bit identical
-  s2ea.tile4.dat: bit-for-bit identical
-  s2ea.tile5.dat: bit-for-bit identical
-  s2ea.tile6.dat: bit-for-bit identical
-  s3ea.tile1.dat: bit-for-bit identical
-  s3ea.tile2.dat: bit-for-bit identical
-  s3ea.tile3.dat: bit-for-bit identical
-  s3ea.tile4.dat: bit-for-bit identical
-  s3ea.tile5.dat: bit-for-bit identical
-  s3ea.tile6.dat: bit-for-bit identical
-  s4ea.tile1.dat: bit-for-bit identical
-  s4ea.tile2.dat: bit-for-bit identical
-  s4ea.tile3.dat: bit-for-bit identical
-  s4ea.tile4.dat: bit-for-bit identical
-  s4ea.tile5.dat: bit-for-bit identical
-  s4ea.tile6.dat: bit-for-bit identical
-  s5ea.tile1.dat: bit-for-bit identical
-  s5ea.tile2.dat: bit-for-bit identical
-  s5ea.tile3.dat: bit-for-bit identical
-  s5ea.tile4.dat: bit-for-bit identical
-  s5ea.tile5.dat: bit-for-bit identical
-  s5ea.tile6.dat: bit-for-bit identical
-  sulf.tile1.dat: bit-for-bit identical
-  sulf.tile2.dat: bit-for-bit identical
-  sulf.tile3.dat: bit-for-bit identical
-  sulf.tile4.dat: bit-for-bit identical
-  sulf.tile5.dat: bit-for-bit identical
-  sulf.tile6.dat: bit-for-bit identical
-  wbc2.tile1.dat: bit-for-bit identical
-  wbc2.tile2.dat: bit-for-bit identical
-  wbc2.tile3.dat: bit-for-bit identical
-  wbc2.tile4.dat: bit-for-bit identical
-  wbc2.tile5.dat: bit-for-bit identical
-  wbc2.tile6.dat: bit-for-bit identical
-  wdt1.tile1.dat: bit-for-bit identical
-  wdt1.tile2.dat: bit-for-bit identical
-  wdt1.tile3.dat: bit-for-bit identical
-  wdt1.tile4.dat: bit-for-bit identical
-  wdt1.tile5.dat: bit-for-bit identical
-  wdt1.tile6.dat: bit-for-bit identical
-  wdt2.tile1.dat: bit-for-bit identical
-  wdt2.tile2.dat: bit-for-bit identical
-  wdt2.tile3.dat: bit-for-bit identical
-  wdt2.tile4.dat: bit-for-bit identical
-  wdt2.tile5.dat: bit-for-bit identical
-  wdt2.tile6.dat: bit-for-bit identical
-  wdt3.tile1.dat: bit-for-bit identical
-  wdt3.tile2.dat: bit-for-bit identical
-  wdt3.tile3.dat: bit-for-bit identical
-  wdt3.tile4.dat: bit-for-bit identical
-  wdt3.tile5.dat: bit-for-bit identical
-  wdt3.tile6.dat: bit-for-bit identical
-  wdt4.tile1.dat: bit-for-bit identical
-  wdt4.tile2.dat: bit-for-bit identical
-  wdt4.tile3.dat: bit-for-bit identical
-  wdt4.tile4.dat: bit-for-bit identical
-  wdt4.tile5.dat: bit-for-bit identical
-  wdt4.tile6.dat: bit-for-bit identical
-  wdt5.tile1.dat: bit-for-bit identical
-  wdt5.tile2.dat: bit-for-bit identical
-  wdt5.tile3.dat: bit-for-bit identical
-  wdt5.tile4.dat: bit-for-bit identical
-  wdt5.tile5.dat: bit-for-bit identical
-  wdt5.tile6.dat: bit-for-bit identical
-  woc2.tile1.dat: bit-for-bit identical
-  woc2.tile2.dat: bit-for-bit identical
-  woc2.tile3.dat: bit-for-bit identical
-  woc2.tile4.dat: bit-for-bit identical
-  woc2.tile5.dat: bit-for-bit identical
-  woc2.tile6.dat: bit-for-bit identical
-  wp10.tile1.dat: bit-for-bit identical
-  wp10.tile2.dat: bit-for-bit identical
-  wp10.tile3.dat: bit-for-bit identical
-  wp10.tile4.dat: bit-for-bit identical
-  wp10.tile5.dat: bit-for-bit identical
-  wp10.tile6.dat: bit-for-bit identical
-  wp25.tile1.dat: bit-for-bit identical
-  wp25.tile2.dat: bit-for-bit identical
-  wp25.tile3.dat: bit-for-bit identical
-  wp25.tile4.dat: bit-for-bit identical
-  wp25.tile5.dat: bit-for-bit identical
-  wp25.tile6.dat: bit-for-bit identical
-  wpre.tile1.dat: bit-for-bit identical
-  wpre.tile2.dat: bit-for-bit identical
-  wpre.tile3.dat: bit-for-bit identical
-  wpre.tile4.dat: bit-for-bit identical
-  wpre.tile5.dat: bit-for-bit identical
-  wpre.tile6.dat: bit-for-bit identical
-  wse1.tile1.dat: bit-for-bit identical
-  wse1.tile2.dat: bit-for-bit identical
-  wse1.tile3.dat: bit-for-bit identical
-  wse1.tile4.dat: bit-for-bit identical
-  wse1.tile5.dat: bit-for-bit identical
-  wse1.tile6.dat: bit-for-bit identical
-  wse2.tile1.dat: bit-for-bit identical
-  wse2.tile2.dat: bit-for-bit identical
-  wse2.tile3.dat: bit-for-bit identical
-  wse2.tile4.dat: bit-for-bit identical
-  wse2.tile5.dat: bit-for-bit identical
-  wse2.tile6.dat: bit-for-bit identical
-  wse3.tile1.dat: bit-for-bit identical
-  wse3.tile2.dat: bit-for-bit identical
-  wse3.tile3.dat: bit-for-bit identical
-  wse3.tile4.dat: bit-for-bit identical
-  wse3.tile5.dat: bit-for-bit identical
-  wse3.tile6.dat: bit-for-bit identical
-  wse4.tile1.dat: bit-for-bit identical
-  wse4.tile2.dat: bit-for-bit identical
-  wse4.tile3.dat: bit-for-bit identical
-  wse4.tile4.dat: bit-for-bit identical
-  wse4.tile5.dat: bit-for-bit identical
-  wse4.tile6.dat: bit-for-bit identical
-  wse5.tile1.dat: bit-for-bit identical
-  wse5.tile2.dat: bit-for-bit identical
-  wse5.tile3.dat: bit-for-bit identical
-  wse5.tile4.dat: bit-for-bit identical
-  wse5.tile5.dat: bit-for-bit identical
-  wse5.tile6.dat: bit-for-bit identical
-  wso4.tile1.dat: bit-for-bit identical
-  wso4.tile2.dat: bit-for-bit identical
-  wso4.tile3.dat: bit-for-bit identical
-  wso4.tile4.dat: bit-for-bit identical
-  wso4.tile5.dat: bit-for-bit identical
-  wso4.tile6.dat: bit-for-bit identical
-  Executable did not change during test suite:
-    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.33822/exec/fv3_gsdchem.exe
-    Expected md5sum: 286edf1925053351aca7e74477dcf84b
-    Actual md5sum: 286edf1925053351aca7e74477dcf84b
-  TEST PASSED AT Wed Sep  4 21:36:13 UTC 2019
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_gsdchem.exe
+    Expected md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+    Actual md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+  TEST PASSED AT Tue Sep 17 17:44:47 UTC 2019
 
 TEST #11: PASS
-  Test cpld_fv3_gsdchem_gbbepx_sfc starting at Wed Sep 4 21:15:29 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and GBBEPx surface emission data)
-  Wed Sep  4 21:15:29 UTC 2019
+  Test cpld_fv3_gsdchem_modis starting at Tue Sep 17 17:05:57 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and MODIS emission data)
+  Tue Sep 17 17:05:57 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -3418,11 +3417,454 @@ TEST #11: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.33822/exec/fv3_gsdchem.exe
-    Expected md5sum: 286edf1925053351aca7e74477dcf84b
-    Actual md5sum: 286edf1925053351aca7e74477dcf84b
-  TEST PASSED AT Wed Sep  4 21:36:02 UTC 2019
-WORKFLOW REPORT AT Wed Sep  4 22:40:22 2019 (+1567636822)
-Tests: 0 failed, 11 passed out of 11
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_gsdchem.exe
+    Expected md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+    Actual md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+  TEST PASSED AT Tue Sep 17 17:28:26 UTC 2019
+
+TEST #12: PASS
+  Test cpld_fv3_gsdchem_gbbepx_sfc starting at Tue Sep 17 17:06:15 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and GBBEPx surface emission data)
+  Tue Sep 17 17:06:15 UTC 2019
+  atmos_4xdaily.tile1.nc: bit-for-bit identical
+  atmos_4xdaily.tile2.nc: bit-for-bit identical
+  atmos_4xdaily.tile3.nc: bit-for-bit identical
+  atmos_4xdaily.tile4.nc: bit-for-bit identical
+  atmos_4xdaily.tile5.nc: bit-for-bit identical
+  atmos_4xdaily.tile6.nc: bit-for-bit identical
+  phyf000.tile1.nc: bit-for-bit identical
+  phyf000.tile2.nc: bit-for-bit identical
+  phyf000.tile3.nc: bit-for-bit identical
+  phyf000.tile4.nc: bit-for-bit identical
+  phyf000.tile5.nc: bit-for-bit identical
+  phyf000.tile6.nc: bit-for-bit identical
+  phyf024.tile1.nc: bit-for-bit identical
+  phyf024.tile2.nc: bit-for-bit identical
+  phyf024.tile3.nc: bit-for-bit identical
+  phyf024.tile4.nc: bit-for-bit identical
+  phyf024.tile5.nc: bit-for-bit identical
+  phyf024.tile6.nc: bit-for-bit identical
+  dynf000.tile1.nc: bit-for-bit identical
+  dynf000.tile2.nc: bit-for-bit identical
+  dynf000.tile3.nc: bit-for-bit identical
+  dynf000.tile4.nc: bit-for-bit identical
+  dynf000.tile5.nc: bit-for-bit identical
+  dynf000.tile6.nc: bit-for-bit identical
+  dynf024.tile1.nc: bit-for-bit identical
+  dynf024.tile2.nc: bit-for-bit identical
+  dynf024.tile3.nc: bit-for-bit identical
+  dynf024.tile4.nc: bit-for-bit identical
+  dynf024.tile5.nc: bit-for-bit identical
+  dynf024.tile6.nc: bit-for-bit identical
+  RESTART/coupler.res: bit-for-bit identical
+  RESTART/fv_core.res.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile1.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile2.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile3.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile4.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile5.nc: bit-for-bit identical
+  RESTART/fv_core.res.tile6.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile1.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile2.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile3.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile4.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile5.nc: bit-for-bit identical
+  RESTART/fv_srf_wnd.res.tile6.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile1.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile2.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile3.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile4.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile5.nc: bit-for-bit identical
+  RESTART/fv_tracer.res.tile6.nc: bit-for-bit identical
+  RESTART/phy_data.tile1.nc: bit-for-bit identical
+  RESTART/phy_data.tile2.nc: bit-for-bit identical
+  RESTART/phy_data.tile3.nc: bit-for-bit identical
+  RESTART/phy_data.tile4.nc: bit-for-bit identical
+  RESTART/phy_data.tile5.nc: bit-for-bit identical
+  RESTART/phy_data.tile6.nc: bit-for-bit identical
+  RESTART/sfc_data.tile1.nc: bit-for-bit identical
+  RESTART/sfc_data.tile2.nc: bit-for-bit identical
+  RESTART/sfc_data.tile3.nc: bit-for-bit identical
+  RESTART/sfc_data.tile4.nc: bit-for-bit identical
+  RESTART/sfc_data.tile5.nc: bit-for-bit identical
+  RESTART/sfc_data.tile6.nc: bit-for-bit identical
+  anbc.tile1.dat: bit-for-bit identical
+  anbc.tile2.dat: bit-for-bit identical
+  anbc.tile3.dat: bit-for-bit identical
+  anbc.tile4.dat: bit-for-bit identical
+  anbc.tile5.dat: bit-for-bit identical
+  anbc.tile6.dat: bit-for-bit identical
+  anoc.tile1.dat: bit-for-bit identical
+  anoc.tile2.dat: bit-for-bit identical
+  anoc.tile3.dat: bit-for-bit identical
+  anoc.tile4.dat: bit-for-bit identical
+  anoc.tile5.dat: bit-for-bit identical
+  anoc.tile6.dat: bit-for-bit identical
+  ao2D.tile1.dat: bit-for-bit identical
+  ao2D.tile2.dat: bit-for-bit identical
+  ao2D.tile3.dat: bit-for-bit identical
+  ao2D.tile4.dat: bit-for-bit identical
+  ao2D.tile5.dat: bit-for-bit identical
+  ao2D.tile6.dat: bit-for-bit identical
+  aso2.tile1.dat: bit-for-bit identical
+  aso2.tile2.dat: bit-for-bit identical
+  aso2.tile3.dat: bit-for-bit identical
+  aso2.tile4.dat: bit-for-bit identical
+  aso2.tile5.dat: bit-for-bit identical
+  aso2.tile6.dat: bit-for-bit identical
+  cbae.tile1.dat: bit-for-bit identical
+  cbae.tile2.dat: bit-for-bit identical
+  cbae.tile3.dat: bit-for-bit identical
+  cbae.tile4.dat: bit-for-bit identical
+  cbae.tile5.dat: bit-for-bit identical
+  cbae.tile6.dat: bit-for-bit identical
+  cbbc.tile1.dat: bit-for-bit identical
+  cbbc.tile2.dat: bit-for-bit identical
+  cbbc.tile3.dat: bit-for-bit identical
+  cbbc.tile4.dat: bit-for-bit identical
+  cbbc.tile5.dat: bit-for-bit identical
+  cbbc.tile6.dat: bit-for-bit identical
+  cbdt.tile1.dat: bit-for-bit identical
+  cbdt.tile2.dat: bit-for-bit identical
+  cbdt.tile3.dat: bit-for-bit identical
+  cbdt.tile4.dat: bit-for-bit identical
+  cbdt.tile5.dat: bit-for-bit identical
+  cbdt.tile6.dat: bit-for-bit identical
+  cboc.tile1.dat: bit-for-bit identical
+  cboc.tile2.dat: bit-for-bit identical
+  cboc.tile3.dat: bit-for-bit identical
+  cboc.tile4.dat: bit-for-bit identical
+  cboc.tile5.dat: bit-for-bit identical
+  cboc.tile6.dat: bit-for-bit identical
+  cbsf.tile1.dat: bit-for-bit identical
+  cbsf.tile2.dat: bit-for-bit identical
+  cbsf.tile3.dat: bit-for-bit identical
+  cbsf.tile4.dat: bit-for-bit identical
+  cbsf.tile5.dat: bit-for-bit identical
+  cbsf.tile6.dat: bit-for-bit identical
+  cbss.tile1.dat: bit-for-bit identical
+  cbss.tile2.dat: bit-for-bit identical
+  cbss.tile3.dat: bit-for-bit identical
+  cbss.tile4.dat: bit-for-bit identical
+  cbss.tile5.dat: bit-for-bit identical
+  cbss.tile6.dat: bit-for-bit identical
+  d1st.tile1.dat: bit-for-bit identical
+  d1st.tile2.dat: bit-for-bit identical
+  d1st.tile3.dat: bit-for-bit identical
+  d1st.tile4.dat: bit-for-bit identical
+  d1st.tile5.dat: bit-for-bit identical
+  d1st.tile6.dat: bit-for-bit identical
+  d2st.tile1.dat: bit-for-bit identical
+  d2st.tile2.dat: bit-for-bit identical
+  d2st.tile3.dat: bit-for-bit identical
+  d2st.tile4.dat: bit-for-bit identical
+  d2st.tile5.dat: bit-for-bit identical
+  d2st.tile6.dat: bit-for-bit identical
+  d3st.tile1.dat: bit-for-bit identical
+  d3st.tile2.dat: bit-for-bit identical
+  d3st.tile3.dat: bit-for-bit identical
+  d3st.tile4.dat: bit-for-bit identical
+  d3st.tile5.dat: bit-for-bit identical
+  d3st.tile6.dat: bit-for-bit identical
+  d4st.tile1.dat: bit-for-bit identical
+  d4st.tile2.dat: bit-for-bit identical
+  d4st.tile3.dat: bit-for-bit identical
+  d4st.tile4.dat: bit-for-bit identical
+  d4st.tile5.dat: bit-for-bit identical
+  d4st.tile6.dat: bit-for-bit identical
+  d5st.tile1.dat: bit-for-bit identical
+  d5st.tile2.dat: bit-for-bit identical
+  d5st.tile3.dat: bit-for-bit identical
+  d5st.tile4.dat: bit-for-bit identical
+  d5st.tile5.dat: bit-for-bit identical
+  d5st.tile6.dat: bit-for-bit identical
+  dms1.tile1.dat: bit-for-bit identical
+  dms1.tile2.dat: bit-for-bit identical
+  dms1.tile3.dat: bit-for-bit identical
+  dms1.tile4.dat: bit-for-bit identical
+  dms1.tile5.dat: bit-for-bit identical
+  dms1.tile6.dat: bit-for-bit identical
+  emd1.tile1.dat: bit-for-bit identical
+  emd1.tile2.dat: bit-for-bit identical
+  emd1.tile3.dat: bit-for-bit identical
+  emd1.tile4.dat: bit-for-bit identical
+  emd1.tile5.dat: bit-for-bit identical
+  emd1.tile6.dat: bit-for-bit identical
+  emd2.tile1.dat: bit-for-bit identical
+  emd2.tile2.dat: bit-for-bit identical
+  emd2.tile3.dat: bit-for-bit identical
+  emd2.tile4.dat: bit-for-bit identical
+  emd2.tile5.dat: bit-for-bit identical
+  emd2.tile6.dat: bit-for-bit identical
+  emd3.tile1.dat: bit-for-bit identical
+  emd3.tile2.dat: bit-for-bit identical
+  emd3.tile3.dat: bit-for-bit identical
+  emd3.tile4.dat: bit-for-bit identical
+  emd3.tile5.dat: bit-for-bit identical
+  emd3.tile6.dat: bit-for-bit identical
+  emd4.tile1.dat: bit-for-bit identical
+  emd4.tile2.dat: bit-for-bit identical
+  emd4.tile3.dat: bit-for-bit identical
+  emd4.tile4.dat: bit-for-bit identical
+  emd4.tile5.dat: bit-for-bit identical
+  emd4.tile6.dat: bit-for-bit identical
+  emd5.tile1.dat: bit-for-bit identical
+  emd5.tile2.dat: bit-for-bit identical
+  emd5.tile3.dat: bit-for-bit identical
+  emd5.tile4.dat: bit-for-bit identical
+  emd5.tile5.dat: bit-for-bit identical
+  emd5.tile6.dat: bit-for-bit identical
+  ems1.tile1.dat: bit-for-bit identical
+  ems1.tile2.dat: bit-for-bit identical
+  ems1.tile3.dat: bit-for-bit identical
+  ems1.tile4.dat: bit-for-bit identical
+  ems1.tile5.dat: bit-for-bit identical
+  ems1.tile6.dat: bit-for-bit identical
+  ems2.tile1.dat: bit-for-bit identical
+  ems2.tile2.dat: bit-for-bit identical
+  ems2.tile3.dat: bit-for-bit identical
+  ems2.tile4.dat: bit-for-bit identical
+  ems2.tile5.dat: bit-for-bit identical
+  ems2.tile6.dat: bit-for-bit identical
+  ems3.tile1.dat: bit-for-bit identical
+  ems3.tile2.dat: bit-for-bit identical
+  ems3.tile3.dat: bit-for-bit identical
+  ems3.tile4.dat: bit-for-bit identical
+  ems3.tile5.dat: bit-for-bit identical
+  ems3.tile6.dat: bit-for-bit identical
+  ems4.tile1.dat: bit-for-bit identical
+  ems4.tile2.dat: bit-for-bit identical
+  ems4.tile3.dat: bit-for-bit identical
+  ems4.tile4.dat: bit-for-bit identical
+  ems4.tile5.dat: bit-for-bit identical
+  ems4.tile6.dat: bit-for-bit identical
+  ems5.tile1.dat: bit-for-bit identical
+  ems5.tile2.dat: bit-for-bit identical
+  ems5.tile3.dat: bit-for-bit identical
+  ems5.tile4.dat: bit-for-bit identical
+  ems5.tile5.dat: bit-for-bit identical
+  ems5.tile6.dat: bit-for-bit identical
+  hobg.tile1.dat: bit-for-bit identical
+  hobg.tile2.dat: bit-for-bit identical
+  hobg.tile3.dat: bit-for-bit identical
+  hobg.tile4.dat: bit-for-bit identical
+  hobg.tile5.dat: bit-for-bit identical
+  hobg.tile6.dat: bit-for-bit identical
+  no3b.tile1.dat: bit-for-bit identical
+  no3b.tile2.dat: bit-for-bit identical
+  no3b.tile3.dat: bit-for-bit identical
+  no3b.tile4.dat: bit-for-bit identical
+  no3b.tile5.dat: bit-for-bit identical
+  no3b.tile6.dat: bit-for-bit identical
+  ocbb.tile1.dat: bit-for-bit identical
+  ocbb.tile2.dat: bit-for-bit identical
+  ocbb.tile3.dat: bit-for-bit identical
+  ocbb.tile4.dat: bit-for-bit identical
+  ocbb.tile5.dat: bit-for-bit identical
+  ocbb.tile6.dat: bit-for-bit identical
+  ohbg.tile1.dat: bit-for-bit identical
+  ohbg.tile2.dat: bit-for-bit identical
+  ohbg.tile3.dat: bit-for-bit identical
+  ohbg.tile4.dat: bit-for-bit identical
+  ohbg.tile5.dat: bit-for-bit identical
+  ohbg.tile6.dat: bit-for-bit identical
+  pbc1.tile1.dat: bit-for-bit identical
+  pbc1.tile2.dat: bit-for-bit identical
+  pbc1.tile3.dat: bit-for-bit identical
+  pbc1.tile4.dat: bit-for-bit identical
+  pbc1.tile5.dat: bit-for-bit identical
+  pbc1.tile6.dat: bit-for-bit identical
+  pbc2.tile1.dat: bit-for-bit identical
+  pbc2.tile2.dat: bit-for-bit identical
+  pbc2.tile3.dat: bit-for-bit identical
+  pbc2.tile4.dat: bit-for-bit identical
+  pbc2.tile5.dat: bit-for-bit identical
+  pbc2.tile6.dat: bit-for-bit identical
+  pm10.tile1.dat: bit-for-bit identical
+  pm10.tile2.dat: bit-for-bit identical
+  pm10.tile3.dat: bit-for-bit identical
+  pm10.tile4.dat: bit-for-bit identical
+  pm10.tile5.dat: bit-for-bit identical
+  pm10.tile6.dat: bit-for-bit identical
+  pm25.tile1.dat: bit-for-bit identical
+  pm25.tile2.dat: bit-for-bit identical
+  pm25.tile3.dat: bit-for-bit identical
+  pm25.tile4.dat: bit-for-bit identical
+  pm25.tile5.dat: bit-for-bit identical
+  pm25.tile6.dat: bit-for-bit identical
+  pmsa.tile1.dat: bit-for-bit identical
+  pmsa.tile2.dat: bit-for-bit identical
+  pmsa.tile3.dat: bit-for-bit identical
+  pmsa.tile4.dat: bit-for-bit identical
+  pmsa.tile5.dat: bit-for-bit identical
+  pmsa.tile6.dat: bit-for-bit identical
+  poc1.tile1.dat: bit-for-bit identical
+  poc1.tile2.dat: bit-for-bit identical
+  poc1.tile3.dat: bit-for-bit identical
+  poc1.tile4.dat: bit-for-bit identical
+  poc1.tile5.dat: bit-for-bit identical
+  poc1.tile6.dat: bit-for-bit identical
+  poc2.tile1.dat: bit-for-bit identical
+  poc2.tile2.dat: bit-for-bit identical
+  poc2.tile3.dat: bit-for-bit identical
+  poc2.tile4.dat: bit-for-bit identical
+  poc2.tile5.dat: bit-for-bit identical
+  poc2.tile6.dat: bit-for-bit identical
+  pp10.tile1.dat: bit-for-bit identical
+  pp10.tile2.dat: bit-for-bit identical
+  pp10.tile3.dat: bit-for-bit identical
+  pp10.tile4.dat: bit-for-bit identical
+  pp10.tile5.dat: bit-for-bit identical
+  pp10.tile6.dat: bit-for-bit identical
+  pp25.tile1.dat: bit-for-bit identical
+  pp25.tile2.dat: bit-for-bit identical
+  pp25.tile3.dat: bit-for-bit identical
+  pp25.tile4.dat: bit-for-bit identical
+  pp25.tile5.dat: bit-for-bit identical
+  pp25.tile6.dat: bit-for-bit identical
+  pso2.tile1.dat: bit-for-bit identical
+  pso2.tile2.dat: bit-for-bit identical
+  pso2.tile3.dat: bit-for-bit identical
+  pso2.tile4.dat: bit-for-bit identical
+  pso2.tile5.dat: bit-for-bit identical
+  pso2.tile6.dat: bit-for-bit identical
+  s1ea.tile1.dat: bit-for-bit identical
+  s1ea.tile2.dat: bit-for-bit identical
+  s1ea.tile3.dat: bit-for-bit identical
+  s1ea.tile4.dat: bit-for-bit identical
+  s1ea.tile5.dat: bit-for-bit identical
+  s1ea.tile6.dat: bit-for-bit identical
+  s2ea.tile1.dat: bit-for-bit identical
+  s2ea.tile2.dat: bit-for-bit identical
+  s2ea.tile3.dat: bit-for-bit identical
+  s2ea.tile4.dat: bit-for-bit identical
+  s2ea.tile5.dat: bit-for-bit identical
+  s2ea.tile6.dat: bit-for-bit identical
+  s3ea.tile1.dat: bit-for-bit identical
+  s3ea.tile2.dat: bit-for-bit identical
+  s3ea.tile3.dat: bit-for-bit identical
+  s3ea.tile4.dat: bit-for-bit identical
+  s3ea.tile5.dat: bit-for-bit identical
+  s3ea.tile6.dat: bit-for-bit identical
+  s4ea.tile1.dat: bit-for-bit identical
+  s4ea.tile2.dat: bit-for-bit identical
+  s4ea.tile3.dat: bit-for-bit identical
+  s4ea.tile4.dat: bit-for-bit identical
+  s4ea.tile5.dat: bit-for-bit identical
+  s4ea.tile6.dat: bit-for-bit identical
+  s5ea.tile1.dat: bit-for-bit identical
+  s5ea.tile2.dat: bit-for-bit identical
+  s5ea.tile3.dat: bit-for-bit identical
+  s5ea.tile4.dat: bit-for-bit identical
+  s5ea.tile5.dat: bit-for-bit identical
+  s5ea.tile6.dat: bit-for-bit identical
+  sulf.tile1.dat: bit-for-bit identical
+  sulf.tile2.dat: bit-for-bit identical
+  sulf.tile3.dat: bit-for-bit identical
+  sulf.tile4.dat: bit-for-bit identical
+  sulf.tile5.dat: bit-for-bit identical
+  sulf.tile6.dat: bit-for-bit identical
+  wbc2.tile1.dat: bit-for-bit identical
+  wbc2.tile2.dat: bit-for-bit identical
+  wbc2.tile3.dat: bit-for-bit identical
+  wbc2.tile4.dat: bit-for-bit identical
+  wbc2.tile5.dat: bit-for-bit identical
+  wbc2.tile6.dat: bit-for-bit identical
+  wdt1.tile1.dat: bit-for-bit identical
+  wdt1.tile2.dat: bit-for-bit identical
+  wdt1.tile3.dat: bit-for-bit identical
+  wdt1.tile4.dat: bit-for-bit identical
+  wdt1.tile5.dat: bit-for-bit identical
+  wdt1.tile6.dat: bit-for-bit identical
+  wdt2.tile1.dat: bit-for-bit identical
+  wdt2.tile2.dat: bit-for-bit identical
+  wdt2.tile3.dat: bit-for-bit identical
+  wdt2.tile4.dat: bit-for-bit identical
+  wdt2.tile5.dat: bit-for-bit identical
+  wdt2.tile6.dat: bit-for-bit identical
+  wdt3.tile1.dat: bit-for-bit identical
+  wdt3.tile2.dat: bit-for-bit identical
+  wdt3.tile3.dat: bit-for-bit identical
+  wdt3.tile4.dat: bit-for-bit identical
+  wdt3.tile5.dat: bit-for-bit identical
+  wdt3.tile6.dat: bit-for-bit identical
+  wdt4.tile1.dat: bit-for-bit identical
+  wdt4.tile2.dat: bit-for-bit identical
+  wdt4.tile3.dat: bit-for-bit identical
+  wdt4.tile4.dat: bit-for-bit identical
+  wdt4.tile5.dat: bit-for-bit identical
+  wdt4.tile6.dat: bit-for-bit identical
+  wdt5.tile1.dat: bit-for-bit identical
+  wdt5.tile2.dat: bit-for-bit identical
+  wdt5.tile3.dat: bit-for-bit identical
+  wdt5.tile4.dat: bit-for-bit identical
+  wdt5.tile5.dat: bit-for-bit identical
+  wdt5.tile6.dat: bit-for-bit identical
+  woc2.tile1.dat: bit-for-bit identical
+  woc2.tile2.dat: bit-for-bit identical
+  woc2.tile3.dat: bit-for-bit identical
+  woc2.tile4.dat: bit-for-bit identical
+  woc2.tile5.dat: bit-for-bit identical
+  woc2.tile6.dat: bit-for-bit identical
+  wp10.tile1.dat: bit-for-bit identical
+  wp10.tile2.dat: bit-for-bit identical
+  wp10.tile3.dat: bit-for-bit identical
+  wp10.tile4.dat: bit-for-bit identical
+  wp10.tile5.dat: bit-for-bit identical
+  wp10.tile6.dat: bit-for-bit identical
+  wp25.tile1.dat: bit-for-bit identical
+  wp25.tile2.dat: bit-for-bit identical
+  wp25.tile3.dat: bit-for-bit identical
+  wp25.tile4.dat: bit-for-bit identical
+  wp25.tile5.dat: bit-for-bit identical
+  wp25.tile6.dat: bit-for-bit identical
+  wpre.tile1.dat: bit-for-bit identical
+  wpre.tile2.dat: bit-for-bit identical
+  wpre.tile3.dat: bit-for-bit identical
+  wpre.tile4.dat: bit-for-bit identical
+  wpre.tile5.dat: bit-for-bit identical
+  wpre.tile6.dat: bit-for-bit identical
+  wse1.tile1.dat: bit-for-bit identical
+  wse1.tile2.dat: bit-for-bit identical
+  wse1.tile3.dat: bit-for-bit identical
+  wse1.tile4.dat: bit-for-bit identical
+  wse1.tile5.dat: bit-for-bit identical
+  wse1.tile6.dat: bit-for-bit identical
+  wse2.tile1.dat: bit-for-bit identical
+  wse2.tile2.dat: bit-for-bit identical
+  wse2.tile3.dat: bit-for-bit identical
+  wse2.tile4.dat: bit-for-bit identical
+  wse2.tile5.dat: bit-for-bit identical
+  wse2.tile6.dat: bit-for-bit identical
+  wse3.tile1.dat: bit-for-bit identical
+  wse3.tile2.dat: bit-for-bit identical
+  wse3.tile3.dat: bit-for-bit identical
+  wse3.tile4.dat: bit-for-bit identical
+  wse3.tile5.dat: bit-for-bit identical
+  wse3.tile6.dat: bit-for-bit identical
+  wse4.tile1.dat: bit-for-bit identical
+  wse4.tile2.dat: bit-for-bit identical
+  wse4.tile3.dat: bit-for-bit identical
+  wse4.tile4.dat: bit-for-bit identical
+  wse4.tile5.dat: bit-for-bit identical
+  wse4.tile6.dat: bit-for-bit identical
+  wse5.tile1.dat: bit-for-bit identical
+  wse5.tile2.dat: bit-for-bit identical
+  wse5.tile3.dat: bit-for-bit identical
+  wse5.tile4.dat: bit-for-bit identical
+  wse5.tile5.dat: bit-for-bit identical
+  wse5.tile6.dat: bit-for-bit identical
+  wso4.tile1.dat: bit-for-bit identical
+  wso4.tile2.dat: bit-for-bit identical
+  wso4.tile3.dat: bit-for-bit identical
+  wso4.tile4.dat: bit-for-bit identical
+  wso4.tile5.dat: bit-for-bit identical
+  wso4.tile6.dat: bit-for-bit identical
+  Executable did not change during test suite:
+    File: /gpfs/hps2/ptmp/Jessica.Meixner/rtgen.613/exec/fv3_gsdchem.exe
+    Expected md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+    Actual md5sum: d4c69d441c8382754f2dd0060d6d1fd9
+  TEST PASSED AT Tue Sep 17 17:28:11 UTC 2019
+WORKFLOW REPORT AT Tue Sep 17 18:08:47 2019 (+1568743727)
+Tests: 0 failed, 12 passed out of 12
 Builds: 0 failed, 3 passed out of 3
 REGRESSION TEST WAS SUCCESSFUL

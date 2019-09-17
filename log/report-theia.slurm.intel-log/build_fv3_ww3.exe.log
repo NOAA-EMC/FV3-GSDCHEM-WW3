@@ -1,10 +1,10 @@
-+ sh -c 'cd /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/src ; ./install.sh fv3_ww3.exe'
++ sh -c 'cd /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/src ; ./install.sh fv3_ww3.exe'
 + [[ fv3_ww3.exe == fv3_ww3.exe ]]
-+ rm -f /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/exec/fv3_ww3.exe
-+ md5sum=/scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/exec/fv3_ww3.exe.md5
++ rm -f /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/exec/fv3_ww3.exe
++ md5sum=/scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/exec/fv3_ww3.exe.md5
 + OPTS=app=coupledFV3_WW3
-+ mkdir -p /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/exec /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/include
-+ rm -f /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/exec/fv3_ww3.exe /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/include/modules_fv3_ww3
++ mkdir -p /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/exec /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/include
++ rm -f /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/exec/fv3_ww3.exe /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/include/modules_fv3_ww3
 + cd /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3
 + which aprun
 which: no aprun in (.:/apps/rocoto/1.3.1/bin:/apps/grib_api/1.14.7/intel/15.6.233/bin:/apps/cdo/1.9.5/intel/15.6.233/bin:/apps/nco/4.4.5-intel/bin:/apps/hpss:/apps/ncview/2.1.3/bin:/apps/netcdf/4.3.0-intel/bin:/apps/wgrib2/0.1.9.5.1/bin:/apps/matlab/R2017b/bin:/apps/grads/2.0.1a/bin:/apps/intel/impi/5.1.2.150/intel64/bin:/apps/intel/composer_xe_2013_sp1.2.144/mpirt/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64_mic/py27/py27/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gdb/intel64/py27/bin:/apps/intel/composer_xe_2013_sp1.2.144/debugger/gui/intel64:/apps/intel/composer_xe_2013_sp1.2.144/bin/intel64_mic:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/apps/local/bin:/apps/local/sbin:/apps/slurm/default/slurm/tools:/apps/slurm/default/bin:/apps/slurm/default/sbin:/apps/slurm/tools/sbank/bin)
@@ -27,10 +27,6 @@ cd .. ; \
 ls -1 */*.a */*.o */*.mod */depend \
   | grep -vE 'INSTALL|\.git' | xargs rm -f || true ; \
 rm -rf FMS_INSTALL || true
-ls: cannot access */*.a: No such file or directory
-ls: cannot access */*.o: No such file or directory
-ls: cannot access */*.mod: No such file or directory
-ls: cannot access */depend: No such file or directory
 make[1]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/fv3gfs'
 rm -rf /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL/fms.mk /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/fv3gfs/makefile.temp.clean
 cat /dev/null > /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/conf/configure.fv3
@@ -41,13 +37,6 @@ make[1]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_
 Cleaning ... 
 
 (cd gfsphysics     && make clean)
-
-Build standalone FV3 gfsphysics ...
-
-make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics'
-makefile:299: depend: No such file or directory
-Building dependencies ...
-make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics'
 
 Build standalone FV3 gfsphysics ...
 
@@ -77,25 +66,11 @@ make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_F
 Build standalone FV3 gfsphysics ...
 
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd'
-makefile:54: depend: No such file or directory
-Building dependencies ...
-make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd'
-
-Build standalone FV3 gfsphysics ...
-
-make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd'
 Cleaning ipd  ... 
 
 rm -f -f libipd.a *__genmod.f90 *.o */*.o *.mod *.i90 *.lst *.i depend
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd'
 (cd stochastic_physics  && make clean)
-
-Build standalone FV3 stochastic_physics ...
-
-make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/stochastic_physics'
-makefile:86: depend: No such file or directory
-Building dependencies ...
-make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/stochastic_physics'
 
 Build standalone FV3 stochastic_physics ...
 
@@ -144,20 +119,17 @@ rm -rf /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV
 export COMP_SRCDIR="/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model" COMP_BINDIR="/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/WW3_INSTALL" WW3_COMP="theia"                                  ; \
 export ESMFMKFILE=/dev/null                             ; \
 exec make distclean
-Lmod has detected the following error: The following module(s) are unknown:
-"modules.nems"
 
-Please check the spelling or version number. Also try "module spider ..."
-It is also possible your cache file is out-of-date; it may help to try:
-  $ module --ignore-cache load "modules.nems"
+Currently Loaded Modules:
+  1) intel/18.0.1.163     7) nemsio/9.9.9    13) png/1.2.44
+  2) impi/5.1.2.150       8) sp/2.0.2        14) z/1.2.6
+  3) netcdf/4.3.0         9) w3emc/9.9.9     15) esmf/8.0.0bs48
+  4) pnetcdf/1.5.0-impi  10) w3nco/2.0.6     16) modules.nems
+  5) bacio/9.9.9         11) g2/3.1.0
+  6) ip/9.9.9            12) jasper/1.900.1
 
-Also make sure that all modulefiles written in TCL start with the string
-#%Module
+ 
 
-
-
-No modules loaded
-which: no nc-config in (.:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/apps/local/bin:/apps/local/sbin:/apps/slurm/default/slurm/tools:/apps/slurm/default/bin:/apps/slurm/default/sbin:/apps/slurm/tools/sbank/bin)
 make[1]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/esmf'
 \rm -f /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/exe/ww3_multi_esmf *.o *.mod
 /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/bin/w3_clean -c
@@ -191,16 +163,19 @@ cd /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src ;
 if [ "$delete_nuopc" = yes ] ; then                      \
   rm -f /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/configure.nems.NUOPC                 ; \
 fi
-make[1]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src'
-GNUmakefile:16: /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/test-results.mk: No such file or directory
 Components in linker order: WW3 FV3 FMS
 WW3: include 
+make[1]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src'
 GNUmakefile:70: : component WW3 makefile fragment is missing
-FV3: include 
-GNUmakefile:70: : component FV3 makefile fragment is missing
-FMS: include 
-GNUmakefile:70: : component FMS makefile fragment is missing
-make[1]: *** No rule to make target `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/test-results.mk'.  Stop.
+FV3: include /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/fv3.mk
+GNUmakefile:70: /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/fv3.mk: component FV3 makefile fragment is missing
+FMS: include /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL/fms.mk
+GNUmakefile:70: /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL/fms.mk: component FMS makefile fragment is missing
+rm -f -f *.tmp.f90 *.lst *.o *.mod lm map
+cd ENS_Cpl ; make clean
+make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/ENS_Cpl'
+rm -f -f ENS_Cpl.a *.f90 *.o *.mod *.lst lm map depend
+make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/ENS_Cpl'
 make[1]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src'
 rm -f /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/exe/NEMS.x /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/configure.nems.NUOPC
 rm -f /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/configure.nems /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/externals.nems /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/modules.nems /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/ESMFVersionDefine.h /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/modules.nems.sh /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/modules.nems.csh /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/test-results.mk
@@ -242,9 +217,9 @@ exec make  all
 Currently Loaded Modules:
   1) intel/18.0.1.163     7) nemsio/9.9.9    13) png/1.2.44
   2) impi/5.1.2.150       8) sp/2.0.2        14) z/1.2.6
-  3) netcdf/4.3.0         9) w3emc/9.9.9     15) yaml-cpp/0.6.2
-  4) pnetcdf/1.5.0-impi  10) w3nco/2.0.6     16) esmf/8.0.0bs47
-  5) bacio/9.9.9         11) g2/3.1.0        17) modules.nems
+  3) netcdf/4.3.0         9) w3emc/9.9.9     15) esmf/8.0.0bs48
+  4) pnetcdf/1.5.0-impi  10) w3nco/2.0.6     16) modules.nems
+  5) bacio/9.9.9         11) g2/3.1.0
   6) ip/9.9.9            12) jasper/1.900.1
 
  
@@ -527,9 +502,9 @@ cp -fp /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/s
 Currently Loaded Modules:
   1) intel/18.0.1.163     7) nemsio/9.9.9    13) png/1.2.44
   2) impi/5.1.2.150       8) sp/2.0.2        14) z/1.2.6
-  3) netcdf/4.3.0         9) w3emc/9.9.9     15) yaml-cpp/0.6.2
-  4) pnetcdf/1.5.0-impi  10) w3nco/2.0.6     16) esmf/8.0.0bs47
-  5) bacio/9.9.9         11) g2/3.1.0        17) modules.nems
+  3) netcdf/4.3.0         9) w3emc/9.9.9     15) esmf/8.0.0bs48
+  4) pnetcdf/1.5.0-impi  10) w3nco/2.0.6     16) modules.nems
+  5) bacio/9.9.9         11) g2/3.1.0
   6) ip/9.9.9            12) jasper/1.900.1
 
  
@@ -549,8 +524,8 @@ make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_F
 Build standalone FV3 io ...
 
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl'
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c module_cplfields.F90
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c module_cap_cpl.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c module_cplfields.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c module_cap_cpl.F90
 ar rv libfv3cpl.a module_cplfields.o module_cap_cpl.o
 ar: creating libfv3cpl.a
 a - module_cplfields.o
@@ -561,7 +536,7 @@ make -C gfsphysics      FMS_DIR=/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/E
 Build standalone FV3 gfsphysics ...
 
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics'
-makefile:299: depend: No such file or directory
+makefile:300: depend: No such file or directory
 Building dependencies ...
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics'
 
@@ -654,6 +629,7 @@ mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -sav
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../cpl  -c physics/rad_initialize.f -o physics/rad_initialize.o
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../cpl  -c physics/rayleigh_damp.f -o physics/rayleigh_damp.o
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../cpl  -c physics/rayleigh_damp_mesopause.f -o physics/rayleigh_damp_mesopause.o
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../cpl  -c physics/samfaerosols.f -o physics/samfaerosols.o
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../cpl  -c physics/samfdeepcnv.f -o physics/samfdeepcnv.o
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../cpl  -c physics/samfshalcnv.f -o physics/samfshalcnv.o
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../cpl  -c physics/sascnv.f -o physics/sascnv.o
@@ -720,7 +696,7 @@ mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -sav
 mpiicc -E -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DNEW_TAUCTMAX -DSMALL_PE -DNEMS_GSM -DINTERNAL_FILE_NML  GFS_layer/GFS_driver.F90 > GFS_layer/GFS_driver.tmp.f90
 mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../cpl  -c GFS_layer/GFS_driver.tmp.f90 -o GFS_layer/GFS_driver.o
 mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DNEW_TAUCTMAX -DSMALL_PE -DNEMS_GSM -DINTERNAL_FILE_NML -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../cpl  -c GFS_layer/GFS_abstraction_layer.F90 -o GFS_layer/GFS_abstraction_layer.o
-ar rv libgfsphys.a physics/cnvc90.o physics/co2hc.o physics/date_def.o physics/dcyc2.o physics/dcyc2.pre.rad.o physics/efield.o physics/get_prs.o physics/gocart_tracer_config_stub.o physics/gscond.o physics/gscondp.o physics/gwdc.o physics/gwdps.o physics/ugwp_driver_v0.o physics/cires_orowam2017.o physics/h2o_def.o physics/h2oc.o physics/h2ohdc.o physics/h2ophys.o physics/ideaca.o physics/idea_co2.o physics/idea_composition.o physics/idea_dissipation.o physics/idea_h2o.o physics/idea_ion.o physics/idea_o2_o3.o physics/idea_phys.o physics/idea_solar_heating.o physics/idea_tracer.o physics/iounitdef.o physics/lrgsclr.o physics/mersenne_twister.o physics/mfpbl.o physics/mfpblt.o physics/mfscu.o physics/module_bfmicrophysics.o physics/moninedmf.o physics/moninedmf_hafs.o physics/moninp.o physics/moninp1.o physics/moninq.o physics/moninq1.o physics/moninshoc.o physics/mstadb.o physics/mstadbtn.o physics/mstadbtn2.o physics/mstcnv.o physics/namelist_soilveg.o physics/ozne_def.o physics/iccn_def.o physics/aerclm_def.o physics/ozphys.o physics/ozphys_2015.o physics/physparam.o physics/precpd.o physics/precpd_shoc.o physics/precpdp.o physics/progt2.o physics/progtm_module.o physics/rad_initialize.o physics/radiation_aerosols.o physics/radiation_astronomy.o physics/radiation_clouds.o physics/radiation_gases.o physics/radiation_surface.o physics/radlw_datatb.o physics/radlw_main.o physics/radlw_param.o physics/radsw_datatb.o physics/radsw_main.o physics/radsw_param.o physics/rascnvv2.o physics/rayleigh_damp.o physics/rayleigh_damp_mesopause.o physics/samfdeepcnv.o physics/samfshalcnv.o physics/sascnv.o physics/sascnvn.o physics/satmedmfvdif.o physics/satmedmfvdifq.o physics/set_soilveg.o physics/sfc_cice.o physics/sfc_diag.o physics/sfc_diff.o physics/sfc_drv.o physics/sfc_noahmp_drv.o physics/sfc_nst.o physics/sfc_ocean.o physics/sfc_sice.o physics/sflx.o physics/shalcnv.o physics/shalcv.o physics/shalcv_1lyr.o physics/shalcv_fixdp.o physics/shalcv_opr.o physics/tracer_const_h.o physics/tridi2t3.o physics/calpreciptype.o physics/funcphys.o physics/gcm_shoc.o physics/get_prs_fv3.o physics/h2ointerp.o physics/module_nst_model.o physics/module_nst_parameters.o physics/module_nst_water_prop.o physics/ozinterp.o physics/module_wrf_utl.o physics/noahmp_tables.o physics/module_sf_noahmplsm.o physics/module_sf_noahmp_glacier.o physics/iccninterp.o physics/aerinterp.o physics/wam_f107_kp_mod.o physics/aer_cloud.o physics/cldmacro.o physics/cldwat2m_micro.o physics/gfs_phy_tracer_config.o physics/machine.o physics/num_parthds.o physics/sfcsub.o physics/wv_saturation.o physics/GFDL_parse_tracers.o physics/gcycle.o physics/cires_ugwp_initialize.o physics/cires_ugwp_module.o physics/cires_ugwp_utils.o physics/cires_ugwp_triggers.o physics/cires_ugwp_solvers.o physics/cires_vert_lsatdis.o physics/cires_vert_orodis.o physics/cires_vert_wmsdis.o physics/gfdl_cloud_microphys.o physics/micro_mg_utils.o physics/micro_mg2_0.o physics/micro_mg3_0.o physics/m_micro_driver.o physics/cs_conv.o physics/GFS_debug.o physics/module_mp_radar.o physics/module_mp_thompson_gfs.o physics/module_mp_wsm6_fv3.o physics/physcons.o physics/surface_perturbation.o GFS_layer/GFS_abstraction_layer.o GFS_layer/GFS_diagnostics.o GFS_layer/GFS_driver.o GFS_layer/GFS_physics_driver.o GFS_layer/GFS_radiation_driver.o GFS_layer/GFS_restart.o GFS_layer/GFS_typedefs.o
+ar rv libgfsphys.a physics/cnvc90.o physics/co2hc.o physics/date_def.o physics/dcyc2.o physics/dcyc2.pre.rad.o physics/efield.o physics/get_prs.o physics/gocart_tracer_config_stub.o physics/gscond.o physics/gscondp.o physics/gwdc.o physics/gwdps.o physics/ugwp_driver_v0.o physics/cires_orowam2017.o physics/h2o_def.o physics/h2oc.o physics/h2ohdc.o physics/h2ophys.o physics/ideaca.o physics/idea_co2.o physics/idea_composition.o physics/idea_dissipation.o physics/idea_h2o.o physics/idea_ion.o physics/idea_o2_o3.o physics/idea_phys.o physics/idea_solar_heating.o physics/idea_tracer.o physics/iounitdef.o physics/lrgsclr.o physics/mersenne_twister.o physics/mfpbl.o physics/mfpblt.o physics/mfscu.o physics/module_bfmicrophysics.o physics/moninedmf.o physics/moninedmf_hafs.o physics/moninp.o physics/moninp1.o physics/moninq.o physics/moninq1.o physics/moninshoc.o physics/mstadb.o physics/mstadbtn.o physics/mstadbtn2.o physics/mstcnv.o physics/namelist_soilveg.o physics/ozne_def.o physics/iccn_def.o physics/aerclm_def.o physics/ozphys.o physics/ozphys_2015.o physics/physparam.o physics/precpd.o physics/precpd_shoc.o physics/precpdp.o physics/progt2.o physics/progtm_module.o physics/rad_initialize.o physics/radiation_aerosols.o physics/radiation_astronomy.o physics/radiation_clouds.o physics/radiation_gases.o physics/radiation_surface.o physics/radlw_datatb.o physics/radlw_main.o physics/radlw_param.o physics/radsw_datatb.o physics/radsw_main.o physics/radsw_param.o physics/rascnvv2.o physics/rayleigh_damp.o physics/rayleigh_damp_mesopause.o physics/samfaerosols.o physics/samfdeepcnv.o physics/samfshalcnv.o physics/sascnv.o physics/sascnvn.o physics/satmedmfvdif.o physics/satmedmfvdifq.o physics/set_soilveg.o physics/sfc_cice.o physics/sfc_diag.o physics/sfc_diff.o physics/sfc_drv.o physics/sfc_noahmp_drv.o physics/sfc_nst.o physics/sfc_ocean.o physics/sfc_sice.o physics/sflx.o physics/shalcnv.o physics/shalcv.o physics/shalcv_1lyr.o physics/shalcv_fixdp.o physics/shalcv_opr.o physics/tracer_const_h.o physics/tridi2t3.o physics/calpreciptype.o physics/funcphys.o physics/gcm_shoc.o physics/get_prs_fv3.o physics/h2ointerp.o physics/module_nst_model.o physics/module_nst_parameters.o physics/module_nst_water_prop.o physics/ozinterp.o physics/module_wrf_utl.o physics/noahmp_tables.o physics/module_sf_noahmplsm.o physics/module_sf_noahmp_glacier.o physics/iccninterp.o physics/aerinterp.o physics/wam_f107_kp_mod.o physics/aer_cloud.o physics/cldmacro.o physics/cldwat2m_micro.o physics/gfs_phy_tracer_config.o physics/machine.o physics/num_parthds.o physics/sfcsub.o physics/wv_saturation.o physics/GFDL_parse_tracers.o physics/gcycle.o physics/cires_ugwp_initialize.o physics/cires_ugwp_module.o physics/cires_ugwp_utils.o physics/cires_ugwp_triggers.o physics/cires_ugwp_solvers.o physics/cires_vert_lsatdis.o physics/cires_vert_orodis.o physics/cires_vert_wmsdis.o physics/gfdl_cloud_microphys.o physics/micro_mg_utils.o physics/micro_mg2_0.o physics/micro_mg3_0.o physics/m_micro_driver.o physics/cs_conv.o physics/GFS_debug.o physics/module_mp_radar.o physics/module_mp_thompson_gfs.o physics/module_mp_wsm6_fv3.o physics/physcons.o physics/surface_perturbation.o GFS_layer/GFS_abstraction_layer.o GFS_layer/GFS_diagnostics.o GFS_layer/GFS_driver.o GFS_layer/GFS_physics_driver.o GFS_layer/GFS_radiation_driver.o GFS_layer/GFS_restart.o GFS_layer/GFS_typedefs.o
 ar: creating libgfsphys.a
 a - physics/cnvc90.o
 a - physics/co2hc.o
@@ -795,6 +771,7 @@ a - physics/radsw_param.o
 a - physics/rascnvv2.o
 a - physics/rayleigh_damp.o
 a - physics/rayleigh_damp_mesopause.o
+a - physics/samfaerosols.o
 a - physics/samfdeepcnv.o
 a - physics/samfshalcnv.o
 a - physics/sascnv.o
@@ -895,22 +872,22 @@ make -C io                   FMS_DIR=/scratch4/NCEPDEV/nems/noscrub/Jessica.Meix
 
 Build standalone FV3 io ...
 
-$ESMF_INC is [-I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include]
+$ESMF_INC is [-I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include]
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io'
 Building dependencies ...
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io'
 
 Build standalone FV3 io ...
 
-$ESMF_INC is [-I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include]
+$ESMF_INC is [-I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include]
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io'
 mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics  -c ffsync.F90 -o ffsync.o
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c FV3GFS_io.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c FV3GFS_io.F90
 mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics  -c module_fv3_io_def.F90 -o module_fv3_io_def.o
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -I/scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/include -c module_write_nemsio.F90
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -I/scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/include -c module_write_netcdf.F90
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c module_write_internal_state.F90
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c module_wrt_grid_comp.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/include -c module_write_nemsio.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/include -c module_write_netcdf.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c module_write_internal_state.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../namphysics   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c module_wrt_grid_comp.F90
 ar rv libfv3io.a ffsync.o FV3GFS_io.o module_write_nemsio.o module_write_netcdf.o module_fv3_io_def.o module_write_internal_state.o module_wrt_grid_comp.o
 ar: creating libfv3io.a
 a - ffsync.o
@@ -976,8 +953,8 @@ mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEF
 mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../io -I../namphysics  -c model/fv_dynamics.F90 -o model/fv_dynamics.o
 mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../io -I../namphysics  -c tools/fv_iau_mod.F90 -o tools/fv_iau_mod.o
 mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../io -I../namphysics  -c driver/fvGFS/DYCORE_typedefs.F90 -o driver/fvGFS/DYCORE_typedefs.o
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../io -I../namphysics  -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c driver/fvGFS/fv_nggps_diag.F90 -o driver/fvGFS/fv_nggps_diag.o
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../io -I../namphysics  -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c driver/fvGFS/atmosphere.F90 -o driver/fvGFS/atmosphere.o
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../io -I../namphysics  -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c driver/fvGFS/fv_nggps_diag.F90 -o driver/fvGFS/fv_nggps_diag.o
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -I../gfsphysics -I../ipd -I../io -I../namphysics  -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c driver/fvGFS/atmosphere.F90 -o driver/fvGFS/atmosphere.o
 Using 8-byte addressing
 Using PURE
 Converting pointers to allocatable components
@@ -1101,11 +1078,11 @@ a - initialize_spectral_mod.o
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/stochastic_physics'
 make libfv3cap.a  FMS_DIR=/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3'
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DESMF_VERSION_MAJOR=8  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -Igfsphysics -Iipd -Icpl -Iio -Iatmos_cubed_sphere -ICCPP_layer   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c module_fv3_config.F90
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DESMF_VERSION_MAJOR=8  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -Igfsphysics -Iipd -Icpl -Iio -Iatmos_cubed_sphere -ICCPP_layer   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c atmos_model.F90
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DESMF_VERSION_MAJOR=8  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -Igfsphysics -Iipd -Icpl -Iio -Iatmos_cubed_sphere -ICCPP_layer   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c module_fcst_grid_comp.F90
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DESMF_VERSION_MAJOR=8  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -Igfsphysics -Iipd -Icpl -Iio -Iatmos_cubed_sphere -ICCPP_layer   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c time_utils.F90
-mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DESMF_VERSION_MAJOR=8  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -Igfsphysics -Iipd -Icpl -Iio -Iatmos_cubed_sphere -ICCPP_layer   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c fv3_cap.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DESMF_VERSION_MAJOR=8  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -Igfsphysics -Iipd -Icpl -Iio -Iatmos_cubed_sphere -ICCPP_layer   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c module_fv3_config.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DESMF_VERSION_MAJOR=8  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -Igfsphysics -Iipd -Icpl -Iio -Iatmos_cubed_sphere -ICCPP_layer   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c atmos_model.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DESMF_VERSION_MAJOR=8  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -Igfsphysics -Iipd -Icpl -Iio -Iatmos_cubed_sphere -ICCPP_layer   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c module_fcst_grid_comp.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DESMF_VERSION_MAJOR=8  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -Igfsphysics -Iipd -Icpl -Iio -Iatmos_cubed_sphere -ICCPP_layer   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c time_utils.F90
+mpiifort -Duse_libMPI -Duse_netCDF -DSPMD -DUSE_LOG_DIAG_FIELD_INFO -Duse_LARGEFILE -DUSE_GFSL63 -DGFS_PHYS -Duse_WRTCOMP -DNEW_TAUCTMAX -DINTERNAL_FILE_NML -DMOIST_CAPPA -DUSE_COND -DOPENMP -DESMF_VERSION_MAJOR=8  -fpp -Wp,-w -I/apps/netcdf/4.3.0-intel/include -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -Igfsphysics -Iipd -Icpl -Iio -Iatmos_cubed_sphere -ICCPP_layer   -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c fv3_cap.F90
 ar rv libfv3cap.a atmos_model.o module_fv3_config.o module_fcst_grid_comp.o time_utils.o fv3_cap.o
 ar: creating libfv3cap.a
 a - atmos_model.o
@@ -1133,9 +1110,9 @@ exec make -j 1 WW3_COMP="theia" ww3_nems
 Currently Loaded Modules:
   1) intel/18.0.1.163     7) nemsio/9.9.9    13) png/1.2.44
   2) impi/5.1.2.150       8) sp/2.0.2        14) z/1.2.6
-  3) netcdf/4.3.0         9) w3emc/9.9.9     15) yaml-cpp/0.6.2
-  4) pnetcdf/1.5.0-impi  10) w3nco/2.0.6     16) esmf/8.0.0bs47
-  5) bacio/9.9.9         11) g2/3.1.0        17) modules.nems
+  3) netcdf/4.3.0         9) w3emc/9.9.9     15) esmf/8.0.0bs48
+  4) pnetcdf/1.5.0-impi  10) w3nco/2.0.6     16) modules.nems
+  5) bacio/9.9.9         11) g2/3.1.0
   6) ip/9.9.9            12) jasper/1.900.1
 
  
@@ -1194,7 +1171,6 @@ Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
-Shared Object     : No
  
 [INFO] list of the programs selected : ww3_grid
 Making makefile ...
@@ -1210,24 +1186,62 @@ Processing ww3_grid
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing constants 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3servmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3arrymd 
 ad3 : processing w3gsrumd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3gdatmd 
-ad3 : processing w3idatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3odatmd 
+ad3 : processing w3idatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ad3 : processing w3dispmd 
+ad3 : processing w3adatmd 
 ad3 : processing w3timemd 
 ad3 : processing w3nmlgridmd 
-ad3 : processing w3adatmd 
-ad3 : processing w3dispmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmmdatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3src4md 
-ad3 : processing w3snl1md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3triamd 
+ad3 : processing w3snl1md 
 ad3 : processing w3parall 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directoryls: 
+cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3wdatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iogrmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_grid 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_grid
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1246,17 +1260,24 @@ Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
-Shared Object     : No
  
 [INFO] list of the programs selected : ww3_outf
  
 Processing ww3_outf
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
-ad3 : processing w3sbt1md 
-ad3 : processing w3sdb1md 
 ad3 : processing w3iogomd 
+ad3 : processing w3sdb1md 
+ad3 : processing w3sbt1md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_outf 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_outf
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1275,18 +1296,27 @@ Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
-Shared Object     : No
  
 [INFO] list of the programs selected : ww3_outp
  
 Processing ww3_outp
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
-ad3 : processing w3partmd 
 ad3 : processing w3bullmd 
+ad3 : processing w3partmd 
 ad3 : processing w3iopomd 
 ad3 : processing w3flx1md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_outp 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_outp
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1305,7 +1335,6 @@ Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
-Shared Object     : No
  
 [INFO] list of the programs selected : ww3_prep
  
@@ -1313,7 +1342,11 @@ Processing ww3_prep
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing w3fldsmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_prep 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_prep
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1332,7 +1365,6 @@ Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
-Shared Object     : No
  
 [INFO] list of the programs selected : ww3_gint
  
@@ -1340,6 +1372,8 @@ Processing ww3_gint
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing ww3_gint 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_gint
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1358,7 +1392,6 @@ Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
-Shared Object     : No
  
 [INFO] list of the programs selected : ww3_prnc
  
@@ -1366,7 +1399,11 @@ Processing ww3_prnc
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing w3nmlprncmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_prnc 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_prnc
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1385,7 +1422,6 @@ Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
-Shared Object     : No
  
 [INFO] list of the programs selected : ww3_ounf
  
@@ -1394,8 +1430,16 @@ Processing ww3_ounf
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing w3iorsmd 
 ad3 : processing w3nmlounfmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3initmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_ounf 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_ounf
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1414,7 +1458,6 @@ Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
-Shared Object     : No
  
 [INFO] list of the programs selected : ww3_ounp
  
@@ -1422,7 +1465,11 @@ Processing ww3_ounp
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing w3nmlounpmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_ounp 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_ounp
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1442,7 +1489,6 @@ Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
-Shared Object     : No
  
 [INFO] list of the programs selected : ww3_grib
 Making makefile ...
@@ -1459,6 +1505,8 @@ Processing ww3_grib
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing ww3_grib 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_grib
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1477,7 +1525,6 @@ Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
-Shared Object     : No
  
 [INFO] list of the programs selected : ww3_multi_esmf
 Making makefile ...
@@ -1494,66 +1541,192 @@ switch = /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/
 Processing ww3_multi_esmf
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
-ad3 : processing scrip_kindsmod [no w3adc]
 ad3 : processing constants 
+ad3 : processing scrip_kindsmod [no w3adc]
 ad3 : processing w3uqckmd 
-ad3 : processing scrip_iounitsmod [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_constants [no w3adc]
+ad3 : processing scrip_iounitsmod [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_timers [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3servmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_errormod [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_netcdfmod [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_grids [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3gsrumd 
 ad3 : processing w3cspcmd 
 ad3 : processing w3arrymd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.modls: : No such file or directorycannot access *.mod
+: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmunitmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_remap_vars [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ad3 : processing scrip_remap_read [no w3adc]
 ad3 : processing scrip_remap_conservative [no w3adc]
 ad3 : processing scrip_remap_write [no w3adc]
-ad3 : processing scrip_remap_read [no w3adc]
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_interface 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3gdatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3odatmd 
 ad3 : processing wmscrpmd 
 ad3 : processing w3sbt1md 
 ad3 : processing w3idatmd 
+ls: ls: cannot access *.modcannot access *.mod: No such file or directory
+: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3dispmd 
-ad3 : processing wmmdatmd 
 ad3 : processing w3timemd 
+ad3 : processing wmmdatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3adatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3src4md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3fldsmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ad3 : processing w3fld1md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3sdb1md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3flx1md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3partmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3nmlmultimd 
 ad3 : processing wmfinlmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ad3 : processing w3fld2md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3triamd 
-ad3 : processing w3snl1md 
 ad3 : processing w3parall 
+ad3 : processing w3snl1md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.modls: cannot access *.mod: No such file or directory
+: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3wdatmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iogrmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iogomd 
 ad3 : processing wmupdtmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iosfmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iotrmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3pro3md 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3profsmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3srcemd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3wdasmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3updtmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iopomd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iorsmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmgridmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iobcmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wminiomd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing w3initmd 
 ad3 : processing w3wavemd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmiopomd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmwavemd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wminitmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ad3 : processing wmesmfmd 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
 ar: creating libww3_multi_esmf.a
 a - wmmdatmd.o
 a - w3gdatmd.o
@@ -1579,6 +1752,8 @@ a - w3uqckmd.o
 a - w3parall.o
 a - w3triamd.o
 a - w3srcemd.o
+a - w3fld1md.o
+a - w3fld2md.o
 a - w3flx1md.o
 a - w3src4md.o
 a - w3snl1md.o
@@ -1632,7 +1807,6 @@ Main directory    : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCH
 Scratch directory : /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
-Shared Object     : No
  
 [INFO] list of the programs selected : ww3_multi
  
@@ -1640,6 +1814,8 @@ Processing ww3_multi
 ---------------------
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing ww3_multi 
+ls: cannot access *.mod: No such file or directory
+ls: cannot access *.mod: No such file or directory
       Linking ww3_multi
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1672,9 +1848,9 @@ test -x /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/
 Currently Loaded Modules:
   1) intel/18.0.1.163     7) nemsio/9.9.9    13) png/1.2.44
   2) impi/5.1.2.150       8) sp/2.0.2        14) z/1.2.6
-  3) netcdf/4.3.0         9) w3emc/9.9.9     15) yaml-cpp/0.6.2
-  4) pnetcdf/1.5.0-impi  10) w3nco/2.0.6     16) esmf/8.0.0bs47
-  5) bacio/9.9.9         11) g2/3.1.0        17) modules.nems
+  3) netcdf/4.3.0         9) w3emc/9.9.9     15) esmf/8.0.0bs48
+  4) pnetcdf/1.5.0-impi  10) w3nco/2.0.6     16) modules.nems
+  5) bacio/9.9.9         11) g2/3.1.0
   6) ip/9.9.9            12) jasper/1.900.1
 
  
@@ -1684,7 +1860,7 @@ Components in linker order: WW3 FV3 FMS
 WW3: include /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/WW3_INSTALL/nuopc.mk
 FV3: include /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/fv3.mk
 FMS: include /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL/fms.mk
-CPPFLAGS += ESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_47"
+CPPFLAGS += ESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48"
 CPPFLAGS += ESMF_VERSION_BETASNAPSHOT="'T'"
 CPPFLAGS += ESMF_VERSION_MINOR="0"
 CPPFLAGS += ESMF_VERSION_PATCHLEVEL="0"
@@ -1696,71 +1872,71 @@ make[1]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_
 cd ENS_Cpl             && make stub
 make[2]: Entering directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/ENS_Cpl'
 mpiicc -E -traditional ENS_CplComp_ESMFMod_STUB.F90 > ENS_CplComp_ESMFMod_STUB.f90
-mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -c ENS_CplComp_ESMFMod_STUB.f90
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -c ENS_CplComp_ESMFMod_STUB.f90
 ar rv ENS_Cpl.a ENS_CplComp_ESMFMod_STUB.o
 ar: creating ENS_Cpl.a
 a - ENS_CplComp_ESMFMod_STUB.o
 make[2]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/ENS_Cpl'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Sep  4 22:38:08 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=247' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_47" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
-mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_HYB -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_UTILS.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:26:26 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_UTILS.tmp.f90
 mv -v module_NEMS_UTILS.tmp.o module_NEMS_UTILS.o
 ‘module_NEMS_UTILS.tmp.o’ -> ‘module_NEMS_UTILS.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Sep  4 22:38:08 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=247' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_47" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
-mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_HYB -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_methods.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:26:26 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_methods.tmp.f90
 mv -v module_MEDIATOR_methods.tmp.o module_MEDIATOR_methods.o
 ‘module_MEDIATOR_methods.tmp.o’ -> ‘module_MEDIATOR_methods.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Sep  4 22:38:08 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=247' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_47" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
-mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_HYB -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:26:26 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR.tmp.f90
 mv -v module_MEDIATOR.tmp.o module_MEDIATOR.o
 ‘module_MEDIATOR.tmp.o’ -> ‘module_MEDIATOR.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Sep  4 22:38:08 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=247' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_47" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
-mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_HYB -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_SpaceWeather.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:26:26 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_SpaceWeather.tmp.f90
 mv -v module_MEDIATOR_SpaceWeather.tmp.o module_MEDIATOR_SpaceWeather.o
 ‘module_MEDIATOR_SpaceWeather.tmp.o’ -> ‘module_MEDIATOR_SpaceWeather.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Sep  4 22:38:08 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=247' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_47" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
-mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_HYB -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:26:26 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_INTERNAL_STATE.tmp.f90
 mv -v module_EARTH_INTERNAL_STATE.tmp.o module_EARTH_INTERNAL_STATE.o
 ‘module_EARTH_INTERNAL_STATE.tmp.o’ -> ‘module_EARTH_INTERNAL_STATE.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Sep  4 22:38:08 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=247' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_47" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
-mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_HYB -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:26:26 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_GRID_COMP.tmp.f90
 mv -v module_EARTH_GRID_COMP.tmp.o module_EARTH_GRID_COMP.o
 ‘module_EARTH_GRID_COMP.tmp.o’ -> ‘module_EARTH_GRID_COMP.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Sep  4 22:38:08 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=247' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_47" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
-mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_HYB -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:26:26 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_INTERNAL_STATE.tmp.f90
 mv -v module_NEMS_INTERNAL_STATE.tmp.o module_NEMS_INTERNAL_STATE.o
 ‘module_NEMS_INTERNAL_STATE.tmp.o’ -> ‘module_NEMS_INTERNAL_STATE.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Sep  4 22:38:08 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=247' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_47" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
-mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_HYB -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:26:26 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_GRID_COMP.tmp.f90
 mv -v module_NEMS_GRID_COMP.tmp.o module_NEMS_GRID_COMP.o
 ‘module_NEMS_GRID_COMP.tmp.o’ -> ‘module_NEMS_GRID_COMP.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Sep  4 22:38:08 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=247' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_47" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
-mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_HYB -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_Rusage.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:26:26 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_Rusage.tmp.f90
 mv -v module_NEMS_Rusage.tmp.o module_NEMS_Rusage.o
 ‘module_NEMS_Rusage.tmp.o’ -> ‘module_NEMS_Rusage.o’
 mpiicc -c nems_c_rusage.c
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Wed Sep  4 22:38:08 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=247' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_47" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
-mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -I/home/emc.nemspara/SOFT/yaml-cpp-0.6.2/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_HYB -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c MAIN_NEMS.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:26:26 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
+mpiifort -I/apps/netcdf/4.3.0-intel/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/mod -I/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/include -I/apps/netcdf/4.3.0-intel/include -IENS_Cpl -I.  -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c MAIN_NEMS.tmp.f90
 mv -v MAIN_NEMS.tmp.o MAIN_NEMS.o
 ‘MAIN_NEMS.tmp.o’ -> ‘MAIN_NEMS.o’
 echo libgocart is 
 libgocart is
-echo extlibs is /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libnemsio_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libbacio_4.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libsp_v2.0.2_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3emc_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3nco_d.a -L/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -Wl,-rpath,/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -lesmf  -cxxlib -lrt -ldl -lnetcdff -lnetcdf -lyaml-cpp  -qopenmp  -L/apps/netcdf/4.3.0-intel/lib -lnetcdff -lnetcdf
-extlibs is /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libnemsio_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libbacio_4.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libsp_v2.0.2_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3emc_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3nco_d.a -L/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -Wl,-rpath,/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -lesmf -cxxlib -lrt -ldl -lnetcdff -lnetcdf -lyaml-cpp -qopenmp -L/apps/netcdf/4.3.0-intel/lib -lnetcdff -lnetcdf
-mpiifort  -o /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/exe/NEMS.x MAIN_NEMS.o module_NEMS_UTILS.o module_MEDIATOR_methods.o module_MEDIATOR.o module_MEDIATOR_SpaceWeather.o module_EARTH_INTERNAL_STATE.o module_EARTH_GRID_COMP.o module_NEMS_INTERNAL_STATE.o module_NEMS_GRID_COMP.o module_NEMS_Rusage.o nems_c_rusage.o  /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/obj_HYB/libww3_multi_esmf.a  /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libfv3cap.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libfv3core.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libfv3io.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libipd.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libgfsphys.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libfv3cpl.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libstochastic_physics.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL/libfms.a ENS_Cpl/ENS_Cpl.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libnemsio_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libbacio_4.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libsp_v2.0.2_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3emc_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3nco_d.a -L/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -Wl,-rpath,/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs47-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -lesmf  -cxxlib -lrt -ldl -lnetcdff -lnetcdf -lyaml-cpp  -qopenmp  -L/apps/netcdf/4.3.0-intel/lib -lnetcdff -lnetcdf  
+echo extlibs is /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libnemsio_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libbacio_4.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libsp_v2.0.2_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3emc_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3nco_d.a -L/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -Wl,-rpath,/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -lesmf  -cxxlib -lrt -ldl -lnetcdff -lnetcdf  -qopenmp  -L/apps/netcdf/4.3.0-intel/lib -lnetcdff -lnetcdf
+extlibs is /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libnemsio_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libbacio_4.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libsp_v2.0.2_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3emc_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3nco_d.a -L/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -Wl,-rpath,/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -lesmf -cxxlib -lrt -ldl -lnetcdff -lnetcdf -qopenmp -L/apps/netcdf/4.3.0-intel/lib -lnetcdff -lnetcdf
+mpiifort  -o /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/exe/NEMS.x MAIN_NEMS.o module_NEMS_UTILS.o module_MEDIATOR_methods.o module_MEDIATOR.o module_MEDIATOR_SpaceWeather.o module_EARTH_INTERNAL_STATE.o module_EARTH_GRID_COMP.o module_NEMS_INTERNAL_STATE.o module_NEMS_GRID_COMP.o module_NEMS_Rusage.o nems_c_rusage.o  /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/obj_MPI/libww3_multi_esmf.a  /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libfv3cap.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libfv3core.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libfv3io.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libipd.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libgfsphys.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libfv3cpl.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL/libstochastic_physics.a /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL/libfms.a ENS_Cpl/ENS_Cpl.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libnemsio_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libbacio_4.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libsp_v2.0.2_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3emc_d.a /scratch3/NCEPDEV/nceplibs/NCEPLIBS_CCPP/lib/libw3nco_d.a -L/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -Wl,-rpath,/scratch4/NCEPDEV/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48-intel18.0.1.163-impi5.1.2.150-netcdf4.3.0/lib -lesmf  -cxxlib -lrt -ldl -lnetcdff -lnetcdf  -qopenmp  -L/apps/netcdf/4.3.0-intel/lib -lnetcdff -lnetcdf  
 /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/exe/NEMS.x is created.
 make[1]: Leaving directory `/scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src'
 + cd /scratch4/NCEPDEV/nems/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src
-+ cp -fp ../exe/NEMS.x /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/exec/fv3_ww3.exe
-+ cp -fp conf/modules.nems /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/include/modules_fv3_ww3
-+ md5sum /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/exec/fv3_ww3.exe
++ cp -fp ../exe/NEMS.x /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/exec/fv3_ww3.exe
++ cp -fp conf/modules.nems /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/include/modules_fv3_ww3
++ md5sum /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/exec/fv3_ww3.exe
 + unset md5sum
 + unset OPTS
 + set -xe
 + set -xe
-+ test -s /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/exec/fv3_ww3.exe
-+ test -x /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.23970/exec/fv3_ww3.exe
++ test -s /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/exec/fv3_ww3.exe
++ test -x /scratch3/NCEPDEV/stmp2/Jessica.Meixner/rtgen.31814/exec/fv3_ww3.exe
 _______________________________________________________________
-Start Epilog v19.07.23 on node t1124 for job 2285403 :: Wed Sep 4 22:38:44 UTC 2019
-Job 2285403 (not serial) finished for user Jessica.Meixner in partition theia with exit code 0:0
+Start Epilog v19.07.23 on node t0519 for job 2447963 :: Tue Sep 17 16:27:04 UTC 2019
+Job 2447963 (not serial) finished for user Jessica.Meixner in partition theia with exit code 0:0
 _______________________________________________________________
-End Epilogue v19.07.23 Wed Sep 4 22:38:44 UTC 2019
+End Epilogue v19.07.23 Tue Sep 17 16:27:04 UTC 2019

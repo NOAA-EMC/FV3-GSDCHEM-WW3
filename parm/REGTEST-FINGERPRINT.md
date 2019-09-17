@@ -18,3 +18,4 @@ Change log:
 
 * Apr. 30, 2019 - initial commit
 * Aug.  2, 2019 - Updating to FV3GFS-GSDCHEM 087
+* Sept 12, 2019 - Updating to FV3GFS-GSDCHEM 088

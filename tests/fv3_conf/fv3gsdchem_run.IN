@@ -29,5 +29,6 @@ cp    @[RTPWD]/${inputdir}/*_table .
 cp    @[RTPWD]/${inputdir}/*configure .
 
 # GSDCHEM
-inputdir=GSDCHEM_input_data${sfx}
-cp -r @[RTPWD]/${inputdir}/emi_C96 ./INPUT/
+emissdir=emi_C$(( NPX - 1 ))
+inputdir=GSDCHEM_input_data/${emissdir}
+cp -r @[RTPWD]/${inputdir} ./INPUT/

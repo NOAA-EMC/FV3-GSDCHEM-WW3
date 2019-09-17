@@ -174,5 +174,26 @@ export DO_SFCPERTS=.F.
 export SKEB=-999.
 export SPPT=-999.
 export SHUM=-999.
+export TRANS_TRAC=.F.
 export IAU_INC_FILES="''"
+}
+
+export_gsdchem ()
+{
+export CTRA_OPT=2
+export DUST_OPT=3
+export DUST_ALPHA=-1.         # default
+export DUST_GAMMA=-1.         # default
+export DUST_UTHRES=-1.        # default
+export DUST_DATA=             # default
+export SEAS_OPT=2
+export SEAS_EMIS_SCALE=-1.    # default
+export SEAS_EMIS_SCHEME=3
+export WDLS_OPT=1
+export WDLS_ALPHA=-1.
+export EMIS_DATA="INPUT/emi_C96/10"
+export MODIS_source="INPUT/emi_C96/10_fire"
+export GBBEPx_source="INPUT/emi_C96/FRP_fire"
+export FIRE_FRQ=30
+export DUST_EXTRA=
 }

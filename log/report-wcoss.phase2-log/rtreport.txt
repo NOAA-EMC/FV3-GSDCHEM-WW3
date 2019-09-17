@@ -1,11 +1,11 @@
 Run rocotostat...
 Generate report...
-WORKFLOW STARTED AT Tue Sep  3 16:37:59 2019 (+1567528679)
+WORKFLOW STARTED AT Tue Sep 17 16:03:32 2019 (+1568736212)
 Repository information:
 
 
 REPO TOP:
-feature/bs44nemsgithub 283b428 [origin/feature/bs44nemsgithub] remove out-grd
+master           8f70e4e [origin/master] Update components (incl GSDCHEM 0.87) and ESMF versions
 Fetch URL: gerrit:EMC_FV3-GSDCHEM-WW3
  M log/report-wcoss.phase2-log/build_fv3_ww3.exe.log
  M log/report-wcoss.phase2-log/rtreport.txt
@@ -24,7 +24,7 @@ Fetch URL: gerrit:GSDCHEM
 
 Entering 'NEMS'
 age: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
-Fetch URL: https://github.com/NOAA-EMC/NEMS.git
+Fetch URL: https://github.com/NOAA-EMC/NEMS
 
 Entering 'WW3'
 age: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
@@ -34,8 +34,8 @@ Fetch URL: https://github.com/NOAA-EMC/WW3
 BUILD fv3_ww3.exe: SUCCEEDED
 
 TEST #1: PASS
-  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Tue Sep 3 17:14:15 UTC 2019 (One-way coupled FV3-WW3 C384)
-  Tue Sep  3 17:14:15 UTC 2019
+  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Tue Sep 17 16:39:48 UTC 2019 (One-way coupled FV3-WW3 C384)
+  Tue Sep 17 16:39:48 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -99,14 +99,14 @@ TEST #1: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /ptmpp2/Jessica.Meixner/rtgen.23357/exec/fv3_ww3.exe
-    Expected md5sum: c74c01192ed450a1c75fc8bf54035bbf
-    Actual md5sum: c74c01192ed450a1c75fc8bf54035bbf
-  TEST PASSED AT Tue Sep  3 17:26:04 UTC 2019
+    File: /ptmpp2/Jessica.Meixner/rtgen.24579/exec/fv3_ww3.exe
+    Expected md5sum: dd1e977e69910781ebedd01e633dc7db
+    Actual md5sum: dd1e977e69910781ebedd01e633dc7db
+  TEST PASSED AT Tue Sep 17 16:51:49 UTC 2019
 
 TEST #2: PASS
-  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Tue Sep 3 17:14:14 UTC 2019 (One-way coupled FV3-WW3)
-  Tue Sep  3 17:14:14 UTC 2019
+  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Tue Sep 17 16:39:47 UTC 2019 (One-way coupled FV3-WW3)
+  Tue Sep 17 16:39:47 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -170,11 +170,11 @@ TEST #2: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /ptmpp2/Jessica.Meixner/rtgen.23357/exec/fv3_ww3.exe
-    Expected md5sum: c74c01192ed450a1c75fc8bf54035bbf
-    Actual md5sum: c74c01192ed450a1c75fc8bf54035bbf
-  TEST PASSED AT Tue Sep  3 17:39:53 UTC 2019
-WORKFLOW REPORT AT Tue Sep  3 17:42:05 2019 (+1567532525)
+    File: /ptmpp2/Jessica.Meixner/rtgen.24579/exec/fv3_ww3.exe
+    Expected md5sum: dd1e977e69910781ebedd01e633dc7db
+    Actual md5sum: dd1e977e69910781ebedd01e633dc7db
+  TEST PASSED AT Tue Sep 17 17:05:50 UTC 2019
+WORKFLOW REPORT AT Tue Sep 17 17:06:38 2019 (+1568739998)
 Tests: 0 failed, 2 passed out of 2
 Builds: 0 failed, 1 passed out of 1
 REGRESSION TEST WAS SUCCESSFUL

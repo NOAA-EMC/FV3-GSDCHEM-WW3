@@ -1,0 +1,117 @@
+###############################################################################
+#
+#  FV3GFS-GSDCHEM control test
+#
+###############################################################################
+
+export TEST_DESCR="FV3-GSDCHEM with GFDL MP and MODIS emissions at C384, 6-hour"
+
+export CNTL_DIR=cpld_fv3_gfdlmp_gsdchem_modis_c384
+
+export LIST_FILES="atmos_4xdaily.tile1.nc \
+                   atmos_4xdaily.tile2.nc \
+                   atmos_4xdaily.tile3.nc \
+                   atmos_4xdaily.tile4.nc \
+                   atmos_4xdaily.tile5.nc \
+                   atmos_4xdaily.tile6.nc \
+                   phyf000.tile1.nc \
+                   phyf000.tile2.nc \
+                   phyf000.tile3.nc \
+                   phyf000.tile4.nc \
+                   phyf000.tile5.nc \
+                   phyf000.tile6.nc \
+                   phyf006.tile1.nc \
+                   phyf006.tile2.nc \
+                   phyf006.tile3.nc \
+                   phyf006.tile4.nc \
+                   phyf006.tile5.nc \
+                   phyf006.tile6.nc \
+                   dynf000.tile1.nc \
+                   dynf000.tile2.nc \
+                   dynf000.tile3.nc \
+                   dynf000.tile4.nc \
+                   dynf000.tile5.nc \
+                   dynf000.tile6.nc \
+                   dynf006.tile1.nc \
+                   dynf006.tile2.nc \
+                   dynf006.tile3.nc \
+                   dynf006.tile4.nc \
+                   dynf006.tile5.nc \
+                   dynf006.tile6.nc \
+                   RESTART/coupler.res \
+                   RESTART/fv_core.res.nc \
+                   RESTART/fv_core.res.tile1.nc \
+                   RESTART/fv_core.res.tile2.nc \
+                   RESTART/fv_core.res.tile3.nc \
+                   RESTART/fv_core.res.tile4.nc \
+                   RESTART/fv_core.res.tile5.nc \
+                   RESTART/fv_core.res.tile6.nc \
+                   RESTART/fv_srf_wnd.res.tile1.nc \
+                   RESTART/fv_srf_wnd.res.tile2.nc \
+                   RESTART/fv_srf_wnd.res.tile3.nc \
+                   RESTART/fv_srf_wnd.res.tile4.nc \
+                   RESTART/fv_srf_wnd.res.tile5.nc \
+                   RESTART/fv_srf_wnd.res.tile6.nc \
+                   RESTART/fv_tracer.res.tile1.nc \
+                   RESTART/fv_tracer.res.tile2.nc \
+                   RESTART/fv_tracer.res.tile3.nc \
+                   RESTART/fv_tracer.res.tile4.nc \
+                   RESTART/fv_tracer.res.tile5.nc \
+                   RESTART/fv_tracer.res.tile6.nc \
+                   RESTART/phy_data.tile1.nc \
+                   RESTART/phy_data.tile2.nc \
+                   RESTART/phy_data.tile3.nc \
+                   RESTART/phy_data.tile4.nc \
+                   RESTART/phy_data.tile5.nc \
+                   RESTART/phy_data.tile6.nc \
+                   RESTART/sfc_data.tile1.nc \
+                   RESTART/sfc_data.tile2.nc \
+                   RESTART/sfc_data.tile3.nc \
+                   RESTART/sfc_data.tile4.nc \
+                   RESTART/sfc_data.tile5.nc \
+                   RESTART/sfc_data.tile6.nc"
+
+export_fv3
+export_gsdchem
+
+# export QUEUE=batch
+export TASKS=168
+export NODES=$(expr $TASKS / $TPN + 1)
+
+RUN_SCRIPT=rt_fv3gsdchem.sh
+
+RTPWD=${DISKNM}/FV3GFS-GSDCHEM/trunk-20190901
+
+export DIAG_TABLE=chm_diag_table_gfdlmp
+export FIELD_TABLE=chm_field_table_gfdlmp
+export INPUT_NML=chm.gfdlmp.c384.nml.IN
+export NEMS_CONFIGURE=nems.configure.atm_chm_between.IN
+# - model_configure ---
+export CPL='.true.'
+export INPES=4
+export JNPES=6
+export NPX=385
+export NPY=385
+export NPZ=64
+export NPZP=65
+export DT_ATMOS=300
+export FHMAX=06
+export WRITE_GROUP=1
+export WRTTASK_PER_GROUP=24
+export FDIAG='0,1,2,3,4,5,6'
+export IMO=1536
+export JMO=768
+# - nems.configure ---
+export nems_configure='atm_chm_between'
+export atm_model='fv3'
+export atm_petlist_bounds="-1 -1"
+export chm_model='gsdchem'
+export chm_petlist_bounds="-1 -1"
+export coupling_interval_sec="${DT_ATMOS}" # fv3 time step
+# - chemistry namelist ---
+export PLUME_FLAG=1
+export EMIS_DATA="INPUT/emi_C384/${SMONTH}"
+export FIRE_DATA="INPUT/emi_C384/${SMONTH}_fire"
+
+# test walltime
+export WLCLK=30

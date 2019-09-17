@@ -147,7 +147,7 @@
        lgfdlmprad     = @[LGFDLMPRAD]
        effr_in        = @[EFFR_IN]
        random_clds    = .false.
-       trans_trac     = .false.
+       trans_trac     = @[TRANS_TRAC]
        cnvcld         = .true.
        cplchm         = .true.
        imfshalcnv     = 2
@@ -300,7 +300,7 @@
   aerchem_onoff     = 1
   bio_emiss_opt     = 0
   biomass_burn_opt  = 1
-  chem_conv_tr      = 2
+  chem_conv_tr      = @[CTRA_OPT]
   chem_in_opt       = 0
   chem_opt          = 300
   chemdt            = 3
@@ -323,10 +323,13 @@
   seas_opt          = @[SEAS_OPT]
   seas_emis_scheme  = @[SEAS_EMIS_SCHEME]
   seas_emis_scale   = @[SEAS_EMIS_SCALE]
+  wetdep_ls_opt     = @[WDLS_OPT]
+  wetdep_ls_alpha   = @[WDLS_ALPHA]
   vertmix_onoff     = 1
   gfdlmp_onoff      = 1
   archive_step      = 1
   chem_hist_outname = "chem_out_"
+  dust_inname       = "@[DUST_DATA]"
   emi_inname        = "@[EMIS_DATA]"
   fireemi_inname    = "@[FIRE_DATA]"
   emi_outname       = "./"

@@ -26,8 +26,8 @@ platform wcoss.phase2 {
     LONG_TEST_QUEUE='&LONGQ;'
     BUILD_QUEUE='&BUILDQ;'
     MACHINE_ID='wcoss.phase2'
-    BASELINE="/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
-    BASELINE_TEMPLATE="/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
+    BASELINE="/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190912"
+    BASELINE_TEMPLATE="/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190912"
 
     default_resources={
         TASKS=156
@@ -37,8 +37,8 @@ platform wcoss.phase2 {
         JNPES=8
         THRD=1
         atm_petlist_bounds="0 155"
-        wav_petlist_bounds="156 191"
-        CPLTASKS=192
+        wav_petlist_bounds="156 263"
+        CPLTASKS=264
     }
     default_stretched_resources={
         TASKS=48
@@ -121,8 +121,8 @@ platform wcoss.phase1 {
     cores_per_node=16
     cpus_per_core=2
     MACHINE_ID='wcoss.phase1'
-    BASELINE="/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
-    BASELINE_TEMPLATE="/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
+    BASELINE="/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190912"
+    BASELINE_TEMPLATE="/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190912"
 
     # WCOSS Phase 2 has been slow of late.
     DEFAULT_TEST_WALLTIME=2700
@@ -138,8 +138,8 @@ platform wcoss.phase1 {
         JNPES=8
         THRD=1
         atm_petlist_bounds="0 155"
-        wav_petlist_bounds="156 191"
-        CPLTASKS=192
+        wav_petlist_bounds="156 263"
+        CPLTASKS=264
     }
     default_stretched_resources={
         TASKS=48
@@ -206,8 +206,8 @@ platform wcoss_dell_p3 {
     LONG_TEST_QUEUE='&LONGQ;'
     BUILD_QUEUE='&BUILDQ;'
 
-    BASELINE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
-    BASELINE_TEMPLATE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
+    BASELINE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190912"
+    BASELINE_TEMPLATE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190912"
 
     default_resources={
         TASKS=156
@@ -217,8 +217,8 @@ platform wcoss_dell_p3 {
         JNPES=8
         THRD=1
         atm_petlist_bounds="0 155"
-        wav_petlist_bounds="156 191"
-        CPLTASKS=192
+        wav_petlist_bounds="156 263"
+        CPLTASKS=264
     }
     default_stretched_resources={
         TASKS=48
@@ -304,8 +304,8 @@ platform wcoss.cray {
     BUILD_WALLTIME="3600"
     DEFAULT_TEST_WALLTIME=2700
 
-    BASELINE="/gpfs/hps3/emc/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
-    BASELINE_TEMPLATE="/gpfs/hps3/emc/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190801"
+    BASELINE="/gpfs/hps3/emc/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190912"
+    BASELINE_TEMPLATE="/gpfs/hps3/emc/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190912"
 
     execution_time_modules=[[[
       module load alps
@@ -319,8 +319,8 @@ platform wcoss.cray {
         JNPES=8
         THRD=1
         atm_petlist_bounds="0 149"
-        wav_petlist_bounds="150 191"
-        CPLTASKS=192
+        wav_petlist_bounds="150 263"
+        CPLTASKS=264
     }
     default_stretched_resources={
         TASKS=48
