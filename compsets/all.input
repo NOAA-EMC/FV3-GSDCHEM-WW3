@@ -3,16 +3,16 @@ load 'fv3ww3.input'
 
 run cpld_1way@leap_fv3@C96_ww3@glo30m          @ fv3, ww3,  baseline, leap
 run cpld_1way@block_fv3@C384_ww3@glo30m        @ fv3, ww3,  baseline, block384
-run cpld_1way@block_fv3@32bit@C384_ww3@glo30m  @ fv3, ww3,  baseline, gefs32bit,      plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_1way@block_fv3@32bit@C384_ww3@glo30m  @ fv3, ww3,  baseline, gefs32bit,      plat==hera.intel, plat==wcoss.cray, plat==wcoss_dell_p3
 
 
 
-run cpld_fv3_gsdchem_modis                     @ fv3gsdchem, coupledapp, baseline, atmchem_modis,                     plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
-run cpld_fv3_gsdchem_gbbepx_frp                @ fv3gsdchem, coupledapp, baseline, atmchem_gbbepx_frp,                plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
-run cpld_fv3_gsdchem_gbbepx_sfc                @ fv3gsdchem, coupledapp, baseline, atmchem_gbbepx_sfc,                plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
-run cpld_fv3_gfdlmp_gsdchem_modis              @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_modis,              plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
-run cpld_fv3_gfdlmp_gsdchem_gbbepx_frp         @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_gbbepx_frp,         plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
-run cpld_fv3_gfdlmp_gsdchem_gbbepx_frp_fengsha @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_gbbepx_frp_fengsha, plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
-run cpld_fv3_gfdlmp_samf_gsdchem_gbbepx_frp    @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_samf_gbbepx_frp,    plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
-run cpld_fv3_gfdlmp_gsdchem_gbbepx_sfc         @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_gbbepx_sfc,         plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
-run cpld_fv3_gfdlmp_gsdchem_modis_c384         @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_modis_c384,         plat==theia.intel, plat==theia.slurm.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gsdchem_modis                     @ fv3gsdchem, coupledapp, baseline, atmchem_modis,                     plat==hera.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gsdchem_gbbepx_frp                @ fv3gsdchem, coupledapp, baseline, atmchem_gbbepx_frp,                plat==hera.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gsdchem_gbbepx_sfc                @ fv3gsdchem, coupledapp, baseline, atmchem_gbbepx_sfc,                plat==hera.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gfdlmp_gsdchem_modis              @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_modis,              plat==hera.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gfdlmp_gsdchem_gbbepx_frp         @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_gbbepx_frp,         plat==hera.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gfdlmp_gsdchem_gbbepx_frp_fengsha @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_gbbepx_frp_fengsha, plat==hera.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gfdlmp_samf_gsdchem_gbbepx_frp    @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_samf_gbbepx_frp,    plat==hera.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gfdlmp_gsdchem_gbbepx_sfc         @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_gbbepx_sfc,         plat==hera.intel, plat==wcoss.cray, plat==wcoss_dell_p3
+run cpld_fv3_gfdlmp_gsdchem_modis_c384         @ fv3gsdchem, coupledapp, baseline, atmchem_gfdlmp_modis_c384,         plat==hera.intel, plat==wcoss.cray, plat==wcoss_dell_p3

@@ -1,11 +1,11 @@
 + [[ fv3_gsdchem_ww3_32bit.exe == fv3_ww3.exe ]]
 + [[ fv3_gsdchem_ww3_32bit.exe == fv3_gsdchem.exe ]]
 + [[ fv3_gsdchem_ww3_32bit.exe == fv3_gsdchem_ww3_32bit.exe ]]
-+ rm -f /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_gsdchem_ww3_32bit.exe
-+ md5sum=/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_gsdchem_ww3_32bit.exe.md5
++ rm -f /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/exec/fv3_gsdchem_ww3_32bit.exe
++ md5sum=/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/exec/fv3_gsdchem_ww3_32bit.exe.md5
 + OPTS=app=coupledFV3_GSDCHEM_WW3_32bit
-+ mkdir -p /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/include
-+ rm -f /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_gsdchem_ww3_32bit.exe /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/include/modules_fv3_gsdchem_ww3_32bit
++ mkdir -p /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/exec /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/include
++ rm -f /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/exec/fv3_gsdchem_ww3_32bit.exe /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/include/modules_fv3_gsdchem_ww3_32bit
 + cd /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3
 + which aprun
 which: no aprun in (/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/gpfs/dell3/usrx/local/dev/emc_rocoto/emc-utils-1.0.0/bin:/gpfs/dell3/usrx/local/dev/emc_rocoto/rocoto-1.3.0rc2/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/gpfs/dell3/usrx/local/dev/emc_rocoto/ruby-2.5.1/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:/u/Jessica.Meixner/.local/bin:/u/Jessica.Meixner/bin)
@@ -1305,7 +1305,6 @@ export CRTM_SRC="/gpfs/dell1/nco/ops/nwprod/lib/crtm/v2.2.5/src"
 export CRTM_VER="v2.2.5"
 export CVS_RSH="ssh"
 export DAALROOT="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal"
-export DISPLAY="v72a3f:25.0"
 export ESMFMKFILE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/lib/esmf.mk"
 export FORT_BUFFERED="TRUE"
 export G2_INC4="/gpfs/dell1/nco/ops/nwprod/lib/g2/v3.1.0/ips/18.0.1/include/g2_v3.1.0_4"
@@ -1329,7 +1328,7 @@ export HDF5_LDFLAGS_F="-L/usrx/local/prod/packages/ips/18.0.1/hdf5/1.10.1/lib -l
 export HISTCONTROL="ignoredups"
 export HISTSIZE="1000"
 export HOME="/u/Jessica.Meixner"
-export HOSTNAME="v71e9f"
+export HOSTNAME="v71e5f"
 export HOSTTYPE="X86_64"
 export INFOPATH="/usrx/local/prod/intel/2018UP01/documentation_2018/en/debugger/gdb-ia/info:info_gdb_igfx"
 export INSPECTOR_2018_DIR="/usrx/local/prod/intel/2018UP01/inspector_2018"
@@ -1382,15 +1381,15 @@ export LMOD_VERSION="7.7"
 export LMOD_sys="Linux"
 export LOADEDMODULES="ips/18.0.1.163:NetCDF/4.5.0:HDF5-serial/1.10.1:cmake/3.10.0:bacio/2.0.2:ip/3.0.1:sp/2.0.2:w3nco/2.0.6:w3emc/2.3.0:nemsio/2.2.3:sfcio/1.0.0:lsf/10.1:impi/18.0.1:bufr/11.2.0:sigio/2.0.1:crtm/2.2.5:g2/3.1.0:jasper/1.900.29:libpng/1.2.59:zlib/1.2.11:esmf/8.0.0bs48:modules.nems"
 export LOGNAME="Jessica.Meixner"
-export LSB_ACCT_FILE="/tmp/9895860.tmpdir/.1570475774.9895860.acct"
-export LSB_AFFINITY_HOSTFILE="/u/Jessica.Meixner/.lsbatch/1570475774.9895860.hostAffinityFile"
-export LSB_BATCH_JID="9895860"
-export LSB_BIND_CPU_LIST="2,30"
+export LSB_ACCT_FILE="/tmp/9907554.tmpdir/.1570497489.9907554.acct"
+export LSB_AFFINITY_HOSTFILE="/u/Jessica.Meixner/.lsbatch/1570497489.9907554.hostAffinityFile"
+export LSB_BATCH_JID="9907554"
+export LSB_BIND_CPU_LIST="0,28"
 export LSB_CG_MEMLIMIT="0x180000000"
-export LSB_CHKFILENAME="/u/Jessica.Meixner/.lsbatch/1570475774.9895860"
-export LSB_DJOB_HOSTFILE="/u/Jessica.Meixner/.lsbatch/1570475774.9895860.hostfile"
+export LSB_CHKFILENAME="/u/Jessica.Meixner/.lsbatch/1570497489.9907554"
+export LSB_DJOB_HOSTFILE="/u/Jessica.Meixner/.lsbatch/1570497489.9907554.hostfile"
 export LSB_DJOB_NUMPROC="1"
-export LSB_DJOB_RANKFILE="/u/Jessica.Meixner/.lsbatch/1570475774.9895860.hostfile"
+export LSB_DJOB_RANKFILE="/u/Jessica.Meixner/.lsbatch/1570497489.9907554.hostfile"
 export LSB_ECHKPNT_RSH_CMD="ssh -Y -o 'PasswordAuthentication no' -o 'StrictHostKeyChecking no'"
 export LSB_EEXEC_REAL_GID=""
 export LSB_EEXEC_REAL_UID=""
@@ -1399,23 +1398,23 @@ export LSB_EXEC_CLUSTER="venus"
 export LSB_EXEC_HOSTTYPE="X86_64"
 export LSB_EXIT_IF_CWD_NOTEXIST="Y"
 export LSB_EXIT_PRE_ABORT="99"
-export LSB_HOSTS="v71e9f"
+export LSB_HOSTS="v71e5f"
 export LSB_JOBEXIT_STAT="0"
-export LSB_JOBFILENAME="/u/Jessica.Meixner/.lsbatch/1570475774.9895860"
-export LSB_JOBID="9895860"
+export LSB_JOBFILENAME="/u/Jessica.Meixner/.lsbatch/1570497489.9907554"
+export LSB_JOBID="9907554"
 export LSB_JOBINDEX="0"
 export LSB_JOBNAME="rt_build_fv3_gsdchem_ww3_32bit.exe"
-export LSB_JOBRES_CALLBACK="54087@v71e9f"
-export LSB_JOBRES_PID="40720"
+export LSB_JOBRES_CALLBACK="54740@v71e5f"
+export LSB_JOBRES_PID="150282"
 export LSB_JOB_EXECUSER="Jessica.Meixner"
 export LSB_MAX_NUM_PROCESSORS="1"
-export LSB_MCPU_HOSTS="v71e9f 1 "
-export LSB_OUTDIR="/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/rocoto"
-export LSB_OUTPUTFILE="/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/tmp/log/build_fv3_gsdchem_ww3_32bit.exe.log"
+export LSB_MCPU_HOSTS="v71e5f 1 "
+export LSB_OUTDIR="/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/rocoto"
+export LSB_OUTPUTFILE="/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/tmp/log/build_fv3_gsdchem_ww3_32bit.exe.log"
 export LSB_PROJECT_NAME="FV3GFS-T2O"
 export LSB_QUEUE="dev_transfer"
 export LSB_RES_GET_FANOUT_INFO="Y"
-export LSB_SUB_HOST="v72a3f"
+export LSB_SUB_HOST="v72a2f"
 export LSB_SUB_RES_REQ=" rusage[mem=6144] affinity[core(1)]"
 export LSB_SUB_USER="Jessica.Meixner"
 export LSB_TRAPSIGS="trap # 15 10 12 2 1"
@@ -1426,17 +1425,17 @@ export LSF_BINDIR="/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin"
 export LSF_CGROUP_TOPDIR_KEY="venus"
 export LSF_ENVDIR="/gpfs/lsf/conf"
 export LSF_INVOKE_CMD="bsub"
-export LSF_JOB_TIMESTAMP_VALUE="1570475776"
+export LSF_JOB_TIMESTAMP_VALUE="1570497491"
 export LSF_LIBDIR="/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/lib"
 export LSF_LIM_API_NTRIES="1"
-export LSF_LOGDIR="/usrx/local/lsf/log/v71e9"
+export LSF_LOGDIR="/usrx/local/lsf/log/v71e5"
 export LSF_SERVERDIR="/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc"
 export LSF_VERSION="34"
 export LS_COLORS="rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:"
-export LS_EXECCWD="/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/rocoto"
+export LS_EXECCWD="/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/rocoto"
 export LS_EXEC_T="START"
-export LS_JOBPID="40720"
-export LS_SUBCWD="/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/rocoto"
+export LS_JOBPID="150282"
+export LS_SUBCWD="/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/rocoto"
 export MAIL="/var/spool/mail/Jessica.Meixner"
 export MAKEFLAGS="app=coupledFV3_GSDCHEM_WW3_32bit"
 export MAKELEVEL="1"
@@ -1485,8 +1484,8 @@ export QTDIR="/usr/lib64/qt-3.3"
 export QTINC="/usr/lib64/qt-3.3/include"
 export QTLIB="/usr/lib64/qt-3.3/lib"
 export QT_GRAPHICSSYSTEM_CHECKED="1"
-export RM_CPUTASK1="2,30"
-export RT_INSTALL_DIR="/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632"
+export RM_CPUTASK1="0,28"
+export RT_INSTALL_DIR="/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024"
 export SBD_KRB5CCNAME_VAL=""
 export SFCIO_INC4="/gpfs/dell1/nco/ops/nwprod/lib/sfcio/v1.0.0/ips/18.0.1/include/sfcio_v1.0.0_4"
 export SFCIO_LIB4="/gpfs/dell1/nco/ops/nwprod/lib/sfcio/v1.0.0/ips/18.0.1/libsfcio_v1.0.0_4.a"
@@ -1503,9 +1502,9 @@ export SP_LIB8="/gpfs/dell1/nco/ops/nwprod/lib/sp/v2.0.2/ips/18.0.1/libsp_v2.0.2
 export SP_LIBd="/gpfs/dell1/nco/ops/nwprod/lib/sp/v2.0.2/ips/18.0.1/libsp_v2.0.2_d.a"
 export SP_SRC="/gpfs/dell1/nco/ops/nwprod/lib/sp/v2.0.2/src"
 export SP_VER="v2.0.2"
-export SSH_CLIENT="192.58.2.82 42012 22"
-export SSH_CONNECTION="192.58.2.82 42012 192.58.152.17 22"
-export SSH_TTY="/dev/pts/25"
+export SSH_CLIENT="192.58.2.81 49510 22"
+export SSH_CONNECTION="192.58.2.81 49510 192.58.152.16 22"
+export SSH_TTY="/dev/pts/2"
 export TBBROOT="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb"
 export USER="Jessica.Meixner"
 export VT_ADD_LIBS="-ldwarf -lelf -lvtunwind -lm -lpthread"
@@ -1528,9 +1527,8 @@ export W3NCO_LIBd="/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/ips/18.0.1/libw3n
 export W3NCO_SRC="/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/src"
 export W3NCO_VER="v2.0.6"
 export XDG_RUNTIME_DIR="/run/user/20941"
-export XDG_SESSION_ID="62261"
+export XDG_SESSION_ID="64203"
 export XLSF_UIDDIR="/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/lib/uid"
-export XMODIFIERS="@im=ibus"
 export Z_INC="/usrx/local/prod/packages/ips/18.0.1/zlib/1.2.11/include"
 export Z_LIB="/usrx/local/prod/packages/ips/18.0.1/zlib/1.2.11/lib/libz.a"
 export Z_SRC="/usrx/local/prod/packages/ips/18.0.1/zlib/1.2.11/src"
@@ -1564,7 +1562,7 @@ export __LMOD_REF_COUNT_MANPATH="/usrx/local/prod/packages/ips/18.0.1/zlib/1.2.1
 export __LMOD_REF_COUNT_NLSPATH="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/lib/intel64_lin/locale/%l_%t/%N:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mkl/lib/intel64_lin/locale/%l_%t/%N:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/share/locale/%l_%t/%N:1"
 export __LMOD_REF_COUNT_PATH="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/bin:1;/usrx/local/prod/packages/gnu/4.8.5/libpng/1.2.59/bin:1;/usrx/local/prod/packages/gnu/4.8.5/jasper/1.900.29/bin:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:1;/usrx/local/prod/packages/cmake/3.10.0/bin:1;/usrx/local/prod/packages/ips/18.0.1/hdf5/1.10.1:1;/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/bin:1;/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:1;/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:1;/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:1;/usrx/local/prod/intel/2018UP01/itac_latest/bin:1;/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/usr/lpp/mmfs/bin:1;/opt/ibutils/bin:1;/opt/dell/srvadmin/bin:1;/u/Jessica.Meixner/.local/bin:1;/u/Jessica.Meixner/bin:1;/usrx/local/prod/packages/ips/18.0.1/zlib/1.2.11/include:1"
 export __LMOD_REF_COUNT__LMFILES_="/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/NetCDF/4.5.0:1;/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/HDF5-serial/1.10.1:1;/usrx/local/prod/modulefiles/core_third/cmake/3.10.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bacio/2.0.2:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/ip/3.0.1:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/sp/2.0.2:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/w3emc/2.3.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/nemsio/2.2.3:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/sfcio/1.0.0:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.2.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/sigio/2.0.1:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/crtm/2.2.5:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/g2/3.1.0:1;/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/jasper/1.900.29:1;/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/libpng/1.2.59:1;/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/zlib/1.2.11:1;/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/modulefiles/esmf/8.0.0bs48:1;/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/conf/modules.nems:1"
-export __LSF_JOB_TMPDIR__="/tmp/9895860.tmpdir"
+export __LSF_JOB_TMPDIR__="/tmp/9907554.tmpdir"
 export app="coupledFV3_GSDCHEM_WW3_32bit"
 export have_qoutql="YES"
 checking for a BSD-compatible install... /usr/bin/install -c
@@ -1974,20 +1972,20 @@ Processing ww3_grid
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing constants 
 ad3 : processing w3servmd 
-ad3 : processing w3gsrumd 
 ad3 : processing w3arrymd 
+ad3 : processing w3gsrumd 
 ad3 : processing w3gdatmd 
-ad3 : processing w3odatmd 
 ad3 : processing w3idatmd 
-ad3 : processing w3adatmd 
+ad3 : processing w3odatmd 
 ad3 : processing w3dispmd 
-ad3 : processing w3timemd 
 ad3 : processing w3nmlgridmd 
+ad3 : processing w3adatmd 
+ad3 : processing w3timemd 
 ad3 : processing wmmdatmd 
 ad3 : processing w3src4md 
-ad3 : processing w3triamd 
 ad3 : processing w3snl1md 
 ad3 : processing w3parall 
+ad3 : processing w3triamd 
 ad3 : processing w3iogrmd 
 ad3 : processing w3wdatmd 
 ad3 : processing ww3_grid 
@@ -2016,8 +2014,8 @@ Shared Object     : No
 Processing ww3_outf
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
-ad3 : processing w3iogomd 
 ad3 : processing w3sdb1md 
+ad3 : processing w3iogomd 
 ad3 : processing w3sbt1md 
 ad3 : processing ww3_outf 
       Linking ww3_outf
@@ -2257,37 +2255,37 @@ switch = /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW
 Processing ww3_multi_esmf
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
-ad3 : processing constants 
 ad3 : processing scrip_kindsmod [no w3adc]
+ad3 : processing constants 
 ad3 : processing w3uqckmd 
-ad3 : processing w3servmd 
 ad3 : processing scrip_constants [no w3adc]
 ad3 : processing scrip_iounitsmod [no w3adc]
+ad3 : processing w3servmd 
 ad3 : processing scrip_timers [no w3adc]
 ad3 : processing scrip_errormod [no w3adc]
 ad3 : processing scrip_netcdfmod [no w3adc]
-ad3 : processing w3arrymd 
 ad3 : processing w3gsrumd 
+ad3 : processing w3arrymd 
 ad3 : processing w3cspcmd 
-ad3 : processing scrip_grids [no w3adc]
 ad3 : processing wmunitmd 
+ad3 : processing scrip_grids [no w3adc]
 ad3 : processing scrip_remap_vars [no w3adc]
-ad3 : processing scrip_remap_read [no w3adc]
-ad3 : processing scrip_remap_conservative [no w3adc]
 ad3 : processing scrip_remap_write [no w3adc]
+ad3 : processing scrip_remap_conservative [no w3adc]
+ad3 : processing scrip_remap_read [no w3adc]
 ad3 : processing scrip_interface 
 ad3 : processing w3gdatmd 
-ad3 : processing wmscrpmd 
-ad3 : processing w3odatmd 
-ad3 : processing w3sbt1md 
 ad3 : processing w3idatmd 
+ad3 : processing w3odatmd 
+ad3 : processing wmscrpmd 
+ad3 : processing w3sbt1md 
 ad3 : processing w3dispmd 
 ad3 : processing w3timemd 
 ad3 : processing wmmdatmd 
 ad3 : processing w3adatmd 
 ad3 : processing w3src4md 
-ad3 : processing w3sdb1md 
 ad3 : processing w3fldsmd 
+ad3 : processing w3sdb1md 
 ad3 : processing w3flx1md 
 ad3 : processing w3partmd 
 ad3 : processing w3nmlmultimd 
@@ -2297,8 +2295,8 @@ ad3 : processing w3triamd
 ad3 : processing w3snl1md 
 ad3 : processing w3wdatmd 
 ad3 : processing w3iogrmd 
-ad3 : processing wmupdtmd 
 ad3 : processing w3iogomd 
+ad3 : processing wmupdtmd 
 ad3 : processing w3iosfmd 
 ad3 : processing w3iotrmd 
 ad3 : processing w3pro3md 
@@ -2311,8 +2309,8 @@ ad3 : processing w3iorsmd
 ad3 : processing wmgridmd 
 ad3 : processing w3iobcmd 
 ad3 : processing wminiomd 
-ad3 : processing w3initmd 
 ad3 : processing w3wavemd 
+ad3 : processing w3initmd 
 ad3 : processing wmiopomd 
 ad3 : processing wmwavemd 
 ad3 : processing wminitmd 
@@ -2467,44 +2465,44 @@ ar rv ENS_Cpl.a ENS_CplComp_ESMFMod_STUB.o
 ar: creating ENS_Cpl.a
 a - ENS_CplComp_ESMFMod_STUB.o
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/ENS_Cpl'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 19:45:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:47:01 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_UTILS.tmp.f90
 mv -v module_NEMS_UTILS.tmp.o module_NEMS_UTILS.o
 ‘module_NEMS_UTILS.tmp.o’ -> ‘module_NEMS_UTILS.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 19:45:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:47:01 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_methods.tmp.f90
 mv -v module_MEDIATOR_methods.tmp.o module_MEDIATOR_methods.o
 ‘module_MEDIATOR_methods.tmp.o’ -> ‘module_MEDIATOR_methods.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 19:45:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:47:01 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR.tmp.f90
 mv -v module_MEDIATOR.tmp.o module_MEDIATOR.o
 ‘module_MEDIATOR.tmp.o’ -> ‘module_MEDIATOR.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 19:45:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:47:01 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_SpaceWeather.tmp.f90
 mv -v module_MEDIATOR_SpaceWeather.tmp.o module_MEDIATOR_SpaceWeather.o
 ‘module_MEDIATOR_SpaceWeather.tmp.o’ -> ‘module_MEDIATOR_SpaceWeather.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 19:45:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:47:01 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_INTERNAL_STATE.tmp.f90
 mv -v module_EARTH_INTERNAL_STATE.tmp.o module_EARTH_INTERNAL_STATE.o
 ‘module_EARTH_INTERNAL_STATE.tmp.o’ -> ‘module_EARTH_INTERNAL_STATE.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 19:45:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:47:01 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_GRID_COMP.tmp.f90
 mv -v module_EARTH_GRID_COMP.tmp.o module_EARTH_GRID_COMP.o
 ‘module_EARTH_GRID_COMP.tmp.o’ -> ‘module_EARTH_GRID_COMP.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 19:45:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:47:01 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_INTERNAL_STATE.tmp.f90
 mv -v module_NEMS_INTERNAL_STATE.tmp.o module_NEMS_INTERNAL_STATE.o
 ‘module_NEMS_INTERNAL_STATE.tmp.o’ -> ‘module_NEMS_INTERNAL_STATE.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 19:45:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:47:01 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_GRID_COMP.tmp.f90
 mv -v module_NEMS_GRID_COMP.tmp.o module_NEMS_GRID_COMP.o
 ‘module_NEMS_GRID_COMP.tmp.o’ -> ‘module_NEMS_GRID_COMP.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 19:45:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:47:01 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_Rusage.tmp.f90
 mv -v module_NEMS_Rusage.tmp.o module_NEMS_Rusage.o
 ‘module_NEMS_Rusage.tmp.o’ -> ‘module_NEMS_Rusage.o’
 mpiicc -c nems_c_rusage.c
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 19:45:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:47:01 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c MAIN_NEMS.tmp.f90
 mv -v MAIN_NEMS.tmp.o MAIN_NEMS.o
 ‘MAIN_NEMS.tmp.o’ -> ‘MAIN_NEMS.o’
@@ -2516,50 +2514,50 @@ mpiifort  -o /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW
 /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/exe/NEMS.x is created.
 make[1]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src'
 + cd /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src
-+ cp -fp ../exe/NEMS.x /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_gsdchem_ww3_32bit.exe
-+ cp -fp conf/modules.nems /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/include/modules_fv3_gsdchem_ww3_32bit
-+ md5sum /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_gsdchem_ww3_32bit.exe
++ cp -fp ../exe/NEMS.x /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/exec/fv3_gsdchem_ww3_32bit.exe
++ cp -fp conf/modules.nems /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/include/modules_fv3_gsdchem_ww3_32bit
++ md5sum /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/exec/fv3_gsdchem_ww3_32bit.exe
 + unset md5sum
 + unset OPTS
 + set -xe
 + set -xe
-+ test -s /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_gsdchem_ww3_32bit.exe
-+ test -x /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_gsdchem_ww3_32bit.exe
++ test -s /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/exec/fv3_gsdchem_ww3_32bit.exe
++ test -x /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/exec/fv3_gsdchem_ww3_32bit.exe
 
 ------------------------------------------------------------
-Sender: LSF System <lsfadmin@v71e9f>
-Subject: Job 9895860: <rt_build_fv3_gsdchem_ww3_32bit.exe> in cluster <venus> Done
+Sender: LSF System <lsfadmin@v71e5f>
+Subject: Job 9907554: <rt_build_fv3_gsdchem_ww3_32bit.exe> in cluster <venus> Done
 
-Job <rt_build_fv3_gsdchem_ww3_32bit.exe> was submitted from host <v72a3f> by user <Jessica.Meixner> in cluster <venus> at Mon Oct  7 19:16:14 2019
-Job was executed on host(s) <v71e9f>, in queue <dev_transfer>, as user <Jessica.Meixner> in cluster <venus> at Mon Oct  7 19:16:16 2019
+Job <rt_build_fv3_gsdchem_ww3_32bit.exe> was submitted from host <v72a2f> by user <Jessica.Meixner> in cluster <venus> at Tue Oct  8 01:18:09 2019
+Job was executed on host(s) <v71e5f>, in queue <dev_transfer>, as user <Jessica.Meixner> in cluster <venus> at Tue Oct  8 01:18:11 2019
 </u/Jessica.Meixner> was used as the home directory.
-</gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/rocoto> was used as the working directory.
-Started at Mon Oct  7 19:16:16 2019
-Terminated at Mon Oct  7 19:45:45 2019
-Results reported at Mon Oct  7 19:45:45 2019
+</gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/rocoto> was used as the working directory.
+Started at Tue Oct  8 01:18:11 2019
+Terminated at Tue Oct  8 01:47:37 2019
+Results reported at Tue Oct  8 01:47:37 2019
 
 Your job looked like:
 
 ------------------------------------------------------------
 # LSBATCH: User input
-/gpfs/dell3/usrx/local/dev/emc_rocoto/rocoto-1.3.0rc2/sbin/lsfwrapper.sh sh -c "cd /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/src ; ./install.sh fv3_gsdchem_ww3_32bit.exe"
+/gpfs/dell3/usrx/local/dev/emc_rocoto/rocoto-1.3.0rc2/sbin/lsfwrapper.sh sh -c "cd /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.156024/src ; ./install.sh fv3_gsdchem_ww3_32bit.exe"
 ------------------------------------------------------------
 
 Successfully completed.
 
 Resource usage summary:
 
-    CPU time :                                   1898.19 sec.
-    Max Memory :                                 4808 MB
-    Average Memory :                             542.43 MB
+    CPU time :                                   1894.22 sec.
+    Max Memory :                                 4810 MB
+    Average Memory :                             471.67 MB
     Total Requested Memory :                     6144.00 MB
-    Delta Memory :                               1336.00 MB
+    Delta Memory :                               1334.00 MB
     Max Swap :                                   -
-    Max Processes :                              30
-    Max Threads :                                35
-    Run time :                                   1784 sec.
-    Turnaround time :                            1771 sec.
+    Max Processes :                              28
+    Max Threads :                                32
+    Run time :                                   1768 sec.
+    Turnaround time :                            1768 sec.
 
 The output (if any) is above this job summary.
 
-[Mon Oct  7 19:45:45 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_shared_ecflow.ksh: /var/lsf/ecflow_post_in.Jessica.Meixner.9895860 file not found or empty.  Job is not eligible for ecflow abort notification.
+[Tue Oct  8 01:47:37 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_shared_ecflow.ksh: /var/lsf/ecflow_post_in.Jessica.Meixner.9907554 file not found or empty.  Job is not eligible for ecflow abort notification.

@@ -1,9 +1,9 @@
 + [[ fv3_ww3.exe == fv3_ww3.exe ]]
-+ rm -f /ptmpp2/Jessica.Meixner/rtgen.45269/exec/fv3_ww3.exe
-+ md5sum=/ptmpp2/Jessica.Meixner/rtgen.45269/exec/fv3_ww3.exe.md5
++ rm -f /ptmpp2/Jessica.Meixner/rtgen.34599/exec/fv3_ww3.exe
++ md5sum=/ptmpp2/Jessica.Meixner/rtgen.34599/exec/fv3_ww3.exe.md5
 + OPTS=app=coupledFV3_WW3
-+ mkdir -p /ptmpp2/Jessica.Meixner/rtgen.45269/exec /ptmpp2/Jessica.Meixner/rtgen.45269/include
-+ rm -f /ptmpp2/Jessica.Meixner/rtgen.45269/exec/fv3_ww3.exe /ptmpp2/Jessica.Meixner/rtgen.45269/include/modules_fv3_ww3
++ mkdir -p /ptmpp2/Jessica.Meixner/rtgen.34599/exec /ptmpp2/Jessica.Meixner/rtgen.34599/include
++ rm -f /ptmpp2/Jessica.Meixner/rtgen.34599/exec/fv3_ww3.exe /ptmpp2/Jessica.Meixner/rtgen.34599/include/modules_fv3_ww3
 + cd /gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3
 + which aprun
 which: no aprun in (/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/gpfs/gd2/emc/hwrf/noscrub/soft/emc-utils-1.0.0//bin:/gpfs/gd2/emc/hwrf/noscrub/soft/ruby-1.8.7-p374/bin:/usrx/local/emc_rocoto/1.3.0rc2/bin:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Jessica.Meixner/bin)
@@ -1193,20 +1193,20 @@ Processing ww3_grid
 make[2]: Entering directory `/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing constants 
 ad3 : processing w3servmd 
-ad3 : processing w3arrymd 
 ad3 : processing w3gsrumd 
+ad3 : processing w3arrymd 
 ad3 : processing w3gdatmd 
 ad3 : processing w3idatmd 
 ad3 : processing w3odatmd 
-ad3 : processing w3timemd 
-ad3 : processing w3adatmd 
 ad3 : processing w3dispmd 
 ad3 : processing w3nmlgridmd 
+ad3 : processing w3timemd 
+ad3 : processing w3adatmd 
 ad3 : processing wmmdatmd 
 ad3 : processing w3src4md 
 ad3 : processing w3triamd 
-ad3 : processing w3parall 
 ad3 : processing w3snl1md 
+ad3 : processing w3parall 
 ad3 : processing w3wdatmd 
 ad3 : processing w3iogrmd 
 ad3 : processing ww3_grid 
@@ -1235,9 +1235,9 @@ Shared Object     : No
 Processing ww3_outf
 ---------------------
 make[2]: Entering directory `/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
+ad3 : processing w3iogomd 
 ad3 : processing w3sdb1md 
 ad3 : processing w3sbt1md 
-ad3 : processing w3iogomd 
 ad3 : processing ww3_outf 
       Linking ww3_outf
 make[2]: Leaving directory `/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
@@ -1264,9 +1264,9 @@ Shared Object     : No
 Processing ww3_outp
 ---------------------
 make[2]: Entering directory `/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
-ad3 : processing w3iopomd 
 ad3 : processing w3bullmd 
 ad3 : processing w3partmd 
+ad3 : processing w3iopomd 
 ad3 : processing w3flx1md 
 ad3 : processing ww3_outp 
       Linking ww3_outp
@@ -1374,8 +1374,8 @@ Shared Object     : No
 Processing ww3_ounf
 ---------------------
 make[2]: Entering directory `/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
-ad3 : processing w3iorsmd 
 ad3 : processing w3nmlounfmd 
+ad3 : processing w3iorsmd 
 ad3 : processing w3initmd 
 ad3 : processing ww3_ounf 
       Linking ww3_ounf
@@ -1476,8 +1476,8 @@ switch = /gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/mo
 Processing ww3_multi_esmf
 ---------------------
 make[2]: Entering directory `/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
-ad3 : processing constants 
 ad3 : processing scrip_kindsmod [no w3adc]
+ad3 : processing constants 
 ad3 : processing w3uqckmd 
 ad3 : processing scrip_iounitsmod [no w3adc]
 ad3 : processing scrip_constants [no w3adc]
@@ -1485,39 +1485,39 @@ ad3 : processing scrip_timers [no w3adc]
 ad3 : processing w3servmd 
 ad3 : processing scrip_errormod [no w3adc]
 ad3 : processing scrip_netcdfmod [no w3adc]
+ad3 : processing w3arrymd 
 ad3 : processing w3gsrumd 
 ad3 : processing w3cspcmd 
-ad3 : processing w3arrymd 
 ad3 : processing wmunitmd 
 ad3 : processing scrip_grids [no w3adc]
 ad3 : processing scrip_remap_vars [no w3adc]
-ad3 : processing scrip_remap_read [no w3adc]
-ad3 : processing scrip_remap_write [no w3adc]
 ad3 : processing scrip_remap_conservative [no w3adc]
+ad3 : processing scrip_remap_write [no w3adc]
+ad3 : processing scrip_remap_read [no w3adc]
 ad3 : processing scrip_interface 
 ad3 : processing w3gdatmd 
-ad3 : processing wmscrpmd 
+ad3 : processing w3odatmd 
 ad3 : processing w3sbt1md 
 ad3 : processing w3idatmd 
-ad3 : processing w3odatmd 
+ad3 : processing wmscrpmd 
+ad3 : processing w3dispmd 
 ad3 : processing w3timemd 
 ad3 : processing wmmdatmd 
-ad3 : processing w3dispmd 
 ad3 : processing w3adatmd 
+ad3 : processing w3src4md 
 ad3 : processing w3sdb1md 
 ad3 : processing w3flx1md 
 ad3 : processing w3partmd 
 ad3 : processing w3nmlmultimd 
-ad3 : processing w3src4md 
 ad3 : processing wmfinlmd 
 ad3 : processing w3fldsmd 
-ad3 : processing w3parall 
-ad3 : processing w3snl1md 
 ad3 : processing w3triamd 
+ad3 : processing w3snl1md 
+ad3 : processing w3parall 
 ad3 : processing w3wdatmd 
 ad3 : processing w3iogrmd 
-ad3 : processing w3iogomd 
 ad3 : processing wmupdtmd 
+ad3 : processing w3iogomd 
 ad3 : processing w3iosfmd 
 ad3 : processing w3iotrmd 
 ad3 : processing w3pro3md 
@@ -1683,44 +1683,44 @@ ar rv ENS_Cpl.a ENS_CplComp_ESMFMod_STUB.o
 ar: creating ENS_Cpl.a
 a - ENS_CplComp_ESMFMod_STUB.o
 make[2]: Leaving directory `/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/ENS_Cpl'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:56:22 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:00:54 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
 mpiifort -I/usrx/local/NetCDF/4.2/serial/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/NetCDF/4.2/serial/include -IENS_Cpl -I.  -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_UTILS.tmp.f90
 mv -v module_NEMS_UTILS.tmp.o module_NEMS_UTILS.o
 `module_NEMS_UTILS.tmp.o' -> `module_NEMS_UTILS.o'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:56:22 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:00:54 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
 mpiifort -I/usrx/local/NetCDF/4.2/serial/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/NetCDF/4.2/serial/include -IENS_Cpl -I.  -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_methods.tmp.f90
 mv -v module_MEDIATOR_methods.tmp.o module_MEDIATOR_methods.o
 `module_MEDIATOR_methods.tmp.o' -> `module_MEDIATOR_methods.o'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:56:22 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:00:54 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
 mpiifort -I/usrx/local/NetCDF/4.2/serial/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/NetCDF/4.2/serial/include -IENS_Cpl -I.  -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR.tmp.f90
 mv -v module_MEDIATOR.tmp.o module_MEDIATOR.o
 `module_MEDIATOR.tmp.o' -> `module_MEDIATOR.o'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:56:22 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:00:54 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
 mpiifort -I/usrx/local/NetCDF/4.2/serial/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/NetCDF/4.2/serial/include -IENS_Cpl -I.  -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_SpaceWeather.tmp.f90
 mv -v module_MEDIATOR_SpaceWeather.tmp.o module_MEDIATOR_SpaceWeather.o
 `module_MEDIATOR_SpaceWeather.tmp.o' -> `module_MEDIATOR_SpaceWeather.o'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:56:22 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:00:54 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
 mpiifort -I/usrx/local/NetCDF/4.2/serial/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/NetCDF/4.2/serial/include -IENS_Cpl -I.  -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_INTERNAL_STATE.tmp.f90
 mv -v module_EARTH_INTERNAL_STATE.tmp.o module_EARTH_INTERNAL_STATE.o
 `module_EARTH_INTERNAL_STATE.tmp.o' -> `module_EARTH_INTERNAL_STATE.o'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:56:22 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:00:54 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
 mpiifort -I/usrx/local/NetCDF/4.2/serial/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/NetCDF/4.2/serial/include -IENS_Cpl -I.  -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_GRID_COMP.tmp.f90
 mv -v module_EARTH_GRID_COMP.tmp.o module_EARTH_GRID_COMP.o
 `module_EARTH_GRID_COMP.tmp.o' -> `module_EARTH_GRID_COMP.o'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:56:22 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:00:54 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
 mpiifort -I/usrx/local/NetCDF/4.2/serial/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/NetCDF/4.2/serial/include -IENS_Cpl -I.  -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_INTERNAL_STATE.tmp.f90
 mv -v module_NEMS_INTERNAL_STATE.tmp.o module_NEMS_INTERNAL_STATE.o
 `module_NEMS_INTERNAL_STATE.tmp.o' -> `module_NEMS_INTERNAL_STATE.o'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:56:22 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:00:54 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
 mpiifort -I/usrx/local/NetCDF/4.2/serial/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/NetCDF/4.2/serial/include -IENS_Cpl -I.  -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_GRID_COMP.tmp.f90
 mv -v module_NEMS_GRID_COMP.tmp.o module_NEMS_GRID_COMP.o
 `module_NEMS_GRID_COMP.tmp.o' -> `module_NEMS_GRID_COMP.o'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:56:22 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:00:54 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
 mpiifort -I/usrx/local/NetCDF/4.2/serial/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/NetCDF/4.2/serial/include -IENS_Cpl -I.  -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_Rusage.tmp.f90
 mv -v module_NEMS_Rusage.tmp.o module_NEMS_Rusage.o
 `module_NEMS_Rusage.tmp.o' -> `module_NEMS_Rusage.o'
 mpiicc -c nems_c_rusage.c
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:56:22 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Oct  8 01:00:54 UTC 2019 r "' -D'CMP_YEAR=2019' -D'CMP_JD=281' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PUBLIC="'F'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
 mpiifort -I/usrx/local/NetCDF/4.2/serial/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/nems/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/NetCDF/4.2/serial/include -IENS_Cpl -I.  -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c MAIN_NEMS.tmp.f90
 mv -v MAIN_NEMS.tmp.o MAIN_NEMS.o
 `MAIN_NEMS.tmp.o' -> `MAIN_NEMS.o'
@@ -1732,47 +1732,47 @@ mpiifort  -o /gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NE
 /gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/exe/NEMS.x is created.
 make[1]: Leaving directory `/gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src'
 + cd /gpfs/gd1/emc/marine/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src
-+ cp -fp ../exe/NEMS.x /ptmpp2/Jessica.Meixner/rtgen.45269/exec/fv3_ww3.exe
-+ cp -fp conf/modules.nems /ptmpp2/Jessica.Meixner/rtgen.45269/include/modules_fv3_ww3
-+ md5sum /ptmpp2/Jessica.Meixner/rtgen.45269/exec/fv3_ww3.exe
++ cp -fp ../exe/NEMS.x /ptmpp2/Jessica.Meixner/rtgen.34599/exec/fv3_ww3.exe
++ cp -fp conf/modules.nems /ptmpp2/Jessica.Meixner/rtgen.34599/include/modules_fv3_ww3
++ md5sum /ptmpp2/Jessica.Meixner/rtgen.34599/exec/fv3_ww3.exe
 + unset md5sum
 + unset OPTS
 + set -xe
 + set -xe
-+ test -s /ptmpp2/Jessica.Meixner/rtgen.45269/exec/fv3_ww3.exe
-+ test -x /ptmpp2/Jessica.Meixner/rtgen.45269/exec/fv3_ww3.exe
++ test -s /ptmpp2/Jessica.Meixner/rtgen.34599/exec/fv3_ww3.exe
++ test -x /ptmpp2/Jessica.Meixner/rtgen.34599/exec/fv3_ww3.exe
 
 ------------------------------------------------------------
-Sender: LSF System <lsfadmin@g26c42f>
-Subject: Job 228154: <rt_build_fv3_ww3.exe> in cluster <gyre> Done
+Sender: LSF System <lsfadmin@g26c51f>
+Subject: Job 234542: <rt_build_fv3_ww3.exe> in cluster <gyre> Done
 
-Job <rt_build_fv3_ww3.exe> was submitted from host <g20a2f> by user <Jessica.Meixner> in cluster <gyre>.
-Job was executed on host(s) <g26c42f>, in queue <dev2_shared>, as user <Jessica.Meixner> in cluster <gyre>.
+Job <rt_build_fv3_ww3.exe> was submitted from host <g20a1f> by user <Jessica.Meixner> in cluster <gyre>.
+Job was executed on host(s) <g26c51f>, in queue <dev2_shared>, as user <Jessica.Meixner> in cluster <gyre>.
 </u/Jessica.Meixner> was used as the home directory.
-</ptmpp2/Jessica.Meixner/rtgen.45269/rocoto> was used as the working directory.
-Started at Mon Oct  7 18:23:19 2019
-Results reported on Mon Oct  7 18:57:16 2019
+</ptmpp2/Jessica.Meixner/rtgen.34599/rocoto> was used as the working directory.
+Started at Tue Oct  8 00:27:56 2019
+Results reported on Tue Oct  8 01:01:49 2019
 
 Your job looked like:
 
 ------------------------------------------------------------
 # LSBATCH: User input
-/usrx/local/emc_rocoto/1.3.0rc2/sbin/lsfwrapper.sh sh -c "cd /ptmpp2/Jessica.Meixner/rtgen.45269/src ; ./install.sh fv3_ww3.exe"
+/usrx/local/emc_rocoto/1.3.0rc2/sbin/lsfwrapper.sh sh -c "cd /ptmpp2/Jessica.Meixner/rtgen.34599/src ; ./install.sh fv3_ww3.exe"
 ------------------------------------------------------------
 
 Successfully completed.
 
 Resource usage summary:
 
-    CPU time :               2301.45 sec.
-    Max Memory :             2251 MB
-    Average Memory :         279.34 MB
+    CPU time :               2305.66 sec.
+    Max Memory :             2253 MB
+    Average Memory :         276.62 MB
     Total Requested Memory : 4096.00 MB
-    Delta Memory :           1845.00 MB
+    Delta Memory :           1843.00 MB
     (Delta: the difference between Total Requested Memory and Max Memory.)
     Max Processes :          36
-    Max Threads :            39
+    Max Threads :            41
 
 The output (if any) is above this job summary.
 
-[Mon Oct  7 18:57:16 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_shared_ecflow.ksh: /var/lsf/ecflow_post_in.228154 file not found or empty.  Job is not eligible for ecflow abort notification.
+[Tue Oct  8 01:01:49 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_shared_ecflow.ksh: /var/lsf/ecflow_post_in.234542 file not found or empty.  Job is not eligible for ecflow abort notification.
