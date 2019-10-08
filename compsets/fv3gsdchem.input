@@ -4330,7 +4330,7 @@ test cpld_fv3_gfdlmp_gsdchem_modis_c384: fv3_gsdchem.exe {
     TEST_DESCR="FV3-GSDCHEM with GFDL MP and MODIS emissions at C384, 6-hour"
     CNTL_NAME="@[TEST_NAME]"
 
-    DEFAULT_TEST_WALLTIME=3600
+    DEFAULT_TEST_WALLTIME=4800
 
     TASKS=168
     TPN=12

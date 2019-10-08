@@ -1,9 +1,9 @@
 + [[ fv3_ww3.exe == fv3_ww3.exe ]]
-+ rm -f /gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/exec/fv3_ww3.exe
-+ md5sum=/gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/exec/fv3_ww3.exe.md5
++ rm -f /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_ww3.exe
++ md5sum=/gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_ww3.exe.md5
 + OPTS=app=coupledFV3_WW3
-+ mkdir -p /gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/exec /gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/include
-+ rm -f /gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/exec/fv3_ww3.exe /gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/include/modules_fv3_ww3
++ mkdir -p /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/include
++ rm -f /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_ww3.exe /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/include/modules_fv3_ww3
 + cd /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3
 + which aprun
 which: no aprun in (/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/gpfs/dell3/usrx/local/dev/emc_rocoto/emc-utils-1.0.0/bin:/gpfs/dell3/usrx/local/dev/emc_rocoto/rocoto-1.3.0rc2/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/gpfs/dell3/usrx/local/dev/emc_rocoto/ruby-2.5.1/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:/u/Jessica.Meixner/.local/bin:/u/Jessica.Meixner/bin)
@@ -1201,6 +1201,7 @@ Main directory    : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSD
 Scratch directory : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
+Shared Object     : No
  
 [INFO] list of the programs selected : ww3_grid
 Making makefile ...
@@ -1216,62 +1217,24 @@ Processing ww3_grid
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing constants 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3servmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3arrymd 
 ad3 : processing w3gsrumd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3gdatmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3odatmd 
 ad3 : processing w3idatmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing w3dispmd 
-ad3 : processing wmmdatmd 
-ad3 : processing w3timemd 
-ad3 : processing w3nmlgridmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3adatmd 
+ad3 : processing w3dispmd 
+ad3 : processing w3nmlgridmd 
+ad3 : processing w3timemd 
+ad3 : processing wmmdatmd 
 ad3 : processing w3src4md 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing w3snl1md 
-ad3 : processing w3parall 
 ad3 : processing w3triamd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing w3iogrmd 
+ad3 : processing w3parall 
+ad3 : processing w3snl1md 
 ad3 : processing w3wdatmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
+ad3 : processing w3iogrmd 
 ad3 : processing ww3_grid 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
       Linking ww3_grid
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1290,24 +1253,17 @@ Main directory    : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSD
 Scratch directory : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
+Shared Object     : No
  
 [INFO] list of the programs selected : ww3_outf
  
 Processing ww3_outf
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
-ad3 : processing w3sdb1md 
 ad3 : processing w3iogomd 
 ad3 : processing w3sbt1md 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
+ad3 : processing w3sdb1md 
 ad3 : processing ww3_outf 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
       Linking ww3_outf
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1326,6 +1282,7 @@ Main directory    : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSD
 Scratch directory : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
+Shared Object     : No
  
 [INFO] list of the programs selected : ww3_outp
  
@@ -1336,17 +1293,7 @@ ad3 : processing w3bullmd
 ad3 : processing w3flx1md 
 ad3 : processing w3iopomd 
 ad3 : processing w3partmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_outp 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
       Linking ww3_outp
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1365,6 +1312,7 @@ Main directory    : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSD
 Scratch directory : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
+Shared Object     : No
  
 [INFO] list of the programs selected : ww3_prep
  
@@ -1372,11 +1320,7 @@ Processing ww3_prep
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing w3fldsmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_prep 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
       Linking ww3_prep
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1395,6 +1339,7 @@ Main directory    : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSD
 Scratch directory : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
+Shared Object     : No
  
 [INFO] list of the programs selected : ww3_gint
  
@@ -1402,8 +1347,6 @@ Processing ww3_gint
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing ww3_gint 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
       Linking ww3_gint
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1422,6 +1365,7 @@ Main directory    : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSD
 Scratch directory : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
+Shared Object     : No
  
 [INFO] list of the programs selected : ww3_prnc
  
@@ -1429,11 +1373,7 @@ Processing ww3_prnc
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing w3nmlprncmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_prnc 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
       Linking ww3_prnc
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1452,6 +1392,7 @@ Main directory    : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSD
 Scratch directory : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
+Shared Object     : No
  
 [INFO] list of the programs selected : ww3_ounf
  
@@ -1460,16 +1401,8 @@ Processing ww3_ounf
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing w3nmlounfmd 
 ad3 : processing w3iorsmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3initmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_ounf 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
       Linking ww3_ounf
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1488,6 +1421,7 @@ Main directory    : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSD
 Scratch directory : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
+Shared Object     : No
  
 [INFO] list of the programs selected : ww3_ounp
  
@@ -1495,11 +1429,7 @@ Processing ww3_ounp
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing w3nmlounpmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing ww3_ounp 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
       Linking ww3_ounp
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1519,6 +1449,7 @@ Main directory    : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSD
 Scratch directory : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
+Shared Object     : No
  
 [INFO] list of the programs selected : ww3_grib
 Making makefile ...
@@ -1535,8 +1466,6 @@ Processing ww3_grib
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing ww3_grib 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
       Linking ww3_grib
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1555,6 +1484,7 @@ Main directory    : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSD
 Scratch directory : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
+Shared Object     : No
  
 [INFO] list of the programs selected : ww3_multi_esmf
 Making makefile ...
@@ -1572,191 +1502,65 @@ Processing ww3_multi_esmf
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing constants 
-ad3 : processing w3uqckmd 
 ad3 : processing scrip_kindsmod [no w3adc]
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing w3servmd 
-ad3 : processing scrip_iounitsmod [no w3adc]
+ad3 : processing w3uqckmd 
 ad3 : processing scrip_constants [no w3adc]
-ls: cannot access *.mod: No such file or directory
+ad3 : processing scrip_iounitsmod [no w3adc]
 ad3 : processing scrip_timers [no w3adc]
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
+ad3 : processing w3servmd 
 ad3 : processing scrip_errormod [no w3adc]
-ls: cannot access *.mod: No such file or directory
+ad3 : processing scrip_netcdfmod [no w3adc]
+ad3 : processing scrip_grids [no w3adc]
 ad3 : processing w3gsrumd 
 ad3 : processing w3cspcmd 
 ad3 : processing w3arrymd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing wmunitmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing scrip_netcdfmod [no w3adc]
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing scrip_grids [no w3adc]
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_remap_vars [no w3adc]
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing scrip_remap_conservative [no w3adc]
 ad3 : processing scrip_remap_write [no w3adc]
 ad3 : processing scrip_remap_read [no w3adc]
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing w3gdatmd 
 ad3 : processing scrip_interface 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
+ad3 : processing w3gdatmd 
 ad3 : processing w3odatmd 
+ad3 : processing wmscrpmd 
 ad3 : processing w3sbt1md 
 ad3 : processing w3idatmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing wmscrpmd 
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3dispmd 
 ad3 : processing wmmdatmd 
 ad3 : processing w3timemd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3adatmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing w3fldsmd 
 ad3 : processing w3src4md 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing w3fld1md 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
+ad3 : processing w3fldsmd 
 ad3 : processing w3sdb1md 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3flx1md 
 ad3 : processing w3partmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3nmlmultimd 
 ad3 : processing wmfinlmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing w3fld2md 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ad3 : processing w3triamd 
 ad3 : processing w3parall 
+ad3 : processing w3triamd 
 ad3 : processing w3snl1md 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3wdatmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iogrmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iogomd 
 ad3 : processing wmupdtmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iosfmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iotrmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3pro3md 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3profsmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3srcemd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3wdasmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3updtmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iopomd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iorsmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3iobcmd 
 ad3 : processing wmgridmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing wminiomd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing w3initmd 
 ad3 : processing w3wavemd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing wmiopomd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing wmwavemd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing wminitmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ad3 : processing wmesmfmd 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
 ar: creating libww3_multi_esmf.a
 a - wmmdatmd.o
 a - w3gdatmd.o
@@ -1782,8 +1586,6 @@ a - w3uqckmd.o
 a - w3parall.o
 a - w3triamd.o
 a - w3srcemd.o
-a - w3fld1md.o
-a - w3fld2md.o
 a - w3flx1md.o
 a - w3src4md.o
 a - w3snl1md.o
@@ -1837,6 +1639,7 @@ Main directory    : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSD
 Scratch directory : /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/tmp
 Save source codes : yes
 Save listings     : yes
+Shared Object     : No
  
 [INFO] list of the programs selected : ww3_multi
  
@@ -1844,8 +1647,6 @@ Processing ww3_multi
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
 ad3 : processing ww3_multi 
-ls: cannot access *.mod: No such file or directory
-ls: cannot access *.mod: No such file or directory
       Linking ww3_multi
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/ftn'
  
@@ -1909,44 +1710,44 @@ ar rv ENS_Cpl.a ENS_CplComp_ESMFMod_STUB.o
 ar: creating ENS_Cpl.a
 a - ENS_CplComp_ESMFMod_STUB.o
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src/ENS_Cpl'
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:35:32 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:53:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_UTILS.tmp.f90
 mv -v module_NEMS_UTILS.tmp.o module_NEMS_UTILS.o
 ‘module_NEMS_UTILS.tmp.o’ -> ‘module_NEMS_UTILS.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:35:32 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:53:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_methods.tmp.f90
 mv -v module_MEDIATOR_methods.tmp.o module_MEDIATOR_methods.o
 ‘module_MEDIATOR_methods.tmp.o’ -> ‘module_MEDIATOR_methods.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:35:32 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:53:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR.tmp.f90
 mv -v module_MEDIATOR.tmp.o module_MEDIATOR.o
 ‘module_MEDIATOR.tmp.o’ -> ‘module_MEDIATOR.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:35:32 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:53:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_MEDIATOR_SpaceWeather.tmp.f90
 mv -v module_MEDIATOR_SpaceWeather.tmp.o module_MEDIATOR_SpaceWeather.o
 ‘module_MEDIATOR_SpaceWeather.tmp.o’ -> ‘module_MEDIATOR_SpaceWeather.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:35:32 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:53:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_INTERNAL_STATE.tmp.f90
 mv -v module_EARTH_INTERNAL_STATE.tmp.o module_EARTH_INTERNAL_STATE.o
 ‘module_EARTH_INTERNAL_STATE.tmp.o’ -> ‘module_EARTH_INTERNAL_STATE.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:35:32 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:53:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_EARTH_GRID_COMP.tmp.f90
 mv -v module_EARTH_GRID_COMP.tmp.o module_EARTH_GRID_COMP.o
 ‘module_EARTH_GRID_COMP.tmp.o’ -> ‘module_EARTH_GRID_COMP.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:35:32 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:53:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_INTERNAL_STATE.tmp.f90
 mv -v module_NEMS_INTERNAL_STATE.tmp.o module_NEMS_INTERNAL_STATE.o
 ‘module_NEMS_INTERNAL_STATE.tmp.o’ -> ‘module_NEMS_INTERNAL_STATE.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:35:32 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:53:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_GRID_COMP.tmp.f90
 mv -v module_NEMS_GRID_COMP.tmp.o module_NEMS_GRID_COMP.o
 ‘module_NEMS_GRID_COMP.tmp.o’ -> ‘module_NEMS_GRID_COMP.o’
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:35:32 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:53:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c module_NEMS_Rusage.tmp.f90
 mv -v module_NEMS_Rusage.tmp.o module_NEMS_Rusage.o
 ‘module_NEMS_Rusage.tmp.o’ -> ‘module_NEMS_Rusage.o’
 mpiicc -c nems_c_rusage.c
-mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Tue Sep 17 16:35:32 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=260' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
+mpiicc -E -traditional  -DFRONT_WW3=WMESMFMD -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Jessica.Meixner) Mon Oct  7 18:53:09 UTC 2019 r87da3d3ae001 https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=280' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0_beta_snapshot_48" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'T'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0 beta snapshot" -DESMF_VERSION_PUBLIC="'F'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0bs48/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/WW3/model/mod_MPI -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/FMS/FMS_INSTALL -c MAIN_NEMS.tmp.f90
 mv -v MAIN_NEMS.tmp.o MAIN_NEMS.o
 ‘MAIN_NEMS.tmp.o’ -> ‘MAIN_NEMS.o’
@@ -1958,50 +1759,50 @@ mpiifort  -o /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW
 /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/exe/NEMS.x is created.
 make[1]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src'
 + cd /gpfs/dell2/emc/modeling/noscrub/Jessica.Meixner/EMC_FV3-GSDCHEM-WW3/NEMS/src
-+ cp -fp ../exe/NEMS.x /gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/exec/fv3_ww3.exe
-+ cp -fp conf/modules.nems /gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/include/modules_fv3_ww3
-+ md5sum /gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/exec/fv3_ww3.exe
++ cp -fp ../exe/NEMS.x /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_ww3.exe
++ cp -fp conf/modules.nems /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/include/modules_fv3_ww3
++ md5sum /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_ww3.exe
 + unset md5sum
 + unset OPTS
 + set -xe
 + set -xe
-+ test -s /gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/exec/fv3_ww3.exe
-+ test -x /gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/exec/fv3_ww3.exe
++ test -s /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_ww3.exe
++ test -x /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/exec/fv3_ww3.exe
 
 ------------------------------------------------------------
-Sender: LSF System <lsfadmin@v71e2f>
-Subject: Job 8965237: <rt_build_fv3_ww3.exe> in cluster <venus> Done
+Sender: LSF System <lsfadmin@v71e14f>
+Subject: Job 9894060: <rt_build_fv3_ww3.exe> in cluster <venus> Done
 
-Job <rt_build_fv3_ww3.exe> was submitted from host <v72a1f> by user <Jessica.Meixner> in cluster <venus> at Tue Sep 17 16:04:07 2019
-Job was executed on host(s) <v71e2f>, in queue <dev_transfer>, as user <Jessica.Meixner> in cluster <venus> at Tue Sep 17 16:04:08 2019
+Job <rt_build_fv3_ww3.exe> was submitted from host <v72a3f> by user <Jessica.Meixner> in cluster <venus> at Mon Oct  7 18:25:37 2019
+Job was executed on host(s) <v71e14f>, in queue <dev_transfer>, as user <Jessica.Meixner> in cluster <venus> at Mon Oct  7 18:25:37 2019
 </u/Jessica.Meixner> was used as the home directory.
-</gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/rocoto> was used as the working directory.
-Started at Tue Sep 17 16:04:08 2019
-Terminated at Tue Sep 17 16:36:25 2019
-Results reported at Tue Sep 17 16:36:25 2019
+</gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/rocoto> was used as the working directory.
+Started at Mon Oct  7 18:25:37 2019
+Terminated at Mon Oct  7 18:53:47 2019
+Results reported at Mon Oct  7 18:53:47 2019
 
 Your job looked like:
 
 ------------------------------------------------------------
 # LSBATCH: User input
-/gpfs/dell3/usrx/local/dev/emc_rocoto/rocoto-1.3.0rc2/sbin/lsfwrapper.sh sh -c "cd /gpfs/dell1/ptmp/Jessica.Meixner/rtgen.173672/src ; ./install.sh fv3_ww3.exe"
+/gpfs/dell3/usrx/local/dev/emc_rocoto/rocoto-1.3.0rc2/sbin/lsfwrapper.sh sh -c "cd /gpfs/dell3/ptmp/Jessica.Meixner/rtgen.97632/src ; ./install.sh fv3_ww3.exe"
 ------------------------------------------------------------
 
 Successfully completed.
 
 Resource usage summary:
 
-    CPU time :                                   1839.38 sec.
+    CPU time :                                   1820.04 sec.
     Max Memory :                                 4810 MB
-    Average Memory :                             513.18 MB
+    Average Memory :                             575.47 MB
     Total Requested Memory :                     6144.00 MB
     Delta Memory :                               1334.00 MB
     Max Swap :                                   -
-    Max Processes :                              30
-    Max Threads :                                35
-    Run time :                                   1937 sec.
-    Turnaround time :                            1938 sec.
+    Max Processes :                              27
+    Max Threads :                                31
+    Run time :                                   1695 sec.
+    Turnaround time :                            1690 sec.
 
 The output (if any) is above this job summary.
 
-[Tue Sep 17 16:36:25 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_shared_ecflow.ksh: /var/lsf/ecflow_post_in.Jessica.Meixner.8965237 file not found or empty.  Job is not eligible for ecflow abort notification.
+[Mon Oct  7 18:53:47 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_shared_ecflow.ksh: /var/lsf/ecflow_post_in.Jessica.Meixner.9894060 file not found or empty.  Job is not eligible for ecflow abort notification.
