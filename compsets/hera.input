@@ -30,8 +30,8 @@ platform hera.intel {
     # INPUTS is the input directory, which should contain fix and parm
     # files, plus any restarts or other inputs.
 
-    BASELINE="/scratch1/NCEPDEV/nems/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190912"
-    BASELINE_TEMPLATE="/scratch1/NCEPDEV/nems/emc.nemspara/RT/FV3-GDSCHEM-WW3/master-20190912"
+    BASELINE="/scratch1/NCEPDEV/nems/emc.nemspara/RT/FV3-GDSCHEM-WW3/gefs_v12-20191017"
+    BASELINE_TEMPLATE="/scratch1/NCEPDEV/nems/emc.nemspara/RT/FV3-GDSCHEM-WW3/gefs_v12-20191017"
     INPUTS="@[BASELINE]"
 
     default_resources={
