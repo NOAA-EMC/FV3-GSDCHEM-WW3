@@ -1,11 +1,11 @@
-Oct 18 19:25:07 2019 15968 7 9.1.3 jobSetupStatus: job additionalInfo reservation_id=15030806
+Nov  1 01:56:30 2019 19273 7 9.1.3 jobSetupStatus: job additionalInfo reservation_id=15160908
 + [[ fv3_gsdchem.exe == fv3_ww3.exe ]]
 + [[ fv3_gsdchem.exe == fv3_gsdchem.exe ]]
-+ rm -f /gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/exec/fv3_gsdchem.exe
-+ md5sum=/gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/exec/fv3_gsdchem.exe.md5
++ rm -f /gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/exec/fv3_gsdchem.exe
++ md5sum=/gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/exec/fv3_gsdchem.exe.md5
 + OPTS=app=coupledFV3_GSDCHEM
-+ mkdir -p /gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/exec /gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/include
-+ rm -f /gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/exec/fv3_gsdchem.exe /gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/include/modules_appbuilder.fv3
++ mkdir -p /gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/exec /gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/include
++ rm -f /gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/exec/fv3_gsdchem.exe /gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/include/modules_appbuilder.fv3
 + cd /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12
 + module load alps
 ++ /opt/modules/3.2.10.3/bin/modulecmd bash load alps
@@ -72,8 +72,8 @@ make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_F
 
 Build CCPP layer ...
 
-make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/CCPP_layer'
 makefile:67: depend: No such file or directory
+make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/CCPP_layer'
 Building dependencies ...
 make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/CCPP_layer'
 
@@ -139,139 +139,7 @@ rm -rf nems_dir FV3_INSTALL /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_F
 	    /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/conf/modules.fv3
 rm -rf /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL/fv3.mk
 cd /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM ; test -f Makefile && exec make -k distclean || echo "Nothing to clean up"
-make[1]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM'
-Making distclean in src
-make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src'
-Making distclean in chem
-make[3]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem'
-Making distclean in shr
-make[4]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/shr'
-test -z "mod" || rm -f *.mod
-test -z "libshr.a" || rm -f libshr.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/shr'
-Making distclean in plume
-make[4]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/plume'
-test -z "mod" || rm -f *.mod
-test -z "libplume.a" || rm -f libplume.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/plume'
-Making distclean in vash
-make[4]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/vash'
-test -z "mod" || rm -f *.mod
-test -z "libvash.a" || rm -f libvash.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/vash'
-Making distclean in dust
-make[4]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/dust'
-test -z "mod" || rm -f *.mod
-test -z "libdust.a" || rm -f libdust.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/dust'
-Making distclean in aero
-make[4]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/aero'
-test -z "mod" || rm -f *.mod
-test -z "libaero.a" || rm -f libaero.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/aero'
-Making distclean in dep
-make[4]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/dep'
-test -z "mod" || rm -f *.mod
-test -z "libdep.a" || rm -f libdep.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/dep'
-Making distclean in seas
-make[4]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/seas'
-test -z "mod" || rm -f *.mod
-test -z "libseas.a" || rm -f libseas.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/seas'
-Making distclean in opt
-make[4]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/opt'
-test -z "mod" || rm -f *.mod
-test -z "libopt.a" || rm -f libopt.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/opt'
-Making distclean in gocart
-make[4]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/gocart'
-test -z "mod" || rm -f *.mod
-test -z "libgocart.a" || rm -f libgocart.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/gocart'
-Making distclean in .
-make[4]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem'
-test -z "libgsdchem.a" || rm -f libgsdchem.a
-test -z "mod" || rm -f *.mod
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-make[4]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem'
-rm -f Makefile
-make[3]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem'
-make[3]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src'
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-make[3]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src'
-rm -f Makefile
-make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src'
-make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM'
-test -z "gsdchem.mk" || rm -f gsdchem.mk
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f cscope.out cscope.in.out cscope.po.out cscope.files
-make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM'
-rm -f config.status config.cache config.log configure.lineno config.status.lineno
-rm -f Makefile
-make[1]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM'
+Nothing to clean up
 rm -rf /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/GSDCHEM_INSTALL /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/GSDCHEM_INSTALL/gsdchem.mk
 if ! test -f /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src/conf/configure.nems.NUOPC ; then       \
 	  cat /dev/null > /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src/conf/configure.nems.NUOPC       ; \
@@ -284,8 +152,8 @@ if ! test -f /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/
 	fi
 Components in linker order: GSDCHEM FV3 FMS
 GSDCHEM: include 
-make[1]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src'
 GNUmakefile:70: : component GSDCHEM makefile fragment is missing
+make[1]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src'
 FV3: include /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL/fv3.mk
 GNUmakefile:70: /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL/fv3.mk: component FV3 makefile fragment is missing
 FMS: include /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL/fms.mk
@@ -696,8 +564,8 @@ make -C gfsphysics      FMS_DIR=/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/E
 
 Build standalone FV3 gfsphysics ...
 
-makefile:300: depend: No such file or directory
 make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics'
+makefile:300: depend: No such file or directory
 Building dependencies ...
 make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics'
 
@@ -1015,8 +883,8 @@ make -C ipd                  FMS_DIR=/gpfs/hps3/emc/ensemble/save/Walter.Kolczyn
 
 Build standalone FV3 gfsphysics ...
 
-make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd'
 makefile:54: depend: No such file or directory
+make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd'
 Building dependencies ...
 make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd'
 
@@ -1167,8 +1035,8 @@ make -C stochastic_physics   FMS_DIR=/gpfs/hps3/emc/ensemble/save/Walter.Kolczyn
 
 Build standalone FV3 stochastic_physics ...
 
-makefile:86: depend: No such file or directory
 make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/stochastic_physics'
+makefile:86: depend: No such file or directory
 Building dependencies ...
 make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/stochastic_physics'
 
@@ -1304,7 +1172,7 @@ Currently Loaded Modulefiles:
  30) esmf/8.0.0
  31) modules.nems
 export ALPS_APP_DEPTH="24"
-export ALPS_APP_ID="151326854"
+export ALPS_APP_ID="152844356"
 export ALPS_APP_PE="0"
 export ATP_HOME="/opt/cray/atp/1.8.1"
 export ATP_MRNET_COMM_PATH="/opt/cray/atp/1.8.1/libexec/atp_mrnet_commnode_wrapper"
@@ -1351,7 +1219,7 @@ export CRAY_XPMEM_INCLUDE_OPTS="-I/opt/cray/xpmem/0.1-2.0502.64982.7.25.ari/incl
 export CRAY_XPMEM_POST_LINK_OPTS="-L/opt/cray/xpmem/0.1-2.0502.64982.7.25.ari/lib64"
 export CSHEDIT="emacs"
 export CVS_RSH="ssh"
-export DISPLAY="llogin1:23.0"
+export DISPLAY="llogin2:11.0"
 export DMAPP_ABORT_ON_ERROR="1"
 export ECF_HOST="sdecflow1"
 export EDITOR="nano"
@@ -1373,13 +1241,14 @@ export GDB_HOST="/opt/intel/compilers_and_libraries_2016.3.210/linux/debugger/gd
 export GIT_SSH_COMMAND="ssh -C -F ~/ssh_config "
 export GNU_VERSION="4.9.2"
 export G_BROKEN_FILENAMES="1"
+export G_FILENAME_ENCODING="@locale,UTF-8,ISO-8859-15,CP1252"
 export HDF5_DIR="/opt/cray/hdf5/1.8.14/INTEL/14.0"
 export HDF5_INCLUDE_OPTS="/opt/cray/hdf5/1.8.14/INTEL/14.0/include"
 export HDF5_ROOT="/opt/cray/hdf5/1.8.14/INTEL/14.0"
 export HISTSIZE="1000"
 export HOME="/u/Walter.Kolczynski"
-export HOST="llogin1"
-export HOSTNAME="nid01468"
+export HOST="llogin2"
+export HOSTNAME="nid00700"
 export HOSTTYPE="X86_64"
 export INFODIR="/usr/local/info:/usr/share/info:/usr/info"
 export INFOPATH="/opt/gcc/4.9.2/snos/share/info:/opt/intel/compilers_and_libraries_2016.3.210/linux/debugger/gdb/intel64/share/info/:/opt/intel/compilers_and_libraries_2016.3.210/linux/debugger/gdb/intel64_mic/share/info/:/usr/local/info:/usr/share/info:/usr/info"
@@ -1407,25 +1276,26 @@ export JAVA_HOME="/usr/lib64/jvm/java"
 export JAVA_ROOT="/usr/lib64/jvm/java"
 export JDK_HOME="/usr/lib64/jvm/java"
 export JRE_HOME="/usr/lib64/jvm/java/jre"
+export LANG="en_US.UTF-8"
 export LD_LIBRARY_PATH="/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/lib:/usrx/local/prod/zlib/1.2.7/intel/sandybridge/lib:/opt/gcc/4.9.2/snos/lib64:/usrx/local/prod/python/2.7.14/lib:/gpfs/llsf/xt-lsfhpc/9.1/linux2.6-glibc2.3-x86_64-cray/lib:/opt/intel/compilers_and_libraries_2016.3.210/linux/compiler/lib/intel64:/opt/intel/mic/coi/host-linux-release/lib:/opt/intel/mic/myo/lib:/opt/intel/compilers_and_libraries_2016.3.210/linux/mpirt/lib/intel64:/opt/intel/compilers_and_libraries_2016.3.210/linux/ipp/../compiler/lib/intel64:/opt/intel/compilers_and_libraries_2016.3.210/linux/ipp/lib/intel64:/opt/intel/compilers_and_libraries_2016.3.210/linux/ipp/tools/intel64/perfsys:/opt/intel/mic/coi/host-linux-release/lib:/opt/intel/mic/myo/lib:/opt/intel/compilers_and_libraries_2016.3.210/linux/compiler/lib/intel64:/opt/intel/compilers_and_libraries_2016.3.210/linux/mkl/lib/intel64:/opt/intel/compilers_and_libraries_2016.3.210/linux/tbb/lib/intel64/gcc4.1:/opt/intel/compilers_and_libraries_2016.3.210/linux/debugger/libipt/intel64/lib"
 export LESS="-M -I"
 export LESSCLOSE="lessclose.sh %s %s"
 export LESSKEY="/etc/lesskey.bin"
 export LESSOPEN="lessopen.sh %s"
 export LESS_ADVANCED_PREPROCESSOR="no"
-export LIBRARYMODULES="acml:alps:cray-dwarf:cray-fftw:cray-ga:cray-hdf5:cray-hdf5-parallel:cray-libsci:cray-libsci_acc:cray-mpich:cray-mpich-abi:cray-mpich2:cray-netcdf:cray-netcdf-hdf5parallel:cray-parallel-netcdf:cray-petsc:cray-petsc-complex:cray-shmem:cray-tpsl:cray-trilinos:cudatoolkit:fftw:ga:hdf5:hdf5-parallel:iobuf:libfast:netcdf:netcdf-hdf5parallel:ntk:onesided:papi:petsc:petsc-complex:pmi:tpsl:trilinos:xt-libsci:xt-mpich2:xt-mpt:xt-papi:/etc/opt/cray/modules/site_librarymodules"
+export LIBRARYMODULES="acml:alps:cray-dwarf:cray-fftw:cray-ga:cray-hdf5:cray-hdf5-parallel:cray-libsci:cray-libsci_acc:cray-mpich:cray-mpich2:cray-mpich-abi:cray-netcdf:cray-netcdf-hdf5parallel:cray-parallel-netcdf:cray-petsc:cray-petsc-complex:cray-shmem:cray-tpsl:cray-trilinos:cudatoolkit:fftw:ga:hdf5:hdf5-parallel:iobuf:libfast:netcdf:netcdf-hdf5parallel:ntk:onesided:papi:petsc:petsc-complex:pmi:tpsl:trilinos:xt-libsci:xt-mpich2:xt-mpt:xt-papi:/etc/opt/cray/modules/site_librarymodules"
 export LIBRARY_PATH="/opt/intel/compilers_and_libraries_2016.3.210/linux/compiler/lib/intel64:/opt/intel/compilers_and_libraries_2016.3.210/linux/ipp/../compiler/lib/intel64:/opt/intel/compilers_and_libraries_2016.3.210/linux/ipp/lib/intel64:/opt/intel/compilers_and_libraries_2016.3.210/linux/compiler/lib/intel64:/opt/intel/compilers_and_libraries_2016.3.210/linux/mkl/lib/intel64:/opt/intel/compilers_and_libraries_2016.3.210/linux/tbb/lib/intel64/gcc4.1"
 export LIBSCI_BASE_DIR="/opt/cray/libsci/13.0.3"
 export LIBSCI_VERSION="13.0.3"
 export LOADEDMODULES="craype-network-aries:craype/2.3.0:cray-libsci/13.0.3:pmi/5.0.11:atp/1.8.1:PrgEnv-intel/5.2.82:intel/16.3.210:cray-netcdf/4.3.3.1:cray-hdf5/1.8.14:xt-lsfhpc/9.1.3:craype-haswell:python/2.7.14:bacio-intel/2.0.1:ip-intel/2.0.0:sp-intel/2.0.2:w3nco-intel/2.0.6:w3emc-intel/2.2.0:nemsio-intel/2.2.3:gcc/4.9.2:jasper-gnu-sandybridge/1.900.1:png-intel-sandybridge/1.2.49:zlib-intel-sandybridge/1.2.7:g2-intel/3.1.0:rca/1.0.0-2.0502.60530.1.62.ari:alps/5.2.4-2.0502.9822.32.1.ari:xpmem/0.1-2.0502.64982.7.25.ari:gni-headers/4.0-1.0502.10859.9.24.ari:udreg/2.3.2-1.0502.10518.2.17.ari:ugni/6.0-1.0502.10863.8.29.ari:esmf/8.0.0:modules.nems"
 export LOGNAME="Walter.Kolczynski"
-export LSB_ACCT_FILE="/ufs/tmp/5314.tmpdir/.1571426704.5314.acct"
-export LSB_AFFINITY_HOSTFILE="/ufs/lsbatch/spool/1571426704.5314.hostAffinityFile"
-export LSB_BATCH_JID="5314"
+export LSB_ACCT_FILE="/ufs/tmp/201110.tmpdir/.1572573388.201110.acct"
+export LSB_AFFINITY_HOSTFILE="/ufs/lsbatch/spool/1572573388.201110.hostAffinityFile"
+export LSB_BATCH_JID="201110"
 export LSB_CG_MEMLIMIT="0x7d000000"
-export LSB_CHKFILENAME="/ufs/lsbatch/spool/1571426704.5314"
-export LSB_DJOB_HOSTFILE="/ufs/lsbatch/spool/1571426704.5314.hostfile"
-export LSB_DJOB_RANKFILE="/ufs/lsbatch/spool/1571426704.5314.hostfile"
+export LSB_CHKFILENAME="/ufs/lsbatch/spool/1572573388.201110"
+export LSB_DJOB_HOSTFILE="/ufs/lsbatch/spool/1572573388.201110.hostfile"
+export LSB_DJOB_RANKFILE="/ufs/lsbatch/spool/1572573388.201110.hostfile"
 export LSB_ECHKPNT_RSH_CMD="ssh"
 export LSB_EEXEC_REAL_GID=""
 export LSB_EEXEC_REAL_UID=""
@@ -1434,21 +1304,21 @@ export LSB_EXEC_CLUSTER="NCEP-RESTON"
 export LSB_EXEC_HOSTTYPE="X86_64"
 export LSB_EXIT_IF_CWD_NOTEXIST="Y"
 export LSB_EXIT_PRE_ABORT="99"
-export LSB_HOSTS="nid01468 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302 nid02302"
+export LSB_HOSTS="nid00700 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111 nid00111"
 export LSB_JOBEXIT_STAT="0"
-export LSB_JOBFILENAME="/ufs/lsbatch/spool/1571426704.5314"
-export LSB_JOBID="5314"
+export LSB_JOBFILENAME="/ufs/lsbatch/spool/1572573388.201110"
+export LSB_JOBID="201110"
 export LSB_JOBINDEX="0"
 export LSB_JOBNAME="rt_build_fv3_gsdchem.exe"
-export LSB_JOBRES_PID="15968"
+export LSB_JOBRES_PID="19273"
 export LSB_JOB_EXECUSER="Walter.Kolczynski"
 export LSB_MAX_NUM_PROCESSORS="25"
-export LSB_MCPU_HOSTS="nid01468 1 nid02302 24 "
-export LSB_OUTDIR="/gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/rocoto"
-export LSB_OUTPUTFILE="/gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/tmp/log/build_fv3_gsdchem.exe.log"
+export LSB_MCPU_HOSTS="nid00700 1 nid00111 24 "
+export LSB_OUTDIR="/gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/rocoto"
+export LSB_OUTPUTFILE="/gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/tmp/log/build_fv3_gsdchem.exe.log"
 export LSB_PROJECT_NAME="FV3GFS-T2O"
 export LSB_QUEUE="dev"
-export LSB_SUB_HOST="llogin1"
+export LSB_SUB_HOST="llogin2"
 export LSB_SUB_RES_REQ=" 1*{select[craylinux && !vnode] rusage[mem=2000]} + 24*{select[craylinux && vnode]span[ptile=24] cu[type=cabinet]} "
 export LSB_SUB_USER="Walter.Kolczynski"
 export LSB_TRAPSIGS="trap # 15 10 12 2 1"
@@ -1462,18 +1332,18 @@ export LSF_EAUTH_CLIENT="user"
 export LSF_EAUTH_SERVER="mbatchd@NCEP-RESTON"
 export LSF_ENVDIR="/gpfs/llsf/xt-lsfhpc/conf"
 export LSF_INVOKE_CMD="bsub"
-export LSF_JOB_TIMESTAMP_VALUE="1571426706"
+export LSF_JOB_TIMESTAMP_VALUE="1572573389"
 export LSF_LIBDIR="/gpfs/llsf/xt-lsfhpc/9.1/linux2.6-glibc2.3-x86_64-cray/lib"
 export LSF_LIM_API_NTRIES="1"
 export LSF_LOGDIR="/gpfs/llsf/xt-lsfhpc/log"
 export LSF_SERVERDIR="/gpfs/llsf/xt-lsfhpc/9.1/linux2.6-glibc2.3-x86_64-cray/etc"
 export LSF_VERSION="30"
 export LS_COLORS="no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;32:*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=01;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*.voc=00;32:*.wav=00;32:"
-export LS_EXECCWD="/gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/rocoto"
+export LS_EXECCWD="/gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/rocoto"
 export LS_EXEC_T="START"
-export LS_JOBPID="15968"
+export LS_JOBPID="19273"
 export LS_OPTIONS="-N --color=none -T 0"
-export LS_SUBCWD="/gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/rocoto"
+export LS_SUBCWD="/gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/rocoto"
 export MACHTYPE="x86_64-suse-linux"
 export MAIL="/var/mail/Walter.Kolczynski"
 export MAKEFLAGS="app=coupledFV3_GSDCHEM"
@@ -1486,8 +1356,8 @@ export MIC_LIBRARY_PATH="/opt/intel/compilers_and_libraries_2016.3.210/linux/com
 export MINICOM="-c on"
 export MKLROOT="/opt/intel/compilers_and_libraries_2016.3.210/linux/mkl"
 export MODULEPATH="/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/modulefiles:/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src/conf:/usrx/local/emc_rocoto/modulefiles:/opt/cray/ari/modulefiles:/usrx/local/prod/modulefiles:/gpfs/hps/nco/ops/nwprod/lib/modulefiles:/gpfs/hps/nco/ops/nwprod/modulefiles:/opt/cray/alt-modulefiles:/opt/cray/craype/default/alt-modulefiles:/opt/modulefiles:/gpfs/hps3/emc/hwrf/noscrub/soft/modulefiles:/usrx/local/dev/modulefiles"
-export MODULE_VERSION="3.2.10.3"
-export MODULE_VERSION_STACK="3.2.10.3"
+export MODULE_VERSION="3.2.10"
+export MODULE_VERSION_STACK="3.2.10"
 export MORE="-sl"
 export MPICH_ABORT_ON_ERROR="1"
 export MPM_LAUNCHER="/opt/intel/compilers_and_libraries_2016.3.210/linux/debugger/mpm/bin/start_mpm.sh"
@@ -1667,7 +1537,7 @@ export PYTHONSTARTUP="/etc/pythonstart"
 export QTDIR="/usr/lib/qt3"
 export QT_SYSTEM_DIR="/usr/share/desktop-data"
 export RCLOCAL_PRGENV="true"
-export RT_INSTALL_DIR="/gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758"
+export RT_INSTALL_DIR="/gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298"
 export SAVE="/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski"
 export SBD_KRB5CCNAME_VAL=""
 export SDK_HOME="/usr/lib64/jvm/java"
@@ -1681,17 +1551,18 @@ export SP_LIB8="/gpfs/hps/nco/ops/nwprod/lib/sp/v2.0.2/intel/libsp_v2.0.2_8.a"
 export SP_LIBd="/gpfs/hps/nco/ops/nwprod/lib/sp/v2.0.2/intel/libsp_v2.0.2_d.a"
 export SP_SRC="/gpfs/hps/nco/ops/nwprod/lib/sp/v2.0.2/src"
 export SP_VER="v2.0.2"
-export SSH_CLIENT="192.58.1.82 55660 22"
-export SSH_CONNECTION="192.58.1.82 55660 192.58.3.6 22"
-export SSH_TTY="/dev/pts/26"
+export SSH_CLIENT="192.58.1.82 48698 22"
+export SSH_CONNECTION="192.58.1.82 48698 192.58.3.7 22"
+export SSH_SENDS_LOCALE="yes"
+export SSH_TTY="/dev/pts/7"
 export SSS="/gpfs/sss/emc/ensemble/shared/Walter.Kolczynski"
 export SVN_EDITOR="nano"
 export TARGETMODULES="craype-abudhabi:craype-abudhabi-cu:craype-accel-host:craype-accel-nvidia20:craype-accel-nvidia30:craype-accel-nvidia35:craype-barcelona:craype-broadwell:craype-haswell:craype-hugepages128K:craype-hugepages128M:craype-hugepages16M:craype-hugepages256M:craype-hugepages2M:craype-hugepages32M:craype-hugepages4M:craype-hugepages512K:craype-hugepages512M:craype-hugepages64M:craype-hugepages8M:craype-intel-knc:craype-interlagos:craype-interlagos-cu:craype-istanbul:craype-ivybridge:craype-mc12:craype-mc8:craype-mic-knl:craype-network-aries:craype-network-gemini:craype-network-infiniband:craype-network-none:craype-network-seastar:craype-sandybridge:craype-shanghai:craype-target-compute_node:craype-target-local_host:craype-target-native:craype-xeon:xtpe-barcelona:xtpe-interlagos:xtpe-interlagos-cu:xtpe-istanbul:xtpe-mc12:xtpe-mc8:xtpe-network-gemini:xtpe-network-seastar:xtpe-shanghai:xtpe-target-native:xtpe-xeon:/etc/opt/cray/modules/site_targetmodules"
 export TBBROOT="/opt/intel/compilers_and_libraries_2016.3.210/linux/tbb"
 export THEIA_TMP="/scratch4/NCEPDEV/stmp4/Walter.Kolczynski/wcoss"
-export TOOLMODULES="apprentice:apprentice2:atp:chapel:cray-lgdb:cray-snplauncher:craypat:craypkg-gen:ddt:gdb:iobuf:papi:perftools:perftools-lite:stat:totalview:xt-craypat:xt-lgdb:xt-papi:xt-totalview:/etc/opt/cray/modules/site_toolmodules"
+export TOOLMODULES="apprentice:apprentice2:atp:chapel:cray-lgdb:craypat:craypkg-gen:cray-snplauncher:ddt:gdb:iobuf:papi:perftools:perftools-lite:stat:totalview:xt-craypat:xt-lgdb:xt-papi:xt-totalview:/etc/opt/cray/modules/site_toolmodules"
 export USER="Walter.Kolczynski"
-export USERMODULES="PrgEnv-cray:PrgEnv-gnu:PrgEnv-intel:PrgEnv-pathscale:PrgEnv-pgi:acml:alps:apprentice:apprentice2:atp:blcr:cce:chapel:cray-ccdb:cray-fftw:cray-ga:cray-hdf5:cray-hdf5-parallel:cray-lgdb:cray-libsci:cray-libsci_acc:cray-mpich:cray-mpich-compat:cray-mpich2:cray-netcdf:cray-netcdf-hdf5parallel:cray-parallel-netcdf:cray-petsc:cray-petsc-complex:cray-shmem:cray-snplauncher:cray-tpsl:cray-trilinos:craypat:craype:craypkg-gen:cudatoolkit:ddt:fftw:ga:gcc:hdf5:hdf5-parallel:intel:iobuf:java:lgdb:libfast:libsci_acc:mpich1:netcdf:netcdf-hdf5parallel:netcdf-nofsync:netcdf-nofsync-hdf5parallel:ntk:onesided:papi:parallel-netcdf:pathscale:perftools:perftools-lite:petsc:petsc-complex:pgi:pmi:stat:totalview:tpsl:trilinos:xt-asyncpe:xt-craypat:xt-lgdb:xt-libsci:xt-mpich2:xt-mpt:xt-papi:xt-shmem:xt-totalview:/etc/opt/cray/modules/site_usermodules"
+export USERMODULES="acml:alps:apprentice:apprentice2:atp:blcr:cce:chapel:cray-ccdb:cray-fftw:cray-ga:cray-hdf5:cray-hdf5-parallel:cray-lgdb:cray-libsci:cray-libsci_acc:cray-mpich:cray-mpich2:cray-mpich-compat:cray-netcdf:cray-netcdf-hdf5parallel:cray-parallel-netcdf:craypat:craype:cray-petsc:cray-petsc-complex:craypkg-gen:cray-shmem:cray-snplauncher:cray-tpsl:cray-trilinos:cudatoolkit:ddt:fftw:ga:gcc:hdf5:hdf5-parallel:intel:iobuf:java:lgdb:libfast:libsci_acc:mpich1:netcdf:netcdf-hdf5parallel:netcdf-nofsync:netcdf-nofsync-hdf5parallel:ntk:onesided:papi:parallel-netcdf:pathscale:perftools:perftools-lite:petsc:petsc-complex:pgi:pmi:PrgEnv-cray:PrgEnv-gnu:PrgEnv-intel:PrgEnv-pathscale:PrgEnv-pgi:stat:totalview:tpsl:trilinos:xt-asyncpe:xt-craypat:xt-lgdb:xt-libsci:xt-mpich2:xt-mpt:xt-papi:xt-shmem:xt-totalview:/etc/opt/cray/modules/site_usermodules"
 export W3EMC_INC4="/gpfs/hps/nco/ops/nwprod/lib/w3emc/v2.2.0/intel/w3emc_v2.2.0_4"
 export W3EMC_INC8="/gpfs/hps/nco/ops/nwprod/lib/w3emc/v2.2.0/intel/w3emc_v2.2.0_8"
 export W3EMC_INCd="/gpfs/hps/nco/ops/nwprod/lib/w3emc/v2.2.0/intel/w3emc_v2.2.0_d"
@@ -1706,7 +1577,7 @@ export W3NCO_LIBd="/gpfs/hps/nco/ops/nwprod/lib/w3nco/v2.0.6/intel/libw3nco_v2.0
 export W3NCO_SRC="/gpfs/hps/nco/ops/nwprod/lib/w3nco/v2.0.6/src"
 export W3NCO_VER="v2.0.6"
 export WINDOWMANAGER=""
-export XAUTHLOCALHOSTNAME="llogin1"
+export XAUTHLOCALHOSTNAME="llogin2"
 export XCURSOR_THEME="crystalwhite"
 export XDG_CONFIG_DIRS="/etc/xdg"
 export XDG_DATA_DIRS="/usr/share:/etc/opt/kde3/share:/opt/kde3/share"
@@ -1721,7 +1592,7 @@ export Z_SRC="/usrx/local/prod/zlib/1.2.7/intel/sandybridge/src"
 export Z_VER="1.2.7"
 export _LMFILES_="/opt/cray/craype/default/alt-modulefiles/craype-network-aries:/opt/cray/alt-modulefiles/craype/2.3.0:/opt/cray/alt-modulefiles/cray-libsci/13.0.3:/opt/cray/ari/modulefiles/pmi/5.0.11:/opt/cray/alt-modulefiles/atp/1.8.1:/opt/cray/alt-modulefiles/PrgEnv-intel/5.2.82:/opt/modulefiles/intel/16.3.210:/opt/cray/alt-modulefiles/cray-netcdf/4.3.3.1:/opt/cray/alt-modulefiles/cray-hdf5/1.8.14:/opt/modulefiles/xt-lsfhpc/9.1.3:/opt/cray/craype/default/alt-modulefiles/craype-haswell:/usrx/local/prod/modulefiles/python/2.7.14:/gpfs/hps/nco/ops/nwprod/lib/modulefiles/bacio-intel/2.0.1:/gpfs/hps/nco/ops/nwprod/lib/modulefiles/ip-intel/2.0.0:/gpfs/hps/nco/ops/nwprod/lib/modulefiles/sp-intel/2.0.2:/gpfs/hps/nco/ops/nwprod/lib/modulefiles/w3nco-intel/2.0.6:/gpfs/hps/nco/ops/nwprod/lib/modulefiles/w3emc-intel/2.2.0:/gpfs/hps/nco/ops/nwprod/lib/modulefiles/nemsio-intel/2.2.3:/opt/modulefiles/gcc/4.9.2:/usrx/local/prod/modulefiles/jasper-gnu-sandybridge/1.900.1:/usrx/local/prod/modulefiles/png-intel-sandybridge/1.2.49:/usrx/local/prod/modulefiles/zlib-intel-sandybridge/1.2.7:/gpfs/hps/nco/ops/nwprod/lib/modulefiles/g2-intel/3.1.0:/opt/cray/ari/modulefiles/rca/1.0.0-2.0502.60530.1.62.ari:/opt/cray/ari/modulefiles/alps/5.2.4-2.0502.9822.32.1.ari:/opt/cray/ari/modulefiles/xpmem/0.1-2.0502.64982.7.25.ari:/opt/cray/ari/modulefiles/gni-headers/4.0-1.0502.10859.9.24.ari:/opt/cray/ari/modulefiles/udreg/2.3.2-1.0502.10518.2.17.ari:/opt/cray/ari/modulefiles/ugni/6.0-1.0502.10863.8.29.ari:/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/modulefiles/esmf/8.0.0:/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src/conf/modules.nems"
 export _NEMS_MAKE_RECURSION_DETECT="X"
-export __LSF_JOB_TMPDIR__="/ufs/tmp/5314.tmpdir"
+export __LSF_JOB_TMPDIR__="/ufs/tmp/201110.tmpdir"
 export app="coupledFV3_GSDCHEM"
 checking for a BSD-compatible install... /usr/bin/install -c
 checking whether build environment is sane... yes
@@ -2151,44 +2022,44 @@ ar rv ENS_Cpl.a ENS_CplComp_ESMFMod_STUB.o
 ar: creating ENS_Cpl.a
 a - ENS_CplComp_ESMFMod_STUB.o
 make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src/ENS_Cpl'
-cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:45:22 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
+cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:17:02 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
 ftn -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -IENS_Cpl -I.  -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_NEMS_UTILS.tmp.f90
 mv -v module_NEMS_UTILS.tmp.o module_NEMS_UTILS.o
 `module_NEMS_UTILS.tmp.o' -> `module_NEMS_UTILS.o'
-cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:45:22 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
+cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:17:02 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
 ftn -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -IENS_Cpl -I.  -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_MEDIATOR_methods.tmp.f90
 mv -v module_MEDIATOR_methods.tmp.o module_MEDIATOR_methods.o
 `module_MEDIATOR_methods.tmp.o' -> `module_MEDIATOR_methods.o'
-cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:45:22 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
+cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:17:02 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
 ftn -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -IENS_Cpl -I.  -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_MEDIATOR.tmp.f90
 mv -v module_MEDIATOR.tmp.o module_MEDIATOR.o
 `module_MEDIATOR.tmp.o' -> `module_MEDIATOR.o'
-cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:45:22 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
+cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:17:02 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
 ftn -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -IENS_Cpl -I.  -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_MEDIATOR_SpaceWeather.tmp.f90
 mv -v module_MEDIATOR_SpaceWeather.tmp.o module_MEDIATOR_SpaceWeather.o
 `module_MEDIATOR_SpaceWeather.tmp.o' -> `module_MEDIATOR_SpaceWeather.o'
-cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:45:22 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
+cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:17:02 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
 ftn -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -IENS_Cpl -I.  -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_EARTH_INTERNAL_STATE.tmp.f90
 mv -v module_EARTH_INTERNAL_STATE.tmp.o module_EARTH_INTERNAL_STATE.o
 `module_EARTH_INTERNAL_STATE.tmp.o' -> `module_EARTH_INTERNAL_STATE.o'
-cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:45:22 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
+cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:17:02 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
 ftn -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -IENS_Cpl -I.  -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_EARTH_GRID_COMP.tmp.f90
 mv -v module_EARTH_GRID_COMP.tmp.o module_EARTH_GRID_COMP.o
 `module_EARTH_GRID_COMP.tmp.o' -> `module_EARTH_GRID_COMP.o'
-cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:45:22 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
+cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:17:02 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
 ftn -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -IENS_Cpl -I.  -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_NEMS_INTERNAL_STATE.tmp.f90
 mv -v module_NEMS_INTERNAL_STATE.tmp.o module_NEMS_INTERNAL_STATE.o
 `module_NEMS_INTERNAL_STATE.tmp.o' -> `module_NEMS_INTERNAL_STATE.o'
-cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:45:22 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
+cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:17:02 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
 ftn -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -IENS_Cpl -I.  -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_NEMS_GRID_COMP.tmp.f90
 mv -v module_NEMS_GRID_COMP.tmp.o module_NEMS_GRID_COMP.o
 `module_NEMS_GRID_COMP.tmp.o' -> `module_NEMS_GRID_COMP.o'
-cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:45:22 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
+cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:17:02 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
 ftn -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -IENS_Cpl -I.  -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_NEMS_Rusage.tmp.f90
 mv -v module_NEMS_Rusage.tmp.o module_NEMS_Rusage.o
 `module_NEMS_Rusage.tmp.o' -> `module_NEMS_Rusage.o'
 cc -c nems_c_rusage.c
-cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:45:22 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
+cc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:17:02 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_PUBLIC="'T'" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_REVISION="0" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
 ftn -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -fno-alias -auto -safe-cray-ptr -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xCORE-AVX2 -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/hps3/emc/nems/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/opt/cray/netcdf/4.3.3.1/INTEL/14.0/include -IENS_Cpl -I.  -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c MAIN_NEMS.tmp.f90
 mv -v MAIN_NEMS.tmp.o MAIN_NEMS.o
 `MAIN_NEMS.tmp.o' -> `MAIN_NEMS.o'
@@ -2203,92 +2074,92 @@ H5PL.c:(.text+0x3b7): warning: Using 'dlopen' in statically linked applications 
 ESMCI_VMKernel.C:(.text+0x14ad1): warning: Using 'gethostbyname' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
 /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/exe/NEMS.x is created.
 make[1]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src'
-Application 151326854 resources: utime ~912s, stime ~68s, Rss ~2402440, inblocks ~389262034, outblocks ~1307342
+Application 152844356 resources: utime ~916s, stime ~71s, Rss ~2404448, inblocks ~389178183, outblocks ~1307342
 + cd /gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src
-+ cp -fp ../exe/NEMS.x /gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/exec/fv3_gsdchem.exe
-+ cp -fp conf/modules.nems /gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/include/modules_appbuilder.fv3
-+ md5sum /gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/exec/fv3_gsdchem.exe
++ cp -fp ../exe/NEMS.x /gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/exec/fv3_gsdchem.exe
++ cp -fp conf/modules.nems /gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/include/modules_appbuilder.fv3
++ md5sum /gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/exec/fv3_gsdchem.exe
 + unset md5sum
 + unset OPTS
 + set -xe
 + set -xe
-+ test -s /gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/exec/fv3_gsdchem.exe
-+ test -x /gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/exec/fv3_gsdchem.exe
++ test -s /gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/exec/fv3_gsdchem.exe
++ test -x /gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/exec/fv3_gsdchem.exe
 
 ------------------------------------------------------------
-Sender: LSF System <lsfadmin@nid01468>
-Subject: Job 5314: <rt_build_fv3_gsdchem.exe> in cluster <NCEP-RESTON> Done
+Sender: LSF System <lsfadmin@nid00700>
+Subject: Job 201110: <rt_build_fv3_gsdchem.exe> in cluster <NCEP-RESTON> Done
 
-Job <rt_build_fv3_gsdchem.exe> was submitted from host <llogin1> by user <Walter.Kolczynski> in cluster <NCEP-RESTON> at Fri Oct 18 19:25:04 2019.
-Job was executed on host(s) <1*nid01468>, in queue <dev>, as user <Walter.Kolczynski> in cluster <NCEP-RESTON> at Fri Oct 18 19:25:06 2019.
-                            <24*nid02302>
+Job <rt_build_fv3_gsdchem.exe> was submitted from host <llogin2> by user <Walter.Kolczynski> in cluster <NCEP-RESTON> at Fri Nov  1 01:56:28 2019.
+Job was executed on host(s) <1*nid00700>, in queue <dev>, as user <Walter.Kolczynski> in cluster <NCEP-RESTON> at Fri Nov  1 01:56:29 2019.
+                            <24*nid00111>
 </u/Walter.Kolczynski> was used as the home directory.
-</gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/rocoto> was used as the working directory.
-Started at Fri Oct 18 19:25:06 2019.
-Terminated at Fri Oct 18 19:48:07 2019.
-Results reported at Fri Oct 18 19:48:07 2019.
+</gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/rocoto> was used as the working directory.
+Started at Fri Nov  1 01:56:29 2019.
+Terminated at Fri Nov  1 02:20:00 2019.
+Results reported at Fri Nov  1 02:20:00 2019.
 
 Your job looked like:
 
 ------------------------------------------------------------
 # LSBATCH: User input
-/gpfs/hps/usrx/local/emc_rocoto/1.3.0rc2/sbin/lsfcraywrapper.sh sh -c "cd /gpfs/hps2/ptmp/Walter.Kolczynski/rtgen.22758/src ; ./install.sh fv3_gsdchem.exe"
+/gpfs/hps/usrx/local/emc_rocoto/1.3.0rc2/sbin/lsfcraywrapper.sh sh -c "cd /gpfs/hps/ptmp/Walter.Kolczynski/rtgen.23298/src ; ./install.sh fv3_gsdchem.exe"
 ------------------------------------------------------------
 
 Successfully completed.
 
 Resource usage summary:
 
-    CPU time :                                   1.07 sec.
+    CPU time :                                   0.93 sec.
     Max Memory :                                 24 MB
-    Average Memory :                             19.53 MB
+    Average Memory :                             20.09 MB
     Total Requested Memory :                     2000.00 MB
     Delta Memory :                               1976.00 MB
     Max Swap :                                   -
     Max Processes :                              5
     Max Threads :                                6
-    Run time :                                   1318 sec.
-    Turnaround time :                            1383 sec.
+    Run time :                                   1349 sec.
+    Turnaround time :                            1412 sec.
 
 The output (if any) is above this job summary.
 
-Data collected from /ufs/RUR/output/rur.output.NCEP-RESTON@5314
+Data collected from /ufs/RUR/output/rur.output.NCEP-RESTON@201110
 ------------------------------------------------------------------------
 
-ALPS Resource Utilization Report (RUR) Summary for LSF Job: 5314
+ALPS Resource Utilization Report (RUR) Summary for LSF Job: 201110
 
 STATUS:
 
 
-          APP START:                 2019-10-18:19:25:11 UTC
-          APP STOP:                  2019-10-18:19:47:05 UTC
+          APP START:                 2019-11-01:01:56:32 UTC
+          APP STOP:                  2019-11-01:02:18:58 UTC
           exit codes:                0 
           core files:                0
 
 CPU:
 
 
-          stime:                    83.244000 s
-          utime:                    920.492000 s
+          stime:                    85.780000 s
+          utime:                    922.628000 s
 
 MEMORY:
 
 
-          max_rss:                  2346.13 MiB
-          accumulated max_rss:      2346.13 MiB
-          active(anon):             28.30 MiB
-          active(file):             1.64 MiB
-          inactive(anon):           .46 MiB
-          inactive(file):           6.31 MiB
-          majfaults:                721
-          minfaults:                26783211
+          max_rss:                  2348.09 MiB
+          accumulated max_rss:      2348.09 MiB
+          active(anon):             29.53 MiB
+          active(file):             1.48 MiB
+          inactive(anon):           1.19 MiB
+          inactive(file):           6.62 MiB
+          majfaults:                724
+          minfaults:                26973109
           pageswpcnt:               0
 
 I/O: 
 
 
-          rcalls:                   4742639
-          wcalls:                   93705
-          rchar:                    190072.54 MiB
-          wchar:                    638.72 MiB
-          bkiowait:                 1.6889031840 s
+          rcalls:                   4726266
+          wcalls:                   93588
+          rchar:                    190031.28 MiB
+          wchar:                    638.70 MiB
+          bkiowait:                 1.6229449900 s
