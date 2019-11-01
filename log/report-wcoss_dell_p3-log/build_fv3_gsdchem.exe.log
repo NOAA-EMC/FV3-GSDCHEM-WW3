@@ -1,10 +1,10 @@
 + [[ fv3_gsdchem.exe == fv3_ww3.exe ]]
 + [[ fv3_gsdchem.exe == fv3_gsdchem.exe ]]
-+ rm -f /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-+ md5sum=/gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe.md5
++ rm -f /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
++ md5sum=/gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe.md5
 + OPTS=app=coupledFV3_GSDCHEM
-+ mkdir -p /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/include
-+ rm -f /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/include/modules_appbuilder.fv3
++ mkdir -p /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/include
++ rm -f /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/include/modules_appbuilder.fv3
 + cd /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12
 + which aprun
 which: no aprun in (/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/gpfs/hps3/emc/hwrf/noscrub/soft/emc-utils/bin:/gpfs/dell3/usrx/local/dev/emc_rocoto/rocoto-1.3.0rc2/bin:/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/gpfs/dell3/usrx/local/dev/emc_rocoto/ruby-2.5.1/bin:.:/usrx/local/prod/packages/gnu/4.8.5/ncl/6.4.0/bin:/u/Walter.Kolczynski/bin:/nwprod/util:/nwprod/util/exec:/nwprod/ush:/nwprod/exec:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/lpp/mmfs/bin:/opt/ibutils/bin:/opt/dell/srvadmin/bin:/u/Walter.Kolczynski/.local/bin)
@@ -116,139 +116,7 @@ rm -rf nems_dir FV3_INSTALL /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/s
     /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/conf/modules.fv3
 rm -rf /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL/fv3.mk
 cd /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM ; test -f Makefile && exec make -k distclean || echo "Nothing to clean up"
-make[1]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM'
-Making distclean in src
-make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src'
-Making distclean in chem
-make[3]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem'
-Making distclean in shr
-make[4]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/shr'
-test -z "mod" || rm -f *.mod
-test -z "libshr.a" || rm -f libshr.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/shr'
-Making distclean in plume
-make[4]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/plume'
-test -z "mod" || rm -f *.mod
-test -z "libplume.a" || rm -f libplume.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/plume'
-Making distclean in vash
-make[4]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/vash'
-test -z "mod" || rm -f *.mod
-test -z "libvash.a" || rm -f libvash.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/vash'
-Making distclean in dust
-make[4]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/dust'
-test -z "mod" || rm -f *.mod
-test -z "libdust.a" || rm -f libdust.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/dust'
-Making distclean in aero
-make[4]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/aero'
-test -z "mod" || rm -f *.mod
-test -z "libaero.a" || rm -f libaero.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/aero'
-Making distclean in dep
-make[4]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/dep'
-test -z "mod" || rm -f *.mod
-test -z "libdep.a" || rm -f libdep.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/dep'
-Making distclean in seas
-make[4]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/seas'
-test -z "mod" || rm -f *.mod
-test -z "libseas.a" || rm -f libseas.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/seas'
-Making distclean in opt
-make[4]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/opt'
-test -z "mod" || rm -f *.mod
-test -z "libopt.a" || rm -f libopt.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/opt'
-Making distclean in gocart
-make[4]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/gocart'
-test -z "mod" || rm -f *.mod
-test -z "libgocart.a" || rm -f libgocart.a
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f Makefile
-make[4]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/gocart'
-Making distclean in .
-make[4]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem'
-test -z "libgsdchem.a" || rm -f libgsdchem.a
-test -z "mod" || rm -f *.mod
-rm -f *.o
-rm -f *.tab.c
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-make[4]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem'
-rm -f Makefile
-make[3]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem'
-make[3]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src'
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-make[3]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src'
-rm -f Makefile
-make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src'
-make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM'
-test -z "gsdchem.mk" || rm -f gsdchem.mk
-test -z "" || rm -f 
-test . = "." || test -z "" || rm -f 
-rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
-rm -f cscope.out cscope.in.out cscope.po.out cscope.files
-make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM'
-rm -f config.status config.cache config.log configure.lineno config.status.lineno
-rm -f Makefile
-make[1]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM'
+Nothing to clean up
 rm -rf /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/GSDCHEM_INSTALL /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/GSDCHEM_INSTALL/gsdchem.mk
 if ! test -f /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src/conf/configure.nems.NUOPC ; then       \
   cat /dev/null > /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src/conf/configure.nems.NUOPC       ; \
@@ -1251,11 +1119,10 @@ export CRTM_SRC="/gpfs/dell1/nco/ops/nwprod/lib/crtm/v2.2.5/src"
 export CRTM_VER="v2.2.5"
 export CVS_RSH="ssh"
 export DAALROOT="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal"
-export DISPLAY="m72a3f:25.0"
+export DISPLAY="m71a2f:24.0"
 export ECF_HOST="sdecflow1"
 export EDITOR="nano"
 export ESMFMKFILE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/lib/esmf.mk"
-export ESMF_DIR="/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/esmf/src/esmf_8.0.0"
 export FORT_BUFFERED="TRUE"
 export G2_INC4="/gpfs/dell1/nco/ops/nwprod/lib/g2/v3.1.0/ips/18.0.1/include/g2_v3.1.0_4"
 export G2_INCd="/gpfs/dell1/nco/ops/nwprod/lib/g2/v3.1.0/ips/18.0.1/include/g2_v3.1.0_d"
@@ -1278,7 +1145,7 @@ export HDF5_LDFLAGS_F="-L/usrx/local/prod/packages/ips/18.0.1/hdf5/1.10.1/lib -l
 export HISTCONTROL="ignoredups"
 export HISTSIZE="1000"
 export HOME="/u/Walter.Kolczynski"
-export HOSTNAME="m71e11f"
+export HOSTNAME="m71e4f"
 export HOSTTYPE="X86_64"
 export INFOPATH="/usrx/local/prod/intel/2018UP01/documentation_2018/en/debugger/gdb-ia/info:info_gdb_igfx"
 export INSPECTOR_2018_DIR="/usrx/local/prod/intel/2018UP01/inspector_2018"
@@ -1331,15 +1198,15 @@ export LMOD_VERSION="7.7"
 export LMOD_sys="Linux"
 export LOADEDMODULES="ips/18.0.1.163:NetCDF/4.5.0:HDF5-serial/1.10.1:cmake/3.10.0:bacio/2.0.2:ip/3.0.1:sp/2.0.2:w3nco/2.0.6:w3emc/2.3.0:nemsio/2.2.3:sfcio/1.0.0:lsf/10.1:impi/18.0.1:bufr/11.2.0:sigio/2.0.1:crtm/2.2.5:g2/3.1.0:jasper/1.900.29:libpng/1.2.59:zlib/1.2.11:esmf/8.0.0:modules.nems"
 export LOGNAME="Walter.Kolczynski"
-export LSB_ACCT_FILE="/tmp/11303977.tmpdir/.1571425351.11303977.acct"
-export LSB_AFFINITY_HOSTFILE="/u/Walter.Kolczynski/.lsbatch/1571425351.11303977.hostAffinityFile"
-export LSB_BATCH_JID="11303977"
-export LSB_BIND_CPU_LIST="0,28"
+export LSB_ACCT_FILE="/tmp/11734218.tmpdir/.1572572672.11734218.acct"
+export LSB_AFFINITY_HOSTFILE="/u/Walter.Kolczynski/.lsbatch/1572572672.11734218.hostAffinityFile"
+export LSB_BATCH_JID="11734218"
+export LSB_BIND_CPU_LIST="4,32"
 export LSB_CG_MEMLIMIT="0x180000000"
-export LSB_CHKFILENAME="/u/Walter.Kolczynski/.lsbatch/1571425351.11303977"
-export LSB_DJOB_HOSTFILE="/u/Walter.Kolczynski/.lsbatch/1571425351.11303977.hostfile"
+export LSB_CHKFILENAME="/u/Walter.Kolczynski/.lsbatch/1572572672.11734218"
+export LSB_DJOB_HOSTFILE="/u/Walter.Kolczynski/.lsbatch/1572572672.11734218.hostfile"
 export LSB_DJOB_NUMPROC="1"
-export LSB_DJOB_RANKFILE="/u/Walter.Kolczynski/.lsbatch/1571425351.11303977.hostfile"
+export LSB_DJOB_RANKFILE="/u/Walter.Kolczynski/.lsbatch/1572572672.11734218.hostfile"
 export LSB_ECHKPNT_RSH_CMD="ssh -Y -o 'PasswordAuthentication no' -o 'StrictHostKeyChecking no'"
 export LSB_EEXEC_REAL_GID=""
 export LSB_EEXEC_REAL_UID=""
@@ -1348,23 +1215,23 @@ export LSB_EXEC_CLUSTER="mars"
 export LSB_EXEC_HOSTTYPE="X86_64"
 export LSB_EXIT_IF_CWD_NOTEXIST="Y"
 export LSB_EXIT_PRE_ABORT="99"
-export LSB_HOSTS="m71e11f"
+export LSB_HOSTS="m71e4f"
 export LSB_JOBEXIT_STAT="0"
-export LSB_JOBFILENAME="/u/Walter.Kolczynski/.lsbatch/1571425351.11303977"
-export LSB_JOBID="11303977"
+export LSB_JOBFILENAME="/u/Walter.Kolczynski/.lsbatch/1572572672.11734218"
+export LSB_JOBID="11734218"
 export LSB_JOBINDEX="0"
 export LSB_JOBNAME="rt_build_fv3_gsdchem.exe"
-export LSB_JOBRES_CALLBACK="52970@m71e11f"
-export LSB_JOBRES_PID="5807"
+export LSB_JOBRES_CALLBACK="42786@m71e4f"
+export LSB_JOBRES_PID="139609"
 export LSB_JOB_EXECUSER="Walter.Kolczynski"
 export LSB_MAX_NUM_PROCESSORS="1"
-export LSB_MCPU_HOSTS="m71e11f 1 "
-export LSB_OUTDIR="/gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/rocoto"
-export LSB_OUTPUTFILE="/gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/tmp/log/build_fv3_gsdchem.exe.log"
+export LSB_MCPU_HOSTS="m71e4f 1 "
+export LSB_OUTDIR="/gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/rocoto"
+export LSB_OUTPUTFILE="/gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/tmp/log/build_fv3_gsdchem.exe.log"
 export LSB_PROJECT_NAME="FV3GFS-T2O"
 export LSB_QUEUE="dev_transfer"
 export LSB_RES_GET_FANOUT_INFO="Y"
-export LSB_SUB_HOST="m72a3f"
+export LSB_SUB_HOST="m71a2f"
 export LSB_SUB_RES_REQ=" rusage[mem=6144] affinity[core(1)]"
 export LSB_SUB_USER="Walter.Kolczynski"
 export LSB_TRAPSIGS="trap # 15 10 12 2 1"
@@ -1375,17 +1242,17 @@ export LSF_BINDIR="/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin"
 export LSF_CGROUP_TOPDIR_KEY="mars"
 export LSF_ENVDIR="/gpfs/lsf/conf"
 export LSF_INVOKE_CMD="bsub"
-export LSF_JOB_TIMESTAMP_VALUE="1571425353"
+export LSF_JOB_TIMESTAMP_VALUE="1572572673"
 export LSF_LIBDIR="/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/lib"
 export LSF_LIM_API_NTRIES="1"
-export LSF_LOGDIR="/usrx/local/lsf/log/m71e11"
+export LSF_LOGDIR="/usrx/local/lsf/log/m71e4"
 export LSF_SERVERDIR="/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc"
 export LSF_VERSION="34"
-export LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:"
-export LS_EXECCWD="/gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/rocoto"
+export LS_COLORS="rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:"
+export LS_EXECCWD="/gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/rocoto"
 export LS_EXEC_T="START"
-export LS_JOBPID="5807"
-export LS_SUBCWD="/gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/rocoto"
+export LS_JOBPID="139609"
+export LS_SUBCWD="/gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/rocoto"
 export MAIL="/var/spool/mail/Walter.Kolczynski"
 export MAKEFLAGS="app=coupledFV3_GSDCHEM"
 export MAKELEVEL="1"
@@ -1436,8 +1303,8 @@ export QTDIR="/usr/lib64/qt-3.3"
 export QTINC="/usr/lib64/qt-3.3/include"
 export QTLIB="/usr/lib64/qt-3.3/lib"
 export QT_GRAPHICSSYSTEM_CHECKED="1"
-export RM_CPUTASK1="0,28"
-export RT_INSTALL_DIR="/gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124"
+export RM_CPUTASK1="4,32"
+export RT_INSTALL_DIR="/gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517"
 export SAVE="/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save"
 export SBD_KRB5CCNAME_VAL=""
 export SFCIO_INC4="/gpfs/dell1/nco/ops/nwprod/lib/sfcio/v1.0.0/ips/18.0.1/include/sfcio_v1.0.0_4"
@@ -1455,9 +1322,9 @@ export SP_LIB8="/gpfs/dell1/nco/ops/nwprod/lib/sp/v2.0.2/ips/18.0.1/libsp_v2.0.2
 export SP_LIBd="/gpfs/dell1/nco/ops/nwprod/lib/sp/v2.0.2/ips/18.0.1/libsp_v2.0.2_d.a"
 export SP_SRC="/gpfs/dell1/nco/ops/nwprod/lib/sp/v2.0.2/src"
 export SP_VER="v2.0.2"
-export SSH_CLIENT="192.58.1.82 45832 22"
-export SSH_CONNECTION="192.58.1.82 45832 192.58.151.17 22"
-export SSH_TTY="/dev/pts/25"
+export SSH_CLIENT="192.58.1.82 52864 22"
+export SSH_CONNECTION="192.58.1.82 52864 192.58.151.12 22"
+export SSH_TTY="/dev/pts/17"
 export SSS="/gpfs/sss/emc/ensemble/shared/Walter.Kolczynski"
 export TBBROOT="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/tbb"
 export THEIA_TMP="/scratch4/NCEPDEV/stmp4/Walter.Kolczynski/wcoss"
@@ -1482,29 +1349,29 @@ export W3NCO_LIBd="/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/ips/18.0.1/libw3n
 export W3NCO_SRC="/gpfs/dell1/nco/ops/nwprod/lib/w3nco/v2.0.6/src"
 export W3NCO_VER="v2.0.6"
 export XDG_RUNTIME_DIR="/run/user/20820"
-export XDG_SESSION_ID="769971"
+export XDG_SESSION_ID="35455"
 export XLSF_UIDDIR="/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/lib/uid"
 export Z_INC="/usrx/local/prod/packages/ips/18.0.1/zlib/1.2.11/include"
 export Z_LIB="/usrx/local/prod/packages/ips/18.0.1/zlib/1.2.11/lib/libz.a"
 export Z_SRC="/usrx/local/prod/packages/ips/18.0.1/zlib/1.2.11/src"
 export Z_VER="1.2.11"
 export _LMFILES_="/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/NetCDF/4.5.0:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/HDF5-serial/1.10.1:/usrx/local/prod/modulefiles/core_third/cmake/3.10.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bacio/2.0.2:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/ip/3.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/sp/2.0.2:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/w3emc/2.3.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/nemsio/2.2.3:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/sfcio/1.0.0:/usrx/local/prod/modulefiles/core_third/lsf/10.1:/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.2.0:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/sigio/2.0.1:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/crtm/2.2.5:/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/g2/3.1.0:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/jasper/1.900.29:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/libpng/1.2.59:/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/zlib/1.2.11:/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/modulefiles/esmf/8.0.0:/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src/conf/modules.nems"
-export _ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPTcyMDAsWyJjX3Nob3J0VGltZSJdPTEuMzU4NzQ5ODY2NDg1NixkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJjb25tcGlsZXIiXT0iSERGNS1zZXJpYWwiLFsibXBpIl09ImltcGkiLH0sbVQ9e1siSERGNS1zZXJpYWwiXT17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3RoaXJkL2lwcy8xOC4wLjEvSERGNS1zZXJpYWwvMS4xMC4xIixbImZ1bGxOYW1lIl09IkhERjUtc2VyaWFsLzEuMTAuMSIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IkhE"
-export _ModuleTable002_="RjUtc2VyaWFsLzEuMTAuMSIsfSxOZXRDREY9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl90aGlyZC9pcHMvMTguMC4xL05ldENERi80LjUuMCIsWyJmdWxsTmFtZSJdPSJOZXRDREYvNC41LjAiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJOZXRDREYvNC41LjAiLH0sYmFjaW89e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL2JhY2lvLzIuMC4yIixbImZ1bGxOYW1lIl09ImJhY2lvLzIuMC4yIixbImxvYWRPcmRlciJdPTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09"
-export _ModuleTable003_="MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmFjaW8vMi4wLjIiLH0sYnVmcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvYnVmci8xMS4yLjAiLFsiZnVsbE5hbWUiXT0iYnVmci8xMS4yLjAiLFsibG9hZE9yZGVyIl09MTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYnVmci8xMS4yLjAiLH0sY21ha2U9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2NtYWtlLzMuMTAuMCIsWyJmdWxsTmFtZSJdPSJjbWFrZS8zLjEwLjAiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxb"
-export _ModuleTable004_="InN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjbWFrZS8zLjEwLjAiLH0sY3J0bT17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvY3J0bS8yLjIuNSIsWyJmdWxsTmFtZSJdPSJjcnRtLzIuMi41IixbImxvYWRPcmRlciJdPTE2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNydG0vMi4yLjUiLH0sZXNtZj17WyJmbiJdPSIvZ3Bmcy9kZWxsMi9lbWMvbW9kZWxpbmcvbm9zY3J1Yi9lbWMubmVtc3BhcmEvc29mdC9tb2R1bGVmaWxlcy9lc21mLzguMC4wIixbImZ1bGxOYW1lIl09ImVzbWYvOC4w"
-export _ModuleTable005_="LjAiLFsibG9hZE9yZGVyIl09MjEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZXNtZi84LjAuMCIsfSxnMj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvZzIvMy4xLjAiLFsiZnVsbE5hbWUiXT0iZzIvMy4xLjAiLFsibG9hZE9yZGVyIl09MTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZzIvMy4xLjAiLH0saW1waT17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX21waS9pcHMvMTguMC4xL2ltcGkvMTguMC4xLmx1YSIsWyJmdWxs"
-export _ModuleTable006_="TmFtZSJdPSJpbXBpLzE4LjAuMSIsWyJsb2FkT3JkZXIiXT0xMyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJpbXBpLzE4LjAuMSIsfSxpcD17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvaXAvMy4wLjEiLFsiZnVsbE5hbWUiXT0iaXAvMy4wLjEiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJpcC8zLjAuMSIsfSxpcHM9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2lwcy8xOC4wLjEuMTYzIixbImZ1"
-export _ModuleTable007_="bGxOYW1lIl09Imlwcy8xOC4wLjEuMTYzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaXBzLzE4LjAuMS4xNjMiLH0samFzcGVyPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMS9qYXNwZXIvMS45MDAuMjkiLFsiZnVsbE5hbWUiXT0iamFzcGVyLzEuOTAwLjI5IixbImxvYWRPcmRlciJdPTE4LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imphc3Blci8xLjkwMC4yOSIsfSxsaWJwbmc9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21w"
-export _ModuleTable008_="aWxlcl90aGlyZC9pcHMvMTguMC4xL2xpYnBuZy8xLjIuNTkiLFsiZnVsbE5hbWUiXT0ibGlicG5nLzEuMi41OSIsWyJsb2FkT3JkZXIiXT0xOSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsaWJwbmcvMS4yLjU5Iix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09MTIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibHNmLzEwLjEiLH0sWyJtb2R1bGVzLm5lbXMiXT17WyJmbiJdPSIvZ3Bmcy9kZWxsMi9lbWMvbW9kZWxp"
-export _ModuleTable009_="bmcvbm9zY3J1Yi9XYWx0ZXIuS29sY3p5bnNraS9zYXZlL0VNQ19GVjMtR1NEQ0hFTS1XVzMvZ2Vmc192MTIvTkVNUy9zcmMvY29uZi9tb2R1bGVzLm5lbXMiLFsiZnVsbE5hbWUiXT0ibW9kdWxlcy5uZW1zIixbImxvYWRPcmRlciJdPTIyLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im1vZHVsZXMubmVtcyIsfSxuZW1zaW89e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvbXBpX3Byb2QvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMS9uZW1zaW8vMi4yLjMiLFsiZnVsbE5hbWUiXT0ibmVtc2lvLzIuMi4zIixbImxvYWRPcmRlciJdPTEwLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEs"
-export _ModuleTable010_="WyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im5lbXNpby8yLjIuMyIsfSxzZmNpbz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvc2ZjaW8vMS4wLjAiLFsiZnVsbE5hbWUiXT0ic2ZjaW8vMS4wLjAiLFsibG9hZE9yZGVyIl09MTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ic2ZjaW8vMS4wLjAiLH0sc2lnaW89e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3NpZ2lvLzIuMC4xIixbImZ1bGxOYW1lIl09InNpZ2lvLzIuMC4xIixbImxv"
-export _ModuleTable011_="YWRPcmRlciJdPTE1LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNpZ2lvLzIuMC4xIix9LHNwPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMS9zcC8yLjAuMiIsWyJmdWxsTmFtZSJdPSJzcC8yLjAuMiIsWyJsb2FkT3JkZXIiXT03LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNwLzIuMC4yIix9LHczZW1jPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL21waV9wcm9kL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEvdzNlbWMvMi4zLjAi"
-export _ModuleTable012_="LFsiZnVsbE5hbWUiXT0idzNlbWMvMi4zLjAiLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ3M2VtYy8yLjMuMCIsfSx3M25jbz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvdzNuY28vMi4wLjYiLFsiZnVsbE5hbWUiXT0idzNuY28vMi4wLjYiLFsibG9hZE9yZGVyIl09OCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ3M25jby8yLjAuNiIsfSx6bGliPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhp"
-export _ModuleTable013_="cmQvaXBzLzE4LjAuMS96bGliLzEuMi4xMSIsWyJmdWxsTmFtZSJdPSJ6bGliLzEuMi4xMSIsWyJsb2FkT3JkZXIiXT0yMCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ6bGliLzEuMi4xMSIsfSx9LG1wYXRoQT17Ii9ncGZzL2RlbGwyL2VtYy9tb2RlbGluZy9ub3NjcnViL2VtYy5uZW1zcGFyYS9zb2Z0L21vZHVsZWZpbGVzIiwiL2dwZnMvZGVsbDIvZW1jL21vZGVsaW5nL25vc2NydWIvV2FsdGVyLktvbGN6eW5za2kvc2F2ZS9FTUNfRlYzLUdTRENIRU0tV1czL2dlZnNfdjEyL05FTVMvc3JjL2NvbmYiLCIvdXNyeC9sb2NhbC9kZXYvZW1jX3JvY290by9tb2R1bGVmaWxlcyIsIi9ncGZzL2RlbGwzL3VzcngvbG9j"
-export _ModuleTable014_="YWwvZGV2L2VtY19yb2NvdG8vbW9kdWxlZmlsZXMiLCIvdXNyeC9sb2NhbC9wcm9kL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIiwiL2dwZnMvaHBzMy9lbWMvaHdyZi9ub3NjcnViL3NvZnQvbW9kdWxlZmlsZXMiLCIvZ3Bmcy9ocHMzL2VtYy9nbG9iYWwvc2F2ZS9UZXJyeS5NY0d1aW5uZXNzL3Byb2R1dGlsL21vZHVsZWZpbGVzIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl90aGlyZC9pcHMvMTguMC4xIiwiL2dwZnMv"
-export _ModuleTable015_="ZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2QvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmls"
-export _ModuleTable016_="ZXMvZGVmczovZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0="
+export _ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbImNvbXBpbGVyIl09ImlwcyIsWyJjb25tcGlsZXIiXT0iSERGNS1zZXJpYWwiLFsibXBpIl09ImltcGkiLH0sbVQ9e1siSERGNS1zZXJpYWwiXT17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3RoaXJkL2lwcy8xOC4wLjEvSERGNS1zZXJpYWwvMS4xMC4xIixbImZ1bGxOYW1lIl09IkhERjUtc2VyaWFsLzEuMTAuMSIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09IkhERjUtc2VyaWFs"
+export _ModuleTable002_="LzEuMTAuMSIsfSxOZXRDREY9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl90aGlyZC9pcHMvMTguMC4xL05ldENERi80LjUuMCIsWyJmdWxsTmFtZSJdPSJOZXRDREYvNC41LjAiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJOZXRDREYvNC41LjAiLH0sYmFjaW89e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL2JhY2lvLzIuMC4yIixbImZ1bGxOYW1lIl09ImJhY2lvLzIuMC4yIixbImxvYWRPcmRlciJdPTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1"
+export _ModuleTable003_="cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmFjaW8vMi4wLjIiLH0sYnVmcj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvYnVmci8xMS4yLjAiLFsiZnVsbE5hbWUiXT0iYnVmci8xMS4yLjAiLFsibG9hZE9yZGVyIl09MTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYnVmci8xMS4yLjAiLH0sY21ha2U9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2NtYWtlLzMuMTAuMCIsWyJmdWxsTmFtZSJdPSJjbWFrZS8zLjEwLjAiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVw"
+export _ModuleTable004_="dGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjbWFrZS8zLjEwLjAiLH0sY3J0bT17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvY3J0bS8yLjIuNSIsWyJmdWxsTmFtZSJdPSJjcnRtLzIuMi41IixbImxvYWRPcmRlciJdPTE2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNydG0vMi4yLjUiLH0sZXNtZj17WyJmbiJdPSIvZ3Bmcy9kZWxsMi9lbWMvbW9kZWxpbmcvbm9zY3J1Yi9lbWMubmVtc3BhcmEvc29mdC9tb2R1bGVmaWxlcy9lc21mLzguMC4wIixbImZ1bGxOYW1lIl09ImVzbWYvOC4wLjAiLFsibG9h"
+export _ModuleTable005_="ZE9yZGVyIl09MjEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZXNtZi84LjAuMCIsfSxnMj17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvZzIvMy4xLjAiLFsiZnVsbE5hbWUiXT0iZzIvMy4xLjAiLFsibG9hZE9yZGVyIl09MTcscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZzIvMy4xLjAiLH0saW1waT17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX21waS9pcHMvMTguMC4xL2ltcGkvMTguMC4xLmx1YSIsWyJmdWxsTmFtZSJdPSJp"
+export _ModuleTable006_="bXBpLzE4LjAuMSIsWyJsb2FkT3JkZXIiXT0xMyxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJpbXBpLzE4LjAuMSIsfSxpcD17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvaXAvMy4wLjEiLFsiZnVsbE5hbWUiXT0iaXAvMy4wLjEiLFsibG9hZE9yZGVyIl09Nixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJpcC8zLjAuMSIsfSxpcHM9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkL2lwcy8xOC4wLjEuMTYzIixbImZ1bGxOYW1lIl09"
+export _ModuleTable007_="Imlwcy8xOC4wLjEuMTYzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaXBzLzE4LjAuMS4xNjMiLH0samFzcGVyPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4LjAuMS9qYXNwZXIvMS45MDAuMjkiLFsiZnVsbE5hbWUiXT0iamFzcGVyLzEuOTAwLjI5IixbImxvYWRPcmRlciJdPTE4LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Imphc3Blci8xLjkwMC4yOSIsfSxsaWJwbmc9e1siZm4iXT0iL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl90aGly"
+export _ModuleTable008_="ZC9pcHMvMTguMC4xL2xpYnBuZy8xLjIuNTkiLFsiZnVsbE5hbWUiXT0ibGlicG5nLzEuMi41OSIsWyJsb2FkT3JkZXIiXT0xOSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJsaWJwbmcvMS4yLjU5Iix9LGxzZj17WyJmbiJdPSIvdXNyeC9sb2NhbC9wcm9kL21vZHVsZWZpbGVzL2NvcmVfdGhpcmQvbHNmLzEwLjEiLFsiZnVsbE5hbWUiXT0ibHNmLzEwLjEiLFsibG9hZE9yZGVyIl09MTIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibHNmLzEwLjEiLH0sWyJtb2R1bGVzLm5lbXMiXT17WyJmbiJdPSIvZ3Bmcy9kZWxsMi9lbWMvbW9kZWxpbmcvbm9zY3J1"
+export _ModuleTable009_="Yi9XYWx0ZXIuS29sY3p5bnNraS9zYXZlL0VNQ19GVjMtR1NEQ0hFTS1XVzMvZ2Vmc192MTIvTkVNUy9zcmMvY29uZi9tb2R1bGVzLm5lbXMiLFsiZnVsbE5hbWUiXT0ibW9kdWxlcy5uZW1zIixbImxvYWRPcmRlciJdPTIyLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im1vZHVsZXMubmVtcyIsfSxuZW1zaW89e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvbXBpX3Byb2QvaXBzLzE4LjAuMS9pbXBpLzE4LjAuMS9uZW1zaW8vMi4yLjMiLFsiZnVsbE5hbWUiXT0ibmVtc2lvLzIuMi4zIixbImxvYWRPcmRlciJdPTEwLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMi"
+export _ModuleTable010_="XT0iYWN0aXZlIixbInVzZXJOYW1lIl09Im5lbXNpby8yLjIuMyIsfSxzZmNpbz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvc2ZjaW8vMS4wLjAiLFsiZnVsbE5hbWUiXT0ic2ZjaW8vMS4wLjAiLFsibG9hZE9yZGVyIl09MTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ic2ZjaW8vMS4wLjAiLH0sc2lnaW89e1siZm4iXT0iL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xL3NpZ2lvLzIuMC4xIixbImZ1bGxOYW1lIl09InNpZ2lvLzIuMC4xIixbImxvYWRPcmRlciJd"
+export _ModuleTable011_="PTE1LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNpZ2lvLzIuMC4xIix9LHNwPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL2NvbXBpbGVyX3Byb2QvaXBzLzE4LjAuMS9zcC8yLjAuMiIsWyJmdWxsTmFtZSJdPSJzcC8yLjAuMiIsWyJsb2FkT3JkZXIiXT03LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNwLzIuMC4yIix9LHczZW1jPXtbImZuIl09Ii9ncGZzL2RlbGwxL25jby9vcHMvbndwcm9kL21vZHVsZWZpbGVzL21waV9wcm9kL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEvdzNlbWMvMi4zLjAiLFsiZnVsbE5h"
+export _ModuleTable012_="bWUiXT0idzNlbWMvMi4zLjAiLFsibG9hZE9yZGVyIl09OSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ3M2VtYy8yLjMuMCIsfSx3M25jbz17WyJmbiJdPSIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9wcm9kL2lwcy8xOC4wLjEvdzNuY28vMi4wLjYiLFsiZnVsbE5hbWUiXT0idzNuY28vMi4wLjYiLFsibG9hZE9yZGVyIl09OCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ3M25jby8yLjAuNiIsfSx6bGliPXtbImZuIl09Ii91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfdGhpcmQvaXBzLzE4"
+export _ModuleTable013_="LjAuMS96bGliLzEuMi4xMSIsWyJmdWxsTmFtZSJdPSJ6bGliLzEuMi4xMSIsWyJsb2FkT3JkZXIiXT0yMCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJ6bGliLzEuMi4xMSIsfSx9LG1wYXRoQT17Ii9ncGZzL2RlbGwyL2VtYy9tb2RlbGluZy9ub3NjcnViL2VtYy5uZW1zcGFyYS9zb2Z0L21vZHVsZWZpbGVzIiwiL2dwZnMvZGVsbDIvZW1jL21vZGVsaW5nL25vc2NydWIvV2FsdGVyLktvbGN6eW5za2kvc2F2ZS9FTUNfRlYzLUdTRENIRU0tV1czL2dlZnNfdjEyL05FTVMvc3JjL2NvbmYiLCIvdXNyeC9sb2NhbC9kZXYvZW1jX3JvY290by9tb2R1bGVmaWxlcyIsIi9ncGZzL2RlbGwzL3VzcngvbG9jYWwvZGV2L2Vt"
+export _ModuleTable014_="Y19yb2NvdG8vbW9kdWxlZmlsZXMiLCIvdXNyeC9sb2NhbC9wcm9kL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9kZWZzIiwiL2dwZnMvZGVsbDEvbmNvL29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29yZV9wcm9kIiwiL2dwZnMvaHBzMy9lbWMvaHdyZi9ub3NjcnViL3NvZnQvbW9kdWxlZmlsZXMiLCIvZ3Bmcy9ocHMzL2VtYy9nbG9iYWwvc2F2ZS9UZXJyeS5NY0d1aW5uZXNzL3Byb2R1dGlsL21vZHVsZWZpbGVzIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl90aGlyZC9pcHMvMTguMC4xIiwiL2dwZnMvZGVsbDEvbmNv"
+export _ModuleTable015_="L29wcy9ud3Byb2QvbW9kdWxlZmlsZXMvY29tcGlsZXJfcHJvZC9pcHMvMTguMC4xIiwiL3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb21waWxlcl9tcGkvaXBzLzE4LjAuMSIsIi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvbXBpX3RoaXJkL2lwcy8xOC4wLjEvaW1waS8xOC4wLjEiLCIvZ3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9tcGlfcHJvZC9pcHMvMTguMC4xL2ltcGkvMTguMC4xIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii91c3J4L2xvY2FsL3Byb2QvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L3VzcngvbG9jYWwvcHJvZC9tb2R1bGVmaWxlcy9jb3JlX3RoaXJkOi91c3J4L2xvY2FsL3Byb2QvbW9kdWxlZmlsZXMvZGVmczov"
+export _ModuleTable016_="Z3Bmcy9kZWxsMS9uY28vb3BzL253cHJvZC9tb2R1bGVmaWxlcy9jb3JlX3Byb2QiLH0="
 export _ModuleTable_Sz_="16"
 export _NEMS_MAKE_RECURSION_DETECT="X"
 export __LMOD_REF_COUNT_CLASSPATH="/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/lib64/mpi.jar:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/daal/lib/daal.jar:1"
@@ -1519,7 +1386,7 @@ export __LMOD_REF_COUNT_NLSPATH="/usrx/local/prod/intel/2018UP01/compilers_and_l
 export __LMOD_REF_COUNT_PATH="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/bin:1;/usrx/local/prod/packages/gnu/4.8.5/libpng/1.2.59/bin:1;/usrx/local/prod/packages/gnu/4.8.5/jasper/1.900.29/bin:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:1;/gpfs/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:1;/usrx/local/prod/packages/cmake/3.10.0/bin:1;/usrx/local/prod/packages/ips/18.0.1/hdf5/1.10.1:1;/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/bin:1;/usrx/local/prod/intel/2018UP01/advisor_2018/bin64:1;/usrx/local/prod/intel/2018UP01/vtune_amplifier_2018/bin64:1;/usrx/local/prod/intel/2018UP01/inspector_2018/bin64:1;/usrx/local/prod/intel/2018UP01/itac_latest/bin:1;/usrx/local/prod/intel/2018UP01/clck_latest/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/bin/intel64:1;/usrx/local/prod/intel/2018UP01/compilers_and_libraries/linux/mpi/bin64:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/targets/intel64/x200/bin:1;/usrx/local/prod/intel/2018UP01/debugger_2018/gdb/intel64/bin:1;.:1;/usrx/local/prod/packages/gnu/4.8.5/ncl/6.4.0/bin:1;/u/Walter.Kolczynski/bin:2;/nwprod/util:1;/nwprod/util/exec:1;/nwprod/ush:1;/nwprod/exec:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/usr/lpp/mmfs/bin:1;/opt/ibutils/bin:1;/opt/dell/srvadmin/bin:1;/u/Walter.Kolczynski/.local/bin:1;/usrx/local/prod/packages/ips/18.0.1/zlib/1.2.11/include:1"
 export __LMOD_REF_COUNT_PYTHONPATH="/gpfs/dell1/nco/ops/nwprod/ecflow.v4.7.1.0/intel/lib/python2.7/site-packages/ecflow:1;/gpfs/dell1/nco/ops/nwprod/prod_util.v1.1.1/ush:1;/usrx/local/prod/intel/2018UP01/advisor_2018/pythonapi:1"
 export __LMOD_REF_COUNT__LMFILES_="/usrx/local/prod/modulefiles/core_third/ips/18.0.1.163:1;/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/NetCDF/4.5.0:1;/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/HDF5-serial/1.10.1:1;/usrx/local/prod/modulefiles/core_third/cmake/3.10.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bacio/2.0.2:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/ip/3.0.1:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/sp/2.0.2:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/w3nco/2.0.6:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/w3emc/2.3.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/mpi_prod/ips/18.0.1/impi/18.0.1/nemsio/2.2.3:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/sfcio/1.0.0:1;/usrx/local/prod/modulefiles/core_third/lsf/10.1:1;/usrx/local/prod/modulefiles/compiler_mpi/ips/18.0.1/impi/18.0.1.lua:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/bufr/11.2.0:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/sigio/2.0.1:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/crtm/2.2.5:1;/gpfs/dell1/nco/ops/nwprod/modulefiles/compiler_prod/ips/18.0.1/g2/3.1.0:1;/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/jasper/1.900.29:1;/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/libpng/1.2.59:1;/usrx/local/prod/modulefiles/compiler_third/ips/18.0.1/zlib/1.2.11:1;/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/modulefiles/esmf/8.0.0:1;/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src/conf/modules.nems:1"
-export __LSF_JOB_TMPDIR__="/tmp/11303977.tmpdir"
+export __LSF_JOB_TMPDIR__="/tmp/11734218.tmpdir"
 export app="coupledFV3_GSDCHEM"
 export have_qoutql="YES"
 checking for a BSD-compatible install... /usr/bin/install -c
@@ -1893,44 +1760,44 @@ ar rv ENS_Cpl.a ENS_CplComp_ESMFMod_STUB.o
 ar: creating ENS_Cpl.a
 a - ENS_CplComp_ESMFMod_STUB.o
 make[2]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src/ENS_Cpl'
-mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:22:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
+mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:04:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_NEMS_UTILS.F90 > module_NEMS_UTILS.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_NEMS_UTILS.tmp.f90
 mv -v module_NEMS_UTILS.tmp.o module_NEMS_UTILS.o
 ‘module_NEMS_UTILS.tmp.o’ -> ‘module_NEMS_UTILS.o’
-mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:22:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
+mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:04:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_MEDIATOR_methods.F90 > module_MEDIATOR_methods.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_MEDIATOR_methods.tmp.f90
 mv -v module_MEDIATOR_methods.tmp.o module_MEDIATOR_methods.o
 ‘module_MEDIATOR_methods.tmp.o’ -> ‘module_MEDIATOR_methods.o’
-mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:22:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
+mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:04:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_MEDIATOR.F90 > module_MEDIATOR.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_MEDIATOR.tmp.f90
 mv -v module_MEDIATOR.tmp.o module_MEDIATOR.o
 ‘module_MEDIATOR.tmp.o’ -> ‘module_MEDIATOR.o’
-mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:22:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
+mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:04:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_MEDIATOR_SpaceWeather.tmp.f90
 mv -v module_MEDIATOR_SpaceWeather.tmp.o module_MEDIATOR_SpaceWeather.o
 ‘module_MEDIATOR_SpaceWeather.tmp.o’ -> ‘module_MEDIATOR_SpaceWeather.o’
-mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:22:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:04:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_EARTH_INTERNAL_STATE.tmp.f90
 mv -v module_EARTH_INTERNAL_STATE.tmp.o module_EARTH_INTERNAL_STATE.o
 ‘module_EARTH_INTERNAL_STATE.tmp.o’ -> ‘module_EARTH_INTERNAL_STATE.o’
-mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:22:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:04:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_EARTH_GRID_COMP.tmp.f90
 mv -v module_EARTH_GRID_COMP.tmp.o module_EARTH_GRID_COMP.o
 ‘module_EARTH_GRID_COMP.tmp.o’ -> ‘module_EARTH_GRID_COMP.o’
-mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:22:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
+mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:04:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_NEMS_INTERNAL_STATE.tmp.f90
 mv -v module_NEMS_INTERNAL_STATE.tmp.o module_NEMS_INTERNAL_STATE.o
 ‘module_NEMS_INTERNAL_STATE.tmp.o’ -> ‘module_NEMS_INTERNAL_STATE.o’
-mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:22:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
+mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:04:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_NEMS_GRID_COMP.tmp.f90
 mv -v module_NEMS_GRID_COMP.tmp.o module_NEMS_GRID_COMP.o
 ‘module_NEMS_GRID_COMP.tmp.o’ -> ‘module_NEMS_GRID_COMP.o’
-mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:22:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
+mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:04:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" module_NEMS_Rusage.F90 > module_NEMS_Rusage.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c module_NEMS_Rusage.tmp.f90
 mv -v module_NEMS_Rusage.tmp.o module_NEMS_Rusage.o
 ‘module_NEMS_Rusage.tmp.o’ -> ‘module_NEMS_Rusage.o’
 mpiicc -c nems_c_rusage.c
-mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Oct 18 19:22:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=291' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
+mpiicc -E -traditional  -DFRONT_GSDCHEM=CHM -DFRONT_FV3=fv3gfs_cap_mod -DFRONT_FMS= -D'SVN_INFO="(Walter.Kolczynski) Fri Nov  1 02:04:03 UTC 2019 rba1ddf7c335d https://github.com/NOAA-EMC/NEMS"' -D'CMP_YEAR=2019' -D'CMP_JD=305' -DESMF_VERSION_STRING_GIT="ESMF_8_0_0" -DESMF_VERSION_MAJOR="8" -DESMF_VERSION_PATCHLEVEL="0" -DESMF_VERSION_REVISION="0" -DESMF_VERSION_BETASNAPSHOT="'F'" -DESMF_VERSION_MINOR="0" -DESMF_VERSION_STRING="8.0.0" -DESMF_VERSION_PUBLIC="'T'" MAIN_NEMS.F90 > MAIN_NEMS.tmp.f90
 mpiifort -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -fno-alias -auto -safe-cray-ptr -save-temps -ftz -assume byterecl -nowarn -sox -align array64byte -i4 -real-size 64 -no-prec-div -no-prec-sqrt -xHOST -qno-opt-dynamic-align -O2 -debug minimal -fp-model source -qoverride-limits -qopt-prefetch=3 -qopenmp -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/mod -I/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/soft/esmf/8.0.0/include -I/usrx/local/prod/packages/ips/18.0.1/netcdf/4.5.0/include -IENS_Cpl -I.  -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/GSDCHEM/src/chem/ -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3 -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/FV3_INSTALL -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/atmos_cubed_sphere -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/io -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/fms -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/gfsphysics -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/cpl -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/ipd -I/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL -c MAIN_NEMS.tmp.f90
 mv -v MAIN_NEMS.tmp.o MAIN_NEMS.o
 ‘MAIN_NEMS.tmp.o’ -> ‘MAIN_NEMS.o’
@@ -1942,50 +1809,50 @@ mpiifort  -o /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSD
 /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/exe/NEMS.x is created.
 make[1]: Leaving directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src'
 + cd /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/NEMS/src
-+ cp -fp ../exe/NEMS.x /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-+ cp -fp conf/modules.nems /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/include/modules_appbuilder.fv3
-+ md5sum /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
++ cp -fp ../exe/NEMS.x /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
++ cp -fp conf/modules.nems /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/include/modules_appbuilder.fv3
++ md5sum /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
 + unset md5sum
 + unset OPTS
 + set -xe
 + set -xe
-+ test -s /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-+ test -x /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
++ test -s /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
++ test -x /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
 
 ------------------------------------------------------------
-Sender: LSF System <lsfadmin@m71e11f>
-Subject: Job 11303977: <rt_build_fv3_gsdchem.exe> in cluster <mars> Done
+Sender: LSF System <lsfadmin@m71e4f>
+Subject: Job 11734218: <rt_build_fv3_gsdchem.exe> in cluster <mars> Done
 
-Job <rt_build_fv3_gsdchem.exe> was submitted from host <m72a3f> by user <Walter.Kolczynski> in cluster <mars> at Fri Oct 18 19:02:31 2019
-Job was executed on host(s) <m71e11f>, in queue <dev_transfer>, as user <Walter.Kolczynski> in cluster <mars> at Fri Oct 18 19:02:33 2019
+Job <rt_build_fv3_gsdchem.exe> was submitted from host <m71a2f> by user <Walter.Kolczynski> in cluster <mars> at Fri Nov  1 01:44:32 2019
+Job was executed on host(s) <m71e4f>, in queue <dev_transfer>, as user <Walter.Kolczynski> in cluster <mars> at Fri Nov  1 01:44:33 2019
 </u/Walter.Kolczynski> was used as the home directory.
-</gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/rocoto> was used as the working directory.
-Started at Fri Oct 18 19:02:33 2019
-Terminated at Fri Oct 18 19:22:39 2019
-Results reported at Fri Oct 18 19:22:39 2019
+</gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/rocoto> was used as the working directory.
+Started at Fri Nov  1 01:44:33 2019
+Terminated at Fri Nov  1 02:04:39 2019
+Results reported at Fri Nov  1 02:04:39 2019
 
 Your job looked like:
 
 ------------------------------------------------------------
 # LSBATCH: User input
-/gpfs/dell3/usrx/local/dev/emc_rocoto/rocoto-1.3.0rc2/sbin/lsfwrapper.sh sh -c "cd /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/src ; ./install.sh fv3_gsdchem.exe"
+/gpfs/dell3/usrx/local/dev/emc_rocoto/rocoto-1.3.0rc2/sbin/lsfwrapper.sh sh -c "cd /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/src ; ./install.sh fv3_gsdchem.exe"
 ------------------------------------------------------------
 
 Successfully completed.
 
 Resource usage summary:
 
-    CPU time :                                   1176.44 sec.
+    CPU time :                                   1179.96 sec.
     Max Memory :                                 4810 MB
-    Average Memory :                             657.47 MB
+    Average Memory :                             593.92 MB
     Total Requested Memory :                     6144.00 MB
     Delta Memory :                               1334.00 MB
     Max Swap :                                   -
     Max Processes :                              20
     Max Threads :                                22
-    Run time :                                   1205 sec.
-    Turnaround time :                            1208 sec.
+    Run time :                                   1229 sec.
+    Turnaround time :                            1207 sec.
 
 The output (if any) is above this job summary.
 
-[Fri Oct 18 19:22:39 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_shared_ecflow.ksh: /var/lsf/ecflow_post_in.Walter.Kolczynski.11303977 file not found or empty.  Job is not eligible for ecflow abort notification.
+[Fri Nov  1 02:04:39 UTC 2019] /usrx/local/lsf/conf/scripts/ncep_post_exec_shared_ecflow.ksh: /var/lsf/ecflow_post_in.Walter.Kolczynski.11734218 file not found or empty.  Job is not eligible for ecflow abort notification.

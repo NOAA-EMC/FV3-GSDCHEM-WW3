@@ -1,6 +1,6 @@
 Run rocotostat...
 Generate report...
-WORKFLOW STARTED AT Fri Oct 18 18:32:46 2019 (+1571423566)
+WORKFLOW STARTED AT Fri Nov  1 01:18:33 2019 (+1572571113)
 Repository information:
 
 
@@ -38,8 +38,8 @@ BUILD fv3_gsdchem.exe: SUCCEEDED
 BUILD fv3_gsdchem_ww3_32bit.exe: SUCCEEDED
 
 TEST #1: PASS
-  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Fri Oct 18 20:28:36 UTC 2019 (One-way coupled FV3-WW3 C384)
-  Fri Oct 18 20:28:36 UTC 2019
+  Test cpld_1way@block_fv3@C384_ww3@glo30m starting at Fri Nov 1 03:06:34 UTC 2019 (One-way coupled FV3-WW3 C384)
+  Fri Nov  1 03:06:34 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -103,14 +103,14 @@ TEST #1: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_ww3.exe
-    Expected md5sum: e99af4c1fcc22abdb3c97b9971b7c854
-    Actual md5sum: e99af4c1fcc22abdb3c97b9971b7c854
-  TEST PASSED AT Fri Oct 18 20:38:22 UTC 2019
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_ww3.exe
+    Expected md5sum: 1beae0e99e1cf685c190bb69c3ef990d
+    Actual md5sum: 1beae0e99e1cf685c190bb69c3ef990d
+  TEST PASSED AT Fri Nov  1 03:16:13 UTC 2019
 
 TEST #2: PASS
-  Test cpld_fv3_gsdchem_gbbepx_frp starting at Fri Oct 18 19:23:43 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and GBBEPx emission data + FRP)
-  Fri Oct 18 19:23:43 UTC 2019
+  Test cpld_fv3_gsdchem_gbbepx_frp starting at Fri Nov 1 02:10:54 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and GBBEPx emission data + FRP)
+  Fri Nov  1 02:10:54 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -546,14 +546,14 @@ TEST #2: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-    Expected md5sum: 670bec3b7db9a6034def356323ff2970
-    Actual md5sum: 670bec3b7db9a6034def356323ff2970
-  TEST PASSED AT Fri Oct 18 19:31:51 UTC 2019
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
+    Expected md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+    Actual md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+  TEST PASSED AT Fri Nov  1 02:21:58 UTC 2019
 
 TEST #3: PASS
-  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_frp starting at Fri Oct 18 19:23:45 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and GBBEPx emission data + FRP)
-  Fri Oct 18 19:23:45 UTC 2019
+  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_frp starting at Fri Nov 1 02:10:55 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and GBBEPx emission data + FRP)
+  Fri Nov  1 02:10:55 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -989,14 +989,14 @@ TEST #3: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-    Expected md5sum: 670bec3b7db9a6034def356323ff2970
-    Actual md5sum: 670bec3b7db9a6034def356323ff2970
-  TEST PASSED AT Fri Oct 18 19:34:05 UTC 2019
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
+    Expected md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+    Actual md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+  TEST PASSED AT Fri Nov  1 02:24:22 UTC 2019
 
 TEST #4: PASS
-  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Fri Oct 18 19:06:12 UTC 2019 (One-way coupled FV3-WW3)
-  Fri Oct 18 19:06:12 UTC 2019
+  Test cpld_1way@leap_fv3@C96_ww3@glo30m starting at Fri Nov 1 01:48:18 UTC 2019 (One-way coupled FV3-WW3)
+  Fri Nov  1 01:48:18 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -1060,14 +1060,14 @@ TEST #4: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_ww3.exe
-    Expected md5sum: e99af4c1fcc22abdb3c97b9971b7c854
-    Actual md5sum: e99af4c1fcc22abdb3c97b9971b7c854
-  TEST PASSED AT Fri Oct 18 19:10:29 UTC 2019
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_ww3.exe
+    Expected md5sum: 1beae0e99e1cf685c190bb69c3ef990d
+    Actual md5sum: 1beae0e99e1cf685c190bb69c3ef990d
+  TEST PASSED AT Fri Nov  1 01:52:20 UTC 2019
 
 TEST #5: PASS
-  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_sfc starting at Fri Oct 18 19:24:04 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and GBBEPx surface emission data)
-  Fri Oct 18 19:24:04 UTC 2019
+  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_sfc starting at Fri Nov 1 02:11:10 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and GBBEPx surface emission data)
+  Fri Nov  1 02:11:10 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -1503,14 +1503,14 @@ TEST #5: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-    Expected md5sum: 670bec3b7db9a6034def356323ff2970
-    Actual md5sum: 670bec3b7db9a6034def356323ff2970
-  TEST PASSED AT Fri Oct 18 19:34:03 UTC 2019
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
+    Expected md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+    Actual md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+  TEST PASSED AT Fri Nov  1 02:24:01 UTC 2019
 
 TEST #6: PASS
-  Test cpld_fv3_gfdlmp_samf_gsdchem_gbbepx_frp starting at Fri Oct 18 19:24:31 UTC 2019 (FV3-GSDCHEM with GFDL microphysics, SAMF tracer transport, and GBBEPx emission data + FRP)
-  Fri Oct 18 19:24:31 UTC 2019
+  Test cpld_fv3_gfdlmp_samf_gsdchem_gbbepx_frp starting at Fri Nov 1 02:12:15 UTC 2019 (FV3-GSDCHEM with GFDL microphysics, SAMF tracer transport, and GBBEPx emission data + FRP)
+  Fri Nov  1 02:12:15 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -1946,14 +1946,14 @@ TEST #6: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-    Expected md5sum: 670bec3b7db9a6034def356323ff2970
-    Actual md5sum: 670bec3b7db9a6034def356323ff2970
-  TEST PASSED AT Fri Oct 18 19:34:18 UTC 2019
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
+    Expected md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+    Actual md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+  TEST PASSED AT Fri Nov  1 02:24:19 UTC 2019
 
 TEST #7: PASS
-  Test cpld_fv3_gfdlmp_gsdchem_modis starting at Fri Oct 18 19:24:38 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and MODIS emission data)
-  Fri Oct 18 19:24:38 UTC 2019
+  Test cpld_fv3_gfdlmp_gsdchem_modis starting at Fri Nov 1 02:12:32 UTC 2019 (FV3-GSDCHEM with GFDL microphysics and MODIS emission data)
+  Fri Nov  1 02:12:32 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -2389,14 +2389,14 @@ TEST #7: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-    Expected md5sum: 670bec3b7db9a6034def356323ff2970
-    Actual md5sum: 670bec3b7db9a6034def356323ff2970
-  TEST PASSED AT Fri Oct 18 19:35:36 UTC 2019
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
+    Expected md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+    Actual md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+  TEST PASSED AT Fri Nov  1 02:25:55 UTC 2019
 
 TEST #8: PASS
-  Test cpld_1way@block_fv3@32bit@C384_ww3@glo30m starting at Fri Oct 18 20:50:03 UTC 2019 (One-way coupled FV3-WW3 C384 with GEFS FV3 configuration)
-  Fri Oct 18 20:50:03 UTC 2019
+  Test cpld_1way@block_fv3@32bit@C384_ww3@glo30m starting at Fri Nov 1 03:44:02 UTC 2019 (One-way coupled FV3-WW3 C384 with GEFS FV3 configuration)
+  Fri Nov  1 03:44:03 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -2460,14 +2460,14 @@ TEST #8: PASS
   RESTART/sfc_data.tile4.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem_ww3_32bit.exe
-    Expected md5sum: 25b1b71dc87eb800a3abdd4c8129b7df
-    Actual md5sum: 25b1b71dc87eb800a3abdd4c8129b7df
-  TEST PASSED AT Fri Oct 18 20:59:18 UTC 2019
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem_ww3_32bit.exe
+    Expected md5sum: d518a73fd5838cf79b759a15730a7534
+    Actual md5sum: d518a73fd5838cf79b759a15730a7534
+  TEST PASSED AT Fri Nov  1 03:53:01 UTC 2019
 
 TEST #9: PASS
-  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_frp_fengsha starting at Fri Oct 18 19:25:29 UTC 2019 (FV3-GSDCHEM with GFDL MP, GBBEPx emissions + FRP, and FENGSHA)
-  Fri Oct 18 19:25:29 UTC 2019
+  Test cpld_fv3_gfdlmp_gsdchem_gbbepx_frp_fengsha starting at Fri Nov 1 02:13:03 UTC 2019 (FV3-GSDCHEM with GFDL MP, GBBEPx emissions + FRP, and FENGSHA)
+  Fri Nov  1 02:13:03 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -2903,14 +2903,14 @@ TEST #9: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-    Expected md5sum: 670bec3b7db9a6034def356323ff2970
-    Actual md5sum: 670bec3b7db9a6034def356323ff2970
-  TEST PASSED AT Fri Oct 18 19:35:23 UTC 2019
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
+    Expected md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+    Actual md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+  TEST PASSED AT Fri Nov  1 02:25:25 UTC 2019
 
 TEST #10: PASS
-  Test cpld_fv3_gfdlmp_gsdchem_modis_c384 starting at Fri Oct 18 19:25:44 UTC 2019 (FV3-GSDCHEM with GFDL MP and MODIS emissions at C384, 6-hour)
-  Fri Oct 18 19:25:44 UTC 2019
+  Test cpld_fv3_gfdlmp_gsdchem_modis_c384 starting at Fri Nov 1 02:14:11 UTC 2019 (FV3-GSDCHEM with GFDL MP and MODIS emissions at C384, 6-hour)
+  Fri Nov  1 02:14:11 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -2974,14 +2974,14 @@ TEST #10: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-    Expected md5sum: 670bec3b7db9a6034def356323ff2970
-    Actual md5sum: 670bec3b7db9a6034def356323ff2970
-  TEST PASSED AT Fri Oct 18 19:47:15 UTC 2019
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
+    Expected md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+    Actual md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+  TEST PASSED AT Fri Nov  1 02:40:58 UTC 2019
 
 TEST #11: PASS
-  Test cpld_fv3_gsdchem_modis starting at Fri Oct 18 19:26:30 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and MODIS emission data)
-  Fri Oct 18 19:26:30 UTC 2019
+  Test cpld_fv3_gsdchem_modis starting at Fri Nov 1 02:15:23 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and MODIS emission data)
+  Fri Nov  1 02:15:23 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -3417,14 +3417,14 @@ TEST #11: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-    Expected md5sum: 670bec3b7db9a6034def356323ff2970
-    Actual md5sum: 670bec3b7db9a6034def356323ff2970
-  TEST PASSED AT Fri Oct 18 19:34:42 UTC 2019
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
+    Expected md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+    Actual md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+  TEST PASSED AT Fri Nov  1 02:27:06 UTC 2019
 
 TEST #12: PASS
-  Test cpld_fv3_gsdchem_gbbepx_sfc starting at Fri Oct 18 19:26:34 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and GBBEPx surface emission data)
-  Fri Oct 18 19:26:34 UTC 2019
+  Test cpld_fv3_gsdchem_gbbepx_sfc starting at Fri Nov 1 02:16:11 UTC 2019 (FV3-GSDCHEM with Zhao/Carr/Sundqvist microphysics and GBBEPx surface emission data)
+  Fri Nov  1 02:16:11 UTC 2019
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -3860,11 +3860,11 @@ TEST #12: PASS
   wso4.tile5.dat: bit-for-bit identical
   wso4.tile6.dat: bit-for-bit identical
   Executable did not change during test suite:
-    File: /gpfs/dell1/ptmp/Walter.Kolczynski/rtgen.154124/exec/fv3_gsdchem.exe
-    Expected md5sum: 670bec3b7db9a6034def356323ff2970
-    Actual md5sum: 670bec3b7db9a6034def356323ff2970
-  TEST PASSED AT Fri Oct 18 19:33:43 UTC 2019
-WORKFLOW REPORT AT Fri Oct 18 21:00:32 2019 (+1571432432)
+    File: /gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.89517/exec/fv3_gsdchem.exe
+    Expected md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+    Actual md5sum: 8fe08a6c428e869ca7a687e8ec4a8730
+  TEST PASSED AT Fri Nov  1 02:26:21 UTC 2019
+WORKFLOW REPORT AT Fri Nov  1 03:53:21 2019 (+1572580401)
 Tests: 0 failed, 12 passed out of 12
 Builds: 0 failed, 3 passed out of 3
 REGRESSION TEST WAS SUCCESSFUL
