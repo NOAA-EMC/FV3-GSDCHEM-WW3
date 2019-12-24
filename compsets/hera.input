@@ -19,7 +19,7 @@ platform hera.intel {
     C768_PPN=20
 
  # hera testing: using longer run time
-    DEFAULT_TEST_WALLTIME=3000
+    DEFAULT_TEST_WALLTIME=4800
 
  #  The *nems locations are in NEMS checkout areas.
     HOMEnems=PWD_UP5
@@ -30,8 +30,8 @@ platform hera.intel {
     # INPUTS is the input directory, which should contain fix and parm
     # files, plus any restarts or other inputs.
 
-    BASELINE="/scratch1/NCEPDEV/nems/emc.nemspara/RT/FV3-GDSCHEM-WW3/gefs_v12-20191017"
-    BASELINE_TEMPLATE="/scratch1/NCEPDEV/nems/emc.nemspara/RT/FV3-GDSCHEM-WW3/gefs_v12-20191017"
+    BASELINE="/scratch1/NCEPDEV/nems/emc.nemspara/RT/FV3-GDSCHEM-WW3/gefs_v12-20191223"
+    BASELINE_TEMPLATE="/scratch1/NCEPDEV/nems/emc.nemspara/RT/FV3-GDSCHEM-WW3/gefs_v12-20191223"
     INPUTS="@[BASELINE]"
 
     default_resources={
