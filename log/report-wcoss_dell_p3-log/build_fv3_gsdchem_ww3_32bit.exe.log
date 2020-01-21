@@ -1417,7 +1417,7 @@ export LSB_OUTPUTFILE="/gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.120563/tmp/log/b
 export LSB_PROJECT_NAME="GFS-DEV"
 export LSB_QUEUE="dev_transfer"
 export LSB_RES_GET_FANOUT_INFO="Y"
-export LSB_SUB_HOST="m71a2f"
+export LSB_SUB_HOST="m71a1f"
 export LSB_SUB_RES_REQ=" rusage[mem=6144] affinity[core(1)]"
 export LSB_SUB_USER="Walter.Kolczynski"
 export LSB_TRAPSIGS="trap # 15 10 12 2 1"
@@ -1982,10 +1982,9 @@ Processing ww3_grid
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/WW3/model/ftn'
 ad3 : processing constants 
 ad3 : processing w3servmd 
-ad3 : processing w3gsrumd 
 ad3 : processing w3arrymd 
+ad3 : processing w3gsrumd 
 ad3 : processing w3gdatmd 
-ad3 : processing w3idatmd 
 ad3 : processing w3odatmd 
 ad3 : processing w3timemd 
 ad3 : processing w3adatmd 
@@ -2272,6 +2271,7 @@ ad3 : processing scrip_iounitsmod [no w3adc]
 ad3 : processing scrip_constants [no w3adc]
 ad3 : processing scrip_timers [no w3adc]
 ad3 : processing w3servmd 
+ad3 : processing scrip_timers [no w3adc]
 ad3 : processing scrip_errormod [no w3adc]
 ad3 : processing scrip_netcdfmod [no w3adc]
 ad3 : processing scrip_grids [no w3adc]
@@ -2291,7 +2291,6 @@ ad3 : processing w3odatmd
 ad3 : processing w3sbt1md 
 ad3 : processing w3timemd 
 ad3 : processing wmmdatmd 
-ad3 : processing w3dispmd 
 ad3 : processing w3adatmd 
 ad3 : processing w3src4md 
 ad3 : processing w3fldsmd 
@@ -2305,6 +2304,7 @@ ad3 : processing w3triamd
 ad3 : processing w3snl1md 
 ad3 : processing w3iogrmd 
 ad3 : processing w3wdatmd 
+ad3 : processing w3iogrmd 
 ad3 : processing w3iogomd 
 ad3 : processing wmupdtmd 
 ad3 : processing w3iosfmd 

@@ -1363,7 +1363,7 @@ export LSB_OUTPUTFILE="/gpfs/dell2/ptmp/Walter.Kolczynski/rtgen.120563/tmp/log/b
 export LSB_PROJECT_NAME="GFS-DEV"
 export LSB_QUEUE="dev_transfer"
 export LSB_RES_GET_FANOUT_INFO="Y"
-export LSB_SUB_HOST="m71a2f"
+export LSB_SUB_HOST="m71a1f"
 export LSB_SUB_RES_REQ=" rusage[mem=6144] affinity[core(1)]"
 export LSB_SUB_USER="Walter.Kolczynski"
 export LSB_TRAPSIGS="trap # 15 10 12 2 1"

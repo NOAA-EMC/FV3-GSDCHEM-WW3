@@ -1203,11 +1203,13 @@ Processing ww3_grid
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/WW3/model/ftn'
 ad3 : processing constants 
 ad3 : processing w3servmd 
-ad3 : processing w3gsrumd 
 ad3 : processing w3arrymd 
+ad3 : processing w3gsrumd 
 ad3 : processing w3gdatmd 
 ad3 : processing w3odatmd 
 ad3 : processing w3idatmd 
+ad3 : processing w3timemd 
+ad3 : processing w3nmlgridmd 
 ad3 : processing w3adatmd 
 ad3 : processing w3dispmd 
 ad3 : processing w3timemd 
@@ -1215,6 +1217,7 @@ ad3 : processing w3nmlgridmd
 ad3 : processing wmmdatmd 
 ad3 : processing w3src4md 
 ad3 : processing w3snl1md 
+ad3 : processing w3parall 
 ad3 : processing w3triamd 
 ad3 : processing w3parall 
 ad3 : processing w3iogrmd 
@@ -1245,8 +1248,8 @@ Shared Object     : No
 Processing ww3_outf
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/WW3/model/ftn'
-ad3 : processing w3sdb1md 
 ad3 : processing w3iogomd 
+ad3 : processing w3sdb1md 
 ad3 : processing w3sbt1md 
 ad3 : processing ww3_outf 
       Linking ww3_outf
@@ -1384,8 +1387,8 @@ Shared Object     : No
 Processing ww3_ounf
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/WW3/model/ftn'
-ad3 : processing w3iorsmd 
 ad3 : processing w3nmlounfmd 
+ad3 : processing w3iorsmd 
 ad3 : processing w3initmd 
 ad3 : processing ww3_ounf 
       Linking ww3_ounf
@@ -1486,9 +1489,10 @@ switch = /gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM
 Processing ww3_multi_esmf
 ---------------------
 make[2]: Entering directory `/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/save/EMC_FV3-GSDCHEM-WW3/gefs_v12/WW3/model/ftn'
-ad3 : processing constants 
 ad3 : processing scrip_kindsmod [no w3adc]
+ad3 : processing constants 
 ad3 : processing w3uqckmd 
+ad3 : processing scrip_constants [no w3adc]
 ad3 : processing scrip_iounitsmod [no w3adc]
 ad3 : processing scrip_constants [no w3adc]
 ad3 : processing scrip_timers [no w3adc]

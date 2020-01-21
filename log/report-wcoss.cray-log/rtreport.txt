@@ -7,6 +7,7 @@ Repository information:
 REPO TOP:
 gefs_v12_staging 963d793 [origin/gefs_v12_staging] Update baseline
 Fetch URL: ssh://walter.kolczynski@vlab.ncep.noaa.gov:29418/EMC_FV3-GSDCHEM-WW3
+ M WW3
  M log/report-wcoss.cray-log/build_fv3_gsdchem.exe.log
  M log/report-wcoss.cray-log/build_fv3_gsdchem_ww3_32bit.exe.log
  M log/report-wcoss.cray-log/build_fv3_ww3.exe.log

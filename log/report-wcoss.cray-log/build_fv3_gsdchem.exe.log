@@ -1167,8 +1167,8 @@ make -C stochastic_physics   FMS_DIR=/gpfs/hps3/emc/ensemble/save/Walter.Kolczyn
 
 Build standalone FV3 stochastic_physics ...
 
-make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/stochastic_physics'
 makefile:86: depend: No such file or directory
+make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/stochastic_physics'
 Building dependencies ...
 make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/stochastic_physics'
 

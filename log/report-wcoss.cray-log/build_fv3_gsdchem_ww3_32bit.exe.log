@@ -1239,9 +1239,9 @@ make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_F
 make -C stochastic_physics   FMS_DIR=/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FMS/FMS_INSTALL 32BIT=N  # force gfs physics to 64bit
 
 Build standalone FV3 stochastic_physics ...
-makefile:86: depend: No such file or directory
 
 make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/stochastic_physics'
+makefile:86: depend: No such file or directory
 Building dependencies ...
 make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/FV3/stochastic_physics'
 
@@ -2274,11 +2274,15 @@ ad3 : processing w3adatmd
 ad3 : processing w3nmlgridmd 
 ad3 : processing w3dispmd 
 ad3 : processing w3timemd 
+ad3 : processing w3adatmd 
+ad3 : processing w3nmlgridmd 
 ad3 : processing wmmdatmd 
 ad3 : processing w3src4md 
 ad3 : processing w3snl1md 
 ad3 : processing w3triamd 
 ad3 : processing w3parall 
+ad3 : processing w3snl1md 
+ad3 : processing w3triamd 
 ad3 : processing w3wdatmd 
 ad3 : processing w3iogrmd 
 ad3 : processing ww3_grid 
@@ -2310,6 +2314,7 @@ make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_
 ad3 : processing w3iogomd 
 ad3 : processing w3sbt1md 
 ad3 : processing w3sdb1md 
+ad3 : processing w3iogomd 
 ad3 : processing ww3_outf 
       Linking ww3_outf
 make[2]: Leaving directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/WW3/model/ftn'
@@ -2551,8 +2556,8 @@ make[2]: Entering directory `/gpfs/hps3/emc/ensemble/save/Walter.Kolczynski/EMC_
 ad3 : processing scrip_kindsmod [no w3adc]
 ad3 : processing constants 
 ad3 : processing w3uqckmd 
-ad3 : processing scrip_iounitsmod [no w3adc]
 ad3 : processing scrip_constants [no w3adc]
+ad3 : processing scrip_iounitsmod [no w3adc]
 ad3 : processing scrip_timers [no w3adc]
 ad3 : processing w3servmd 
 ad3 : processing scrip_errormod [no w3adc]
@@ -2870,7 +2875,7 @@ Resource usage summary:
     Max Memory :                                 25 MB
     Average Memory :                             20.00 MB
     Total Requested Memory :                     2000.00 MB
-    Delta Memory :                               1975.00 MB
+    Delta Memory :                               1976.00 MB
     Max Swap :                                   -
     Max Processes :                              5
     Max Threads :                                6

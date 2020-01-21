@@ -1191,8 +1191,8 @@ Processing ww3_grid
 make[2]: Entering directory `/scratch2/NCEPDEV/ensemble/save/Walter.Kolczynski/EMC_FV3-GSDCHEM-WW3/gefs_v12/WW3/model/ftn'
 ad3 : processing constants 
 ad3 : processing w3servmd 
-ad3 : processing w3arrymd 
 ad3 : processing w3gsrumd 
+ad3 : processing w3arrymd 
 ad3 : processing w3gdatmd 
 ad3 : processing w3idatmd 
 ad3 : processing w3odatmd 
@@ -1200,11 +1200,12 @@ ad3 : processing w3nmlgridmd
 ad3 : processing w3timemd 
 ad3 : processing w3adatmd 
 ad3 : processing w3dispmd 
+ad3 : processing w3timemd 
 ad3 : processing wmmdatmd 
 ad3 : processing w3src4md 
+ad3 : processing w3triamd 
 ad3 : processing w3parall 
 ad3 : processing w3snl1md 
-ad3 : processing w3triamd 
 ad3 : processing w3wdatmd 
 ad3 : processing w3iogrmd 
 ad3 : processing ww3_grid 
