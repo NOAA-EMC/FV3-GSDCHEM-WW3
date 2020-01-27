@@ -283,7 +283,6 @@
   dust_opt          = @[DUST_OPT]
   dust_alpha        = @[DUST_ALPHA]
   dust_gamma        = @[DUST_GAMMA]
-  dust_uthres       = @[DUST_UTHRES]
   emiss_inpt_opt    = 1
   emiss_opt         = 5
   gas_bc_opt        = 1

@@ -203,8 +203,8 @@ platform wcoss_dell_p3 {
     LONG_TEST_QUEUE='&LONGQ;'
     BUILD_QUEUE='&BUILDQ;'
 
-    BASELINE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/gefs_v12-20191223"
-    BASELINE_TEMPLATE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/gefs_v12-20191223"
+    BASELINE="/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/baselines/RT/EMC_FV3-GSDCHEM-WW3/gefs_v12-20200127"
+    BASELINE_TEMPLATE="/gpfs/dell2/emc/modeling/noscrub/Walter.Kolczynski/baselines/RT/EMC_FV3-GSDCHEM-WW3/gefs_v12-20200127"
 
     default_resources={
         TASKS=156
