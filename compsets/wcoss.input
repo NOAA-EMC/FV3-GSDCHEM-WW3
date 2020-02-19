@@ -301,8 +301,8 @@ platform wcoss.cray {
     BUILD_WALLTIME="3600"
     DEFAULT_TEST_WALLTIME=2700
 
-    BASELINE="/gpfs/hps3/emc/ensemble/noscrub/Walter.Kolczynski/baselines/RT/FV3-GSDCHEM-WW3/gefs_v12-20200127"
-    BASELINE_TEMPLATE="/gpfs/hps3/emc/ensemble/noscrub/Walter.Kolczynski/baselines/RT/FV3-GSDCHEM-WW3/gefs_v12-20200127"
+    BASELINE="/gpfs/hps3/emc/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/gefs_v12-20200127"
+    BASELINE_TEMPLATE="/gpfs/hps3/emc/nems/noscrub/emc.nemspara/RT/FV3-GDSCHEM-WW3/gefs_v12-20200127"
 
     execution_time_modules=[[[
       module load alps
