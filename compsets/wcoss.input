@@ -124,7 +124,7 @@ platform wcoss.cray {
 
     TASK_THROTTLE='11'
     BUILD_WALLTIME="3600"
-    DEFAULT_TEST_WALLTIME=3600
+    DEFAULT_TEST_WALLTIME=4800
 
     BASELINE="/gpfs/hps3/emc/nems/noscrub/emc.nemspara/RT/FV3-GSDCHEM-WW3/gefs_v12-20200306"
     BASELINE_TEMPLATE="/gpfs/hps3/emc/nems/noscrub/emc.nemspara/RT/FV3-GSDCHEM-WW3/gefs_v12-20200306"
