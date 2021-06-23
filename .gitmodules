@@ -1,6 +1,6 @@
 [submodule "FV3"]
 	path = FV3
-	url = gerrit:FV3
+	url = https://github.com/XianwuXue-NOAA/fv3atm.git
 [submodule "FMS"]
 	path = FMS
 	url = https://github.com/NOAA-EMC/FMS
