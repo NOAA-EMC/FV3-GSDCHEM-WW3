@@ -46,6 +46,7 @@ module load jasper/2.0.25
 module load libpng/1.6.37
 module load zlib/1.2.11
 
-module load esmf/8.1.0.beta_snapshot_26
+module load esmf/8.0.1
+#esmf/8.1.0.beta_snapshot_26
 #esmf/8_1_0_beta_snapshot_27 # will have more errors
 #esmf/8.1.0 # will have error: v3_cap.F90(537): error #6627: This is an actual argument keyword name, and not a dummy argument name.   [ATTRECONFLAG]
