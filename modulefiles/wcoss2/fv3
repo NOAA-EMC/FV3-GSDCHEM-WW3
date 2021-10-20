@@ -2,12 +2,6 @@
 ##
 ##    NEMS FV3 Prerequisites: WCOSS2
 
-proc ModulesHelp {} {
-  puts stderr "\tcit - loads modules required for building and running FV3 under NEMS on the Dell side of WCOSS"
-}
-
-module-whatis "loads NEMS FV3 prerequisites on WCOSS2"
-
 # NOTE: the "module purge" and loading of the module command are
 # handled by the module-setup.sh (or .csh) script.
 
@@ -15,38 +9,33 @@ module-whatis "loads NEMS FV3 prerequisites on WCOSS2"
 ## load programming environment
 ## this typically includes compiler, MPI and job scheduler
 ##
-module load envvar/1.0
+module load envvar/${envvar_ver:-1.0}
 
-module load intel/19.1.3.304
-module load PrgEnv-intel/8.1.0
+module load intel/${intel_ver:-19.1.3.304}
+module load PrgEnv-intel/${PrgEnv_intel_ver:-8.1.0}
 
-module load craype/2.7.10
-module load cray-mpich/8.1.9
-module load netcdf/4.7.4
-module load hdf5/1.10.6
-module load cmake/3.20.2
+module load craype/${craype_ver:-2.7.10}
+module load cray-mpich/${cray_mpich_ver:-8.1.9}
+module load netcdf/${netcdf_ver:-4.7.4}
+module load hdf5/${hdf5_ver:-1.10.6}
+module load cmake/${cmake_ver:-3.20.2}
 
-module load bacio/2.4.1
-module load ip/3.3.3
-module load sp/2.3.3
-module load w3nco/2.4.1
-module load w3emc/2.7.3
-module load nemsio/2.5.2
+module load bacio/${bacio_ver:-2.4.1}
+module load ip/${ip_ver:-3.3.3}
+module load sp/${sp_ver:-2.3.3}
+module load w3nco/${w3nco_ver:-2.4.1}
+module load w3emc/${w3emc_ver:-2.7.3}
+module load nemsio/${nemsio_ver:-2.5.2}
 
-module load sfcio/1.4.1
-#module load lsf/10.1
-#module load impi/18.0.1
-module load bufr/11.5.0
-module load sigio/2.3.2
-module load crtm/2.3.0
+module load sfcio/${sfcio_ver:-1.4.1}
+module load bufr/${bufr_ver:-11.5.0}
+module load sigio/${sigio_ver:-2.3.2}
+module load crtm/${crtm_ver:-2.3.0}
 
 # WW3 grib encoding
-module load g2/3.4.5
-module load jasper/2.0.25
-module load libpng/1.6.37
-module load zlib/1.2.11
+module load g2/${g2_ver:-3.4.5}
+module load jasper/${jasper_ver:-2.0.25}
+module load libpng/${libpng_ver:-1.6.37}
+module load zlib/${zlib_ver:-1.2.11}
 
-module load esmf/8.0.1
-#esmf/8.1.0.beta_snapshot_26
-#esmf/8_1_0_beta_snapshot_27 # will have more errors
-#esmf/8.1.0 # will have error: v3_cap.F90(537): error #6627: This is an actual argument keyword name, and not a dummy argument name.   [ATTRECONFLAG]
+module load esmf/${esmf_ver:-8.0.1}
