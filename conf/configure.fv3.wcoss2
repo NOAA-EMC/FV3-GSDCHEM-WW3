@@ -5,10 +5,10 @@ endif
 ############
 # commands #
 ############
-FC =ftn  # mpiifort -march=core-avx2 -mtune=core-avx2 #ftn #mpiifort
-CC = cc #mpiicc -march=core-avx2 -mtune=core-avx2 #ftn #mpiicc
-CXX = cc #mpiicpc -march=core-avx2 -mtune=core-avx2 #ftn #mpiicpc
-LD = ftn # -cpp #mpiifort -march=core-avx2 -mtune=core-avx2 #ftn #mpiifort
+FC = ftn
+CC = cc
+CXX = cc
+LD = ftn
 
 #########
 # flags #
