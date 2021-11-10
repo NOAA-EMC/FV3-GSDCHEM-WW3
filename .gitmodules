@@ -7,9 +7,7 @@
 	url = https://github.com/NOAA-EMC/FMS
 [submodule "GSDCHEM"]
 	path = GSDCHEM
-	#url = https://github.com/NOAA-EMC/GSDCHEM
 	url = https://github.com/XianwuXue-NOAA/GSDCHEM.git
-	branch = feature/port2wcoss2
 [submodule "NEMS"]
 	path = NEMS
 	url = https://github.com/NOAA-EMC/NEMS
