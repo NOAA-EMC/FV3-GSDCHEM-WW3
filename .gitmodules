@@ -6,7 +6,7 @@
 	url = https://github.com/NOAA-EMC/FMS
 [submodule "GSDCHEM"]
 	path = GSDCHEM
-	url = https://github.com/NOAA-EMC/GSDCHEM.git
+	url = https://github.com/NOAA-EMC/GSDCHEM
 [submodule "NEMS"]
 	path = NEMS
 	url = https://github.com/NOAA-EMC/NEMS
