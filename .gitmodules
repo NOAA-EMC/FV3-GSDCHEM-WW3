@@ -1,7 +1,6 @@
 [submodule "FV3"]
 	path = FV3
 	url = https://github.com/NOAA-EMC/fv3atm
-	branch = production/GEFS_v12
 [submodule "FMS"]
 	path = FMS
 	url = https://github.com/NOAA-EMC/FMS
